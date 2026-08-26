@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building an AI audit framework: where to start — Adesanya AI Advisory</title>
+<meta name="description" content="A practical operating model for AI governance — from risk register to incident reporting — built around ISO/IEC 42001 and the EU AI Act, not a policy PDF that gathers dust.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://adesanyaaiadvisory.com/article-ai-audit-framework.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Adesanya AI Advisory">
+<meta property="og:title" content="Building an AI audit framework: where to start">
+<meta property="og:description" content="A practical operating model for AI governance — from risk register to incident reporting — built around ISO/IEC 42001 and the EU AI Act.">
+<meta property="og:url" content="https://adesanyaaiadvisory.com/article-ai-audit-framework.html">
+<meta property="og:image" content="https://adesanyaaiadvisory.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://adesanyaaiadvisory.com/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20260820074103">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--night-ink);color:var(--paper);line-height:1.7}
+  a{color:var(--lamp)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  article{padding:50px 0 30px}
+  /* code-rain hero band */
+  .arthero{position:relative;overflow:hidden;border-bottom:1px solid var(--hairline);background:linear-gradient(180deg,var(--chamber),var(--night-ink))}
+  .arthero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.17;z-index:0}
+  .arthero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(120% 130% at 20% 0%, transparent 40%, rgba(10,16,32,.85) 100%)}
+  .arthero .wrap{position:relative;z-index:2;padding:40px 24px 26px}
+  .cta-band a{font-family:var(--mono)}
+  .tag{display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--lamp);margin-top:8px}
+  h1{font-family:var(--serif);font-weight:300;font-size:2.3rem;margin:10px 0 12px;line-height:1.12;letter-spacing:-.01em}
+  .meta{font-family:var(--mono);color:var(--mist);font-size:.78rem;letter-spacing:.04em;margin:0}
+  article h2{font-family:var(--serif);font-weight:600;font-size:1.4rem;color:var(--lamp);margin:34px 0 10px}
+  article p{margin-bottom:16px;color:#dde4ee}
+  article ul{margin:0 0 16px 22px}
+  article li{margin-bottom:8px;color:#dde4ee}
+  blockquote{border-left:3px solid var(--brass);padding:4px 0 4px 18px;margin:20px 0;font-style:italic;color:var(--mist)}
+  .box{background:var(--chamber);border:1px solid var(--hairline);border-radius:12px;padding:20px 22px;margin:24px 0}
+  .box h3{font-family:var(--serif);font-weight:600;font-size:1.1rem;color:var(--lamp);margin-bottom:8px}
+  .disc{color:var(--mist);font-size:.84rem;border-top:1px solid var(--hairline);margin-top:30px;padding-top:18px}
+  .cta-band{background:var(--chamber);border:1px solid var(--hairline);border-radius:14px;padding:26px;text-align:center;margin-top:30px}
+  .cta-band a{display:inline-block;background:var(--brass);color:#1a1205;text-decoration:none;font-weight:700;padding:12px 24px;border-radius:10px;margin-top:8px}
+  footer{border-top:1px solid var(--hairline);padding:26px 0;color:var(--mist);font-size:.82rem;margin-top:36px}
+  footer a{color:var(--lamp)}
+  .backlink{display:inline-block;margin-bottom:10px;font-size:.85rem;text-decoration:none}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Building an AI audit framework: where to start",
+ "description": "A practical operating model for AI governance — from risk register to incident reporting — built around ISO/IEC 42001 and the EU AI Act.",
+ "author": {
+  "@type": "Person",
+  "name": "Abdulwahab B. Adesanya",
+  "jobTitle": "Founder, Adesanya AI Advisory · EU AI Act Compliance Counsel",
+  "url": "https://adesanyaaiadvisory.com/",
+  "sameAs": ["https://www.linkedin.com/in/abdulwahab-adesanya"]
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Adesanya AI Advisory",
+  "url": "https://adesanyaaiadvisory.com/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://adesanyaaiadvisory.com/og-image.png"
+  }
+ },
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://adesanyaaiadvisory.com/article-ai-audit-framework.html"
+ },
+ "image": "https://adesanyaaiadvisory.com/og-image.png",
+ "inLanguage": "en"
+}
+</script>
+</head>
+<body class="has-nav">
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="index.html" aria-label="Adesanya AI Advisory — home"><img src="assets/adesanya-mark.svg" alt="" width="26" height="28"><span class="wordmark">ADESANYA AI ADVISORY<sup>&#8482;</sup></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <nav class="navlinks" id="navlinks" aria-label="Site">
+      <a class="nl" href="services.html">Services</a>
+      <a class="nl" href="legislation.html">Legislation</a>
+      <a class="nl" href="knowledge-base.html">Knowledge base</a>
+      <a class="nl" href="nigeria.html">Nigeria–EU</a>
+      <a class="nl" href="https://gateway.adesanyaaiadvisory.com" target="_blank" rel="noopener">Aegis Guard</a>
+      <a class="nl" href="work-with-me.html">Work with me</a>
+      <a class="nl" href="index.html#contact">Contact</a>
+      <a class="watch" href="index.html#radar" aria-label="Live AI Law Radar, updated weekly"><span class="dot"></span>LIVE<span class="full">&nbsp;&#183; RADAR &#183; WEEKLY</span></a>
+    </nav>
+  </div>
+</header>
+
+<div class="arthero">
+  <canvas id="code-rain" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <a class="backlink" href="index.html#insights">← All insights</a>
+    <div><span class="tag">Governance</span></div>
+    <h1>Building an AI audit framework: where to start</h1>
+    <div class="meta">By Adesanya AI Advisory · Dublin · ~6 min read</div>
+  </div>
+</div>
+
+<article><div class="wrap">
+
+  <p>Ask most organisations to show their AI governance and you will be handed a policy document. It will say the right things about fairness, transparency and accountability. It will also, more often than not, describe a process that nobody actually follows. A policy PDF is not a governance framework. A framework is an operating model — a set of repeatable activities, with owners, that you can evidence when a regulator, a board, or a customer asks.</p>
+  <p>Here is where to start building one that works.</p>
+
+  <h2>Begin with an inventory, not a policy</h2>
+  <p>You cannot govern what you have not catalogued. The first artefact in any credible framework is a register of the AI systems in use across the organisation — built in-house and bought in, including AI features embedded in tools you already license. For each entry, capture the purpose, the owner, the data it uses, its risk classification, and its lifecycle stage.</p>
+  <blockquote>The inventory is the spine of the whole framework. Everything else hangs off it.</blockquote>
+
+  <h2>Classify and triage by risk</h2>
+  <p>Not every AI system deserves the same scrutiny. A model that drafts internal marketing copy is not a hiring-decision system. Classify each entry by risk — both regulatory (the EU AI Act's tiers) and your own operational and reputational risk — so that effort flows to where the stakes are highest. This triage is what makes the framework proportionate rather than paralysing.</p>
+
+  <h2>Borrow the structure that already exists</h2>
+  <p>You do not need to invent a framework from first principles. Two reference points do most of the work:</p>
+  <ul>
+    <li><strong>ISO/IEC 42001</strong> — the first certifiable AI management-system standard, built on the familiar plan-do-check-act cycle. It gives you an auditable structure for governance.</li>
+    <li><strong>The NIST AI Risk Management Framework</strong> — its Govern, Map, Measure, Manage functions are a clear, practical way to think about what activities your framework needs.</li>
+  </ul>
+  <p>Mapping your obligations onto an established standard means you are speaking a language auditors, customers and regulators already recognise.</p>
+
+  <h2>Put the core controls in place</h2>
+  <p>A working framework operationalises a handful of controls. At minimum:</p>
+  <ul>
+    <li><strong>Intake and approval</strong> — a gate so new AI systems are assessed before deployment, not after.</li>
+    <li><strong>Risk assessment</strong> — a documented assessment for higher-risk systems, including impact on individuals.</li>
+    <li><strong>Human oversight</strong> — defined points where a person can review, override or stop the system.</li>
+    <li><strong>Monitoring</strong> — ongoing checks on performance, drift and unintended outcomes.</li>
+    <li><strong>Incident response</strong> — a route to detect, report and remediate when an AI system causes harm or fails.</li>
+    <li><strong>Documentation</strong> — the technical and decision records you will need to evidence all of the above.</li>
+  </ul>
+
+  <div class="box">
+    <h3>A 90-day starting plan</h3>
+    <ul>
+      <li><strong>Weeks 1–3:</strong> stand up the AI inventory; assign system owners.</li>
+      <li><strong>Weeks 4–6:</strong> classify systems by risk; pick a reference standard (ISO 42001 / NIST).</li>
+      <li><strong>Weeks 7–10:</strong> design intake, risk-assessment and human-oversight controls.</li>
+      <li><strong>Weeks 11–13:</strong> pilot on one high-risk system; set up monitoring and incident reporting; report to the board.</li>
+    </ul>
+  </div>
+
+  <h2>Make it evidenced, and make it live</h2>
+  <p>The difference between governance that protects you and governance that does not is evidence. When something goes wrong — or when a regulator asks — you want to point to a documented process that was actually operating, with named owners and a trail of decisions. That is also exactly what the EU AI Act expects of high-risk systems, and what ISO/IEC 42001 certification tests. Build the framework so that producing that evidence is a by-product of normal operation, not a special project you scramble to assemble under pressure.</p>
+
+  <div class="cta-band">
+    <p>Standing up AI governance from scratch?</p>
+    <a href="services.html">See our AI Governance Programme →</a>
+  </div>
+
+  <p class="disc">This article is provided for general information only. It is not legal advice and does not create a lawyer–client relationship. Governance frameworks should be tailored to your organisation, sector and risk profile; obtain qualified advice for your circumstances.</p>
+</div></article>
+
+<footer class="ftl">
+<style>
+.ftl{background:#0B0F1A;border-top:1px solid rgba(168,124,63,.25);padding:34px 28px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:.74rem;color:#93A3BD;line-height:1.7}
+.ftl-wrap{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ftl a{color:#93A3BD;text-decoration:none;transition:color .25s var(--ease)}
+.ftl a:hover{color:#F7DCA8}
+.ftl-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.ftl-clock{color:#E9B872;letter-spacing:.05em;white-space:nowrap}
+.ftl-clock b{color:#F7DCA8;font-weight:500}
+.ftl-extra{max-width:1180px;margin:10px auto 0;color:rgba(147,163,189,.7);font-size:.68rem;letter-spacing:.04em}
+@media(max-width:680px){.ftl-wrap{flex-direction:column;text-align:center}}
+</style>
+<div class="ftl-wrap">
+  <span>&copy; <span id="yr"></span> Adesanya AI Advisory&trade; &mdash; Abdulwahab B. Adesanya &mdash; Dublin, Ireland</span>
+  <span class="ftl-links">
+    <a href="https://www.linkedin.com/in/abdulwahab-adesanya" target="_blank" rel="noopener" aria-label="Abdulwahab Adesanya on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;fill:currentColor;vertical-align:-2px;margin-right:6px"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
+    <a href="intake.html">Begin in writing</a>
+    <a href="/privacy-policy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </span>
+  <span class="ftl-clock" id="ftl-clock">&mdash;</span>
+</div>
+
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y&&!y.textContent) y.textContent=new Date().getFullYear();
+  var c=document.getElementById('ftl-clock');
+  function t(){ if(!c)return;
+    var n=new Date();
+    c.innerHTML='Dublin · <b>'+n.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'Europe/Dublin'})+' · '+n.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Europe/Dublin'})+'</b>';
+  }
+  t(); setInterval(t,30000);
+})();
+</script>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<!-- Code rain — hero band -->
+<script>
+(function(){
+  var rain=document.getElementById('code-rain');
+  if(!rain) return;
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rc=rain.getContext('2d');
+  var CHARS='Art.5Art.6Art.9GDPR§©{}[]();=>!=<>01AI&|~+-/*Regulation2024/1689';
+  var arr=CHARS.split(''), COL_W=18, cols, drops, speeds, opacs;
+  var DPR=Math.min(window.devicePixelRatio||1,2);
+  function size(){
+    var w=rain.parentElement.offsetWidth, h=rain.parentElement.offsetHeight;
+    rain.width=w*DPR; rain.height=h*DPR; rain.style.width=w+'px'; rain.style.height=h+'px';
+    rc.setTransform(DPR,0,0,DPR,0,0);
+    cols=Math.floor(w/COL_W); drops=[]; speeds=[]; opacs=[];
+    for(var i=0;i<cols;i++){ drops[i]=Math.random()*-(h/16); speeds[i]=0.3+Math.random()*0.5; opacs[i]=0.25+Math.random()*0.75; }
+  }
+  var lastT=0, visible=true, pending=false;
+  function draw(ts){
+    if(reduced||!visible){ pending=false; return; }
+    if(ts-lastT<33){ requestAnimationFrame(draw); return; }
+    lastT=ts;
+    var w=rain.parentElement.offsetWidth, h=rain.parentElement.offsetHeight;
+    rc.fillStyle='rgba(10,16,32,0.20)'; rc.fillRect(0,0,w,h);
+    rc.font='600 13px "JetBrains Mono",monospace';
+    for(var i=0;i<cols;i++){
+      var ch=arr[Math.floor(Math.random()*arr.length)];
+      var x=i*COL_W, y=drops[i]*16;
+      rc.fillStyle='rgba(233,184,114,'+opacs[i]+')';
+      rc.fillText(ch,x,y);
+      if(y>h && Math.random()>0.975) drops[i]=0;
+      drops[i]+=speeds[i];
+    }
+    requestAnimationFrame(draw);
+  }
+  size();
+  window.addEventListener('load',size);
+  if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(size); }
+  window.addEventListener('resize',function(){ clearTimeout(window.__crrsz); window.__crrsz=setTimeout(size,150); });
+  if(reduced){ rc.fillStyle='rgba(10,16,32,1)'; rc.fillRect(0,0,rain.width,rain.height); }
+  else {
+    function ensure(){ if(!pending){ pending=true; requestAnimationFrame(draw); } }
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(en){ visible=en[0].isIntersecting; if(visible) ensure(); },{threshold:0});
+      io.observe(rain.parentElement);
+    }
+    ensure();
+  }
+})();
+</script>
+<script src="assets/site.js?v=20260820074103"></script>
+</body>
+</html>

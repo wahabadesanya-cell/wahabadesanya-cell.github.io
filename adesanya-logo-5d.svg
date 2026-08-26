@@ -1,0 +1,95 @@
+<svg width="460" height="520" viewBox="0 0 460 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aegis — W. B. Adesanya dimensional emblem">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#1b2c4d"/>
+      <stop offset="0.6" stop-color="#0d1a30"/>
+      <stop offset="1" stop-color="#070f1d"/>
+    </radialGradient>
+    <linearGradient id="goldRim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff2c8"/>
+      <stop offset="0.25" stop-color="#e8c77b"/>
+      <stop offset="0.55" stop-color="#c9a14a"/>
+      <stop offset="0.8" stop-color="#8c6322"/>
+      <stop offset="1" stop-color="#5e3f12"/>
+    </linearGradient>
+    <linearGradient id="goldFace" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#ffe9ad"/>
+      <stop offset="0.5" stop-color="#d4ab57"/>
+      <stop offset="1" stop-color="#9c742c"/>
+    </linearGradient>
+    <linearGradient id="navyFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f3257"/>
+      <stop offset="1" stop-color="#0c192e"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="0.4" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="emboss" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.4" result="b"/>
+      <feOffset in="b" dx="0" dy="2" result="o"/>
+      <feComponentTransfer in="o" result="sh"><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode in="sh"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="460" height="520" rx="36" fill="url(#bg)"/>
+  <ellipse cx="230" cy="250" rx="150" ry="160" fill="#c9a14a" opacity="0.06"/>
+
+  <!-- EXTRUSION: stacked offset shields create 5D depth -->
+  <g filter="url(#soft)">
+    <g transform="translate(230,250)">
+      <!-- deep base layers (darkening) -->
+      <g transform="translate(0,18)"><use href="#sh" fill="#3a2a0c"/></g>
+      <g transform="translate(0,14)"><use href="#sh" fill="#5e3f12"/></g>
+      <g transform="translate(0,10)"><use href="#sh" fill="#7d551b"/></g>
+      <g transform="translate(0,6)"><use href="#sh" fill="#9c742c"/></g>
+
+      <!-- gold rim (top of stack) -->
+      <use href="#sh" fill="url(#goldRim)"/>
+      <!-- inner navy face inset -->
+      <g transform="scale(0.86)"><use href="#shInner" fill="url(#navyFace)"/></g>
+      <!-- thin gold inner hairline -->
+      <g transform="scale(0.86)"><use href="#shInner" fill="none" stroke="url(#goldFace)" stroke-width="2" opacity="0.7"/></g>
+    </g>
+  </g>
+
+  <!-- emblem content -->
+  <g transform="translate(230,250)" filter="url(#emboss)">
+    <!-- stylised A apex in metallic gold -->
+    <path d="M0 -70 L46 50 L22 50 L13 26 L-13 26 L-22 50 L-46 50 Z" fill="url(#goldFace)"/>
+    <path d="M-6 4 L6 4 L13 22 L-13 22 Z" fill="url(#navyFace)"/>
+    <!-- AI node + linking dots -->
+    <circle cx="0" cy="-84" r="8" fill="url(#goldFace)"/>
+    <line x1="0" y1="-76" x2="0" y2="-64" stroke="url(#goldFace)" stroke-width="3"/>
+    <circle cx="-58" cy="-30" r="4.5" fill="#e8c77b"/>
+    <circle cx="58" cy="-30" r="4.5" fill="#e8c77b"/>
+    <line x1="-54" y1="-30" x2="-26" y2="-44" stroke="#c9a14a" stroke-width="1.6" opacity="0.7"/>
+    <line x1="54" y1="-30" x2="26" y2="-44" stroke="#c9a14a" stroke-width="1.6" opacity="0.7"/>
+  </g>
+
+  <!-- glossy top highlight -->
+  <g transform="translate(230,250)" opacity="0.9">
+    <path d="M-86 -150 C-40 -176 40 -176 86 -150 C40 -150 -40 -150 -86 -150 Z" fill="url(#gloss)" transform="translate(0,28)"/>
+    <ellipse cx="-30" cy="-110" rx="60" ry="26" fill="url(#gloss)"/>
+  </g>
+
+  <!-- monogram -->
+  <text x="230" y="372" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" letter-spacing="8" fill="url(#goldFace)">A · B · A</text>
+
+  <!-- wordmark -->
+  <text x="230" y="430" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" letter-spacing="2" fill="#f1f5fb">ADESANYA <tspan fill="url(#goldFace)">AI</tspan></text>
+  <line x1="120" y1="448" x2="340" y2="448" stroke="url(#goldRim)" stroke-width="1.5"/>
+  <text x="230" y="476" text-anchor="middle" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" letter-spacing="9" fill="#9fb0c7">A D V I S O R Y</text>
+
+  <!-- shield path defs -->
+  <defs>
+    <path id="sh" d="M0 -116 L96 -82 C96 4 64 78 0 112 C-64 78 -96 4 -96 -82 Z"/>
+    <path id="shInner" d="M0 -116 L96 -82 C96 4 64 78 0 112 C-64 78 -96 4 -96 -82 Z"/>
+  </defs>
+</svg>

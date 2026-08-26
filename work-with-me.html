@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Cookie consent — GA4 loaded only after visitor accepts -->
+<script>
+(function(){
+  var GA_ID='G-VPL2XEB7GK';
+  function loadGA(){
+    var s=document.createElement('script');
+    s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){dataLayer.push(arguments);};
+    gtag('js',new Date());gtag('config',GA_ID);
+  }
+  var stored=localStorage.getItem('ga_consent');
+  if(stored==='granted'){loadGA();return;}
+  window.gtag=function(){};
+  if(stored==='denied'){return;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('div');b.id='cookie-banner';
+    b.innerHTML='<p style="margin:0;max-width:560px;font-size:.875rem;line-height:1.5">We use Google Analytics to understand how visitors use this site. <a href="/privacy-policy.html" style="color:inherit;text-decoration:underline">Privacy policy</a>.</p>'
+      +'<div style="display:flex;gap:8px;flex-wrap:wrap">'
+      +'<button id="cb-accept" style="background:#E9B872;color:#231905;border:none;padding:9px 20px;border-radius:4px;font-weight:700;font-size:.8125rem;cursor:pointer">Accept analytics</button>'
+      +'<button id="cb-decline" style="background:transparent;color:#E9B872;border:1px solid rgba(233,184,114,.5);padding:9px 20px;border-radius:4px;font-weight:600;font-size:.8125rem;cursor:pointer">Decline</button>'
+      +'</div>';
+    Object.assign(b.style,{position:'fixed',bottom:'0',left:'0',right:'0',background:'#0A1020',borderTop:'1px solid rgba(168,124,63,.28)',padding:'16px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'16px',zIndex:'9999',flexWrap:'wrap',color:'#EFE8DA'});
+    document.body.appendChild(b);
+    document.getElementById('cb-accept').onclick=function(){localStorage.setItem('ga_consent','granted');b.remove();loadGA();};
+    document.getElementById('cb-decline').onclick=function(){localStorage.setItem('ga_consent','denied');b.remove();};
+  });
+})();
+</script>
+<title>Work with Me — Adesanya AI Advisory</title>
+<meta name="description" content="EU AI Act compliance audits, ISO 42001 implementation, AI governance retainers and Aegis Guard enterprise access. LLM in Intellectual Property and Information Technology Law. Fixed-fee engagements. Dublin, Ireland.">
+<link rel="canonical" href="https://adesanyaaiadvisory.com/work-with-me.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Adesanya AI Advisory">
+<meta property="og:title" content="Work with Me — Adesanya AI Advisory">
+<meta property="og:description" content="EU AI Act audits, ISO 42001 implementation, AI governance retainers and Aegis Guard enterprise access. Fixed fees. Dublin.">
+<meta property="og:url" content="https://adesanyaaiadvisory.com/work-with-me.html">
+<meta property="og:image" content="https://adesanyaaiadvisory.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20260820074103">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{font-family:var(--sans);background:var(--night-ink);color:var(--paper);font-size:1.0625rem;line-height:1.7;-webkit-font-smoothing:antialiased}
+::selection{background:rgba(233,184,114,.25)}
+a{color:var(--lamp);text-decoration:none}
+img,svg{display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+section{scroll-margin-top:80px}
+
+h1,h2,h3{font-family:var(--serif);font-weight:300;color:var(--paper)}
+h1{font-size:clamp(2.2rem,5.5vw,3.75rem);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.2;letter-spacing:-.01em}
+h3{font-size:1.15rem;font-weight:600;font-family:var(--sans)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);display:flex;align-items:center;gap:12px}
+.eyebrow::after{content:"";width:0;height:1px;background:var(--brass);transition:width .6s var(--ease) .2s}
+.in .eyebrow::after,.eyebrow.in::after{width:24px}
+.lede{color:var(--mist);max-width:62ch}
+
+.glint{position:relative;color:var(--paper)}
+.glint::after{content:"";position:absolute;left:0;bottom:-3px;height:1px;width:100%;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .28s var(--ease), background .2s var(--ease) .28s}
+.glint:hover::after{transform:scaleX(1);background:var(--lamp-core)}
+
+.btn{display:inline-block;font-size:.9375rem;font-weight:600;padding:14px 30px;border-radius:6px;transition:transform .2s var(--ease), box-shadow .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease)}
+.btn-lamp{background:var(--lamp);color:#231905}
+.btn-lamp:hover{background:var(--lamp-core);transform:translateY(-1px);box-shadow:0 0 0 1px rgba(233,184,114,.35),0 8px 28px rgba(233,184,114,.18)}
+.btn-ghost{border:1px solid var(--brass);color:var(--lamp)}
+.btn-ghost:hover{border-color:var(--lamp);transform:translateY(-1px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--lamp);outline-offset:3px}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;height:64px;z-index:40;background:rgba(10,16,32,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--hairline)}
+.nav .wrap{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.wordmark{font-family:var(--mono);font-size:.8125rem;letter-spacing:.18em;color:var(--paper);white-space:nowrap}
+.wordmark sup{color:var(--brass);font-size:.55em}
+.navlinks{display:flex;align-items:center;gap:30px}
+.navlinks a.nl{font-family:var(--mono);font-size:.71rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);transition:color .2s var(--ease)}
+.navlinks a.nl:hover,.navlinks a.nl.active{color:var(--lamp)}
+.watch{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;color:var(--lamp);border:1px solid var(--hairline);border-radius:30px;padding:7px 14px}
+.watch:hover{border-color:var(--brass)}
+.watch .dot{width:7px;height:7px;border-radius:50%;background:var(--lamp);flex:none}
+.burger{display:none;background:none;border:1px solid var(--hairline);border-radius:6px;color:var(--paper);font-size:1.1rem;padding:6px 12px;cursor:pointer}
+@media(max-width:880px){
+  .burger{display:block}
+  .navlinks{position:absolute;top:64px;left:0;right:0;background:var(--chamber);border-bottom:1px solid var(--hairline);flex-direction:column;align-items:flex-start;gap:0;padding:10px 28px 22px;display:none}
+  .navlinks.open{display:flex}
+  .navlinks a.nl{padding:14px 0;width:100%;border-bottom:1px solid rgba(168,124,63,.12)}
+  .navlinks .watch{margin-top:16px}
+}
+
+/* PAGE HERO */
+.page-hero{padding:clamp(120px,18vh,180px) 0 clamp(60px,8vh,100px);border-bottom:1px solid var(--hairline)}
+.page-hero .eyebrow{margin-bottom:20px}
+.page-hero h1{margin-bottom:20px}
+.page-hero .lede{font-size:1.1rem;margin-bottom:32px}
+.hero-note{font-family:var(--mono);font-size:.8rem;color:var(--brass);letter-spacing:.08em;border-top:1px solid var(--hairline);padding-top:20px;margin-top:8px;max-width:60ch}
+
+/* PROCESS STRIP */
+.process-strip{padding:clamp(40px,6vh,72px) 0;border-bottom:1px solid var(--hairline);background:var(--chamber)}
+.process-strip .wrap{display:flex;gap:0;align-items:stretch}
+.process-step{flex:1;padding:0 28px;border-right:1px solid var(--hairline);display:flex;flex-direction:column;gap:8px}
+.process-step:first-child{padding-left:0}
+.process-step:last-child{border-right:none;padding-right:0}
+.process-step .num{font-family:var(--mono);font-size:.7rem;color:var(--brass);letter-spacing:.14em}
+.process-step h3{font-size:1rem;font-weight:600;color:var(--paper)}
+.process-step p{font-size:.875rem;color:var(--mist);line-height:1.5}
+@media(max-width:700px){.process-strip .wrap{flex-direction:column;gap:28px}.process-step{border-right:none;padding:0 0 28px;border-bottom:1px solid var(--hairline)}.process-step:last-child{border-bottom:none;padding-bottom:0}}
+
+/* SERVICES */
+.services{padding:clamp(80px,12vh,140px) 0}
+.services-header{margin-bottom:clamp(48px,7vh,80px)}
+.service-grid{display:grid;gap:2px}
+/* These are <div>s — they describe a service, they do not link anywhere. The
+   hover border-change they used to carry was an affordance that implied a
+   click and had nothing behind it, so it is gone. A left accent rule reads as
+   a reference panel instead, and distinguishes them at rest from index's
+   .eng-card set, which are anchors and do lift. */
+.service-card{background:var(--chamber);border:1px solid var(--hairline);border-left:2px solid var(--brass);border-radius:14px;padding:clamp(32px,4vw,52px);display:grid;grid-template-columns:1fr 320px;gap:clamp(32px,5vw,72px);align-items:start;margin-bottom:2px}
+.service-card.featured{background:linear-gradient(135deg,var(--glass-blue) 0%,var(--chamber) 100%);border-color:rgba(168,124,63,.5);border-left-color:var(--lamp)}
+@media(max-width:840px){.service-card{grid-template-columns:1fr}}
+.service-num{font-family:var(--mono);font-size:.7rem;color:var(--brass);letter-spacing:.14em;margin-bottom:12px}
+.service-card h2{font-size:clamp(1.4rem,2.5vw,1.9rem);margin-bottom:14px}
+.service-card .lede{font-size:.975rem;margin-bottom:24px}
+.service-includes{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;margin-bottom:28px}
+.service-includes li{font-size:.9rem;color:var(--mist);display:flex;align-items:flex-start;gap:10px;line-height:1.5}
+.service-includes li::before{content:"→";color:var(--brass);flex-shrink:0;margin-top:1px}
+.service-right{display:flex;flex-direction:column;gap:20px}
+.service-meta{background:rgba(10,16,32,.5);border:1px solid var(--hairline);border-radius:10px;padding:24px}
+.service-meta-row{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(168,124,63,.12);font-size:.875rem}
+.service-meta-row:last-child{border-bottom:none;padding-bottom:0}
+.service-meta-row .label{color:var(--mist);font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.service-meta-row .val{color:var(--paper);font-weight:600;text-align:right}
+/* The row is flex; without min-width:0 its label and value together hold it
+   at their combined min-content, which is wider than a 320px screen's
+   content box. Wrapping lets the pair stack when there is no room. */
+.service-meta-row{flex-wrap:wrap;gap:4px 12px}
+.service-meta-row .label,.service-meta-row .val{min-width:0}
+.service-cta{display:flex;flex-direction:column;gap:10px}
+.service-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--lamp);border:1px solid var(--hairline);border-radius:20px;padding:5px 12px;width:fit-content}
+.service-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--lamp);flex-shrink:0}
+
+/* AEGIS CARD */
+/* The `border` shorthand here resets border-left, and this rule is declared
+   after .service-card at equal specificity — so the fourth card silently
+   dropped the family's left accent. Restate it. Its own distinction is the
+   gradient; .featured stays the only card that leads. */
+.aegis-card{background:linear-gradient(135deg,#0d1f3c 0%,#0A1020 100%);border:1px solid rgba(233,184,114,.3);border-left:2px solid var(--brass)}
+.aegis-glow{position:relative;overflow:hidden}
+.aegis-glow::before{content:"";position:absolute;top:-60px;right:-40px;width:260px;height:260px;background:radial-gradient(circle,rgba(233,184,114,.08) 0%,transparent 70%);pointer-events:none;border-radius:50%}
+
+/* COMPARISON TABLE */
+.compare-wrap{padding:clamp(60px,10vh,100px) 0;border-top:1px solid var(--hairline)}
+.compare-title{margin-bottom:40px}
+.compare-table{width:100%;border-collapse:collapse;font-size:.9rem}
+.compare-table th{text-align:left;padding:12px 16px;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);border-bottom:1px solid var(--hairline);font-weight:400}
+.compare-table td{padding:14px 16px;border-bottom:1px solid rgba(168,124,63,.1);color:var(--mist);vertical-align:top}
+.compare-table td:first-child{color:var(--paper);font-weight:500}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table .tick{color:var(--success)}
+.compare-table .cross{color:rgba(168,124,63,.4)}
+@media(max-width:700px){.compare-table th:nth-child(3),.compare-table td:nth-child(3),.compare-table th:nth-child(4),.compare-table td:nth-child(4){display:none}}
+
+/* CONTACT STRIP */
+.cta-strip{background:var(--chamber);border-top:1px solid var(--hairline);padding:clamp(60px,10vh,100px) 0}
+.cta-strip-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.cta-strip h2{margin-bottom:10px;max-width:20ch}
+.cta-strip .lede{font-size:.975rem}
+/* flex-shrink:0 held this row at its two-button content width (397px on a
+   356px viewport), so the flex-wrap beside it could never engage and the
+   whole page scrolled sideways. Letting it shrink lets the wrap work. */
+.cta-btns{display:flex;gap:14px;flex-wrap:wrap;min-width:0}
+
+/* FOOTER */
+footer{border-top:1px solid var(--hairline);padding:28px 0}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;color:var(--mist);letter-spacing:.06em}
+.legal{display:flex;gap:20px}
+.legal a{color:var(--mist)}
+.legal a:hover{color:var(--lamp)}
+
+/* form */
+.fld{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+.fld label{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
+.fld input,.fld select,.fld textarea{background:rgba(255,255,255,.05);border:1px solid var(--hairline);border-radius:6px;padding:12px 14px;color:var(--paper);font-size:.975rem;font-family:var(--sans);transition:border-color .2s var(--ease)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--brass)}
+.fld textarea{resize:vertical;min-height:100px}
+.fld select option{background:var(--chamber)}
+.hp{position:absolute;left:-9999px}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LegalService",
+ "name": "Adesanya AI Advisory",
+ "url": "https://adesanyaaiadvisory.com/work-with-me.html",
+ "description": "EU AI Act compliance audits, ISO/IEC 42001 implementation, AI governance retainers and Aegis Guard enterprise access. Fixed-fee engagements. Dublin, Ireland.",
+ "areaServed": ["Ireland", "European Union"],
+ "founder": {
+  "@type": "Person",
+  "name": "Abdulwahab B. Adesanya",
+  "jobTitle": "Founder, Adesanya AI Advisory · EU AI Act Compliance Counsel",
+  "url": "https://adesanyaaiadvisory.com/",
+  "sameAs": ["https://www.linkedin.com/in/abdulwahab-adesanya"]
+ }
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="/" aria-label="Adesanya AI Advisory — home"><img src="assets/adesanya-mark.svg" alt="" width="26" height="28"><span class="wordmark">ADESANYA AI ADVISORY<sup>™</sup></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="navlinks" id="navlinks" aria-label="Site">
+      <a class="nl" href="/#practice">Practice</a>
+      <a class="nl" href="/#engagements">Engagements</a>
+      <a class="nl" href="/#insights">Insights</a>
+      <a class="nl" href="/#radar">Radar</a>
+      <a class="nl active" href="/work-with-me.html">Work with me</a>
+      <a class="nl" href="/#contact">Contact</a>
+      <a class="watch" href="/#radar" aria-label="Live AI Law Radar"><span class="dot"></span>LIVE<span style="margin-left:5px;">&nbsp;· RADAR</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="rv in">
+      <span class="eyebrow in">Work with me</span>
+      <h1>Governance that holds.<br>Starting with yours.</h1>
+      <p class="lede">Four focused engagement types. Every one begins with a written letter, a defined scope and a fixed or capped fee. No ambiguity, no open meters.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS STRIP -->
+<div class="process-strip">
+  <div class="wrap">
+    <div class="process-step rv">
+      <span class="num">01</span>
+      <h3>Written enquiry</h3>
+      <p>Complete the intake form in writing. We respond within one business day before anything else happens.</p>
+    </div>
+    <div class="process-step rv">
+      <span class="num">02</span>
+      <h3>Scope &amp; fee</h3>
+      <p>A written engagement letter with a fixed or capped fee. Signed before work begins.</p>
+    </div>
+    <div class="process-step rv">
+      <span class="num">03</span>
+      <h3>The work</h3>
+      <p>Focused delivery. Clear checkpoints. No surprises.</p>
+    </div>
+    <div class="process-step rv">
+      <span class="num">04</span>
+      <h3>Handover</h3>
+      <p>Written deliverables your legal, risk and technical teams can act on immediately.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="services-header rv">
+      <span class="eyebrow">Engagements</span>
+      <h2 style="margin-top:16px;">Four ways to work together.</h2>
+    </div>
+
+    <!-- 01 EU AI Act Compliance Audit -->
+    <div class="service-card rv">
+      <div>
+        <div class="service-num">01</div>
+        <h2>EU AI Act<br>Compliance Audit</h2>
+        <p class="lede">A structured review of your AI systems against the EU AI Act risk tier framework — Prohibited, High-Risk, Transparency, and Minimal. Delivered as a written gap analysis with a prioritised remediation roadmap.</p>
+        <ul class="service-includes">
+          <li>Full AI inventory review and risk classification across all four tiers</li>
+          <li>Gap analysis against Articles 5, 9–17, and 50 obligations</li>
+          <li>Conformity assessment readiness check for High-Risk systems</li>
+          <li>Fundamental rights impact assessment framework</li>
+          <li>Written report with prioritised remediation plan and ownership matrix</li>
+          <li>One follow-up call to brief your legal, risk and technical leads</li>
+        </ul>
+        <p style="font-size:.875rem;color:var(--mist);">Suited for: General Counsels, CISOs, and AI leads preparing for enforcement or board-level AI governance reviews.</p>
+      </div>
+      <div class="service-right">
+        <div class="service-meta">
+          <div class="service-meta-row"><span class="label">Format</span><span class="val">Fixed fee</span></div>
+          <div class="service-meta-row"><span class="label">Timeline</span><span class="val">3–4 weeks</span></div>
+          <div class="service-meta-row"><span class="label">Deliverable</span><span class="val">Written report + call</span></div>
+          <div class="service-meta-row"><span class="label">Scope</span><span class="val">Up to 10 AI systems</span></div>
+        </div>
+        <div class="service-cta">
+          <a class="btn btn-lamp" href="/#contact">Enquire about this →</a>
+          <a class="btn btn-ghost" href="/eu_ai_act_compliance_checklist.pdf" download>Download free checklist</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 ISO 42001 Implementation -->
+    <div class="service-card rv">
+      <div>
+        <div class="service-num">02</div>
+        <h2>ISO 42001<br>Implementation</h2>
+        <p class="lede">End-to-end support for establishing an AI Management System (AIMS) aligned to ISO/IEC 42001:2023. From gap analysis to documented policies, Annex A controls, and readiness for certification audit.</p>
+        <ul class="service-includes">
+          <li>ISO 42001 gap analysis against your current AI governance posture</li>
+          <li>AI governance policy drafting (Clause 5.2 compliant)</li>
+          <li>Annex A control mapping and implementation guide</li>
+          <li>AI risk register template and AI inventory documentation</li>
+          <li>Roles, responsibilities and accountability framework</li>
+          <li>Internal audit checklist and certification readiness review</li>
+        </ul>
+        <p style="font-size:.875rem;color:var(--mist);">Suited for: Organisations seeking third-party certification or demonstrating AI governance maturity to enterprise clients and regulators.</p>
+      </div>
+      <div class="service-right">
+        <div class="service-meta">
+          <div class="service-meta-row"><span class="label">Format</span><span class="val">Fixed fee</span></div>
+          <div class="service-meta-row"><span class="label">Timeline</span><span class="val">6–10 weeks</span></div>
+          <div class="service-meta-row"><span class="label">Deliverable</span><span class="val">Full AIMS documentation suite</span></div>
+          <div class="service-meta-row"><span class="label">Includes</span><span class="val">Certification readiness review</span></div>
+        </div>
+        <div class="service-cta">
+          <a class="btn btn-lamp" href="/#contact">Enquire about this →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 AI Governance Retainer -->
+    <div class="service-card featured rv">
+      <div>
+        <div class="service-num">03</div>
+        <div class="service-badge" style="margin-bottom:14px;"><span class="dot"></span>Start here</div>
+        <h2>AI Governance<br>Retainer</h2>
+        <p class="lede">Ongoing compliance advisory for organisations building or deploying AI systems at scale. Monthly access to expert guidance across regulatory developments, contract reviews, incident response, and governance questions as they arise.</p>
+        <ul class="service-includes">
+          <li>Monthly retained hours for governance and regulatory queries</li>
+          <li>Real-time regulatory monitoring — EU AI Act, GDPR, emerging guidance</li>
+          <li>AI contract and vendor assessment reviews on demand</li>
+          <li>Incident response support for AI-related issues</li>
+          <li>Monthly briefing note on material regulatory developments</li>
+          <li>Priority access — responses within one business day</li>
+        </ul>
+        <p style="font-size:.875rem;color:var(--mist);">Suited for: In-house legal and compliance teams that need a specialist on call without the cost of a full-time hire.</p>
+      </div>
+      <div class="service-right">
+        <div class="service-meta">
+          <div class="service-meta-row"><span class="label">Format</span><span class="val">Monthly retainer</span></div>
+          <div class="service-meta-row"><span class="label">Commitment</span><span class="val">3-month minimum</span></div>
+          <div class="service-meta-row"><span class="label">Rollover</span><span class="val">Unused hours roll over</span></div>
+          <div class="service-meta-row"><span class="label">Notice</span><span class="val">30 days to exit</span></div>
+        </div>
+        <div class="service-cta">
+          <a class="btn btn-lamp" href="/#contact">Enquire about this →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Aegis Guard Enterprise -->
+    <div class="service-card aegis-card aegis-glow rv">
+      <div>
+        <div class="service-num">04</div>
+        <div class="service-badge" style="margin-bottom:14px;border-color:rgba(233,184,114,.3);"><span class="dot" style="background:var(--lamp);animation:pulse 2s ease-out infinite;"></span>Early access</div>
+        <h2>Aegis Guard Gateway™<br><span style="font-size:.75em;opacity:.7;">Enterprise Early Access</span></h2>
+        <p class="lede">Aegis Guard is an enterprise-grade MCP (Model Context Protocol) gateway that sits between your LLM clients and internal systems. It enforces EU AI Act risk-tier rules and ISO 42001 controls in real time — every request, every response, logged and auditable.</p>
+        <ul class="service-includes">
+          <li>Real-time JSON-RPC payload interception and risk classification</li>
+          <li>EU AI Act tier enforcement — blocks Prohibited, flags High-Risk automatically</li>
+          <li>ISO 42001 Annex A control mapping baked into the gateway layer</li>
+          <li>HMAC-SHA256 tamper-evident audit logging for regulatory defence</li>
+          <li>PII detection and GDPR-compliant payload hashing</li>
+          <li>Dedicated onboarding and implementation support</li>
+        </ul>
+        <p style="font-size:.875rem;color:var(--mist);">Suited for: Enterprise teams deploying LLM-based tools who need compliance guardrails without slowing down their AI roadmap.</p>
+      </div>
+      <div class="service-right">
+        <div class="service-meta">
+          <div class="service-meta-row"><span class="label">Status</span><span class="val" style="color:var(--lamp);">Early access</span></div>
+          <div class="service-meta-row"><span class="label">Pricing</span><span class="val">Custom — contact us</span></div>
+          <div class="service-meta-row"><span class="label">Deployment</span><span class="val">On-premise or cloud</span></div>
+          <div class="service-meta-row"><span class="label">SLA</span><span class="val">Available on request</span></div>
+        </div>
+        <div class="service-cta">
+          <a class="btn btn-lamp" href="https://gateway.adesanyaaiadvisory.com" target="_blank" rel="noopener">Learn more →</a>
+          <a class="btn btn-ghost" href="/#contact">Request early access</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<div class="compare-wrap">
+  <div class="wrap">
+    <div class="compare-title rv">
+      <span class="eyebrow">At a glance</span>
+      <h2 style="margin-top:14px;">Which engagement is right for you?</h2>
+    </div>
+    <div style="overflow-x:auto;" class="rv">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>You need to…</th>
+          <th>EU AI Act Audit</th>
+          <th>ISO 42001</th>
+          <th>Retainer</th>
+          <th>Aegis Guard</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Understand your EU AI Act obligations fast</td>
+          <td class="tick">✓ Primary</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="cross">—</td>
+        </tr>
+        <tr>
+          <td>Achieve ISO 42001 certification readiness</td>
+          <td class="cross">—</td>
+          <td class="tick">✓ Primary</td>
+          <td class="tick">✓</td>
+          <td class="cross">—</td>
+        </tr>
+        <tr>
+          <td>Ongoing compliance guidance as regulations evolve</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="tick">✓ Primary</td>
+          <td class="cross">—</td>
+        </tr>
+        <tr>
+          <td>Enforce compliance at the infrastructure layer</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="tick">✓ Primary</td>
+        </tr>
+        <tr>
+          <td>Contract and vendor AI clause review</td>
+          <td class="tick">✓</td>
+          <td class="cross">—</td>
+          <td class="tick">✓ Included</td>
+          <td class="cross">—</td>
+        </tr>
+        <tr>
+          <td>Board-level AI governance documentation</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓ Primary</td>
+          <td class="tick">✓</td>
+          <td class="cross">—</td>
+        </tr>
+        <tr>
+          <td>Real-time audit trail for regulators</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="tick">✓ Primary</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="wrap">
+    <div class="cta-strip-inner rv">
+      <div>
+        <h2>Not sure where to start?</h2>
+        <p class="lede">Write a line. Describe what is on your desk. I will tell you which engagement fits and what it would take to begin.</p>
+      </div>
+      <div class="cta-btns">
+        <a class="btn btn-lamp" href="/intake">Begin in writing →</a>
+        <a class="btn btn-ghost" href="/eu_ai_act_compliance_checklist.pdf" download>Free checklist first</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ftl">
+<style>
+.ftl{background:#0B0F1A;border-top:1px solid rgba(168,124,63,.25);padding:34px 28px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:.74rem;color:#93A3BD;line-height:1.7}
+.ftl-wrap{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ftl a{color:#93A3BD;text-decoration:none;transition:color .25s var(--ease)}
+.ftl a:hover{color:#F7DCA8}
+.ftl-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.ftl-clock{color:#E9B872;letter-spacing:.05em;white-space:nowrap}
+.ftl-clock b{color:#F7DCA8;font-weight:500}
+.ftl-extra{max-width:1180px;margin:10px auto 0;color:rgba(147,163,189,.7);font-size:.68rem;letter-spacing:.04em}
+@media(max-width:680px){.ftl-wrap{flex-direction:column;text-align:center}}
+</style>
+<div class="ftl-wrap">
+  <span>&copy; <span id="yr"></span> Adesanya AI Advisory&trade; &mdash; Abdulwahab B. Adesanya &mdash; Dublin, Ireland</span>
+  <span class="ftl-links">
+    <a href="https://www.linkedin.com/in/abdulwahab-adesanya" target="_blank" rel="noopener" aria-label="Abdulwahab Adesanya on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;fill:currentColor;vertical-align:-2px;margin-right:6px"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
+    <a href="intake.html">Begin in writing</a>
+    <a href="/privacy-policy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </span>
+  <span class="ftl-clock" id="ftl-clock">&mdash;</span>
+</div>
+
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y&&!y.textContent) y.textContent=new Date().getFullYear();
+  var c=document.getElementById('ftl-clock');
+  function t(){ if(!c)return;
+    var n=new Date();
+    c.innerHTML='Dublin · <b>'+n.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'Europe/Dublin'})+' · '+n.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Europe/Dublin'})+'</b>';
+  }
+  t(); setInterval(t,30000);
+})();
+</script>
+</footer>
+
+<style>
+@keyframes pulse{0%{transform:scale(.4);opacity:.8}60%{transform:scale(2);opacity:0}100%{opacity:0}}
+</style>
+
+<script>
+(function(){
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* mobile nav is handled by assets/site.js — one implementation, site-wide */
+
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');}});
+},{threshold:0.12});
+document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+})();
+</script>
+<script src="assets/site.js?v=20260820074103"></script>
+</body>
+</html>

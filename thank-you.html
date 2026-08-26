@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you — Adesanya AI Advisory</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20260820074103">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--night-ink);color:var(--paper);line-height:1.6;min-height:100vh;padding:48px 24px}
+  .card{max-width:620px;margin:0 auto;text-align:center}
+  .tick{width:64px;height:64px;border-radius:50%;border:2px solid var(--brass);color:var(--lamp);display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 22px}
+  h1{font-family:var(--serif);font-weight:300;font-size:2.2rem;letter-spacing:-.01em;margin-bottom:12px}
+  .lead{color:var(--mist);margin-bottom:40px;font-size:1.05rem}
+  .divider{border:none;border-top:1px solid var(--hairline);margin:0 auto 40px;max-width:320px}
+  .calendar-section{text-align:left;background:var(--chamber);border:1px solid var(--hairline);border-radius:14px;padding:32px;margin-bottom:36px}
+  .calendar-section h2{font-family:var(--serif);font-size:1.25rem;color:var(--paper);margin-bottom:10px}
+  .calendar-section p{color:var(--mist);font-size:0.95rem;margin-bottom:24px}
+  #code-rain{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.10;z-index:0}
+  .card{position:relative;z-index:1}
+  .back-link{font-family:var(--mono);display:inline-block;color:var(--mist);text-decoration:none;font-size:0.85rem;margin-top:8px}
+  .back-link:hover{color:var(--paper)}
+</style>
+</head>
+<body class="has-nav">
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="index.html" aria-label="Adesanya AI Advisory — home"><img src="assets/adesanya-mark.svg" alt="" width="26" height="28"><span class="wordmark">ADESANYA AI ADVISORY<sup>&#8482;</sup></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <nav class="navlinks" id="navlinks" aria-label="Site">
+      <a class="nl" href="services.html">Services</a>
+      <a class="nl" href="legislation.html">Legislation</a>
+      <a class="nl" href="knowledge-base.html">Knowledge base</a>
+      <a class="nl" href="nigeria.html">Nigeria–EU</a>
+      <a class="nl" href="https://gateway.adesanyaaiadvisory.com" target="_blank" rel="noopener">Aegis Guard</a>
+      <a class="nl" href="work-with-me.html">Work with me</a>
+      <a class="nl" href="index.html#contact">Contact</a>
+      <a class="watch" href="index.html#radar" aria-label="Live AI Law Radar, updated weekly"><span class="dot"></span>LIVE<span class="full">&nbsp;&#183; RADAR &#183; WEEKLY</span></a>
+    </nav>
+  </div>
+</header>
+  <canvas id="code-rain" aria-hidden="true"></canvas>
+  <div class="card">
+    <div class="tick">✓</div>
+    <h1>Your enquiry is in.</h1>
+    <p class="lead">We have received what you've shared and will respond in writing — usually within one business day.</p>
+
+    <hr class="divider">
+
+    <div class="calendar-section">
+      <h2>What happens next</h2>
+      <p>Your enquiry will be reviewed and answered in writing at the email address you provided. If a call would help, we will propose one in writing once we have read what you've sent.</p>
+    </div>
+
+    <a class="back-link" href="index.html">← Back to the site</a>
+  </div>
+
+<!-- Code rain — hero band -->
+<script>
+(function(){
+  var rain=document.getElementById('code-rain');
+  if(!rain) return;
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rc=rain.getContext('2d');
+  var CHARS='Art.5Art.6Art.9GDPR§©{}[]();=>!=<>01AI&|~+-/*Regulation2024/1689';
+  var arr=CHARS.split(''), COL_W=18, cols, drops, speeds, opacs;
+  var DPR=Math.min(window.devicePixelRatio||1,2);
+  function size(){
+    var w=rain.parentElement.offsetWidth, h=rain.parentElement.offsetHeight;
+    rain.width=w*DPR; rain.height=h*DPR; rain.style.width=w+'px'; rain.style.height=h+'px';
+    rc.setTransform(DPR,0,0,DPR,0,0);
+    cols=Math.floor(w/COL_W); drops=[]; speeds=[]; opacs=[];
+    for(var i=0;i<cols;i++){ drops[i]=Math.random()*-(h/16); speeds[i]=0.3+Math.random()*0.5; opacs[i]=0.25+Math.random()*0.75; }
+  }
+  var lastT=0, visible=true, pending=false;
+  function draw(ts){
+    if(reduced||!visible){ pending=false; return; }
+    if(ts-lastT<33){ requestAnimationFrame(draw); return; }
+    lastT=ts;
+    var w=rain.parentElement.offsetWidth, h=rain.parentElement.offsetHeight;
+    rc.fillStyle='rgba(10,16,32,0.20)'; rc.fillRect(0,0,w,h);
+    rc.font='600 13px "JetBrains Mono",monospace';
+    for(var i=0;i<cols;i++){
+      var ch=arr[Math.floor(Math.random()*arr.length)];
+      var x=i*COL_W, y=drops[i]*16;
+      rc.fillStyle='rgba(233,184,114,'+opacs[i]+')';
+      rc.fillText(ch,x,y);
+      if(y>h && Math.random()>0.975) drops[i]=0;
+      drops[i]+=speeds[i];
+    }
+    requestAnimationFrame(draw);
+  }
+  size();
+  window.addEventListener('load',size);
+  if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(size); }
+  window.addEventListener('resize',function(){ clearTimeout(window.__crrsz); window.__crrsz=setTimeout(size,150); });
+  if(reduced){ rc.fillStyle='rgba(10,16,32,1)'; rc.fillRect(0,0,rain.width,rain.height); }
+  else {
+    function ensure(){ if(!pending){ pending=true; requestAnimationFrame(draw); } }
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(en){ visible=en[0].isIntersecting; if(visible) ensure(); },{threshold:0});
+      io.observe(rain.parentElement);
+    }
+    ensure();
+  }
+})();
+</script>
+<script src="assets/site.js?v=20260820074103"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   Adesanya AI Advisory — site design system
+   One stylesheet. Every page links this; no page defines its own :root.
+
+   Before this file existed, all 40+ pages carried a private hand-copied
+   copy of the tokens, which had drifted into four incompatible palettes
+   — two of them the same intent at slightly different hex values, which
+   is the tell that they were copied rather than shared. The canonical
+   palette is the "lamp" one from index.html, which is the approved brand.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root{
+  /* ── Ground ─────────────────────────────────────────────────────────── */
+  /* One tone below the ground, for insets and wells that need to sit *under*
+     the page rather than on it. aegis-guard.html had been carrying this as a
+     private token; it is a real gap in the ladder, not a page quirk. */
+  --ink-deep:#080E1C;
+  --night-ink:#0A1020;
+  --chamber:#101A2E;
+  --glass-blue:#1A2B47;
+  --horizon:#33507C;
+  --walnut:#3B2A1C;
+  --walnut-deep:#241A12;
+
+  /* ── Accent. Brass is the dim/structural gold, lamp the bright one ──── */
+  --brass:#A87C3F;
+  --brass-bright:#C49455;
+  --lamp:#E9B872;
+  --lamp-core:#F7DCA8;
+  --city-light:#F2C36B;
+
+  /* ── Text ───────────────────────────────────────────────────────────── */
+  --paper:#EFE8DA;
+  --mist:#93A3BD;
+
+  /* ── Lines and status ───────────────────────────────────────────────── */
+  --hairline:rgba(168,124,63,.28);
+  --success:#7FAE8B;
+
+  /* ── Type ───────────────────────────────────────────────────────────── */
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace;
+
+  /* ── Layout ─────────────────────────────────────────────────────────── */
+  --max:1180px;
+  --radius:8px;
+
+  /* One considered timing curve rather than the browser-default `ease`
+     keyword the site had been using in 13 places on index alone. A
+     decelerating curve — fast start, soft settle — reads as more
+     deliberate. Deliberately the same everywhere, not tuned per element,
+     so every interaction on the site feels like one system. Matches the
+     gateway page, which already runs this curve. */
+  --ease:cubic-bezier(0.16,1,0.3,1);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   BASE
+   ═══════════════════════════════════════════════════════════════════════ */
+*{box-sizing:border-box;margin:0;padding:0}
+/* scroll-padding-top keeps an anchored heading clear of the 64px fixed bar,
+   for the cases where the browser does handle the fragment itself. */
+html{scroll-padding-top:76px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  font-family:var(--sans);
+  background:var(--night-ink);
+  color:var(--paper);
+  font-size:1.0625rem;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:rgba(233,184,114,.25)}
+a{color:var(--lamp);text-decoration:none}
+img,svg{display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+section{scroll-margin-top:80px}
+
+/* ── Type ─────────────────────────────────────────────────────────────── */
+h1,h2,h3{font-family:var(--serif);font-weight:300;color:var(--paper)}
+h1{font-size:clamp(2.5rem,6.5vw,4.75rem);line-height:1.08;letter-spacing:-.02em}
+h2{font-size:clamp(1.75rem,3.5vw,2.75rem);line-height:1.15;letter-spacing:-.01em}
+h3{font-size:1.25rem;font-weight:600}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.lede{color:var(--mist);max-width:62ch}
+
+/* Section eyebrow. The rule marker grows in when the section reveals —
+   the same device the gateway page uses for every section label, so the
+   two properties read as one family. */
+.eyebrow{
+  font-family:var(--mono);font-size:.75rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--brass);
+  display:flex;align-items:center;gap:12px;
+}
+.eyebrow::after{content:"";width:0;height:1px;background:var(--brass);transition:width .6s var(--ease) .2s}
+.in .eyebrow::after,.eyebrow.in::after{width:24px}
+
+/* ── Text-link glint ──────────────────────────────────────────────────── */
+.glint{position:relative;color:var(--paper)}
+.glint::after{
+  content:"";position:absolute;left:0;bottom:-3px;height:1px;width:100%;
+  background:var(--brass);transform:scaleX(0);transform-origin:left;
+  transition:transform .28s var(--ease),background .2s var(--ease) .28s;
+}
+.glint:hover::after{transform:scaleX(1);background:var(--lamp-core)}
+
+/* ── Buttons ──────────────────────────────────────────────────────────── */
+.btn{
+  display:inline-block;font-size:.9375rem;font-weight:600;
+  padding:14px 30px;border-radius:6px;
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease),
+             background .2s var(--ease),border-color .2s var(--ease);
+}
+.btn-lamp{background:var(--lamp);color:#231905}
+.btn-lamp:hover{background:var(--lamp-core);transform:translateY(-1px);box-shadow:0 0 0 1px rgba(233,184,114,.35),0 8px 28px rgba(233,184,114,.18)}
+.btn-ghost{border:1px solid var(--brass);color:var(--lamp)}
+.btn-ghost:hover{border-color:var(--lamp);transform:translateY(-1px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--lamp);outline-offset:3px}
+
+/* ── Scroll reveal ────────────────────────────────────────────────────── */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   NAV — the fixed bar, burger, and mobile drawer. Lifted out of
+   index.html so the 11 pages that had no nav at all can carry the same
+   one instead of each growing its own.
+   ═══════════════════════════════════════════════════════════════════════ */
+.nav{
+  /* The bar is always the dark surface, including on a light page. Declaring
+     the text tokens locally means a page that re-points --paper/--mist for a
+     light ground (checklist-thank-you.html does) cannot wash the nav out. */
+  --paper:#EFE8DA;
+  --mist:#93A3BD;
+  --hairline:rgba(168,124,63,.28);
+  position:fixed;top:0;left:0;right:0;height:64px;z-index:40;
+  background:rgba(10,16,32,.85);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--hairline);
+}
+/* Wider than --max on purpose: the bar carries more than the reading
+   column does, and capping it at 1180px forced a wrap at desktop widths. */
+.nav .wrap{max-width:1400px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-brand{display:inline-flex;align-items:center;gap:10px;min-width:0}
+.nav-brand img{height:26px;width:auto;flex:none}
+.wordmark{font-family:var(--mono);font-size:.8125rem;letter-spacing:.18em;color:var(--paper);white-space:nowrap}
+.wordmark sup{color:var(--brass);font-size:.55em}
+.navlinks{display:flex;align-items:center;gap:20px}
+/* nowrap matters: without it each label wraps inside itself and the bar grows
+   to two rows rather than the row simply running out of width. */
+.navlinks a.nl{font-family:var(--mono);font-size:.71rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);white-space:nowrap;transition:color .2s var(--ease)}
+.navlinks a.nl:hover,.navlinks a.nl[aria-current="page"]{color:var(--lamp)}
+
+/* Live-radar pill. Collapsed to "LIVE" until hover — the qualifier is there for
+   anyone who wants it without spending nav width on it at every viewport. */
+.watch{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;color:var(--lamp);border:1px solid var(--hairline);border-radius:30px;padding:7px 14px;white-space:nowrap;flex:none;transition:border-color .2s var(--ease)}
+.watch:hover{border-color:var(--brass)}
+.watch .dot{width:7px;height:7px;border-radius:50%;background:var(--lamp);position:relative;flex:none}
+.watch .dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--lamp);opacity:0;animation:watch 4s ease-out infinite}
+@keyframes watch{0%{transform:scale(.4);opacity:.8}60%{transform:scale(1.5);opacity:0}100%{opacity:0}}
+.watch .full{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .4s var(--ease)}
+.watch:hover .full{max-width:180px}
+.burger{display:none;background:none;border:1px solid var(--hairline);border-radius:6px;color:var(--paper);font-size:1.1rem;padding:6px 12px;cursor:pointer}
+@media(max-width:1100px){
+  .burger{display:block}
+  .navlinks{
+    position:absolute;top:64px;left:0;right:0;background:var(--chamber);
+    border-bottom:1px solid var(--hairline);flex-direction:column;
+    align-items:flex-start;gap:0;padding:10px 28px 22px;display:none;
+  }
+  .navlinks.open{display:flex}
+  .navlinks a.nl{padding:14px 0;width:100%;border-bottom:1px solid rgba(168,124,63,.12)}
+}
+/* Below 460px the wordmark text is the widest thing in the bar. Drop the
+   text and keep the shield — the same icon-only collapse the gateway nav
+   uses, and the reason the mark is in the markup at all: hiding the text
+   used to leave a burger floating with no brand beside it. */
+@media(max-width:460px){ .wordmark{display:none} }
+
+/* Pages that carry the fixed nav need the body cleared of it. */
+.has-nav{padding-top:64px}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   REDUCED MOTION
+   ═══════════════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  .eyebrow::after{width:24px}
+}

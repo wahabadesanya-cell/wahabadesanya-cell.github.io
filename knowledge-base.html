@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI &amp; Technology Law Knowledge Base — Adesanya AI Advisory</title>
+<meta name="description" content="A curated, interactive knowledge base on the EU AI Act, AI governance, AI contracting, data privacy and Responsible AI — primary sources curated by Adesanya AI Advisory.">
+<link rel="canonical" href="https://adesanyaaiadvisory.com/knowledge-base.html">
+<meta property="og:title" content="AI &amp; Technology Law Knowledge Base — Adesanya AI Advisory">
+<meta property="og:description" content="A curated, interactive knowledge base on the EU AI Act, AI governance, AI contracting, data privacy and Responsible AI — primary sources, searchable.">
+<meta property="og:image" content="https://adesanyaaiadvisory.com/og-image.png">
+<meta property="og:url" content="https://adesanyaaiadvisory.com/knowledge-base.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Adesanya AI Advisory">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI &amp; Technology Law Knowledge Base — Adesanya AI Advisory">
+<meta name="twitter:description" content="Curated primary sources on the EU AI Act, AI governance and data privacy — searchable.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20260820074103">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif;background:var(--night-ink);color:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--lamp)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--hairline);
+    background:radial-gradient(1200px 400px at 20% -10%,rgba(233,184,114,.14),transparent),
+               radial-gradient(900px 380px at 90% 0%,rgba(168,124,63,.16),transparent),var(--night-ink)}
+  .hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.16;z-index:0}
+  .hero .wrap{position:relative;z-index:2;padding:64px 22px 52px}
+  .badge{font-family:var(--mono);display:inline-flex;gap:8px;align-items:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lamp);border:1px solid var(--hairline);padding:6px 12px;border-radius:30px;background:rgba(233,184,114,.06)}
+  h1{font-family:var(--serif);font-weight:300;font-size:2.5rem;line-height:1.12;letter-spacing:-.02em;margin:18px 0 14px;max-width:20ch}
+  h1 .grad{background:linear-gradient(90deg,var(--lamp),var(--brass));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero p{color:var(--mist);max-width:62ch;font-size:1.06rem}
+  .stats{display:flex;gap:30px;margin-top:28px;flex-wrap:wrap}
+  .stats .s b{font-size:1.5rem;color:var(--paper)} .stats .s span{display:block;font-size:.78rem;color:var(--mist)}
+
+  /* controls */
+  .controls{position:sticky;top:0;z-index:20;background:rgba(10,16,32,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--hairline);padding:14px 0}
+  .controls .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .search{flex:1;min-width:220px;display:flex;align-items:center;gap:8px;background:var(--chamber);border:1px solid var(--hairline);border-radius:10px;padding:10px 14px}
+  .search input{flex:1;background:none;border:none;outline:none;color:var(--paper);font-size:.95rem}
+  .search svg{flex:none;opacity:.6}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-size:.82rem;color:var(--mist);background:var(--chamber);border:1px solid var(--hairline);padding:8px 14px;border-radius:30px;cursor:pointer;transition:.15s;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+  .chip:hover{color:var(--paper);border-color:var(--lamp)}
+  .chip.active{color:#231905;background:var(--lamp);border-color:var(--lamp);font-weight:600}
+  .chip.active .chip-new{background:#231905;color:#E9B872}
+  .chip-new{font-size:.58rem;font-weight:800;letter-spacing:.1em;background:#E9B872;color:#080E1C;border-radius:20px;padding:1px 6px;line-height:1.6;text-transform:uppercase;animation:pulse-new 2s ease-in-out infinite}
+  @keyframes pulse-new{0%,100%{box-shadow:0 0 0 0 rgba(233,184,114,0.5)}50%{box-shadow:0 0 0 4px rgba(233,184,114,0)}}
+
+  /* layout */
+  main{padding:30px 0 70px}
+  .catlabel{display:flex;align-items:center;gap:12px;margin:26px 0 16px}
+  .catlabel h2{font-size:1.15rem;letter-spacing:-.01em}
+  .catlabel .dot{width:9px;height:9px;border-radius:50%;background:var(--lamp)}
+  .catlabel .ct{font-size:.78rem;color:var(--mist);background:var(--chamber);border:1px solid var(--hairline);border-radius:20px;padding:2px 10px}
+  .catlabel.recent-label .dot{background:#E9B872;box-shadow:0 0 8px rgba(233,184,114,0.6)}
+  .catlabel.recent-label h2{color:#E9B872}
+  .new-pill{font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:#E9B872;color:#080E1C;border-radius:20px;padding:2px 9px}
+  .new-badge{position:absolute;top:12px;right:12px;font-size:.6rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:#E9B872;color:#080E1C;border-radius:10px;padding:2px 8px;line-height:1.4}
+  .card{background:linear-gradient(180deg,var(--chamber),var(--glass-blue));border:1px solid var(--hairline);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;transition:.18s;position:relative}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
+  .card:hover{border-color:var(--lamp);transform:translateY(-2px)}
+  .card .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+  .card .type{font-size:.66rem;font-weight:700;letter-spacing:.08em;padding:3px 8px;border-radius:6px;text-transform:uppercase}
+  .type.pdf{background:rgba(240,100,100,.15);color:#ff9d9d} .type.doc{background:rgba(91,141,239,.18);color:#9db9ff}
+  .type.web{background:rgba(201,161,74,.18);color:#e8c77b} .type.std{background:rgba(120,200,150,.16);color:#8fe0b0}
+  .card h3{font-size:1.02rem;margin:10px 0 8px;line-height:1.3}
+  .card .note{font-size:.88rem;color:var(--mist);flex:1}
+  .card .tags{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
+  .card .tags span{font-size:.7rem;color:var(--lamp);background:rgba(233,184,114,.08);border:1px solid rgba(233,184,114,.2);padding:2px 8px;border-radius:20px}
+  .card .foot{display:flex;justify-content:space-between;align-items:center;margin-top:6px;border-top:1px solid var(--hairline);padding-top:12px}
+  .card .date{font-size:.72rem;color:var(--mist)}
+  .card .open{font-size:.82rem;font-weight:600;text-decoration:none}
+  .mynotes{margin-top:12px}
+  .mynotes label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mist);display:block;margin-bottom:5px}
+  .mynotes textarea{width:100%;min-height:54px;background:var(--chamber);border:1px dashed var(--hairline);border-radius:8px;color:var(--paper);font:inherit;font-size:.85rem;padding:8px;resize:vertical}
+  .mynotes textarea:focus{outline:none;border-color:var(--lamp);border-style:solid}
+  .saved{font-size:.68rem;color:var(--lamp);opacity:0;transition:.3s}
+  .saved.show{opacity:1}
+
+  .toolbar{display:flex;gap:10px;justify-content:flex-end;margin-bottom:6px}
+  .btn{font-size:.8rem;background:var(--chamber);border:1px solid var(--hairline);color:var(--paper);padding:8px 14px;border-radius:8px;cursor:pointer}
+  .btn:hover{border-color:var(--lamp)}
+  .empty{text-align:center;color:var(--mist);padding:50px 0}
+  footer{border-top:1px solid var(--hairline);padding:30px 0;color:var(--mist);font-size:.84rem}
+  @media(max-width:600px){h1{font-size:1.9rem}}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "AI & Technology Law Knowledge Base",
+ "url": "https://adesanyaaiadvisory.com/knowledge-base.html",
+ "description": "A curated, interactive knowledge base on the EU AI Act, AI governance, AI contracting, data privacy and Responsible AI — primary sources curated by Adesanya AI Advisory.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Adesanya AI Advisory",
+  "url": "https://adesanyaaiadvisory.com/",
+  "founder": {
+   "@type": "Person",
+   "name": "Abdulwahab B. Adesanya",
+   "jobTitle": "Founder, Adesanya AI Advisory · EU AI Act Compliance Counsel",
+   "url": "https://adesanyaaiadvisory.com/",
+   "sameAs": ["https://www.linkedin.com/in/abdulwahab-adesanya"]
+  }
+ }
+}
+</script>
+</head>
+<body class="has-nav">
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="index.html" aria-label="Adesanya AI Advisory — home"><img src="assets/adesanya-mark.svg" alt="" width="26" height="28"><span class="wordmark">ADESANYA AI ADVISORY<sup>&#8482;</sup></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <nav class="navlinks" id="navlinks" aria-label="Site">
+      <a class="nl" href="services.html">Services</a>
+      <a class="nl" href="legislation.html">Legislation</a>
+      <a class="nl" href="knowledge-base.html" aria-current="page">Knowledge base</a>
+      <a class="nl" href="nigeria.html">Nigeria–EU</a>
+      <a class="nl" href="https://gateway.adesanyaaiadvisory.com" target="_blank" rel="noopener">Aegis Guard</a>
+      <a class="nl" href="work-with-me.html">Work with me</a>
+      <a class="nl" href="index.html#contact">Contact</a>
+      <a class="watch" href="index.html#radar" aria-label="Live AI Law Radar, updated weekly"><span class="dot"></span>LIVE<span class="full">&nbsp;&#183; RADAR &#183; WEEKLY</span></a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <canvas id="code-rain" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div style="margin-bottom:16px"><a href="index.html" style="color:var(--lamp);text-decoration:none;font-size:.85rem">← Adesanya home</a> &nbsp;·&nbsp; <a href="obligation-checker.html" style="color:var(--lamp);text-decoration:none;font-size:.85rem">EU AI Act check ↗</a></div>
+    <span class="badge">● Reference Library · AI &amp; Technology Law</span>
+    <h1>The <span class="grad">AI &amp; Technology Law</span> knowledge base.</h1>
+    <p>A curated, working reference library on the EU AI Act, AI governance, AI contracting, data privacy, case law and Responsible AI — primary sources annotated with a practitioner's take. Includes EU legislation, regulatory guidance, enforcement decisions, Irish law, and cross-jurisdictional case law. Search it, filter by theme, and read the practitioner note on each source.</p>
+    <div class="stats">
+      <div class="s"><b id="stat-total">—</b><span>Curated sources</span></div>
+      <div class="s"><b id="stat-cats">—</b><span>Themes</span></div>
+      <div class="s"><b>2026</b><span>Kept current</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="controls">
+  <div class="wrap">
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="q" type="text" placeholder="Search titles, topics, tags…">
+    </div>
+    <div class="chips" id="chips"></div>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <div class="toolbar">
+      <button class="btn" id="export">⬇ Export my notes</button>
+    </div>
+    <div id="results"></div>
+    <div class="empty" id="empty" style="display:none">No documents match your search.</div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    Your notes are saved in this browser only (local storage). Use <b>Export my notes</b> to back them up. Links open the official public source for each entry. © <span id="yr"></span> Adesanya AI Advisory.
+  </div>
+
+<div class="ftl" style="background:transparent;border-top:1px solid rgba(168,124,63,.2);margin-top:22px;padding:18px 0 0">
+<style>
+.ftl{background:#0B0F1A;border-top:1px solid rgba(168,124,63,.25);padding:34px 28px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:.74rem;color:#93A3BD;line-height:1.7}
+.ftl-wrap{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ftl a{color:#93A3BD;text-decoration:none;transition:color .25s var(--ease)}
+.ftl a:hover{color:#F7DCA8}
+.ftl-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.ftl-clock{color:#E9B872;letter-spacing:.05em;white-space:nowrap}
+.ftl-clock b{color:#F7DCA8;font-weight:500}
+.ftl-extra{max-width:1180px;margin:10px auto 0;color:rgba(147,163,189,.7);font-size:.68rem;letter-spacing:.04em}
+@media(max-width:680px){.ftl-wrap{flex-direction:column;text-align:center}}
+</style>
+<div class="ftl-wrap">
+  <span class="ftl-links">
+    <a href="https://www.linkedin.com/in/abdulwahab-adesanya" target="_blank" rel="noopener" aria-label="Abdulwahab Adesanya on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;fill:currentColor;vertical-align:-2px;margin-right:6px"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
+  </span>
+  <span class="ftl-clock" id="ftl-clock">&mdash;</span>
+</div>
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y&&!y.textContent) y.textContent=new Date().getFullYear();
+  var c=document.getElementById('ftl-clock');
+  function t(){ if(!c)return;
+    var n=new Date();
+    c.innerHTML='Dublin · <b>'+n.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'Europe/Dublin'})+' · '+n.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Europe/Dublin'})+'</b>';
+  }
+  t(); setInterval(t,30000);
+})();
+</script>
+</div>
+</footer>
+
+<script>
+let DOCS = [
+  // Fallback data (used only if data.json can't be loaded). data.json is the source of truth.
+  // Last synced from data.json: 2026-06-26. Update this array if data.json is updated.
+  // PUBLIC resources only — every link is publicly accessible. No private/personal documents here.
+  {t:"EU AI Act — full official text (Reg. 2024/1689)", c:"EU AI Act", ty:"WEB", url:"https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng", id:"euaiact-text", d:"2024-07-12", tags:["EU AI Act","primary source","EUR-Lex"], note:"The authoritative consolidated text of the EU AI Act on EUR-Lex — all language versions and formats."},
+  {t:"European Commission — AI Act regulatory framework", c:"EU AI Act", ty:"WEB", url:"https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai", id:"ec-aiact-hub", d:"2025-08-01", tags:["EU AI Act","Commission","implementation"], note:"The Commission's official hub: risk-based approach, the phased application timeline, and links to the AI Office."},
+  {t:"European AI Office", c:"EU AI Act", ty:"WEB", url:"https://digital-strategy.ec.europa.eu/en/policies/ai-office", id:"eu-ai-office", d:"2024-02-21", tags:["EU AI Act","AI Office","GPAI","enforcement"], note:"The Commission body responsible for GPAI model oversight and AI Act implementation. Key source for AI Office decisions, guidance, and the GPAI Code of Practice status."},
+  {t:"General-Purpose AI Code of Practice (2025)", c:"EU AI Act", ty:"WEB", url:"https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai", id:"gpai-cop", d:"2025-07-10", tags:["GPAI","code of practice"], note:"The final GPAI Code of Practice (Transparency, Copyright, Safety & Security) — the compliance route for general-purpose AI models."},
+  {t:"AI Act Explorer (artificialintelligenceact.eu)", c:"EU AI Act", ty:"WEB", url:"https://artificialintelligenceact.eu/the-act/", id:"aiact-explorer", d:"2026-01-01", tags:["EU AI Act","navigation"], note:"A free, well-structured browser of the Act's articles, annexes and recitals."},
+  {t:"Code of Practice on Transparency of AI-Generated Content", c:"EU AI Act", ty:"WEB", url:"https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content", id:"transparency-cop", d:"2026-06-10", tags:["EU AI Act","Article 50","transparency","deepfakes","code of practice"], note:"The voluntary code operationalising Article 50 transparency — marking/detection of synthetic content and labelling of deepfakes and AI-generated public-interest text. Final text published 10 June 2026; signing carries a presumption of conformity. Initial-signatory deadline 22 July 2026, 18:00 CEST."},
+
+  {t:"NIST AI Risk Management Framework 1.0", c:"AI Governance & Risk", ty:"WEB", url:"https://www.nist.gov/itl/ai-risk-management-framework", id:"nist-rmf", d:"2023-01-26", tags:["NIST","risk management"], note:"The de-facto US standard for trustworthy AI — Govern, Map, Measure, Manage."},
+  {t:"NIST Generative AI Profile (AI 600-1)", c:"AI Governance & Risk", ty:"PDF", url:"https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf", id:"nist-genai", d:"2024-07-26", tags:["NIST","generative AI"], note:"NIST's companion profile applying the AI RMF specifically to generative-AI risks."},
+  {t:"ISO/IEC 42001:2023 — AI Management System", c:"AI Governance & Risk", ty:"STD", url:"https://www.iso.org/standard/81230.html", id:"iso42001", d:"2023-12-18", tags:["ISO","standard","certifiable"], note:"The first certifiable AI management-system standard — the backbone for an auditable governance programme."},
+  {t:"OECD AI Principles (rev. 2024)", c:"AI Governance & Risk", ty:"WEB", url:"https://oecd.ai/en/ai-principles", id:"oecd-principles", d:"2024-05-03", tags:["OECD","principles"], note:"The most widely adopted intergovernmental principles for trustworthy AI."},
+  {t:"Council of Europe Framework Convention on AI", c:"AI Governance & Risk", ty:"WEB", url:"https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence", id:"coe-convention", d:"2024-09-05", tags:["treaty","human rights","binding"], note:"The first legally binding international treaty on AI."},
+
+  {t:"EU Model Contractual Clauses for AI (MCC-AI, 2025)", c:"AI Contracting & Licensing", ty:"WEB", url:"https://public-buyers-community.ec.europa.eu/communities/procurement-ai/resources/updated-eu-ai-model-contractual-clauses", id:"eu-mcc-ai", d:"2025-03-05", tags:["contracts","procurement","clauses"], note:"The Commission's updated model contractual clauses for AI procurement — full and light versions plus commentary."},
+  {t:"SCL — AI contractual clauses & resources", c:"AI Contracting & Licensing", ty:"WEB", url:"https://www.scl.org/", id:"scl-ai-clauses", d:"2025-01-01", tags:["contracts","drafting"], note:"The Society for Computers & Law publishes practitioner-drafted AI contract clauses and commentary."},
+
+  {t:"EDPB — Contact form for flagging GDPR interpretation inconsistencies (Jun 2026)", c:"Privacy & Data Protection", ty:"WEB", url:"https://www.edpb.europa.eu/news/supporting-gdpr-consistency-edpb-launches-dedicated-form_en", id:"edpb-consistency-form-jun26", d:"2026-06-24", tags:["GDPR","EDPB","enforcement","consistency","cross-border"], note:"The EDPB launched a dedicated form (24 Jun 2026) for stakeholders to report divergences in GDPR interpretation between national supervisory authorities, and between national positions and the EDPB. Reports are compiled and discussed at Board level — not responded to individually. Formalises a consistency mechanism that previously had no public submission channel. Directly relevant for multi-jurisdiction AI deployments and GDPR–AI Act interface compliance. Form: edpb.europa.eu/contact/flag-an-inconsistency"},
+  {t:"EDPB Opinion 28/2024 — AI models & GDPR", c:"Privacy & Data Protection", ty:"PDF", url:"https://www.edpb.europa.eu/system/files/2024-12/edpb_opinion_202428_ai-models_en.pdf", id:"edpb-28-2024", d:"2024-12-18", tags:["GDPR","EDPB","legitimate interest"], note:"The key EU privacy text on AI: model anonymity, legitimate interest, and unlawful training data."},
+  {t:"Irish DPC — AI, LLMs & Data Protection", c:"Privacy & Data Protection", ty:"WEB", url:"https://www.dataprotection.ie/en/dpc-guidance/blogs/AI-LLMs-and-Data-Protection", id:"dpc-ai-llm", d:"2024-07-18", tags:["DPC","Ireland","GDPR"], note:"The Irish Data Protection Commission's guidance on AI and large language models."},
+  {t:"ICO — Guidance on AI and Data Protection", c:"Privacy & Data Protection", ty:"WEB", url:"https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/", id:"ico-ai-dp", d:"2025-03-01", tags:["ICO","UK","GDPR"], note:"The UK regulator's detailed, practical guidance on building data protection into AI systems."},
+  {t:"CNIL — Artificial Intelligence resources", c:"Privacy & Data Protection", ty:"WEB", url:"https://www.cnil.fr/en/artificial-intelligence", id:"cnil-ai", d:"2025-01-01", tags:["CNIL","France","how-to"], note:"France's data-protection authority — practical 'how-to' sheets on developing AI in compliance with the GDPR."},
+
+  {t:"TikTok v DPC — Irish High Court (3 Jun 2026)", c:"Case Law & Enforcement", ty:"WEB", url:"https://compliancehub.wiki/tiktok-dpc-irish-supreme-court-gdpr-530m-fine-appeal-2026/", id:"tiktok-dpc-hc-jun26", d:"2026-06-03", tags:["DPC","Ireland","Chapter V","data transfer","GDPR","€530M fine"], note:"Irish High Court upheld the DPC's €530M GDPR fine on TikTok's transfers of EEA user data to China, but ordered the DPC to reconsider the corrective suspension of future transfers. DPC will not appeal (confirmed 12 Jun). Chapter V transfer restrictions apply to AI data pipelines — SCCs alone cannot bridge a conflict with Chinese intelligence law."},
+  {t:"Court of Rome — OpenAI / Garante one-stop-shop annulment (Mar 2026)", c:"Case Law & Enforcement", ty:"WEB", url:"https://www.wsgr.com/en/insights/openai-prevails-in-landmark-italian-ai-and-gdpr-enforcement-case.html", id:"openai-rome-oss-mar26", d:"2026-03-18", tags:["one-stop-shop","OpenAI","DPC","Ireland","GDPR","enforcement gap","jurisdiction"], note:"Italy's €15M GDPR fine against OpenAI annulled. Once OpenAI's Irish establishment was recognised, the Garante lost competence — the DPC became lead supervisory authority. The substantive violations (no legal basis for training data, transparency failures, underage access) were never examined. Ireland is now the de-facto lead GDPR enforcer for AI companies established in Dublin."},
+  {t:"CJEU — NTH Haustechnik (C-484/24), 18 Jun 2026", c:"Case Law & Enforcement", ty:"WEB", url:"https://www.eh.at/en/obtained-in-breach-of-data-protection-law-admissible-nonetheless-the-cjeu-on-the-gdpr-in-civil-proceedings/", id:"cjeu-nth-haustechnik-jun26", d:"2026-06-18", tags:["CJEU","GDPR","evidence","civil proceedings","audit trail","Article 5"], note:"Courts processing documents containing personal data are subject to GDPR. Evidence obtained in breach of GDPR is not automatically inadmissible — courts must balance data-protection obligations against fair-hearing rights. Relevant to AI audit logs, logging obligations under Art.12/19 EU AI Act, and AI-generated evidence in commercial disputes."},
+  {t:"CJEU — Dun & Bradstreet Austria (C-203/22), 27 Feb 2025", c:"Case Law & Enforcement", ty:"WEB", url:"https://www.matheson.com/insights/cjeu-delivers-important-decision-on-automated-decision-making-under-the-gdpr/", id:"cjeu-dun-bradstreet-feb25", d:"2025-02-27", tags:["CJEU","GDPR","Article 22","automated decision-making","explainability","trade secrets","profiling"], note:"Under Article 22, controllers must provide a genuine, intelligible explanation of automated decisions — handing over the algorithm does not suffice. Where trade-secret protection is claimed, the supervisory authority or court adjudicates the balance. Directly relevant to any AI system with legal or similarly significant effects on individuals."},
+
+  {t:"Stanford HAI — AI Index Report 2026", c:"AI & Society", ty:"WEB", url:"https://hai.stanford.edu/ai-index/2026-ai-index-report", id:"stanford-ai-index-2026", d:"2026-04-01", tags:["data","trends","research"], note:"The definitive annual data report on the state of AI — investment, adoption, capability and responsible-AI trends. 2026 edition: 88% organisational adoption, US private AI investment $285.9 bn."},
+  {t:"OECD.AI Policy Observatory", c:"AI & Society", ty:"WEB", url:"https://oecd.ai/", id:"oecd-ai-observatory", d:"2026-01-01", tags:["policy","tracker","global"], note:"A live tracker of national AI policies and strategies worldwide."},
+  {t:"UNESCO — Recommendation on the Ethics of AI", c:"AI & Society", ty:"WEB", url:"https://www.unesco.org/en/artificial-intelligence/recommendation-ethics", id:"unesco-ethics", d:"2021-11-23", tags:["ethics","global"], note:"The first global standard-setting instrument on AI ethics, adopted by 190+ member states."},
+
+  {t:"IAPP — AI Governance Center", c:"AI Practice & Tools", ty:"WEB", url:"https://iapp.org/ai-governance", id:"iapp-aigc", d:"2026-01-01", tags:["IAPP","governance","certification"], note:"Resources, news and the AIGP certification from the leading privacy/AI-governance professional body."},
+  {t:"Future of Privacy Forum", c:"AI Practice & Tools", ty:"WEB", url:"https://fpf.org/", id:"fpf", d:"2026-01-01", tags:["research","privacy","policy"], note:"A respected think tank publishing accessible analysis on AI, privacy and emerging-technology policy."}
+];
+
+const CATS = ["All","EU AI Act","AI Governance & Risk","AI Contracting & Licensing","Privacy & Data Protection","Case Law & Enforcement","Ireland & National Implementation","AI & Society","AI Practice & Tools"];
+let activeCat="All", query="";
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.getElementById('stat-total').textContent=DOCS.length;
+document.getElementById('stat-cats').textContent=CATS.length-1;
+
+const chips=document.getElementById('chips');
+function buildChips(){
+  chips.innerHTML='';
+  CATS.forEach(c=>{
+    const newCount = c==='All' ? DOCS.filter(d=>isNew(d)).length : DOCS.filter(d=>d.c===c && isNew(d)).length;
+    const el=document.createElement('button');
+    el.className='chip'+(c==='All'?' active':''); el.dataset.cat=c;
+    el.innerHTML=c+(newCount>0?'<span class="chip-new">'+newCount+' new</span>':'');
+    el.onclick=()=>{activeCat=c;[...chips.children].forEach(x=>x.classList.remove('active'));el.classList.add('active');draw();};
+    chips.appendChild(el);
+  });
+}
+buildChips();
+document.getElementById('q').addEventListener('input',e=>{query=e.target.value.toLowerCase();draw();});
+
+function driveUrl(d){
+  if(d.url) return d.url; // public resource link (preferred)
+  return d.ty==='DOC' ? 'https://docs.google.com/document/d/'+d.id+'/edit' : 'https://drive.google.com/file/d/'+d.id+'/view';
+}
+function noteKey(id){ return 'wba_note_'+id; }
+function fmt(s){const dt=new Date(s);return isNaN(dt)?'':dt.toLocaleDateString(undefined,{year:'numeric',month:'short'});}
+
+function isNew(d){ return d.d && (Date.now()-new Date(d.d)) < 30*24*60*60*1000; }
+
+function draw(){
+  const res=document.getElementById('results'); res.innerHTML='';
+  let list=DOCS.filter(d=>{
+    const inCat = activeCat==='All' || d.c===activeCat;
+    const hay=(d.t+' '+d.c+' '+d.tags.join(' ')+' '+d.note).toLowerCase();
+    return inCat && (!query || hay.includes(query));
+  });
+  document.getElementById('empty').style.display = list.length? 'none':'block';
+  // Recently Added — entries from the last 30 days, shown at top
+  const recent=list.filter(d=>isNew(d));
+  if(recent.length){
+    const lbl=document.createElement('div'); lbl.className='catlabel recent-label';
+    lbl.innerHTML='<span class="dot"></span><h2>Recently Added</h2><span class="ct">'+recent.length+'</span><span class="new-pill">NEW</span>';
+    res.appendChild(lbl);
+    const grid=document.createElement('div'); grid.className='grid';
+    recent.forEach(d=>grid.appendChild(card(d)));
+    res.appendChild(grid);
+  }
+  const cats=[...new Set(list.map(d=>d.c))];
+  cats.forEach(cat=>{
+    const items=list.filter(d=>d.c===cat);
+    const lbl=document.createElement('div'); lbl.className='catlabel';
+    lbl.innerHTML='<span class="dot"></span><h2>'+cat+'</h2><span class="ct">'+items.length+'</span>';
+    res.appendChild(lbl);
+    const grid=document.createElement('div'); grid.className='grid';
+    items.forEach(d=>grid.appendChild(card(d)));
+    res.appendChild(grid);
+  });
+}
+
+function card(d){
+  const el=document.createElement('div'); el.className='card';
+  el.innerHTML=
+    (isNew(d)?'<span class="new-badge">NEW</span>':'')+
+    '<div class="top"><span class="type '+d.ty.toLowerCase()+'">'+d.ty+'</span><span class="date">'+fmt(d.d)+'</span></div>'+
+    '<h3>'+d.t+'</h3>'+
+    '<div class="note">'+d.note+'</div>'+
+    '<div class="tags">'+d.tags.map(t=>'<span>'+t+'</span>').join('')+'</div>'+
+    '<div class="mynotes"><label>My notes <span class="saved" id="sv_'+d.id+'">saved ✓</span></label>'+
+      '<textarea id="ta_'+d.id+'" placeholder="Add your own take, key takeaway, or how you would use this…"></textarea></div>'+
+    '<div class="foot"><span class="date">'+d.c.replace('&amp;','&')+'</span>'+
+      '<a class="open" href="'+driveUrl(d)+'" target="_blank" rel="noopener">Open ↗</a></div>';
+  const ta=el.querySelector('#ta_'+d.id);
+  ta.value=localStorage.getItem(noteKey(d.id))||'';
+  let t;
+  ta.addEventListener('input',()=>{
+    localStorage.setItem(noteKey(d.id),ta.value);
+    const sv=el.querySelector('#sv_'+d.id); sv.classList.add('show');
+    clearTimeout(t); t=setTimeout(()=>sv.classList.remove('show'),1200);
+  });
+  return el;
+}
+
+document.getElementById('export').onclick=()=>{
+  let md='# My Knowledge-Base Notes — Wahab Adesanya\\n\\n';
+  DOCS.forEach(d=>{
+    const n=localStorage.getItem(noteKey(d.id));
+    if(n && n.trim()){ md+='## '+d.t+'\\n_'+d.c.replace('&amp;','&')+' · '+driveUrl(d)+'_\\n\\n'+n+'\\n\\n'; }
+  });
+  if(md.indexOf('##')<0){ md+='_No notes yet. Click into any card and start typing._\\n'; }
+  const blob=new Blob([md],{type:'text/markdown'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='my-knowledge-base-notes.md'; a.click();
+};
+
+// Load shared data.json (source of truth). Falls back to embedded DOCS if it can't be fetched
+// (e.g. opening the file directly via file:// — host it, or run `python3 -m http.server` to enable).
+(async function bootstrap(){
+  try{
+    const r = await fetch('data.json', {cache:'no-store'});
+    if(r.ok){
+      const j = await r.json();
+      if(j && Array.isArray(j.documents) && j.documents.length){
+        DOCS = j.documents;
+        document.getElementById('stat-total').textContent = DOCS.length;
+      }
+    }
+  }catch(e){ /* keep embedded fallback */ }
+  draw();
+})();
+</script>
+<!-- Code rain — hero band -->
+<script>
+(function(){
+  var rain=document.getElementById('code-rain');
+  if(!rain) return;
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rc=rain.getContext('2d');
+  var CHARS='Art.5Art.6Art.9GDPR§©{}[]();=>!=<>01AI&|~+-/*Regulation2024/1689';
+  var arr=CHARS.split(''), COL_W=18, cols, drops, speeds, opacs;
+  var DPR=Math.min(window.devicePixelRatio||1,2);
+  function size(){
+    var w=rain.parentElement.offsetWidth, h=rain.parentElement.offsetHeight;
+    rain.width=w*DPR; rain.height=h*DPR; rain.style.width=w+'px'; rain.style.height=h+'px';
+    rc.setTransform(DPR,0,0,DPR,0,0);
+    cols=Math.floor(w/COL_W); drops=[]; speeds=[]; opacs=[];
+    for(var i=0;i<cols;i++){ drops[i]=Math.random()*-(h/16); speeds[i]=0.3+Math.random()*0.5; opacs[i]=0.25+Math.random()*0.75; }
+  }
+  var lastT=0, visible=true, pending=false;
+  function draw(ts){
+    if(reduced||!visible){ pending=false; return; }
+    if(ts-lastT<33){ requestAnimationFrame(draw); return; }
+    lastT=ts;
+    var w=rain.parentElement.offsetWidth, h=rain.parentElement.offsetHeight;
+    rc.fillStyle='rgba(10,16,32,0.20)'; rc.fillRect(0,0,w,h);
+    rc.font='600 13px "JetBrains Mono",monospace';
+    for(var i=0;i<cols;i++){
+      var ch=arr[Math.floor(Math.random()*arr.length)];
+      var x=i*COL_W, y=drops[i]*16;
+      rc.fillStyle='rgba(233,184,114,'+opacs[i]+')';
+      rc.fillText(ch,x,y);
+      if(y>h && Math.random()>0.975) drops[i]=0;
+      drops[i]+=speeds[i];
+    }
+    requestAnimationFrame(draw);
+  }
+  size();
+  window.addEventListener('load',size);
+  if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(size); }
+  window.addEventListener('resize',function(){ clearTimeout(window.__crrsz); window.__crrsz=setTimeout(size,150); });
+  if(reduced){ rc.fillStyle='rgba(10,16,32,1)'; rc.fillRect(0,0,rain.width,rain.height); }
+  else {
+    function ensure(){ if(!pending){ pending=true; requestAnimationFrame(draw); } }
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(en){ visible=en[0].isIntersecting; if(visible) ensure(); },{threshold:0});
+      io.observe(rain.parentElement);
+    }
+    ensure();
+  }
+})();
+</script>
+<script src="assets/site.js?v=20260820074103"></script>
+</body>
+</html>

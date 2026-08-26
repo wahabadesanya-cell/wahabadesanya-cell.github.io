@@ -1,0 +1,17 @@
+<svg width="124" height="128" viewBox="0 0 124 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Adesanya AI Advisory">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8C77B"/>
+      <stop offset="0.5" stop-color="#C9A14A"/>
+      <stop offset="1" stop-color="#A87B2E"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16243F"/>
+      <stop offset="1" stop-color="#0C1729"/>
+    </linearGradient>
+  </defs>
+  <path d="M62 4 L116 22 C116 70 100 110 62 124 C24 110 8 70 8 22 Z" fill="url(#navy)" stroke="url(#gold)" stroke-width="4"/>
+  <path d="M62 36 L82 86 L70 86 L66 75 L58 75 L54 86 L42 86 Z" fill="url(#gold)"/>
+  <path d="M60 58 L64 58 L66 68 L58 68 Z" fill="url(#navy)"/>
+  <circle cx="62" cy="30" r="3.6" fill="url(#gold)"/>
+</svg>

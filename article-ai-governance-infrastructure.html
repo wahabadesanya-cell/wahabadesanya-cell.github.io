@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Organisations Most at Risk Under the EU AI Act Are Not the Ones That Moved Too Slowly — Adesanya AI Advisory</title>
+<meta name="description" content="On 2 August 2026, EU AI Act obligations for high-risk AI systems become enforceable. The organisations most exposed are not the ones that moved too slowly. They are the ones that moved fast — without governance.">
+<link rel="canonical" href="https://adesanyaaiadvisory.com/article-ai-governance-infrastructure.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Adesanya AI Advisory">
+<meta property="og:title" content="The Organisations Most at Risk Under the EU AI Act Are Not the Ones That Moved Too Slowly">
+<meta property="og:description" content="The August 2026 EU AI Act deadline approaches. The organisations most exposed are those that deployed AI at pace and assumed governance could follow.">
+<meta property="og:url" content="https://adesanyaaiadvisory.com/article-ai-governance-infrastructure.html">
+<meta property="og:image" content="https://adesanyaaiadvisory.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20260820074103">
+<style>
+  :root{--gold-soft:rgba(201,161,74,.12)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif;background:var(--night-ink);color:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .serif{font-family:var(--serif)}
+  a{color:var(--lamp);text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 26px}
+  .gold{color:var(--lamp)}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);font-weight:600}
+
+  /* nav */
+  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 26px;max-width:var(--max);margin:0 auto}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mark{width:34px;height:40px;flex:none}
+  .brand .txt{line-height:1}
+  .brand .txt b{font-family:var(--serif);font-size:1.12rem;letter-spacing:1px}
+  .brand .txt span{display:block;font-size:.6rem;letter-spacing:.32em;color:var(--mist);margin-top:3px}
+  .navlinks a{font-family:var(--mono);font-size:.82rem;color:var(--mist);margin-left:26px;letter-spacing:.04em;text-transform:uppercase}
+  .navlinks a:hover{color:var(--lamp)}
+  .navcta{display:inline-block;border:1px solid var(--brass);color:var(--lamp)!important;padding:9px 18px;border-radius:6px;font-size:.8rem!important;margin-left:26px}
+  .navcta:hover{background:var(--gold-soft)}
+  @media(max-width:820px){.navlinks a:not(.navcta){display:none}}
+
+  /* scroll progress */
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:50;background:linear-gradient(90deg,var(--lamp),var(--brass))}
+
+  /* article hero */
+  .art-hero{position:relative;overflow:hidden;border-bottom:1px solid var(--hairline);padding:64px 0 52px;
+    background:radial-gradient(700px 360px at 80% 0%,rgba(201,161,74,.13),transparent),var(--night-ink)}
+  .art-hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.15;z-index:0}
+  .art-hero>.wrap{position:relative;z-index:2}
+  .art-hero .back{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;color:var(--mist);margin-bottom:28px}
+  .art-hero .back:hover{color:var(--lamp)}
+  .art-hero .tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--lamp);font-weight:600;margin-bottom:14px}
+  .art-hero h1{font-family:var(--serif);font-size:2.6rem;line-height:1.18;letter-spacing:-.01em;max-width:22ch;margin-bottom:20px}
+  .art-hero .deck{font-size:1.15rem;color:var(--mist);max-width:64ch;line-height:1.65;margin-bottom:28px}
+  .art-meta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--hairline)}
+  .art-meta .author{display:flex;align-items:center;gap:12px}
+  .art-meta .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--brass),var(--chamber));display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.1rem;color:#231905;font-weight:700;flex:none}
+  .art-meta .auth-info b{display:block;font-size:.9rem;color:var(--paper)}
+  .art-meta .auth-info span{font-size:.8rem;color:var(--mist)}
+  .art-meta .pub-info{font-family:var(--mono);font-size:.82rem;color:var(--mist);margin-left:auto}
+
+  /* article body */
+  .art-body{max-width:760px;margin:0 auto;padding:56px 26px 72px}
+  .art-body p{font-size:1.05rem;line-height:1.78;color:var(--mist);margin-bottom:22px}
+  .art-body p strong{color:var(--paper)}
+  .art-body h2{font-family:var(--serif);font-size:1.6rem;color:var(--paper);margin:44px 0 16px;letter-spacing:-.01em}
+  .art-body h3{font-family:var(--serif);font-size:1.2rem;color:var(--lamp);margin:30px 0 10px}
+  .art-body ul,.art-body ol{margin:0 0 22px 22px}
+  .art-body li{font-size:1.02rem;color:var(--mist);margin-bottom:8px;line-height:1.65}
+  .art-body li strong{color:var(--paper)}
+  .art-body blockquote{border-left:3px solid var(--brass);padding:14px 20px;margin:28px 0;background:var(--chamber);border-radius:0 10px 10px 0}
+  .art-body blockquote p{margin:0;color:var(--paper);font-family:var(--serif);font-size:1.08rem}
+  .art-body hr{border:none;border-top:1px solid var(--hairline);margin:40px 0}
+  .art-body .source-note{font-size:.82rem;color:var(--mist);font-style:italic;border-top:1px solid var(--hairline);padding-top:18px;margin-top:48px}
+
+  /* stat callout */
+  .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0 32px}
+  .stat-box{background:var(--chamber);border:1px solid var(--hairline);border-left:3px solid var(--brass);border-radius:12px;padding:20px 22px}
+  .stat-box .num{font-family:var(--serif);font-size:2.4rem;color:var(--lamp);line-height:1;font-weight:700}
+  .stat-box .lbl{font-size:.88rem;color:var(--mist);margin-top:6px;line-height:1.4}
+  @media(max-width:560px){.stat-row{grid-template-columns:1fr}}
+
+  /* obligations */
+  .obl{background:var(--chamber);border:1px solid var(--hairline);border-radius:14px;padding:26px 28px;margin:28px 0 32px}
+  .obl h3{font-family:var(--serif);font-size:1.05rem;color:var(--lamp);margin-bottom:14px;font-weight:400;letter-spacing:.02em}
+  .obl-item{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--hairline)}
+  .obl-item:last-child{border-bottom:none;padding-bottom:0}
+  .obl-item .art{font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--brass);color:#231905;padding:3px 8px;border-radius:5px;flex:none;align-self:flex-start;margin-top:2px}
+  .obl-item .desc strong{display:block;font-size:.95rem;color:var(--paper);margin-bottom:3px}
+  .obl-item .desc p{font-size:.88rem;color:var(--mist);margin:0}
+
+  /* CTA box */
+  .cta-box{background:radial-gradient(600px 240px at 80% 50%,rgba(201,161,74,.14),transparent),var(--chamber);border:1px solid var(--brass);border-radius:16px;padding:36px;margin:48px 0 0;text-align:center}
+  .cta-box h3{font-family:var(--serif);font-size:1.5rem;margin-bottom:10px}
+  .cta-box p{color:var(--mist);max-width:50ch;margin:0 auto 22px;font-size:.96rem}
+  .cta-box .btn{font-family:var(--mono);display:inline-block;background:linear-gradient(120deg,var(--lamp),var(--brass));color:#231905;font-weight:700;padding:13px 28px;border-radius:8px;font-size:.96rem}
+  .cta-box .btn:hover{filter:brightness(1.08)}
+  .cta-box .alt{display:block;margin-top:12px;font-size:.84rem;color:var(--mist)}
+  .cta-box .alt a{color:var(--lamp)}
+
+  /* related articles */
+  .related{background:var(--chamber);border-top:1px solid var(--hairline);padding:56px 26px}
+  .related h2{font-family:var(--serif);font-size:1.5rem;margin-bottom:22px;text-align:center}
+  .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:0 auto}
+  .rel-card{display:block;background:var(--chamber);border:1px solid var(--hairline);border-radius:12px;padding:20px;text-decoration:none;color:inherit;transition:.2s}
+  .rel-card:hover{border-color:var(--brass);transform:translateY(-2px)}
+  .rel-card .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
+  .rel-card h4{font-family:var(--serif);font-size:1rem;color:var(--paper);margin:7px 0 6px}
+  .rel-card p{font-size:.86rem;color:var(--mist)}
+  @media(max-width:680px){.rel-grid{grid-template-columns:1fr}.art-hero h1{font-size:1.9rem}}
+
+  /* burger */
+  .burger{display:none;background:none;border:1px solid var(--hairline);border-radius:7px;color:var(--paper);font-size:1.2rem;padding:6px 11px;cursor:pointer}
+  @media(max-width:820px){
+    .burger{display:block}
+    .navlinks{position:absolute;top:64px;right:0;left:0;background:var(--chamber);border-bottom:1px solid var(--hairline);flex-direction:column;padding:14px 26px;display:none}
+    .navlinks.open{display:flex}
+    .navlinks a:not(.navcta){display:block!important;margin:0;padding:12px 0;border-bottom:1px solid var(--hairline)}
+    .navlinks .navcta{margin:14px 0 4px;text-align:center}
+  }
+
+  footer{padding:40px 0;color:var(--mist);font-size:.85rem;border-top:1px solid var(--hairline)}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "The Organisations Most at Risk Under the EU AI Act Are Not the Ones That Moved Too Slowly",
+ "description": "On 2 August 2026, EU AI Act obligations become enforceable. The organisations most exposed are not the ones that moved too slowly — they are the ones that moved fast, without governance.",
+ "author": {
+  "@type": "Person",
+  "name": "Abdulwahab B. Adesanya",
+  "jobTitle": "Founder, Adesanya AI Advisory · EU AI Act Compliance Counsel",
+  "url": "https://adesanyaaiadvisory.com/",
+  "sameAs": ["https://www.linkedin.com/in/abdulwahab-adesanya"]
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Adesanya AI Advisory",
+  "url": "https://adesanyaaiadvisory.com/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://adesanyaaiadvisory.com/og-image.png"
+  }
+ },
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://adesanyaaiadvisory.com/article-ai-governance-infrastructure.html"
+ },
+ "image": "https://adesanyaaiadvisory.com/og-image.png",
+ "inLanguage": "en",
+ "datePublished": "2026-06T00:00:00Z"
+}
+</script>
+</head>
+<body class="has-nav">
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8c77b"/><stop offset="1" stop-color="#a87b2e"/></linearGradient>
+  <symbol id="shield" viewBox="0 0 124 128">
+    <path d="M62 4 L116 22 C116 70 100 110 62 124 C24 110 8 70 8 22 Z" fill="#0f1d33" stroke="url(#g)" stroke-width="3"/>
+    <path d="M62 36 L82 86 L70 86 L66 75 L58 75 L54 86 L42 86 Z" fill="url(#g)"/>
+    <path d="M60 58 L64 58 L66 68 L58 68 Z" fill="#0f1d33"/>
+    <circle cx="62" cy="30" r="3.4" fill="url(#g)"/>
+    <circle cx="36" cy="50" r="2" fill="url(#g)"/><circle cx="88" cy="50" r="2" fill="url(#g)"/>
+  </symbol>
+</defs></svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="index.html" aria-label="Adesanya AI Advisory — home"><img src="assets/adesanya-mark.svg" alt="" width="26" height="28"><span class="wordmark">ADESANYA AI ADVISORY<sup>&#8482;</sup></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <nav class="navlinks" id="navlinks" aria-label="Site">
+      <a class="nl" href="services.html">Services</a>
+      <a class="nl" href="legislation.html">Legislation</a>
+      <a class="nl" href="knowledge-base.html">Knowledge base</a>
+      <a class="nl" href="nigeria.html">Nigeria–EU</a>
+      <a class="nl" href="https://gateway.adesanyaaiadvisory.com" target="_blank" rel="noopener">Aegis Guard</a>
+      <a class="nl" href="work-with-me.html">Work with me</a>
+      <a class="nl" href="index.html#contact">Contact</a>
+      <a class="watch" href="index.html#radar" aria-label="Live AI Law Radar, updated weekly"><span class="dot"></span>LIVE<span class="full">&nbsp;&#183; RADAR &#183; WEEKLY</span></a>
+    </nav>
+  </div>
+</header>
+<div id="progress"></div>
+
+<!-- ARTICLE HERO -->
+<div class="art-hero">
+  <canvas id="code-rain" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <a href="index.html#insights" class="back">← Back to Insight</a>
+    <div class="tag">AI Governance · EU AI Act</div>
+    <h1 class="serif">The Organisations Most at Risk Under the EU AI Act Are Not the Ones That Moved Too Slowly</h1>
+    <p class="deck">On 2 August 2026, high-risk AI system obligations become enforceable across the EU. The organisations most exposed are those that deployed AI at pace and assumed governance could follow.</p>
+    <div class="art-meta">
+      <div class="author">
+        <div class="av">A</div>
+        <div class="auth-info">
+          <b>Abdulwahab B. Adesanya</b>
+          <span>LL.M Intellectual Property &amp; IT Law (UCD)</span>
+        </div>
+      </div>
+      <div class="pub-info">June 2026 &nbsp;·&nbsp; 8 min read</div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="art-body">
+
+  <p>On 2 August 2026, the obligations under the EU AI Act applicable to high-risk AI systems become fully enforceable. Market supervisory authorities across the European Union will, from that date, have the power to require compliance documentation, impose corrective measures, and levy administrative fines of up to <strong>€30 million or 6% of global annual turnover</strong> — whichever is higher.</p>
+
+  <p>The organisations most exposed to that liability are not those that chose caution. They are those that chose speed without governance.</p>
+
+  <hr>
+
+  <h2>The Evidence Is Unambiguous</h2>
+
+  <p>IDC's July 2025 research, drawing on responses from over 1,000 enterprise IT decision-makers globally, identified the following:</p>
+
+  <div class="stat-row">
+    <div class="stat-box">
+      <div class="num">65%</div>
+      <div class="lbl">of enterprises say AI workload growth is their primary driver of infrastructure investment over the next two years</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">85%</div>
+      <div class="lbl">characterise generative AI as a transformative corporate workload demanding commensurate, sustained investment</div>
+    </div>
+  </div>
+
+  <p>These figures confirm that enterprise AI adoption is not a future trend. It is a present operational reality. What they also confirm, read against the regulatory backdrop, is that a large proportion of that deployment is proceeding without the governance architecture the law now requires.</p>
+
+  <p>IDC's research identifies <strong>compliance gaps, inadequate security controls, and the absence of data sovereignty frameworks</strong> as material causes of AI initiative failure at scale. These are, without exception, governance failures — not engineering ones. And unlike engineering deficiencies, they cannot be remediated after the fact without regulatory consequence.</p>
+
+  <hr>
+
+  <h2>What the Law Actually Requires</h2>
+
+  <p>The EU AI Act does not prohibit ambition. What it prohibits is the deployment of high-risk AI systems without demonstrable, documented, and operational governance.</p>
+
+  <p>High-risk systems — defined under <strong>Annex III</strong> to include AI used in employment and worker management, access to essential services, biometric identification, law enforcement, and the administration of justice — must, from 2 August 2026, satisfy obligations across six core domains:</p>
+
+  <div class="obl">
+    <h3>Core obligations for high-risk AI systems</h3>
+    <div class="obl-item">
+      <span class="art">Art. 9</span>
+      <div class="desc"><strong>Risk Management System</strong><p>Established, implemented, documented, and maintained throughout the AI system's lifecycle. A policy document drafted for the occasion will not suffice.</p></div>
+    </div>
+    <div class="obl-item">
+      <span class="art">Art. 10</span>
+      <div class="desc"><strong>Data Governance</strong><p>Management practices addressing training, validation, and testing data — their relevance, representativeness, and freedom from known errors and biases.</p></div>
+    </div>
+    <div class="obl-item">
+      <span class="art">Art. 11</span>
+      <div class="desc"><strong>Technical Documentation</strong><p>Prepared before the system is placed on the market or put into service, demonstrating compliance to the satisfaction of national authorities.</p></div>
+    </div>
+    <div class="obl-item">
+      <span class="art">Art. 13–14</span>
+      <div class="desc"><strong>Transparency &amp; Human Oversight</strong><p>Natural persons must be in a position to understand, monitor, and where necessary override or halt AI system outputs.</p></div>
+    </div>
+    <div class="obl-item">
+      <span class="art">Art. 15</span>
+      <div class="desc"><strong>Accuracy, Robustness &amp; Cybersecurity</strong><p>High-risk systems must achieve appropriate levels of accuracy, robustness, and cybersecurity throughout their operational lifecycle.</p></div>
+    </div>
+  </div>
+
+  <p>Each of these obligations requires institutional infrastructure: documented processes, defined accountabilities, trained personnel, and governance bodies with authority to act. None of them can be satisfied by a legal opinion, however well-drafted.</p>
+
+  <hr>
+
+  <h2>Governance Is Not a Compliance Function. It Is a Structural One.</h2>
+
+  <p>The organisations navigating this well are not treating August 2026 as a compliance project assigned to their legal team. They are treating it as the deadline by which their AI governance architecture must be operational — a central function that aligns legal, data, IT, and business teams around documented policies and shared accountability.</p>
+
+  <blockquote>
+    <p>"The organisations that treat the Act as a technical specification to be met at the last moment will find, when supervisory authorities begin their reviews, that the documentation they produce does not reflect the reality of how their systems operate."</p>
+  </blockquote>
+
+  <p>That gap — between stated governance and actual practice — is precisely what regulators are trained to find.</p>
+
+  <hr>
+
+  <h2>Three Steps That Cannot Be Deferred</h2>
+
+  <p>For any organisation operating or procuring AI systems in the European Union, three actions require immediate attention:</p>
+
+  <ul>
+    <li><strong>Complete an AI system inventory.</strong> Regulatory obligation attaches to the system, not to organisational awareness of it. An organisation cannot assert compliance in respect of a system it has not identified. Every AI tool in active use — including those procured through third-party vendors — must be documented.</li>
+    <li><strong>Conduct a risk classification.</strong> Not every AI system carries high-risk designation under the Act. However, the determination of which systems do must be made before deployment, not after a regulatory enquiry. The classification exercise must be documented, defensible, and reviewed as use cases evolve.</li>
+    <li><strong>Establish the governance layer.</strong> Policies, accountability structures, human oversight mechanisms, and incident reporting procedures are the minimum. These cannot be outsourced to vendors, delegated informally, or held in draft. They must be operational and evidenced.</li>
+  </ul>
+
+  <hr>
+
+  <h2>August 2026 Is Not the End of This Process. It Is the Beginning of Enforcement.</h2>
+
+  <p>The EU AI Act does not sunset. The obligations that apply from August 2026 are ongoing. The organisations that invest now in governance architecture that is proportionate, documented, and genuinely operational will be better placed not only to satisfy immediate regulatory demands but to deploy AI at scale — with the confidence that comes from structural compliance, not hope.</p>
+
+  <div class="cta-box">
+    <h3 class="serif">Understand your exposure before August</h3>
+    <p>Adesanya AI Advisory offers a focused AI governance health check — a structured assessment of your AI use, risk classification obligations, and the governance gaps that require priority action.</p>
+    <a href="index.html#contact" class="btn">Book a free health check</a>
+    <span class="alt">Or contact directly: <a href="mailto:abdulwahab@adesanyaaiadvisory.com">abdulwahab@adesanyaaiadvisory.com</a></span>
+  </div>
+
+  <p class="source-note">Source: IDC InfoBrief, "Generative and Agentic AI-Ready Infrastructure Strategies," sponsored by Amazon Web Services and NVIDIA, July 2025 (IDC #US52614724). Statistical data cited as published; analysis and legal interpretation are those of Adesanya AI Advisory.</p>
+
+</div>
+
+<!-- RELATED ARTICLES -->
+<div class="related">
+  <h2 class="serif">Related Insight</h2>
+  <div class="rel-grid">
+    <a class="rel-card" href="article-ai-act-deadline.html">
+      <span class="tag">EU AI Act</span>
+      <h4>What the August 2026 deadline means for in-house teams</h4>
+      <p>A plain-English read on the obligations landing first — and how to prepare before they bite.</p>
+    </a>
+    <a class="rel-card" href="article-ai-contract-clauses.html">
+      <span class="tag">Contracting</span>
+      <h4>5 AI-specific clauses every technology contract now needs</h4>
+      <p>Model terms for data use, liability allocation and model provenance.</p>
+    </a>
+    <a class="rel-card" href="article-ai-audit-framework.html">
+      <span class="tag">Governance</span>
+      <h4>Building an AI audit framework: where to start</h4>
+      <p>From risk register to incident reporting — an operating model, not a policy PDF.</p>
+    </a>
+  </div>
+</div>
+
+<footer class="ftl">
+<style>
+.ftl{background:#0B0F1A;border-top:1px solid rgba(168,124,63,.25);padding:34px 28px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:.74rem;color:#93A3BD;line-height:1.7}
+.ftl-wrap{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ftl a{color:#93A3BD;text-decoration:none;transition:color .25s var(--ease)}
+.ftl a:hover{color:#F7DCA8}
+.ftl-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.ftl-clock{color:#E9B872;letter-spacing:.05em;white-space:nowrap}
+.ftl-clock b{color:#F7DCA8;font-weight:500}
+.ftl-extra{max-width:1180px;margin:10px auto 0;color:rgba(147,163,189,.7);font-size:.68rem;letter-spacing:.04em}
+@media(max-width:680px){.ftl-wrap{flex-direction:column;text-align:center}}
+</style>
+<div class="ftl-wrap">
+  <span>&copy; <span id="yr"></span> Adesanya AI Advisory&trade; &mdash; Abdulwahab B. Adesanya &mdash; Dublin, Ireland</span>
+  <span class="ftl-links">
+    <a href="https://www.linkedin.com/in/abdulwahab-adesanya" target="_blank" rel="noopener" aria-label="Abdulwahab Adesanya on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;fill:currentColor;vertical-align:-2px;margin-right:6px"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
+    <a href="intake.html">Begin in writing</a>
+    <a href="/privacy-policy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </span>
+  <span class="ftl-clock" id="ftl-clock">&mdash;</span>
+</div>
+
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y&&!y.textContent) y.textContent=new Date().getFullYear();
+  var c=document.getElementById('ftl-clock');
+  function t(){ if(!c)return;
+    var n=new Date();
+    c.innerHTML='Dublin · <b>'+n.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'Europe/Dublin'})+' · '+n.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Europe/Dublin'})+'</b>';
+  }
+  t(); setInterval(t,30000);
+})();
+</script>
+</footer>
+
+<script>
+  // Scroll progress
+  window.addEventListener('scroll',()=>{
+    const h=document.documentElement;
+    const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+    document.getElementById('progress').style.width=pct+'%';
+  });
+  // Burger
+  document.getElementById('burger').addEventListener('click',()=>{
+    document.getElementById('navlinks').classList.toggle('open');
+  });
+</script>
+<!-- Code rain — hero band -->
+<script>
+(function(){
+  var rain=document.getElementById('code-rain');
+  if(!rain) return;
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rc=rain.getContext('2d');
+  var CHARS='Art.5Art.6Art.9GDPR§©{}[]();=>!=<>01AI&|~+-/*Regulation2024/1689';
+  var arr=CHARS.split(''), COL_W=18, cols, drops, speeds, opacs;
+  var DPR=Math.min(window.devicePixelRatio||1,2);
+  function size(){
+    var w=rain.parentElement.offsetWidth, h=rain.parentElement.offsetHeight;
+    rain.width=w*DPR; rain.height=h*DPR; rain.style.width=w+'px'; rain.style.height=h+'px';
+    rc.setTransform(DPR,0,0,DPR,0,0);
+    cols=Math.floor(w/COL_W); drops=[]; speeds=[]; opacs=[];
+    for(var i=0;i<cols;i++){ drops[i]=Math.random()*-(h/16); speeds[i]=0.3+Math.random()*0.5; opacs[i]=0.25+Math.random()*0.75; }
+  }
+  var lastT=0, visible=true, pending=false;
+  function draw(ts){
+    if(reduced||!visible){ pending=false; return; }
+    if(ts-lastT<33){ requestAnimationFrame(draw); return; }
+    lastT=ts;
+    var w=rain.parentElement.offsetWidth, h=rain.parentElement.offsetHeight;
+    rc.fillStyle='rgba(10,16,32,0.20)'; rc.fillRect(0,0,w,h);
+    rc.font='600 13px "JetBrains Mono",monospace';
+    for(var i=0;i<cols;i++){
+      var ch=arr[Math.floor(Math.random()*arr.length)];
+      var x=i*COL_W, y=drops[i]*16;
+      rc.fillStyle='rgba(233,184,114,'+opacs[i]+')';
+      rc.fillText(ch,x,y);
+      if(y>h && Math.random()>0.975) drops[i]=0;
+      drops[i]+=speeds[i];
+    }
+    requestAnimationFrame(draw);
+  }
+  size();
+  window.addEventListener('load',size);
+  if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(size); }
+  window.addEventListener('resize',function(){ clearTimeout(window.__crrsz); window.__crrsz=setTimeout(size,150); });
+  if(reduced){ rc.fillStyle='rgba(10,16,32,1)'; rc.fillRect(0,0,rain.width,rain.height); }
+  else {
+    function ensure(){ if(!pending){ pending=true; requestAnimationFrame(draw); } }
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(en){ visible=en[0].isIntersecting; if(visible) ensure(); },{threshold:0});
+      io.observe(rain.parentElement);
+    }
+    ensure();
+  }
+})();
+</script>
+<script src="assets/site.js?v=20260820074103"></script>
+</body>
+</html>

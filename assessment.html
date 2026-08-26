@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Critical Exposure Assessment — Adesanya AI Advisory</title>
+<meta name="description" content="Three questions. Instant results. Know exactly where your AI stack is exposed before a regulator does.">
+<link rel="canonical" href="https://adesanyaaiadvisory.com/obligation-checker.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:title" content="AI Critical Exposure Assessment — Adesanya AI Advisory">
+<meta property="og:description" content="Three questions. Know exactly where your AI runtime is exposed before a regulator does.">
+<meta property="og:url" content="https://adesanyaaiadvisory.com/obligation-checker.html">
+<meta property="og:image" content="https://adesanyaaiadvisory.com/og-image.png">
+<!-- Cookie consent — GA4 loaded only after visitor accepts -->
+<script>
+(function(){
+  var GA_ID='G-VPL2XEB7GK';
+  function loadGA(){
+    var s=document.createElement('script');
+    s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){dataLayer.push(arguments);};
+    gtag('js',new Date());gtag('config',GA_ID);
+  }
+  var stored=localStorage.getItem('ga_consent');
+  if(stored==='granted'){loadGA();return;}
+  window.gtag=function(){};
+  if(stored==='denied'){return;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('div');b.id='cookie-banner';
+    b.innerHTML='<p style="margin:0;max-width:560px;font-size:.875rem;line-height:1.5">We use Google Analytics to understand how visitors use this site. <a href="/privacy-policy.html" style="color:inherit;text-decoration:underline">Privacy policy</a>.</p>'
+      +'<div style="display:flex;gap:8px;flex-wrap:wrap">'
+      +'<button id="cb-accept" style="background:#E9B872;color:#231905;border:none;padding:9px 20px;border-radius:4px;font-weight:700;font-size:.8125rem;cursor:pointer">Accept analytics</button>'
+      +'<button id="cb-decline" style="background:transparent;color:#E9B872;border:1px solid rgba(233,184,114,.5);padding:9px 20px;border-radius:4px;font-weight:600;font-size:.8125rem;cursor:pointer">Decline</button>'
+      +'</div>';
+    Object.assign(b.style,{position:'fixed',bottom:'0',left:'0',right:'0',background:'#0A1020',borderTop:'1px solid rgba(168,124,63,.28)',padding:'16px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'16px',zIndex:'9999',flexWrap:'wrap',color:'#EFE8DA'});
+    document.body.appendChild(b);
+    document.getElementById('cb-accept').onclick=function(){localStorage.setItem('ga_consent','granted');b.remove();loadGA();};
+    document.getElementById('cb-decline').onclick=function(){localStorage.setItem('ga_consent','denied');b.remove();};
+  });
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20260820074103">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--night-ink);
+    color: var(--paper);
+    font-size: 1rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  ::selection { background: rgba(233,184,114,.22); }
+  a { color: var(--lamp); text-decoration: none; }
+  a:hover { color: var(--lamp-core); }
+
+  /* ── Header ── */
+
+  /* ── Layout ── */
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+  /* ── Hero ── */
+  .hero { padding: 4rem 28px 2.5rem; max-width: var(--max); margin: 0 auto; }
+  .eyebrow {
+    font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--brass-bright);
+    display: flex; align-items: center; gap: 10px; margin-bottom: 1.25rem;
+  }
+  .eyebrow::after {
+    content: ''; width: 20px; height: 1px; background: var(--brass);
+  }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1; letter-spacing: -0.02em;
+    color: var(--paper); margin-bottom: 1rem;
+  }
+  .hero h1 em { font-style: italic; color: var(--lamp-core); }
+  .hero p {
+    color: var(--mist); font-size: 1rem; max-width: 54ch; margin-bottom: 0.5rem;
+  }
+  .time-note {
+    font-size: 0.78rem; color: var(--brass-bright);
+    font-family: var(--sans); letter-spacing: 0.04em;
+  }
+
+  /* ── Progress ── */
+  .progress-wrap { margin: 2rem 0 1.5rem; }
+  .progress-meta {
+    display: flex; justify-content: space-between;
+    font-size: 0.75rem; color: var(--mist); margin-bottom: 0.5rem;
+    font-family: var(--sans); letter-spacing: 0.04em;
+  }
+  .progress-track {
+    height: 2px; background: var(--glass-blue); border-radius: 1px;
+  }
+  .progress-fill {
+    height: 100%; background: linear-gradient(90deg, var(--brass), var(--lamp));
+    border-radius: 1px; transition:width 0.4s var(--ease);
+  }
+
+  /* ── Card ── */
+  .card {
+    background: var(--chamber);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 2.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .q-number {
+    font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--brass-bright); margin-bottom: 0.75rem;
+  }
+  .q-text {
+    font-family: var(--serif); font-weight: 300;
+    font-size: 1.3rem; line-height: 1.35;
+    color: var(--paper); margin-bottom: 0.5rem;
+  }
+  .q-sub { font-size: 0.875rem; color: var(--mist); margin-bottom: 1.75rem; }
+
+  /* ── Options ── */
+  .options { display: flex; flex-direction: column; gap: 0.65rem; }
+  .option {
+    display: flex; align-items: flex-start; gap: 1rem;
+    background: var(--night-ink);
+    border: 1px solid var(--hairline);
+    border-radius: 7px;
+    padding: 1rem 1.1rem;
+    cursor: pointer;
+    transition:border-color 0.2s var(--ease), background 0.2s var(--ease);
+    user-select: none;
+  }
+  .option:hover { border-color: var(--brass); background: rgba(168,124,63,.06); }
+  .option.selected {
+    border-color: var(--lamp);
+    background: rgba(233,184,114,.08);
+  }
+  .opt-radio {
+    width: 16px; height: 16px; border-radius: 50%;
+    border: 1.5px solid var(--brass);
+    flex-shrink: 0; margin-top: 3px;
+    display: flex; align-items: center; justify-content: center;
+    transition:border-color 0.2s var(--ease), background 0.2s var(--ease);
+  }
+  .option.selected .opt-radio {
+    border-color: var(--lamp);
+    background: var(--lamp);
+  }
+  .option.selected .opt-radio::after {
+    content: ''; width: 5px; height: 5px;
+    background: var(--night-ink); border-radius: 50%;
+  }
+  .opt-label { font-size: 0.93rem; color: var(--paper); line-height: 1.4; }
+  .opt-sub { font-size: 0.78rem; color: var(--mist); margin-top: 0.2rem; }
+
+  /* ── Buttons ── */
+  .btn-row {
+    display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.25rem;
+  }
+  .btn {
+    padding: 0.7rem 1.75rem; border-radius: 5px;
+    font-size: 0.88rem; font-weight: 500; cursor: pointer;
+    border: none; font-family: var(--sans); transition:all 0.2s var(--ease);
+    letter-spacing: 0.02em;
+  }
+  .btn-solid {
+    background: var(--lamp); color: var(--night-ink);
+  }
+  .btn-solid:hover { background: var(--lamp-core); }
+  .btn-solid:disabled { opacity: 0.35; cursor: not-allowed; }
+  .btn-line {
+    background: transparent; color: var(--mist);
+    border: 1px solid var(--hairline);
+  }
+  .btn-line:hover { border-color: var(--brass); color: var(--paper); }
+
+  /* ── Result ── */
+  .result-card {
+    background: var(--chamber);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 2.25rem;
+    text-align: center;
+  }
+  .risk-badge {
+    display: inline-block;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; border-radius: 4px;
+    padding: 0.3rem 0.8rem; margin-bottom: 1.25rem;
+  }
+  .risk-high   { background: rgba(180,60,60,.18);  color: #E88; border: 1px solid rgba(180,60,60,.3); }
+  .risk-medium { background: rgba(233,184,114,.15); color: var(--lamp); border: 1px solid var(--hairline); }
+  .risk-low    { background: rgba(127,174,139,.15); color: #9DC9A8; border: 1px solid rgba(127,174,139,.3); }
+  .result-card h2 {
+    font-family: var(--serif); font-weight: 300;
+    font-size: 1.5rem; line-height: 1.25;
+    color: var(--paper); margin-bottom: 0.75rem;
+  }
+  .result-card > p {
+    color: var(--mist); font-size: 0.93rem;
+    max-width: 50ch; margin: 0 auto 1.75rem;
+  }
+
+  /* Findings */
+  .findings {
+    text-align: left;
+    background: var(--night-ink);
+    border: 1px solid var(--hairline);
+    border-radius: 7px; padding: 1.5rem; margin-bottom: 1.75rem;
+  }
+  .findings-label {
+    font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--brass-bright); margin-bottom: 1rem;
+  }
+  .finding {
+    display: flex; gap: 0.75rem; margin-bottom: 0.9rem; align-items: flex-start;
+  }
+  .finding:last-child { margin-bottom: 0; }
+  .finding-mark {
+    width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: 2px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.65rem; font-weight: 700;
+  }
+  .fm-red   { background: rgba(180,60,60,.2);   color: #E88; }
+  .fm-amber { background: rgba(233,184,114,.2); color: var(--lamp); }
+  .fm-green { background: rgba(127,174,139,.2); color: #9DC9A8; }
+  .finding-body { font-size: 0.875rem; color: var(--mist); line-height: 1.5; }
+  .finding-body strong { color: var(--paper); }
+
+  /* Email capture */
+  .capture-box {
+    background: var(--night-ink);
+    border: 1px solid var(--hairline);
+    border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;
+    text-align: left;
+  }
+  .capture-box h3 {
+    font-family: var(--serif); font-weight: 300;
+    font-size: 1rem; color: var(--paper); margin-bottom: 0.35rem;
+  }
+  .capture-box p { font-size: 0.82rem; color: var(--mist); margin-bottom: 1rem; }
+  .capture-form { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+  .capture-input {
+    flex: 1; min-width: 200px;
+    background: var(--chamber); border: 1px solid var(--hairline);
+    border-radius: 5px; padding: 0.65rem 0.9rem;
+    font-size: 0.88rem; color: var(--paper); font-family: var(--sans);
+    outline: none; transition:border-color 0.2s var(--ease);
+  }
+  .capture-input:focus { border-color: var(--brass); }
+  .capture-input::placeholder { color: var(--mist); }
+  .capture-btn {
+    background: var(--chamber); color: var(--lamp);
+    border: 1px solid var(--hairline); border-radius: 5px;
+    padding: 0.65rem 1.25rem; font-size: 0.85rem; font-weight: 600;
+    cursor: pointer; font-family: var(--sans); white-space: nowrap;
+    transition:border-color 0.2s var(--ease), color 0.2s var(--ease);
+  }
+  .capture-btn:hover { border-color: var(--brass); color: var(--lamp); }
+  .capture-sent {
+    font-size: 0.82rem; color: #7DC49A; margin-top: 0.6rem; display: none;
+  }
+  .capture-privacy {
+    font-size: 0.68rem; color: var(--mist); margin-top: 0.5rem;
+  }
+
+  /* CTA box */
+  .cta-box {
+    background: linear-gradient(135deg, rgba(168,124,63,.12), rgba(233,184,114,.06));
+    border: 1px solid var(--hairline);
+    border-radius: 8px; padding: 1.75rem; margin-top: 0.5rem;
+  }
+  .cta-box h3 {
+    font-family: var(--serif); font-weight: 300;
+    font-size: 1.15rem; color: var(--paper); margin-bottom: 0.5rem;
+  }
+  .cta-box p { font-size: 0.875rem; color: var(--mist); margin-bottom: 1.1rem; }
+  .btn-cta {
+    display: inline-block;
+    background: var(--lamp); color: var(--night-ink);
+    padding: 0.75rem 2rem; border-radius: 5px;
+    font-size: 0.88rem; font-weight: 600;
+    letter-spacing: 0.02em; transition:background 0.2s var(--ease);
+  }
+  .btn-cta:hover { background: var(--lamp-core); color: var(--night-ink); }
+  .retake {
+    margin-top: 1.1rem; font-size: 0.8rem; color: var(--mist);
+  }
+  .retake a { color: var(--brass-bright); cursor: pointer; }
+  .retake a:hover { color: var(--lamp); }
+
+  /* Divider */
+  .rule {
+    border: none; border-top: 1px solid var(--hairline);
+    margin: 1.5rem 0;
+  }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--hairline);
+    padding: 2rem 28px; margin-top: 5rem; text-align: center;
+    font-size: 0.78rem; color: var(--mist);
+  }
+  footer a { color: var(--mist); margin: 0 0.4rem; }
+  footer a:hover { color: var(--lamp); }
+
+  .hidden { display: none !important; }
+
+  @media (max-width: 560px) {
+    .card, .result-card { padding: 1.5rem; }
+    .hero { padding: 2.5rem 20px 1.5rem; }
+  }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "AI Critical Exposure Assessment",
+ "url": "https://adesanyaaiadvisory.com/assessment.html",
+ "applicationCategory": "BusinessApplication",
+ "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+ "publisher": {
+  "@type": "Organization",
+  "name": "Adesanya AI Advisory",
+  "url": "https://adesanyaaiadvisory.com/",
+  "founder": {
+   "@type": "Person",
+   "name": "Abdulwahab B. Adesanya",
+   "jobTitle": "Founder, Adesanya AI Advisory · EU AI Act Compliance Counsel",
+   "url": "https://adesanyaaiadvisory.com/",
+   "sameAs": ["https://www.linkedin.com/in/abdulwahab-adesanya"]
+  }
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is the AI Critical Exposure Assessment?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A free, three-question tool from Adesanya AI Advisory that gives an instant, plain-English read on where your AI stack may be exposed under the EU AI Act — before a regulator finds it. No email required."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Who built this assessment?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Adesanya AI Advisory, an EU AI Act compliance practice based in Dublin, founded by Abdulwahab B. Adesanya, LL.M in Intellectual Property & IT Law, University College Dublin."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What happens after I get my result?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "You can retake the assessment, or move straight to a Readiness Sprint — a five-day fixed-fee engagement that maps your AI systems against EU AI Act deployer obligations and delivers a written remediation roadmap."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body class="has-nav">
+
+<!-- Header -->
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="index.html" aria-label="Adesanya AI Advisory — home"><img src="assets/adesanya-mark.svg" alt="" width="26" height="28"><span class="wordmark">ADESANYA AI ADVISORY<sup>&#8482;</sup></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <nav class="navlinks" id="navlinks" aria-label="Site">
+      <a class="nl" href="services.html">Services</a>
+      <a class="nl" href="legislation.html">Legislation</a>
+      <a class="nl" href="knowledge-base.html">Knowledge base</a>
+      <a class="nl" href="nigeria.html">Nigeria–EU</a>
+      <a class="nl" href="https://gateway.adesanyaaiadvisory.com" target="_blank" rel="noopener">Aegis Guard</a>
+      <a class="nl" href="work-with-me.html">Work with me</a>
+      <a class="nl" href="index.html#contact">Contact</a>
+      <a class="watch" href="index.html#radar" aria-label="Live AI Law Radar, updated weekly"><span class="dot"></span>LIVE<span class="full">&nbsp;&#183; RADAR &#183; WEEKLY</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="eyebrow">3-Question Assessment · Free</div>
+  <h1>Your AI <em>Critical Exposure</em><br>Assessment</h1>
+  <p>Three questions. Instant results. Know exactly where your organisation is exposed before a regulator does.</p>
+  <div class="time-note">Takes under 60 seconds</div>
+</div>
+
+<!-- Assessment -->
+<div class="wrap" id="assessment">
+
+  <!-- Progress -->
+  <div class="progress-wrap">
+    <div class="progress-meta">
+      <span id="progress-text">Question 1 of 3</span>
+      <span id="progress-pct">33%</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progress-fill" style="width:33%"></div>
+    </div>
+  </div>
+
+  <!-- Q1 -->
+  <div class="card" id="q1">
+    <div class="q-number">Question 01 / 03</div>
+    <div class="q-text">When a user revokes GDPR consent, how quickly do your AI systems stop processing their data?</div>
+    <div class="q-sub">This is the runtime consent check — the gap most enterprises cannot answer precisely.</div>
+    <div class="options" data-q="1">
+      <div class="option" data-value="2" onclick="select(this)">
+        <div class="opt-radio"></div>
+        <div>
+          <div class="opt-label">Within the same session — we have real-time consent enforcement</div>
+          <div class="opt-sub">Live consent token validation at the point of AI execution</div>
+        </div>
+      </div>
+      <div class="option" data-value="1" onclick="select(this)">
+        <div class="opt-radio"></div>
+        <div>
+          <div class="opt-label">Within hours — we sync consent status periodically</div>
+          <div class="opt-sub">Batch or scheduled updates, not real-time enforcement</div>
+        </div>
+      </div>
+      <div class="option" data-value="0" onclick="select(this)">
+        <div class="opt-radio"></div>
+        <div>
+          <div class="opt-label">We're not certain — consent revocations aren't tracked at the AI layer</div>
+          <div class="opt-sub">Policy exists but isn't enforced technically at runtime</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="card hidden" id="q2">
+    <div class="q-number">Question 02 / 03</div>
+    <div class="q-text">Can your DPO produce a verifiable audit trail of every AI decision made in the last 6 months?</div>
+    <div class="q-sub">The EU AI Act requires deployers of high-risk AI systems to retain audit logs. The burden of proof sits with you.</div>
+    <div class="options" data-q="2">
+      <div class="option" data-value="2" onclick="select(this)">
+        <div class="opt-radio"></div>
+        <div>
+          <div class="opt-label">Yes — tamper-evident, timestamped logs ready for regulatory submission</div>
+          <div class="opt-sub">Cryptographically signed records, retained and accessible</div>
+        </div>
+      </div>
+      <div class="option" data-value="1" onclick="select(this)">
+        <div class="opt-radio"></div>
+        <div>
+          <div class="opt-label">Partially — we have some logs but they're incomplete or not structured for audit</div>
+          <div class="opt-sub">Logs exist but wouldn't satisfy a regulatory inspection or AI Office audit</div>
+        </div>
+      </div>
+      <div class="option" data-value="0" onclick="select(this)">
+        <div class="opt-radio"></div>
+        <div>
+          <div class="opt-label">No — AI decisions are not systematically logged at this level</div>
+          <div class="opt-sub">No structured audit trail currently in place</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="card hidden" id="q3">
+    <div class="q-number">Question 03 / 03</div>
+    <div class="q-text">If an employee sends personal data to a third-party AI API at 3am, could you detect and block it?</div>
+    <div class="q-sub">The Runtime Execution Gap — the moment data leaves your network perimeter, the breach has already occurred.</div>
+    <div class="options" data-q="3">
+      <div class="option" data-value="2" onclick="select(this)">
+        <div class="opt-radio"></div>
+        <div>
+          <div class="opt-label">Yes — a runtime enforcement layer intercepts and validates before data leaves</div>
+          <div class="opt-sub">Active technical controls, not just policy</div>
+        </div>
+      </div>
+      <div class="option" data-value="1" onclick="select(this)">
+        <div class="opt-radio"></div>
+        <div>
+          <div class="opt-label">We would detect it after the fact — but not prevent it in real time</div>
+          <div class="opt-sub">Monitoring exists, but enforcement is retrospective</div>
+        </div>
+      </div>
+      <div class="option" data-value="0" onclick="select(this)">
+        <div class="opt-radio"></div>
+        <div>
+          <div class="opt-label">No — we rely on employee policy and training, not technical enforcement</div>
+          <div class="opt-sub">Passive controls only — the breach would occur before detection</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <div class="btn-row">
+    <button class="btn btn-line hidden" id="btn-back" onclick="goBack()">← Back</button>
+    <button class="btn btn-solid" id="btn-next" onclick="goNext()" disabled>Next →</button>
+  </div>
+
+</div><!-- /assessment -->
+
+<!-- Result -->
+<div class="wrap hidden" id="result">
+
+  <div style="padding: 3.5rem 0 1.5rem; text-align:center;">
+    <div class="eyebrow" style="justify-content:center">Assessment Complete</div>
+    <p style="color:var(--mist); font-size:0.9rem;">Your AI Runtime Exposure Profile</p>
+  </div>
+
+  <div class="result-card">
+    <div id="risk-badge"></div>
+    <h2 id="result-title"></h2>
+    <p id="result-summary"></p>
+
+    <div class="findings">
+      <div class="findings-label">What your answers reveal</div>
+      <div id="findings-list"></div>
+    </div>
+
+
+    <div class="cta-box">
+      <h3>Start with a Readiness Sprint</h3>
+      <p>In five working days, we map your AI systems against EU AI Act deployer obligations, score your exposure, and deliver a written remediation roadmap your General Counsel can act on. Fixed fee. Written findings. No call required.</p>
+      <a href="intake.html" class="btn-cta">Begin your Readiness Sprint →</a>
+    </div>
+
+    <div class="retake">Not what you expected? <a onclick="retake()">Retake the assessment</a></div>
+  </div>
+
+</div><!-- /result -->
+
+<!-- FAQ -->
+<div class="wrap" style="padding:2.5rem 28px 1rem;max-width:720px">
+  <div class="eyebrow">Frequently asked</div>
+  <div style="display:flex;flex-direction:column;gap:18px;margin-top:14px">
+    <div><h3 style="font-family:var(--serif);font-weight:400;font-size:1rem;color:var(--paper);margin-bottom:4px">What is the AI Critical Exposure Assessment?</h3><p style="color:var(--mist);font-size:.88rem;margin:0">A free, three-question tool that gives an instant, plain-English read on where your AI stack may be exposed under the EU AI Act — before a regulator finds it. No email required.</p></div>
+    <div><h3 style="font-family:var(--serif);font-weight:400;font-size:1rem;color:var(--paper);margin-bottom:4px">Who built this?</h3><p style="color:var(--mist);font-size:.88rem;margin:0">Adesanya AI Advisory, a specialist EU AI Act compliance practice based in Dublin and instructed wherever the Act reaches, founded by Abdulwahab B. Adesanya, LL.M in Intellectual Property &amp; IT Law (UCD).</p></div>
+    <div><h3 style="font-family:var(--serif);font-weight:400;font-size:1rem;color:var(--paper);margin-bottom:4px">What happens after I get my result?</h3><p style="color:var(--mist);font-size:.88rem;margin:0">Move straight to a Readiness Sprint — a five-day fixed-fee engagement mapping your AI systems against EU AI Act deployer obligations, with a written remediation roadmap.</p></div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="ftl">
+<style>
+.ftl{background:#0B0F1A;border-top:1px solid rgba(168,124,63,.25);padding:34px 28px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:.74rem;color:#93A3BD;line-height:1.7}
+.ftl-wrap{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ftl a{color:#93A3BD;text-decoration:none;transition:color .25s var(--ease)}
+.ftl a:hover{color:#F7DCA8}
+.ftl-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.ftl-clock{color:#E9B872;letter-spacing:.05em;white-space:nowrap}
+.ftl-clock b{color:#F7DCA8;font-weight:500}
+.ftl-extra{max-width:1180px;margin:10px auto 0;color:rgba(147,163,189,.7);font-size:.68rem;letter-spacing:.04em}
+@media(max-width:680px){.ftl-wrap{flex-direction:column;text-align:center}}
+</style>
+<div class="ftl-wrap">
+  <span>&copy; <span id="yr"></span> Adesanya AI Advisory&trade; &mdash; Abdulwahab B. Adesanya &mdash; Dublin, Ireland</span>
+  <span class="ftl-links">
+    <a href="https://www.linkedin.com/in/abdulwahab-adesanya" target="_blank" rel="noopener" aria-label="Abdulwahab Adesanya on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;fill:currentColor;vertical-align:-2px;margin-right:6px"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
+    <a href="intake.html">Begin in writing</a>
+    <a href="/privacy-policy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </span>
+  <span class="ftl-clock" id="ftl-clock">&mdash;</span>
+</div>
+
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y&&!y.textContent) y.textContent=new Date().getFullYear();
+  var c=document.getElementById('ftl-clock');
+  function t(){ if(!c)return;
+    var n=new Date();
+    c.innerHTML='Dublin · <b>'+n.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'Europe/Dublin'})+' · '+n.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Europe/Dublin'})+'</b>';
+  }
+  t(); setInterval(t,30000);
+})();
+</script>
+</footer>
+
+<script>
+  const answers = { 1: null, 2: null, 3: null };
+  let currentQ = 1;
+
+  function select(el) {
+    el.closest('.options').querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    answers[currentQ] = parseInt(el.dataset.value);
+    document.getElementById('btn-next').disabled = false;
+  }
+
+  function goNext() {
+    if (currentQ < 3) {
+      document.getElementById('q' + currentQ).classList.add('hidden');
+      currentQ++;
+      document.getElementById('q' + currentQ).classList.remove('hidden');
+      document.getElementById('btn-next').disabled = answers[currentQ] === null;
+      document.getElementById('btn-back').classList.remove('hidden');
+      updateProgress();
+      if (currentQ === 3) document.getElementById('btn-next').textContent = 'See my results →';
+    } else {
+      showResult();
+    }
+  }
+
+  function goBack() {
+    document.getElementById('q' + currentQ).classList.add('hidden');
+    currentQ--;
+    document.getElementById('q' + currentQ).classList.remove('hidden');
+    document.getElementById('btn-next').disabled = false;
+    document.getElementById('btn-next').textContent = 'Next →';
+    if (currentQ === 1) document.getElementById('btn-back').classList.add('hidden');
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const pct = Math.round((currentQ / 3) * 100);
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('progress-text').textContent = 'Question ' + currentQ + ' of 3';
+    document.getElementById('progress-pct').textContent = pct + '%';
+  }
+
+  function handleCapture(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString() })
+      .then(() => {
+        form.style.display = 'none';
+        document.getElementById('capture-sent').style.display = 'block';
+        gtag('event', 'assessment_lead_captured');
+      })
+      .catch(() => {
+        document.getElementById('capture-sent').textContent = '✓ Noted — we\'ll be in touch shortly.';
+        document.getElementById('capture-sent').style.display = 'block';
+        form.style.display = 'none';
+      });
+  }
+
+  function showResult() {
+    const total = answers[1] + answers[2] + answers[3];
+
+    const data = [
+      {
+        a: answers[1],
+        items: [
+          { cls: 'fm-red',   sym: '✕', text: '<strong>Critical gap:</strong> Consent revocations are not enforced at the AI runtime layer. Under GDPR Article 7(3), processing must cease immediately on withdrawal — a periodic sync is not sufficient.' },
+          { cls: 'fm-amber', sym: '!', text: '<strong>Partial control:</strong> Periodic consent syncs reduce risk but leave a window of non-compliant processing between cycles. Real-time enforcement is the standard.' },
+          { cls: 'fm-green', sym: '✓', text: '<strong>Strong control:</strong> Real-time consent enforcement at the AI execution layer meets the technical standard required for GDPR Article 25 (Privacy by Design) compliance.' }
+        ]
+      },
+      {
+        a: answers[2],
+        items: [
+          { cls: 'fm-red',   sym: '✕', text: '<strong>Critical gap:</strong> No structured audit trail means you cannot demonstrate compliance with EU AI Act log retention obligations for deployers of high-risk AI systems. A regulatory inspection would expose this immediately.' },
+          { cls: 'fm-amber', sym: '!', text: '<strong>Partial control:</strong> Incomplete logs create evidential gaps. If an incident occurs, you may not be able to reconstruct what your AI systems decided and why.' },
+          { cls: 'fm-green', sym: '✓', text: '<strong>Strong control:</strong> Tamper-evident audit logs position you to respond to DPC or AI Office inquiries with confidence. Ensure records cover the full 6-month minimum.' }
+        ]
+      },
+      {
+        a: answers[3],
+        items: [
+          { cls: 'fm-red',   sym: '✕', text: '<strong>Critical gap:</strong> Relying on policy and training is not a technical control. The moment data exits your perimeter, the breach has occurred — policy cannot reverse that.' },
+          { cls: 'fm-amber', sym: '!', text: '<strong>Partial control:</strong> Retrospective detection means you can identify breaches but not prevent them. The regulatory exposure exists in the gap between breach and detection.' },
+          { cls: 'fm-green', sym: '✓', text: '<strong>Strong control:</strong> Active runtime enforcement at the network perimeter transforms AI compliance from a policy exercise into a technical guarantee.' }
+        ]
+      }
+    ];
+
+    const list = document.getElementById('findings-list');
+    list.textContent = '';
+    data.forEach(d => {
+      const item = d.items[2 - d.a];
+      const row = document.createElement('div'); row.className = 'finding';
+      const mark = document.createElement('div'); mark.className = 'finding-mark ' + item.cls; mark.textContent = item.sym;
+      const body = document.createElement('div'); body.className = 'finding-body';
+      // item.text has one <strong> prefix — split on first </strong> to extract it safely
+      const strongEnd = item.text.indexOf('</strong>');
+      if (strongEnd !== -1) {
+        const boldText = item.text.replace('<strong>', '').substring(0, item.text.indexOf('</strong>') - '<strong>'.length);
+        const rest = item.text.substring(item.text.indexOf('</strong>') + '</strong>'.length);
+        const strong = document.createElement('strong'); strong.textContent = boldText;
+        body.appendChild(strong);
+        body.appendChild(document.createTextNode(rest));
+      } else {
+        body.textContent = item.text;
+      }
+      row.appendChild(mark); row.appendChild(body);
+      list.appendChild(row);
+    });
+
+    let badgeClass, badgeText, title, summary;
+    if (total <= 1) {
+      badgeClass = 'risk-badge risk-high'; badgeText = 'High Exposure';
+      title = 'Your AI stack has material compliance exposure across the EU AI Act\'s two enforcement horizons.';
+      summary = 'Significant gaps in runtime consent enforcement, audit trail capability, and perimeter controls. These are technical gaps that a regulatory inspection or AI Office audit would surface. Transparency and AI literacy obligations are live from 2 August 2026. High-risk AI (Annex III) full obligations are deferred to 2 December 2027 under the Digital Omnibus (Regulation (EU) 2026/1744, in force 27 July 2026).';
+    } else if (total <= 3) {
+      badgeClass = 'risk-badge risk-medium'; badgeText = 'Moderate Exposure';
+      title = 'Partial controls are in place — but gaps remain before you can demonstrate compliance.';
+      summary = 'You have some of the right infrastructure, but incomplete or retrospective controls still leave you exposed. The difference between partial compliance and full compliance is often a single technical layer — and that gap matters enormously under regulatory scrutiny.';
+    } else {
+      badgeClass = 'risk-badge risk-low'; badgeText = 'Low Exposure';
+      title = 'Your controls are ahead of most enterprises — but independent validation matters.';
+      summary = 'Your answers suggest strong runtime controls are in place. The remaining question is whether your architecture can withstand external scrutiny. An independent Readiness Sprint will confirm your posture and identify any blind spots before enforcement begins.';
+    }
+
+    document.getElementById('risk-badge').className = badgeClass;
+    document.getElementById('risk-badge').textContent = badgeText;
+    document.getElementById('result-title').textContent = title;
+    document.getElementById('result-summary').textContent = summary;
+    document.getElementById('capture-risk').value = badgeText;
+
+    gtag('event', 'assessment_completed');
+
+    document.getElementById('assessment').classList.add('hidden');
+    document.getElementById('result').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function retake() {
+    answers[1] = null; answers[2] = null; answers[3] = null;
+    currentQ = 1;
+    ['q1','q2','q3'].forEach((id, i) => {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden', i !== 0);
+      el.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+    });
+    document.getElementById('btn-next').disabled = true;
+    document.getElementById('btn-next').textContent = 'Next →';
+    document.getElementById('btn-back').classList.add('hidden');
+    document.getElementById('progress-fill').style.width = '33%';
+    document.getElementById('progress-text').textContent = 'Question 1 of 3';
+    document.getElementById('progress-pct').textContent = '33%';
+    document.getElementById('result').classList.add('hidden');
+    document.getElementById('assessment').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+<script src="assets/site.js?v=20260820074103"></script>
+</body>
+</html>

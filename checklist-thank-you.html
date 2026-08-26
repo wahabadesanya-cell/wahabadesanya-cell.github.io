@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Checklist — Adesanya AI Advisory</title>
+  <!-- GA4 — loaded only if visitor accepted analytics consent -->
+  <script>
+  (function(){
+    var GA_ID='G-VPL2XEB7GK';
+    function loadGA(){
+      var s=document.createElement('script');
+      s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
+      document.head.appendChild(s);
+      window.dataLayer=window.dataLayer||[];
+      window.gtag=function(){dataLayer.push(arguments);};
+      gtag('js',new Date());gtag('config',GA_ID);
+    }
+    var stored=localStorage.getItem('ga_consent');
+    if(stored==='granted'){loadGA();}else{window.gtag=function(){};}
+  })();
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css?v=20260820074103">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    /* This page is the one light surface on the site. Before it linked
+       site.css, --paper/--mist/--hairline were simply undefined here, so
+       text fell back to body's colour. Now that they resolve to the dark
+       theme's values, they have to be re-pointed for a light ground or the
+       heading renders cream on white. */
+    :root{--dark:#141413;--smoke:#F5F3EE;
+      --paper:#141413;--mist:#5A5A55;--hairline:rgba(20,20,19,.12)}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--smoke);color:var(--dark);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center}
+    .card{background:#fff;border:1px solid var(--hairline);border-radius:16px;padding:56px 48px;max-width:520px;width:100%;box-shadow:0 4px 40px rgba(20,20,19,.06)}
+    .icon{width:64px;height:64px;background:var(--lamp);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:28px}
+    h1{font-family:var(--serif);font-size:1.9rem;font-weight:400;margin-bottom:12px;letter-spacing:-.01em}
+    p{font-size:1rem;color:var(--mist);line-height:1.6;margin-bottom:24px}
+    .btn{font-family:var(--mono);display:inline-block;background:var(--dark);color:#fff;text-decoration:none;padding:16px 32px;border-radius:8px;font-weight:600;font-size:.95rem;letter-spacing:.02em;transition:opacity .2s var(--ease)}
+    .btn:hover{opacity:.85}
+    .back{display:block;margin-top:20px;font-size:.875rem;color:var(--mist);text-decoration:none}
+    .back:hover{color:var(--dark)}
+    .footer-wordmark{font-family:var(--mono);font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);margin-top:40px;text-decoration:none;display:block}
+    .footer-wordmark span{color:var(--brass)}
+  </style>
+</head>
+<body class="has-nav">
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="index.html" aria-label="Adesanya AI Advisory — home"><img src="assets/adesanya-mark.svg" alt="" width="26" height="28"><span class="wordmark">ADESANYA AI ADVISORY<sup>&#8482;</sup></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <nav class="navlinks" id="navlinks" aria-label="Site">
+      <a class="nl" href="services.html">Services</a>
+      <a class="nl" href="legislation.html">Legislation</a>
+      <a class="nl" href="knowledge-base.html">Knowledge base</a>
+      <a class="nl" href="nigeria.html">Nigeria–EU</a>
+      <a class="nl" href="https://gateway.adesanyaaiadvisory.com" target="_blank" rel="noopener">Aegis Guard</a>
+      <a class="nl" href="work-with-me.html">Work with me</a>
+      <a class="nl" href="index.html#contact">Contact</a>
+      <a class="watch" href="index.html#radar" aria-label="Live AI Law Radar, updated weekly"><span class="dot"></span>LIVE<span class="full">&nbsp;&#183; RADAR &#183; WEEKLY</span></a>
+    </nav>
+  </div>
+</header>
+  <div class="card">
+    <div class="icon">&#10003;</div>
+    <h1>Your checklist is ready.</h1>
+    <p>Thank you for your interest. Click below to download the EU AI Act Compliance Checklist — a practical guide covering all four risk tiers aligned to the 2025/2026 enforcement timeline.</p>
+    <a class="btn" href="/eu_ai_act_compliance_checklist.pdf" download>Download the PDF &rarr;</a>
+    <a class="back" href="/">Return to Adesanya AI Advisory</a>
+  </div>
+  <a class="footer-wordmark" href="/">ADESANYA AI ADVISORY<sup style="font-size:.6em;">™</sup></a>
+  <script>
+    // Track download event in GA4
+    document.querySelector('.btn').addEventListener('click', function() {
+      gtag('event', 'file_download', {
+        file_name: 'eu_ai_act_compliance_checklist.pdf',
+        link_text: 'Download the PDF'
+      });
+    });
+  </script>
+<script src="assets/site.js?v=20260820074103"></script>
+</body>
+</html>

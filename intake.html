@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Compliance Intake Questionnaire — Adesanya AI Advisory™</title>
+<meta name="description" content="Complete the Adesanya AI Advisory intake questionnaire to begin your EU AI Act compliance assessment.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://adesanyaaiadvisory.com/intake">
+<meta property="og:title" content="Begin in Writing — AI Compliance Intake | Adesanya AI Advisory">
+<meta property="og:description" content="Start your EU AI Act compliance engagement with a structured written enquiry. Five sections, eleven questions — reviewed personally, response usually within one business day.">
+<meta property="og:image" content="https://adesanyaaiadvisory.com/og-image.png">
+<meta property="og:url" content="https://adesanyaaiadvisory.com/intake">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Adesanya AI Advisory">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Begin in Writing — AI Compliance Intake | Adesanya AI Advisory">
+<meta name="twitter:description" content="Start your EU AI Act compliance engagement with a structured written enquiry.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20260820074103">
+<style>
+  :root{--success-bg:#0d2318}
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--night-ink);
+    color: var(--paper);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── NAV */
+  nav {
+    border-bottom: 1px solid var(--hairline);
+    padding: 0 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1rem; font-weight: 600;
+    color: var(--lamp); text-decoration: none;
+    letter-spacing: .01em;
+  }
+  .nav-back {
+    font-size: .8125rem; color: var(--mist);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 6px;
+    transition:color .18s var(--ease);
+  }
+  .nav-back:hover { color: var(--lamp); }
+
+  /* ── PROGRESS BAR */
+  .progress-bar {
+    background: var(--glass-blue);
+    border-bottom: 1px solid var(--hairline);
+    padding: 11px 32px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .progress-label {
+    font-size: .72rem; color: var(--mist);
+    white-space: nowrap; font-weight: 600;
+    text-transform: uppercase; letter-spacing: .06em;
+  }
+  .progress-track {
+    flex: 1; height: 4px;
+    background: rgba(255,255,255,.08); border-radius: 4px; overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%; width: 0%;
+    background: linear-gradient(90deg, var(--brass), var(--lamp));
+    border-radius: 4px; transition:width .4s var(--ease);
+  }
+  .progress-count { font-size: .75rem; color: var(--lamp); font-weight: 700; white-space: nowrap; }
+  .progress-time  { font-size: .72rem; color: var(--mist); white-space: nowrap; }
+
+  /* ── HERO */
+  .hero {
+    background: var(--chamber);
+    border-bottom: 1px solid var(--hairline);
+    padding: 52px 32px 44px;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    font-size: .6875rem; font-weight: 700;
+    letter-spacing: .14em; text-transform: uppercase;
+    color: var(--lamp); margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 600; color: var(--lamp-core);
+    line-height: 1.15; margin-bottom: 16px;
+  }
+  .hero-sub {
+    font-size: .9375rem; color: var(--mist);
+    max-width: 560px; margin: 0 auto 28px;
+    line-height: 1.7;
+  }
+  .hero-sub strong { color: var(--lamp-core); }
+  .hero-meta {
+    display: inline-flex; gap: 20px; flex-wrap: wrap;
+    justify-content: center;
+    font-size: .8125rem; color: var(--mist);
+  }
+  .hero-meta span {
+    display: flex; align-items: center; gap: 6px;
+  }
+  .hero-meta span::before {
+    content: ''; width: 6px; height: 6px;
+    border-radius: 50%; background: var(--lamp);
+    flex-shrink: 0;
+  }
+
+  /* ── WHY BOX */
+  .why-box {
+    max-width: 640px; margin: 32px auto 0;
+    background: var(--glass-blue);
+    border: 1px solid var(--hairline);
+    border-left: 3px solid var(--lamp);
+    border-radius: 8px; padding: 18px 22px;
+    font-size: .875rem; color: var(--mist); line-height: 1.7;
+    text-align: left;
+  }
+  .why-box strong { color: var(--lamp-core); }
+
+  /* ── MAIN */
+  main {
+    max-width: 720px; margin: 0 auto;
+    padding: 44px 32px 80px;
+  }
+
+  /* ── FORM SECTION */
+  .form-section {
+    background: var(--chamber);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    transition:border-color .3s var(--ease);
+  }
+  .form-section.section-done {
+    border-color: rgba(127,174,139,.35);
+  }
+  .section-header {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 22px; padding-bottom: 14px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .section-badge {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--lamp); color: var(--night-ink);
+    font-size: .8rem; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; transition:background .3s var(--ease);
+  }
+  .form-section.section-done .section-badge {
+    background: var(--success);
+    color: #fff;
+  }
+  .section-done-mark {
+    display: none; font-size: .8rem; color: var(--success); font-weight: 700;
+    margin-left: auto;
+  }
+  .form-section.section-done .section-done-mark { display: block; }
+
+  .section-info { flex: 1; }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 1.0625rem; font-weight: 600;
+    color: var(--lamp-core); line-height: 1.2;
+  }
+  .section-sub {
+    font-size: .8rem; color: var(--mist); margin-top: 2px;
+  }
+
+  /* ── FIELD */
+  .field { margin-bottom: 22px; }
+  .field:last-child { margin-bottom: 0; }
+  .field-label {
+    display: block;
+    font-size: .8125rem; font-weight: 700;
+    color: var(--lamp-core); margin-bottom: 5px;
+    line-height: 1.45;
+  }
+  .field-hint {
+    font-size: .75rem; color: var(--mist);
+    margin-bottom: 8px; line-height: 1.55;
+  }
+  .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    background: var(--glass-blue);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: .9rem;
+    font-family: var(--sans);
+    color: var(--paper);
+    transition:border-color .2s var(--ease), box-shadow .2s var(--ease);
+    outline: none;
+    -webkit-appearance: none;
+  }
+  input::placeholder, textarea::placeholder { color: rgba(147,163,189,.4); }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--lamp);
+    box-shadow: 0 0 0 3px rgba(233,184,114,.1);
+  }
+  select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2393A3BD' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+  }
+  select option { background: var(--chamber); }
+  textarea { resize: vertical; min-height: 88px; line-height: 1.55; }
+  textarea.tall { min-height: 116px; }
+
+  /* ── RADIO */
+  .radio-group { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 2px; }
+  .radio-opt {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--glass-blue); border: 1px solid var(--hairline);
+    border-radius: 6px; padding: 8px 16px; cursor: pointer;
+    transition:border-color .18s var(--ease), background .18s var(--ease);
+    font-size: .875rem; color: var(--mist);
+    user-select: none;
+  }
+  .radio-opt input[type="radio"] { display: none; }
+  /* CSS :has() for modern browsers */
+  .radio-opt:has(input:checked) {
+    border-color: var(--lamp);
+    background: rgba(233,184,114,.1);
+    color: var(--lamp-core);
+  }
+  /* JS fallback class for older browsers */
+  .radio-opt.checked {
+    border-color: var(--lamp);
+    background: rgba(233,184,114,.1);
+    color: var(--lamp-core);
+  }
+  .radio-dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    border: 2px solid var(--mist); flex-shrink: 0;
+    transition:border-color .18s var(--ease), background .18s var(--ease);
+  }
+  .radio-opt:has(input:checked) .radio-dot,
+  .radio-opt.checked .radio-dot {
+    border-color: var(--lamp);
+    background: var(--lamp);
+  }
+
+  /* ── CONDITIONAL FIELDS */
+  .conditional { display: none; margin-top: 14px; }
+  .conditional.visible { display: block; }
+
+  /* ── REQUIRED MARK */
+  .req { color: var(--lamp); margin-left: 2px; }
+
+  /* ── WHAT HAPPENS NEXT BOX */
+  .next-box {
+    background: var(--glass-blue);
+    border: 1px solid var(--hairline);
+    border-left: 3px solid var(--success);
+    border-radius: 8px; padding: 18px 22px;
+    margin-bottom: 20px;
+  }
+  .next-box-title {
+    font-size: .75rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .08em;
+    color: var(--success); margin-bottom: 12px;
+  }
+  .next-item {
+    display: flex; gap: 10px; align-items: flex-start;
+    margin-bottom: 8px; font-size: .875rem; color: var(--mist); line-height: 1.5;
+  }
+  .next-item:last-child { margin-bottom: 0; }
+  .next-tick {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--success); color: #fff;
+    font-size: .65rem; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* ── DECLARATION */
+  .declaration-box {
+    background: var(--glass-blue);
+    border: 1px solid var(--hairline);
+    border-radius: 8px; padding: 20px 24px;
+    margin-bottom: 20px;
+  }
+  .declaration-text {
+    font-size: .8125rem; color: var(--mist); line-height: 1.7;
+    margin-bottom: 10px;
+  }
+  .checkbox-row {
+    display: flex; gap: 12px; align-items: flex-start;
+    cursor: pointer; margin-top: 14px;
+  }
+  .checkbox-row input[type="checkbox"] {
+    width: 18px; height: 18px; flex-shrink: 0;
+    margin-top: 2px; cursor: pointer;
+    accent-color: var(--lamp);
+  }
+  .checkbox-label {
+    font-size: .875rem; color: var(--paper);
+    line-height: 1.55;
+  }
+
+  /* ── PRIVACY NOTE */
+  .privacy-note {
+    font-size: .75rem; color: var(--mist);
+    margin-bottom: 20px; line-height: 1.6; text-align: center;
+  }
+  .privacy-note a { color: var(--mist); text-decoration: underline; }
+  .privacy-note a:hover { color: var(--lamp); }
+
+  /* ── SUBMIT */
+  .submit-area { text-align: center; }
+  .btn-submit {
+    display: inline-block;
+    background: var(--lamp);
+    color: var(--night-ink);
+    font-family: var(--sans);
+    font-size: .9375rem; font-weight: 700;
+    padding: 14px 44px; border-radius: 8px;
+    border: none; cursor: pointer;
+    transition:background .2s var(--ease), transform .1s var(--ease);
+    letter-spacing: .01em;
+  }
+  .btn-submit:hover { background: var(--lamp-core); }
+  .btn-submit:active { transform: scale(.98); }
+  .submit-note {
+    font-size: .75rem; color: var(--mist);
+    margin-top: 10px; line-height: 1.65;
+  }
+
+  /* ── HIDDEN honeypot */
+  .hidden { display: none; }
+
+  /* ── FOOTER */
+  footer {
+    border-top: 1px solid var(--hairline);
+    padding: 20px 32px;
+    text-align: center;
+    font-size: .75rem; color: var(--mist);
+    line-height: 1.8;
+  }
+  footer a { color: var(--mist); text-decoration: underline; }
+  footer a:hover { color: var(--lamp); }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 20px; }
+    .hero { padding: 36px 20px 30px; }
+    main { padding: 28px 16px 60px; }
+    .form-section { padding: 18px 16px; }
+    .field-grid { grid-template-columns: 1fr; }
+    .progress-bar { padding: 10px 20px; gap: 10px; }
+    .progress-time { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Adesanya AI Advisory™</a>
+  <a href="index.html" class="nav-back">← Back to site</a>
+</nav>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar">
+  <span class="progress-label">Questions answered</span>
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  <span class="progress-count" id="progress-count">0 of 11 questions</span>
+  <span class="progress-time" id="progress-time">≈ 15 min remaining</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">AAA-IQ-001 · Confidential</div>
+  <h1>AI Compliance<br>Intake Questionnaire</h1>
+  <p class="hero-sub"><strong>Your answers are strictly confidential.</strong> Complete this form so we can assess your EU AI Act position and respond with a considered, written assessment — not a generic one.</p>
+  <div class="hero-meta">
+    <span>11 questions · 5 sections</span>
+    <span>15–20 minutes</span>
+    <span>No wrong answers</span>
+  </div>
+  <div class="why-box">
+    <strong>Why we ask for this in writing:</strong> Your answers allow us to give you a considered, accurate response rather than a generic one. They serve as a baseline compliance record from day one. The EU AI Act general application date is <strong>2 August 2026</strong>.
+  </div>
+</div>
+
+<main>
+<form name="aaa-intake-iq001" method="POST" action="https://formsubmit.co/abdulwahab@adesanyaaiadvisory.com" id="intake-form">
+  <input type="hidden" name="form-name" value="aaa-intake-iq001">
+  <input type="hidden" name="_next" value="https://adesanyaaiadvisory.com/thank-you.html">
+  <input type="hidden" name="_captcha" value="false">
+  <p class="hidden"><label>Do not fill this in: <input name="bot-field" autocomplete="off"></label></p>
+
+  <!-- ── SECTION: YOUR DETAILS -->
+  <div class="form-section" id="sec-details">
+    <div class="section-header">
+      <div class="section-badge">ℹ</div>
+      <div class="section-info">
+        <div class="section-title">Your Details</div>
+        <div class="section-sub">Organisation and contact information</div>
+      </div>
+      <span class="section-done-mark">✓ Complete</span>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="org-name">Organisation legal name <span class="req">*</span></label>
+      <input type="text" id="org-name" name="organisation_name" required autocomplete="organization" placeholder="e.g. Acme Financial Services Ltd">
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="sector">Primary sector <span class="req">*</span></label>
+      <select id="sector" name="sector" required autocomplete="off">
+        <option value="" disabled selected>Select your sector</option>
+        <option>Financial services</option>
+        <option>Fintech</option>
+        <option>Regtech</option>
+        <option>Legal</option>
+        <option>Healthcare</option>
+        <option>Technology</option>
+        <option>Insurance</option>
+        <option>Professional services</option>
+        <option>Retail &amp; e-commerce</option>
+        <option>Public sector</option>
+        <option>Nigeria–EU corridor (cross-border)</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="field-grid">
+      <div class="field">
+        <label class="field-label" for="country">Country / jurisdiction <span class="req">*</span></label>
+        <input type="text" id="country" name="country" required autocomplete="country-name" placeholder="e.g. Ireland">
+      </div>
+      <div class="field">
+        <label class="field-label" for="date-completed">Date completed <span class="req">*</span></label>
+        <input type="date" id="date-completed" name="date_completed" required autocomplete="off">
+      </div>
+    </div>
+
+    <div class="field-grid">
+      <div class="field">
+        <label class="field-label" for="contact-name">Your full name <span class="req">*</span></label>
+        <input type="text" id="contact-name" name="contact_name" required autocomplete="name" placeholder="First and last name">
+      </div>
+      <div class="field">
+        <label class="field-label" for="contact-role">Your role / title <span class="req">*</span></label>
+        <input type="text" id="contact-role" name="contact_role" required autocomplete="organization-title" placeholder="e.g. DPO, CISO, Head of Legal">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="contact-email">Email address <span class="req">*</span></label>
+      <input type="email" id="contact-email" name="contact_email" required autocomplete="email" placeholder="you@yourorganisation.com">
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="referral-source">How did you hear about us?</label>
+      <select id="referral-source" name="referral_source" autocomplete="off">
+        <option value="" selected>Select — optional</option>
+        <option>LinkedIn</option>
+        <option>Referral from a colleague</option>
+        <option>Google search</option>
+        <option>Assessment tool on adesanyaaiadvisory.com</option>
+        <option>Nigeria–EU corridor page</option>
+        <option>Other</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ── SECTION A: AI SYSTEMS -->
+  <div class="form-section" id="sec-a">
+    <div class="section-header">
+      <div class="section-badge">A</div>
+      <div class="section-info">
+        <div class="section-title">AI Systems — What You Have</div>
+        <div class="section-sub">Questions A1–A3</div>
+      </div>
+      <span class="section-done-mark">✓ Complete</span>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="a1">A1 — What artificial intelligence tools, systems, or automated decision-making processes does your organisation currently use or have deployed? <span class="req">*</span></label>
+      <div class="field-hint">Include chatbots, AI assistants, document review tools, fraud detection, HR screening, or any tools under evaluation. If your inventory is incomplete, list what you know.</div>
+      <textarea id="a1" name="A1_ai_systems" required autocomplete="off" class="tall" placeholder="e.g. 'ChatGPT Enterprise — used by legal team for drafting'; 'Vendor fraud detection tool — payments'; 'HR CV screening tool — recruitment'"></textarea>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="a2">A2 — For each AI system identified above, who is the primary internal owner or responsible person? <span class="req">*</span></label>
+      <div class="field-hint">e.g. 'ChatGPT — IT / CISO'; 'Fraud detection — Head of Risk'. If unknown for any system, write Unknown.</div>
+      <textarea id="a2" name="A2_system_owners" required autocomplete="off" placeholder="List system and owner for each."></textarea>
+    </div>
+
+    <div class="field">
+      <label class="field-label">A3 — Are any of your AI systems used in decisions that directly affect individuals? <span class="req">*</span></label>
+      <div class="field-hint">For example: credit decisions, hiring, insurance, benefits, or access to services.</div>
+      <div class="radio-group" id="a3-radios">
+        <label class="radio-opt">
+          <input type="radio" name="A3_affects_individuals" value="Yes" required>
+          <span class="radio-dot"></span>Yes
+        </label>
+        <label class="radio-opt">
+          <input type="radio" name="A3_affects_individuals" value="No">
+          <span class="radio-dot"></span>No
+        </label>
+        <label class="radio-opt">
+          <input type="radio" name="A3_affects_individuals" value="Unsure">
+          <span class="radio-dot"></span>Unsure
+        </label>
+      </div>
+      <div class="conditional" id="a3-detail-wrap">
+        <label class="field-label" for="a3-detail" style="margin-top:0">If yes — briefly name the system and the decision type</label>
+        <textarea id="a3-detail" name="A3_detail" autocomplete="off" placeholder="e.g. 'CV screening tool — employment decisions'; 'Credit scoring model — loan approvals'"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION B: COMPLIANCE POSTURE -->
+  <div class="form-section" id="sec-b">
+    <div class="section-header">
+      <div class="section-badge">B</div>
+      <div class="section-info">
+        <div class="section-title">Current Compliance Posture</div>
+        <div class="section-sub">Questions B1–B4</div>
+      </div>
+      <span class="section-done-mark">✓ Complete</span>
+    </div>
+
+    <div class="field">
+      <label class="field-label">B1 — Has your organisation mapped its AI systems against the EU AI Act high-risk categories (Annex III)? <span class="req">*</span></label>
+      <div class="field-hint">Annex III includes: credit scoring, biometric systems, critical infrastructure, employment, essential private services, law enforcement, migration, and justice.</div>
+      <div class="radio-group" id="b1-radios">
+        <label class="radio-opt">
+          <input type="radio" name="B1_annex_mapping" value="Yes — fully mapped" required>
+          <span class="radio-dot"></span>Yes — fully mapped
+        </label>
+        <label class="radio-opt">
+          <input type="radio" name="B1_annex_mapping" value="Partially">
+          <span class="radio-dot"></span>Partially
+        </label>
+        <label class="radio-opt">
+          <input type="radio" name="B1_annex_mapping" value="No">
+          <span class="radio-dot"></span>No
+        </label>
+        <label class="radio-opt">
+          <input type="radio" name="B1_annex_mapping" value="Unsure">
+          <span class="radio-dot"></span>Unsure
+        </label>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="b2">B2 — Do your AI systems currently produce an audit log of decisions and outputs? If yes, how long are logs retained and who has access? <span class="req">*</span></label>
+      <div class="field-hint">Art. 26(6) requires deployers to retain AI decision logs for a minimum of 6 months. Unsure is a valid answer.</div>
+      <textarea id="b2" name="B2_audit_logs" required autocomplete="off" placeholder="e.g. 'No logging currently in place'; 'Logs retained for 90 days in Azure — IT team has access'; 'Unsure'"></textarea>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="b3">B3 — Does your organisation have a designated Data Protection Officer (DPO), AI Officer, or equivalent person responsible for AI governance? <span class="req">*</span></label>
+      <div class="field-hint">If yes, give their name and role. If no, note who currently handles data protection or compliance.</div>
+      <textarea id="b3" name="B3_governance_owner" required autocomplete="off" placeholder="e.g. 'Yes — Jane Smith, DPO (in-house)'; 'No designated AI Officer'; 'No one currently responsible'"></textarea>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="b4">B4 — Have you received any regulatory enquiries, audit findings, or internal risk flags relating to AI use in the past 12 months? <span class="req">*</span></label>
+      <div class="field-hint">Include anything from the DPC, a financial regulator, internal audit, or a vendor compliance team. If none, write None.</div>
+      <textarea id="b4" name="B4_regulatory_flags" required autocomplete="off" placeholder="e.g. 'None'; 'Internal audit flagged absence of AI governance policy'; 'DPC pre-enquiry letter received'"></textarea>
+    </div>
+  </div>
+
+  <!-- ── SECTION C: URGENCY & TIMELINE -->
+  <div class="form-section" id="sec-c">
+    <div class="section-header">
+      <div class="section-badge">C</div>
+      <div class="section-info">
+        <div class="section-title">Urgency &amp; Timeline</div>
+        <div class="section-sub">Questions C1–C3</div>
+      </div>
+      <span class="section-done-mark">✓ Complete</span>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="c1">C1 — Are there any upcoming deadlines, board presentations, regulatory interactions, or vendor reviews relating to AI governance or EU AI Act compliance? <span class="req">*</span></label>
+      <div class="field-hint">e.g. 'Board AI risk update in September'; 'DPC pre-inquiry letter received'; 'Vendor requiring compliance confirmation by Q3'. If none, write None.</div>
+      <textarea id="c1" name="C1_upcoming_deadlines" required autocomplete="off" placeholder="List any upcoming dates or events. If none, write None."></textarea>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="c2">C2 — What is driving your interest in EU AI Act compliance at this time? <span class="req">*</span></label>
+      <div class="field-hint">e.g. internal audit finding, Year Zero awareness, board pressure, client or vendor request, regulatory enquiry, or proactive risk management.</div>
+      <textarea id="c2" name="C2_driver" required autocomplete="off" placeholder="Briefly describe what prompted you to reach out at this time."></textarea>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="c3">C3 — Is there a preferred timeline for beginning compliance work, and are there internal procurement or budget approval processes we should be aware of? <span class="req">*</span></label>
+      <div class="field-hint">e.g. 'Budget approved for Q3'; 'Engagements over €5,000 require sign-off'; 'We need to start before August'.</div>
+      <textarea id="c3" name="C3_timeline" required autocomplete="off" placeholder="Note any timeline preference and any procurement or budget considerations."></textarea>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="engagement-type">What type of engagement are you looking for?</label>
+      <div class="field-hint">Optional — helps us tailor our response. You are not committing to anything at this stage.</div>
+      <select id="engagement-type" name="engagement_type" autocomplete="off">
+        <option value="" selected>Select — optional</option>
+        <option>Contract Review — €750 / €1,500 (single AI contract compliance review)</option>
+        <option>Architecture Review — €2,500 (fixed-fee assessment)</option>
+        <option>Readiness Sprint — €2,500 (5-day fixed engagement)</option>
+        <option>Pilot — €25,000 (full compliance deployment)</option>
+        <option>Ongoing Retainer — from €950/month</option>
+        <option>Nigeria–EU corridor engagement — advisory across NDPA / GDPR / EU AI Act</option>
+        <option>Not sure yet — happy to be guided</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ── SECTION D: ADDITIONAL INFORMATION -->
+  <div class="form-section" id="sec-d">
+    <div class="section-header">
+      <div class="section-badge">D</div>
+      <div class="section-info">
+        <div class="section-title">Additional Information</div>
+        <div class="section-sub">Question D1 — open field, optional</div>
+      </div>
+      <span class="section-done-mark">✓ Complete</span>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="d1">D1 — Is there anything else about your organisation's AI use, compliance concerns, or internal structure that would be helpful for us to know?</label>
+      <div class="field-hint">Open field. You may also email relevant documents (existing policies, audit reports, vendor AI governance statements) to abdulwahab@adesanyaaiadvisory.com alongside this submission.</div>
+      <textarea id="d1" name="D1_additional" autocomplete="off" class="tall" placeholder="Optional — include any further context you think is relevant."></textarea>
+    </div>
+  </div>
+
+  <!-- ── SECTION E: CONFLICTS CHECK -->
+  <div class="form-section" id="sec-e">
+    <div class="section-header">
+      <div class="section-badge">E</div>
+      <div class="section-info">
+        <div class="section-title">Conflicts Check</div>
+        <div class="section-sub">Standard professional check — required before any engagement proceeds</div>
+      </div>
+      <span class="section-done-mark">✓ Complete</span>
+    </div>
+
+    <div class="field">
+      <label class="field-label">E1 — Are you aware of any relationship between your organisation and Adesanya AI Advisory, or any of its existing clients, that could constitute a conflict of interest? <span class="req">*</span></label>
+      <div class="radio-group" id="e1-radios">
+        <label class="radio-opt">
+          <input type="radio" name="E1_conflict" value="No — not aware of any conflict" required>
+          <span class="radio-dot"></span>No — not aware of any conflict
+        </label>
+        <label class="radio-opt">
+          <input type="radio" name="E1_conflict" value="Yes — please see details below">
+          <span class="radio-dot"></span>Yes — please see details below
+        </label>
+      </div>
+      <div class="conditional" id="e1-detail-wrap">
+        <label class="field-label" for="e1-detail" style="margin-top:0">Please describe the potential conflict</label>
+        <div class="field-hint">A Conflict of Interest declaration (AAA-COI-001) will be issued before any engagement proceeds.</div>
+        <textarea id="e1-detail" name="E1_conflict_detail" autocomplete="off" placeholder="Describe any potential conflict."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WHAT HAPPENS NEXT -->
+  <div class="next-box">
+    <div class="next-box-title">What happens after you submit</div>
+    <div class="next-item"><div class="next-tick">✓</div>You receive an acknowledgement email within 1 business day</div>
+    <div class="next-item"><div class="next-tick">✓</div>We review your answers in full — not a template response</div>
+    <div class="next-item"><div class="next-tick">✓</div>We send a written assessment within 5 business days of your submission</div>
+    <div class="next-item"><div class="next-tick">✓</div>Where relevant, we attach a proposal for next steps — no obligation to proceed</div>
+  </div>
+
+  <!-- ── DECLARATION -->
+  <div class="declaration-box">
+    <p class="declaration-text">I confirm that the information provided in this questionnaire is, to the best of my knowledge, accurate and complete. I understand that Adesanya AI Advisory™ will treat this information as strictly confidential and will not share it with any third party without my organisation's prior written consent.</p>
+    <p class="declaration-text">I understand that Adesanya AI Advisory™'s assessment and any proposals arising from this questionnaire will be based exclusively on the information provided herein. The Adviser accepts no liability for assessments that prove incomplete or inaccurate due to omissions or errors in the information provided. Submission of this form is subject to Adesanya AI Advisory™'s <a href="terms.html" style="color:var(--lamp);text-decoration:underline">Terms of Business (AAA-TOB-001)</a>.</p>
+    <p class="declaration-text">Adesanya AI Advisory™ will process the personal data provided in this form for the purpose of responding to this enquiry and, where an engagement is agreed, for the purpose of providing compliance advisory services, in accordance with its <a href="privacy-policy.html" style="color:var(--lamp);text-decoration:underline">Privacy Policy</a>. Personal data submitted is retained for the duration of the engagement and for 6 years thereafter in accordance with Irish professional obligations.</p>
+    <label class="checkbox-row">
+      <input type="checkbox" name="declaration_agreed" value="Agreed" required>
+      <span class="checkbox-label">I confirm the above declaration and that the information provided is accurate and complete to the best of my knowledge. <span class="req">*</span></span>
+    </label>
+  </div>
+
+  <!-- ── PRIVACY NOTE -->
+  <p class="privacy-note">Your personal data is processed in accordance with our <a href="privacy-policy.html">Privacy Policy</a>. This form is processed by Netlify Forms on behalf of Adesanya AI Advisory™.</p>
+
+  <!-- ── SUBMIT -->
+  <div class="submit-area">
+    <button type="submit" class="btn-submit">Send My Answers →</button>
+    <p class="submit-note">Sent securely to abdulwahab@adesanyaaiadvisory.com<br>Acknowledgement within 1 business day · Written assessment within 5 business days</p>
+  </div>
+
+</form>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <strong style="color:var(--lamp-core)">Adesanya AI Advisory™</strong> · Abdulwahab B. Adesanya, LLM (UCD) · Dublin, Ireland<br>
+  abdulwahab@adesanyaaiadvisory.com · adesanyaaiadvisory.com · CRO SR8894226<br>
+  <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms of Business</a> · AAA-IQ-001 · June 2026
+
+<div class="ftl" style="background:transparent;border-top:1px solid rgba(168,124,63,.2);margin-top:22px;padding:18px 0 0">
+<style>
+.ftl{background:#0B0F1A;border-top:1px solid rgba(168,124,63,.25);padding:34px 28px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:.74rem;color:#93A3BD;line-height:1.7}
+.ftl-wrap{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ftl a{color:#93A3BD;text-decoration:none;transition:color .25s var(--ease)}
+.ftl a:hover{color:#F7DCA8}
+.ftl-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.ftl-clock{color:#E9B872;letter-spacing:.05em;white-space:nowrap}
+.ftl-clock b{color:#F7DCA8;font-weight:500}
+.ftl-extra{max-width:1180px;margin:10px auto 0;color:rgba(147,163,189,.7);font-size:.68rem;letter-spacing:.04em}
+@media(max-width:680px){.ftl-wrap{flex-direction:column;text-align:center}}
+</style>
+<div class="ftl-wrap">
+  <span class="ftl-links">
+    <a href="https://www.linkedin.com/in/abdulwahab-adesanya" target="_blank" rel="noopener" aria-label="Abdulwahab Adesanya on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;fill:currentColor;vertical-align:-2px;margin-right:6px"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
+  </span>
+  <span class="ftl-clock" id="ftl-clock">&mdash;</span>
+</div>
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y&&!y.textContent) y.textContent=new Date().getFullYear();
+  var c=document.getElementById('ftl-clock');
+  function t(){ if(!c)return;
+    var n=new Date();
+    c.innerHTML='Dublin · <b>'+n.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'Europe/Dublin'})+' · '+n.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Europe/Dublin'})+'</b>';
+  }
+  t(); setInterval(t,30000);
+})();
+</script>
+</div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // ── 1. DEFAULT DATE TO TODAY
+  var dateField = document.getElementById('date-completed');
+  if (dateField && !dateField.value) {
+    var today = new Date();
+    var y = today.getFullYear();
+    var m = String(today.getMonth() + 1).padStart(2, '0');
+    var d = String(today.getDate()).padStart(2, '0');
+    dateField.value = y + '-' + m + '-' + d;
+  }
+
+  // ── 2. RADIO FALLBACK FOR :has() (older browsers)
+  document.querySelectorAll('.radio-group').forEach(function (group) {
+    group.querySelectorAll('.radio-opt').forEach(function (opt) {
+      opt.addEventListener('click', function () {
+        group.querySelectorAll('.radio-opt').forEach(function (o) { o.classList.remove('checked'); });
+        opt.classList.add('checked');
+      });
+    });
+  });
+
+  // ── 3. CONDITIONAL FIELDS
+  // A3: show detail only when "Yes" selected
+  document.querySelectorAll('[name="A3_affects_individuals"]').forEach(function (radio) {
+    radio.addEventListener('change', function () {
+      var wrap = document.getElementById('a3-detail-wrap');
+      wrap.classList.toggle('visible', this.value === 'Yes');
+    });
+  });
+  // E1: show detail only when "Yes" selected
+  document.querySelectorAll('[name="E1_conflict"]').forEach(function (radio) {
+    radio.addEventListener('change', function () {
+      var wrap = document.getElementById('e1-detail-wrap');
+      wrap.classList.toggle('visible', this.value === 'Yes — please see details below');
+    });
+  });
+
+  // ── 4. PROGRESS BAR + TIME REMAINING + SECTION COMPLETION
+  var TOTAL = 11;
+  var MINS_PER_Q = 1.5;
+  var fill  = document.getElementById('progress-fill');
+  var count = document.getElementById('progress-count');
+  var time  = document.getElementById('progress-time');
+
+  // Map: section element → array of question check functions
+  var sections = [
+    {
+      el: document.getElementById('sec-a'),
+      checks: [
+        function () { return document.getElementById('a1').value.trim() !== ''; },
+        function () { return document.getElementById('a2').value.trim() !== ''; },
+        function () { return !!document.querySelector('[name="A3_affects_individuals"]:checked'); }
+      ]
+    },
+    {
+      el: document.getElementById('sec-b'),
+      checks: [
+        function () { return !!document.querySelector('[name="B1_annex_mapping"]:checked'); },
+        function () { return document.getElementById('b2').value.trim() !== ''; },
+        function () { return document.getElementById('b3').value.trim() !== ''; },
+        function () { return document.getElementById('b4').value.trim() !== ''; }
+      ]
+    },
+    {
+      el: document.getElementById('sec-c'),
+      checks: [
+        function () { return document.getElementById('c1').value.trim() !== ''; },
+        function () { return document.getElementById('c2').value.trim() !== ''; },
+        function () { return document.getElementById('c3').value.trim() !== ''; }
+      ]
+    },
+    {
+      el: document.getElementById('sec-e'),
+      checks: [
+        function () { return !!document.querySelector('[name="E1_conflict"]:checked'); }
+      ]
+    }
+  ];
+
+  function update() {
+    var answered = 0;
+    sections.forEach(function (sec) {
+      var done = sec.checks.every(function (fn) { return fn(); });
+      var sectionAnswered = sec.checks.filter(function (fn) { return fn(); }).length;
+      answered += sectionAnswered;
+      if (sec.el) sec.el.classList.toggle('section-done', done);
+    });
+
+    var pct = Math.round((answered / TOTAL) * 100);
+    fill.style.width = pct + '%';
+    count.textContent = answered + ' of ' + TOTAL + ' questions';
+    var remaining = Math.ceil((TOTAL - answered) * MINS_PER_Q);
+    time.textContent = remaining > 0 ? '≈ ' + remaining + ' min remaining' : '✓ All questions answered';
+  }
+
+  document.querySelectorAll('input, textarea, select').forEach(function (el) {
+    el.addEventListener('input', update);
+    el.addEventListener('change', update);
+  });
+  update();
+
+  // ── 5. UNSAVED CHANGES WARNING
+  var formDirty = false;
+  var form = document.getElementById('intake-form');
+  form.addEventListener('input', function () { formDirty = true; });
+  form.addEventListener('change', function () { formDirty = true; });
+  form.addEventListener('submit', function () { formDirty = false; });
+  window.addEventListener('beforeunload', function (e) {
+    if (formDirty) {
+      e.preventDefault();
+      e.returnValue = 'You have unsaved answers. Are you sure you want to leave?';
+      return e.returnValue;
+    }
+  });
+
+})();
+</script>
+
+<script src="assets/site.js?v=20260820074103"></script>
+</body>
+</html>

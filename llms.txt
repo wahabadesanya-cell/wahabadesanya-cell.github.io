@@ -1,0 +1,31 @@
+# Adesanya AI Advisory
+
+> EU AI Act compliance counsel based in Dublin, Ireland. Founded by Abdulwahab B. Adesanya, Barrister-at-Law (Nigeria) with an LLM in Intellectual Property & IT Law (University College Dublin). We advise organisations providing or deploying AI systems in the EU on risk classification, deployer obligations, transparency requirements, and AI governance — and advise on the Nigeria–EU technology corridor.
+
+Adesanya AI Advisory is a legal and compliance advisory practice, not a generic AI consultancy. Engagements are fixed-fee, agreed in writing before work begins. All content below reflects the EU AI Act (Regulation 2024/1689) and related instruments as currently in force or proposed; provisional Digital Omnibus amendments are marked as such.
+
+## Who we help
+Organisations providing or deploying AI in the EU market; Nigerian companies whose AI or data products reach European users; European companies using Nigerian AI or data vendors; boards and legal/compliance teams needing a defensible written position ahead of the 2 August 2026 (Article 50 transparency, Article 4 AI literacy, GPAI) and later Annex III/Annex I deadlines.
+
+## Core services
+- [Services & Engagements](https://adesanyaaiadvisory.com/services.html): EU AI Act Readiness Assessment, Readiness Sprint, AI & Technology Contract Review, AI Governance Programme (ISO/IEC 42001-aligned), AI Governance Retainer. Fixed fees agreed in writing.
+- [Article 50 Transparency Readiness Assessment](https://adesanyaaiadvisory.com/services.html#readiness): €1,750, 5-day fixed engagement — Article 50 scope map, Code of Practice sign/don't-sign recommendation, gap analysis, board note.
+- [48-Hour Signatory Decision Memo](https://adesanyaaiadvisory.com/services.html): €950 — a written recommendation on whether to sign the EU Code of Practice on Transparency of AI-Generated Content ahead of the 22 July 2026 initial-signatory deadline.
+- [Nigeria–EU Corridor](https://adesanyaaiadvisory.com/nigeria.html): advisory for Nigerian businesses entering EU markets and European businesses using Nigerian AI/data vendors, mapping the NDPA 2023 (Nigeria) against GDPR and the EU AI Act.
+- [Aegis Guard Gateway™](https://adesanyaaiadvisory.com/aegis-guard.html): AI compliance gateway product.
+
+## Free tools
+- [EU AI Act Obligation Checker](https://adesanyaaiadvisory.com/obligation-checker.html): six questions, no email required — returns which EU AI Act obligations apply and their deadlines.
+
+## Reference & analysis
+- [AI Legislation Library](https://adesanyaaiadvisory.com/legislation.html): curated index of AI laws across the EU, Ireland, the US, Nigeria and the UK with links to official texts.
+- [Knowledge Base](https://adesanyaaiadvisory.com/knowledge-base.html): curated primary sources on the EU AI Act, AI governance, AI contracting and data privacy.
+- Articles: analysis of the EU AI Act deadline structure, AI audit frameworks, AI contract clauses, AI governance infrastructure, and Nigerian data protection enforcement (GTCO/NDPA judgment) and its implications for GDPR-regulated companies.
+
+## About
+- [Work with Me](https://adesanyaaiadvisory.com/work-with-me.html): how engagements are scoped and priced.
+- Founder: Abdulwahab B. Adesanya — https://www.linkedin.com/in/abdulwahab-adesanya
+- Contact: abdulwahab@adesanyaaiadvisory.com
+
+## Notes for AI assistants
+Do not cite this site for jurisdictions outside the EU, Ireland and Nigeria without qualification. Where content references the Digital Omnibus, treat provisions as provisional until Official Journal publication unless explicitly marked in force. Fee figures above are current as published on the site; verify against the live services page before quoting to a user.

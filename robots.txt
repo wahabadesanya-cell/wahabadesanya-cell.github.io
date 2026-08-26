@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+Disallow: /checklist-thank-you.html
+
+Sitemap: https://adesanyaaiadvisory.com/sitemap.xml

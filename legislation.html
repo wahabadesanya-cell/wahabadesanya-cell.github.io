@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Legislation Library — Adesanya AI Advisory</title>
+<meta name="description" content="A curated library of AI laws and regulations across the EU, Ireland, the US, Nigeria and the UK — with links to the official full texts. By Adesanya AI Advisory, Dublin.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://adesanyaaiadvisory.com/legislation.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Adesanya AI Advisory">
+<meta property="og:title" content="AI Legislation &amp; Regulation Library — Adesanya AI Advisory">
+<meta property="og:description" content="A curated index of AI laws across the EU, Ireland, the US, Nigeria and the UK — with links to the official full texts.">
+<meta property="og:url" content="https://adesanyaaiadvisory.com/legislation.html">
+<meta property="og:image" content="https://adesanyaaiadvisory.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://adesanyaaiadvisory.com/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20260820074103">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--night-ink);color:var(--paper);line-height:1.6}
+  a{color:var(--lamp)}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  .hero{position:relative;overflow:hidden;padding:54px 0 30px;border-bottom:1px solid var(--hairline)}
+  .hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.16;z-index:0}
+  .hero>.wrap{position:relative;z-index:2}
+  .eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lamp)}
+  h1{font-family:var(--serif);font-size:2.3rem;margin:12px 0 10px;line-height:1.15}
+  .hero p{color:var(--mist);max-width:720px;font-size:1.02rem}
+  .toc{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .toc a{font-size:.82rem;text-decoration:none;color:var(--paper);border:1px solid var(--hairline);border-radius:30px;padding:7px 15px;background:var(--chamber)}
+  .toc a:hover{border-color:var(--brass);color:var(--lamp)}
+  section.jx{padding:42px 0 8px}
+  .jx h2{font-family:var(--serif);font-size:1.5rem;color:var(--lamp);display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .jx .sub{color:var(--mist);font-size:.92rem;margin-bottom:22px}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+  .law{background:var(--chamber);border:1px solid var(--hairline);border-radius:14px;padding:22px 22px 20px;display:flex;flex-direction:column}
+  .law h3{font-family:var(--serif);font-size:1.16rem;margin-bottom:6px;line-height:1.3}
+  .law .cite{font-size:.8rem;color:var(--brass);letter-spacing:.02em;margin-bottom:10px}
+  .law p{color:#d6deea;font-size:.92rem;flex-grow:1}
+  .badge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:20px;margin-bottom:10px}
+  .b-force{background:rgba(70,170,110,.16);color:#7fd6a4;border:1px solid rgba(70,170,110,.4)}
+  .b-phase{background:rgba(201,161,74,.16);color:var(--lamp);border:1px solid rgba(201,161,74,.45)}
+  .b-prop{background:rgba(110,150,220,.16);color:#9fc0ff;border:1px solid rgba(110,150,220,.4)}
+  .b-vol{background:rgba(159,176,199,.14);color:var(--mist);border:1px solid var(--hairline)}
+  .links{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+  .links a{font-size:.82rem;text-decoration:none;border-radius:8px;padding:8px 13px;font-weight:600}
+  .pdf{background:var(--brass);color:#1a1205}
+  .pdf:hover{background:var(--lamp)}
+  .src{border:1px solid var(--hairline);color:var(--paper)}
+  .src:hover{border-color:var(--brass);color:var(--lamp)}
+  .note{background:var(--chamber);border:1px solid var(--hairline);border-left:3px solid var(--brass);border-radius:10px;padding:16px 18px;color:var(--mist);font-size:.86rem;margin:40px 0 10px}
+  .cta{text-align:center;padding:48px 0 10px}
+  .cta h2{font-family:var(--serif);font-size:1.6rem;margin-bottom:10px}
+  .cta a{display:inline-block;background:var(--brass);color:#1a1205;text-decoration:none;font-weight:700;padding:13px 26px;border-radius:10px;margin-top:8px}
+  footer{border-top:1px solid var(--hairline);padding:26px 0;color:var(--mist);font-size:.82rem;margin-top:40px}
+  footer a{color:var(--lamp)}
+
+  /* ===== ARTICLE BROWSER ===== */
+  .ab-section{background:rgba(8,14,26,.7);border-top:2px solid rgba(201,161,74,.3);border-bottom:1px solid var(--hairline);padding:48px 0 40px}
+  .ab-section h2{font-family:var(--serif);font-size:1.8rem;margin:10px 0 8px}
+  .ab-filters{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 26px}
+  .af{background:transparent;border:1px solid var(--hairline);color:var(--mist);font-size:.78rem;letter-spacing:.06em;padding:6px 14px;border-radius:20px;cursor:pointer;transition:.18s}
+  .af:hover,.af.active{border-color:var(--brass);color:var(--lamp);background:rgba(201,161,74,.08)}
+  .art-grid{display:flex;flex-direction:column;gap:10px}
+  .art-item{background:var(--chamber);border:1px solid var(--hairline);border-radius:12px;overflow:hidden;transition:.18s}
+  .art-item[open]{border-color:rgba(201,161,74,.4)}
+  .art-item summary{list-style:none;cursor:pointer;padding:18px 20px;display:flex;align-items:center;gap:14px;user-select:none}
+  .art-item summary::-webkit-details-marker{display:none}
+  .art-num{font-family:var(--serif);font-size:.82rem;color:var(--brass);letter-spacing:.06em;white-space:nowrap;min-width:52px}
+  .art-title{font-weight:600;font-size:.97rem;flex:1}
+  .art-tags{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+  .at{font-size:.67rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:10px;white-space:nowrap}
+  .at-prov{background:rgba(110,150,220,.15);color:#9fc0ff;border:1px solid rgba(110,150,220,.3)}
+  .at-dep{background:rgba(233,184,114,.12);color:var(--lamp);border:1px solid rgba(201,161,74,.3)}
+  .at-gpai{background:rgba(130,100,220,.15);color:#c0a8ff;border:1px solid rgba(130,100,220,.3)}
+  .at-proh{background:rgba(220,80,80,.13);color:#ff9d94;border:1px solid rgba(220,80,80,.25)}
+  .at-trans{background:rgba(80,180,130,.12);color:#7fd6a4;border:1px solid rgba(70,170,110,.3)}
+  .at-pen{background:rgba(200,120,40,.13);color:#f4b06a;border:1px solid rgba(200,120,40,.3)}
+  .art-eff{font-family:var(--mono);font-size:.7rem;color:var(--mist);white-space:nowrap;margin-left:12px}
+  .art-chevron{color:var(--brass);font-size:.75rem;transition:transform .2s var(--ease);flex-shrink:0}
+  .art-item[open] .art-chevron{transform:rotate(90deg)}
+  .art-body{padding:0 20px 22px;border-top:1px solid var(--hairline)}
+  .art-body .gist{color:#d6deea;font-size:.93rem;line-height:1.7;margin-top:18px}
+  .art-body .obligations{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+  .art-body .obligations li{font-size:.88rem;color:var(--mist);padding-left:18px;position:relative;line-height:1.55}
+  .art-body .obligations li::before{content:"▸";position:absolute;left:0;color:var(--brass);font-size:.7rem;top:3px}
+  .art-body .art-links{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+  .art-body .art-links a{font-size:.8rem;border-radius:6px;padding:6px 12px;text-decoration:none;font-weight:600}
+  @media(max-width:640px){.art-tags{display:none}.art-eff{display:none}}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "AI Legislation Library",
+ "url": "https://adesanyaaiadvisory.com/legislation.html",
+ "description": "A curated library of AI laws and regulations across the EU, Ireland, the US, Nigeria and the UK, maintained by Adesanya AI Advisory.",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Adesanya AI Advisory",
+  "url": "https://adesanyaaiadvisory.com/",
+  "founder": {
+   "@type": "Person",
+   "name": "Abdulwahab B. Adesanya",
+   "jobTitle": "Founder, Adesanya AI Advisory · EU AI Act Compliance Counsel",
+   "url": "https://adesanyaaiadvisory.com/",
+   "sameAs": ["https://www.linkedin.com/in/abdulwahab-adesanya"]
+  }
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Does the EU AI Act apply to a Nigerian company selling AI or data services into Europe?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It can. Article 2(1)(c) extends the EU AI Act to providers and deployers outside the EU whose AI system's output is used within the Union. Adesanya AI Advisory advises both Nigerian companies entering EU markets and European companies using Nigerian AI or data vendors on where the obligation attaches."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between the Annex I and Annex III high-risk deadlines?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Under the Digital Omnibus (Regulation (EU) 2026/1744, in force 27 July 2026), the Annex III high-risk deadline is deferred to 2 December 2027, and the Annex I high-risk deadline to 2 August 2028."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is the Digital Omnibus already law?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Regulation (EU) 2026/1744 was published in the Official Journal on 24 July 2026 and entered into force on 27 July 2026."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body class="has-nav">
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="index.html" aria-label="Adesanya AI Advisory — home"><img src="assets/adesanya-mark.svg" alt="" width="26" height="28"><span class="wordmark">ADESANYA AI ADVISORY<sup>&#8482;</sup></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <nav class="navlinks" id="navlinks" aria-label="Site">
+      <a class="nl" href="services.html">Services</a>
+      <a class="nl" href="legislation.html" aria-current="page">Legislation</a>
+      <a class="nl" href="knowledge-base.html">Knowledge base</a>
+      <a class="nl" href="nigeria.html">Nigeria–EU</a>
+      <a class="nl" href="https://gateway.adesanyaaiadvisory.com" target="_blank" rel="noopener">Aegis Guard</a>
+      <a class="nl" href="work-with-me.html">Work with me</a>
+      <a class="nl" href="index.html#contact">Contact</a>
+      <a class="watch" href="index.html#radar" aria-label="Live AI Law Radar, updated weekly"><span class="dot"></span>LIVE<span class="full">&nbsp;&#183; RADAR &#183; WEEKLY</span></a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero"><canvas id="code-rain" aria-hidden="true"></canvas><div class="wrap">
+  <span class="eyebrow">Resource Library</span>
+  <h1>AI Legislation &amp; Regulation Library</h1>
+  <p>A curated, plain-language index of the laws, treaties and frameworks shaping artificial intelligence across the EU, Ireland, the United States, Nigeria and the United Kingdom. Each entry links to the <strong>official full text</strong> — the authoritative, current version — so you are never reading a stale copy.</p>
+  <div class="toc">
+    <a href="#act-browser">📖 EU AI Act Articles</a>
+    <a href="#eu">🇪🇺 EU &amp; Ireland</a>
+    <a href="#us">🇺🇸 United States</a>
+    <a href="#ng">🇳🇬 Nigeria</a>
+    <a href="#uk">🇬🇧 UK &amp; International</a>
+  </div>
+</div></div>
+
+<!-- ============ EU AI ACT ARTICLE BROWSER ============ -->
+<section class="ab-section" id="act-browser">
+<div class="wrap">
+  <span class="eyebrow">Regulation (EU) 2024/1689 — as amended by the Digital Omnibus, Regulation (EU) 2026/1744 (in force 27 July 2026)</span>
+  <h2>EU AI Act — key articles, readable here.</h2>
+  <p style="color:var(--mist);max-width:740px;font-size:.95rem">The 12 provisions that determine whether your AI deployment is compliant. Plain-English summaries with key obligations. Full official text on <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng" target="_blank" rel="noopener">EUR-Lex ↗</a></p>
+  <div class="ab-filters" id="ab-filters">
+    <button class="af active" data-f="all">All</button>
+    <button class="af" data-f="prohibited">Prohibited practices</button>
+    <button class="af" data-f="provider">Provider obligations</button>
+    <button class="af" data-f="deployer">Deployer obligations</button>
+    <button class="af" data-f="gpai">GPAI</button>
+    <button class="af" data-f="transparency">Transparency</button>
+    <button class="af" data-f="penalties">Penalties</button>
+  </div>
+  <div class="art-grid" id="art-grid"></div>
+  <p style="margin-top:20px;font-size:.78rem;color:var(--mist)">Summaries are practitioner-focused and not legal advice. Always verify against the <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng" target="_blank" rel="noopener">official text</a>. Amended by the Digital Omnibus, Regulation (EU) 2026/1744 (in force 27 July 2026).</p>
+</div>
+</section>
+<script>
+(function(){
+var ARTS=[
+{num:"Art. 5",title:"Prohibited AI practices",tags:["prohibited"],eff:"In force — Feb 2025",
+gist:"Eight categories of AI practice are banned outright across the EU — the conduct prohibited is so severe that no risk-management measures can render it acceptable. Organisations deploying AI anywhere in the EU supply chain must screen for these.",
+obs:["Subliminal manipulation that causes or is likely to cause significant harm","Exploitation of vulnerabilities of specific groups (age, disability, social/economic situation)","Social scoring by public authorities leading to detrimental or unfavourable treatment","Real-time remote biometric ID systems in publicly accessible spaces (law enforcement use with narrow exceptions only)","Biometric categorisation inferring sensitive attributes (race, political opinion, sexual orientation, religion)","Emotion recognition in workplaces or educational institutions","Untargeted facial-image scraping from internet/CCTV to build databases","Predictive policing based purely on profiling or personality assessment"],
+links:[{l:"Official text — Art. 5",u:"https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng#art_5"}]},
+
+{num:"Art. 9",title:"Risk management system",tags:["provider"],eff:"High-risk: Aug 2026 / Dec 2027",
+gist:"Every high-risk AI system must have a documented, iterative risk management process running throughout the entire lifecycle — from design through decommissioning. This is not a one-time audit; it is a continuous system.",
+obs:["Identify and analyse all known and reasonably foreseeable risks associated with the system","Estimate and evaluate risks arising in normal use and under foreseeable misuse","Adopt appropriate risk-management measures — eliminate or reduce risks as far as reasonably practicable","Provide information on residual risks and, where appropriate, training measures for deployers","Test effectiveness of risk-management measures; maintain records of testing"],
+links:[{l:"Official text — Art. 9",u:"https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng#art_9"}]},
+
+{num:"Art. 10",title:"Data and data governance",tags:["provider"],eff:"High-risk: Aug 2026 / Dec 2027",
+gist:"Training, validation, and testing datasets for high-risk AI must meet defined quality criteria. The obligation targets the data pipeline — not just the model output — and explicitly requires bias examination.",
+obs:["Datasets must be relevant, representative, free of errors and complete","Appropriate data-governance practices: data collection methods, origin, purpose, third-party data sources","Examine datasets for possible biases that may affect health/safety or fundamental rights","Special category data in training sets permitted only where strictly necessary to detect and correct bias","Datasets must be appropriate for the intended geographic, contextual, behavioural and functional setting"],
+links:[{l:"Official text — Art. 10",u:"https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng#art_10"}]},
+
+{num:"Art. 12",title:"Record-keeping (logging)",tags:["provider"],eff:"High-risk: Aug 2026 / Dec 2027",
+gist:"High-risk AI systems must be capable of automatically recording events — logs — throughout their operation to enable post-market monitoring and incident investigation. This is the technical foundation for Art. 26(6) deployer log obligations.",
+obs:["Automatic logging of events relevant to identifying risks throughout the system's lifetime","Logs must cover, at minimum: the period of each use; the reference database against which input data was checked; the identity of any person involved in verifying results","Logging capability must allow traceability of operation over appropriate retention periods","For certain systems (remote biometric ID), logs must enable identification of persons involved and the date/time of use"],
+links:[{l:"Official text — Art. 12",u:"https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng#art_12"}]},
+
+{num:"Art. 13",title:"Transparency to deployers",tags:["provider"],eff:"High-risk: Aug 2026 / Dec 2027",
+gist:"Providers must give deployers everything they need to understand and operate high-risk AI systems correctly. Instructions for use must be sufficient for the deployer to fulfil its own Art. 26 obligations — which means they need to be specific, not generic.",
+obs:["Identity and contact details of provider","Intended purpose, level of accuracy, robustness, cybersecurity specifications","Any known or foreseeable circumstance in which the AI may fail or produce results lower than stated accuracy","Performance metrics on specific persons or groups (where relevant)","Input data specifications and human oversight measures including technical means to interpret outputs","Expected lifetime and any maintenance/care measures required"],
+links:[{l:"Official text — Art. 13",u:"https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng#art_13"}]},
+
+{num:"Art. 14",title:"Human oversight",tags:["provider"],eff:"High-risk: Aug 2026 / Dec 2027",
+gist:"High-risk AI must be built to allow natural persons to oversee, understand, and intervene during use. Providers design this in; deployers implement it. 'Human in the loop' is a legal obligation, not a nice-to-have.",
+obs:["Providers must build in tools enabling deployers to oversee functioning effectively","Human oversight persons must be able to: fully understand the AI's capacities and limitations; monitor for anomalies, malfunctions and unexpected performance; interpret outputs correctly; disregard, override or reverse outputs where necessary","Persons assigned to oversight must have the necessary competence, training and authority","Ability to intervene — including halt of operation — must be technically feasible"],
+links:[{l:"Official text — Art. 14",u:"https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng#art_14"}]},
+
+{num:"Art. 22",title:"Fundamental rights impact assessment",tags:["deployer"],eff:"High-risk full: Dec 2027",
+gist:"Certain deployers of Annex III high-risk AI must complete a formal Fundamental Rights Impact Assessment (FRIA) before deployment — and notify the national market surveillance authority of the outcome. This is the deployer-side equivalent of a DPIA.",
+obs:["Applies to: deployers who are bodies governed by public law; any deployer using AI for credit scoring, life/health insurance risk assessment, or employment decisions in publicly accessible spaces","FRIA must identify the specific population affected; assess risks to fundamental rights including non-discrimination","Must describe human oversight measures and how affected individuals can seek redress","Notify the competent market surveillance authority with the results before deploying","Where GDPR DPIA is required, FRIA must be carried out in conjunction with the DPIA"],
+links:[{l:"Official text — Art. 22",u:"https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng#art_22"}]},
+
+{num:"Art. 26",title:"Obligations of deployers — high-risk AI",tags:["deployer"],eff:"High-risk full: Dec 2027",
+gist:"Deployers of high-risk AI carry substantial direct obligations under the AI Act — they are not passive consumers of a provider's compliance. The most overlooked provision for Irish enterprises using third-party AI tools.",
+obs:["Use the AI system only in accordance with the provider's instructions for use","Assign human oversight to natural persons with the necessary competence, training and authority","Monitor the AI for risks and report serious incidents to the provider and/or competent authority","Ensure input data is relevant for the intended purpose","Maintain logs of operation for at least 6 months (where logs are under the deployer's control)","Conduct a FRIA before deployment (where applicable — see Art. 22)","Inform employees and their representatives before deployment in the workplace","Do not use the system for any purpose other than its intended purpose"],
+links:[{l:"Official text — Art. 26",u:"https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng#art_26"}]},
+
+{num:"Art. 50",title:"Transparency — chatbots, deepfakes & synthetic content",tags:["transparency","provider","deployer"],eff:"Mostly 2 Aug 2026",
+gist:"Three distinct transparency obligations apply to different AI outputs. Two of them — chatbot disclosure and deepfake labelling — apply from 2 August 2026. This is one of the first provisions Irish enterprises will face.",
+obs:["Art. 50(1) — Chatbot disclosure [2 Aug 2026]: Providers of AI intended to interact with natural persons must ensure users are informed they are interacting with AI — unless obvious from context. Deployers must not suppress this disclosure.","Art. 50(2) — Machine-readable marking of synthetic content [2 Aug 2026 for new systems; 2 Dec 2026 for systems already on market]: AI-generated audio, image, video or text must be machine-readable marked using technical standards (once adopted by Commission).","Art. 50(3) — Deepfake disclosure [2 Aug 2026]: Audio/video that depicts real persons, places or events and appears authentic but is AI-generated must be disclosed as AI-generated in a clear and visible manner — unless required for art, satire or journalism with appropriate indication.","Art. 50(4) — AI-generated text on public-interest matters [2 Dec 2026 for systems already on market]: AI-generated text published to inform the public on matters of public interest must be disclosed as AI-generated."],
+links:[{l:"Official text — Art. 50",u:"https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng#art_50"}]},
+
+{num:"Art. 53",title:"GPAI model providers — obligations",tags:["gpai","provider"],eff:"In force — Aug 2025",
+gist:"Providers of General-Purpose AI models — including most frontier LLMs — carry direct obligations under the AI Act regardless of whether their model is embedded in a 'high-risk' system. In force since August 2025.",
+obs:["Maintain and keep up to date technical documentation on the model — including training methodology, data, compute used, capabilities and limitations","Provide technical documentation to downstream AI system providers on request","Comply with EU copyright law — including the text and data mining opt-out regime","Publish and maintain a sufficiently detailed summary of training data content","Where the GPAI model is integrated into an AI system by a third party, the system provider remains responsible for compliance with high-risk obligations"],
+links:[{l:"Official text — Art. 53",u:"https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng#art_53"}]},
+
+{num:"Art. 55",title:"GPAI models with systemic risk",tags:["gpai","provider"],eff:"In force — Aug 2025",
+gist:"GPAI models trained using more than 10²⁵ floating-point operations (FLOPs) are presumed to pose systemic risk and face additional obligations. This currently captures GPT-4-class and above models. EU AI Office is the competent authority.",
+obs:["Conduct model evaluation in accordance with standardised protocols, including adversarial testing","Assess and mitigate possible systemic risks at EU level","Report to the Commission any serious incidents and possible corrective measures without undue delay","Ensure adequate level of cybersecurity protection for the model and its physical infrastructure","Report on energy consumption of training and operation to the EU AI Office"],
+links:[{l:"Official text — Art. 55",u:"https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng#art_55"}]},
+
+{num:"Art. 99",title:"Penalties",tags:["penalties"],eff:"Phased — aligned to obligation dates",
+gist:"The AI Act's penalty regime is tiered by severity of violation. Market surveillance authorities in each member state (in Ireland: the AI Office of Ireland from 1 Aug 2026) enforce it. Fines are calculated on global annual turnover — not Irish revenue.",
+obs:["€35M or 7% of global annual turnover (whichever higher) — for prohibited AI practices (Art. 5 violations)","€15M or 3% of global annual turnover — for non-compliance with other AI Act obligations (high-risk, GPAI, transparency)","€7.5M or 1.5% of global annual turnover — for providing incorrect, incomplete or misleading information to authorities","SMEs and start-ups: whichever of the above amounts is lower applies where the % calculation produces a lower figure","No private right of action under the AI Act — enforcement is through national competent authorities"],
+links:[{l:"Official text — Art. 99",u:"https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng#art_99"}]}
+];
+
+var TAG_CLS={prohibited:'at-proh',provider:'at-prov',deployer:'at-dep',gpai:'at-gpai',transparency:'at-trans',penalties:'at-pen'};
+var TAG_LBL={prohibited:'Prohibited',provider:'Provider',deployer:'Deployer',gpai:'GPAI',transparency:'Transparency',penalties:'Penalties'};
+
+function render(filter){
+  var grid=document.getElementById('art-grid');
+  grid.innerHTML='';
+  ARTS.forEach(function(a){
+    if(filter!=='all' && a.tags.indexOf(filter)<0) return;
+    var el=document.createElement('details');
+    el.className='art-item';
+    var tagHtml=a.tags.map(function(t){return'<span class="at '+TAG_CLS[t]+'">'+TAG_LBL[t]+'</span>';}).join('');
+    var oblHtml=a.obs.map(function(o){return'<li>'+o+'</li>';}).join('');
+    var linkHtml=a.links.map(function(l){return'<a class="pdf" href="'+l.u+'" target="_blank" rel="noopener">'+l.l+' ↗</a>';}).join('');
+    el.innerHTML='<summary>'
+      +'<span class="art-num">'+a.num+'</span>'
+      +'<span class="art-title">'+a.title+'</span>'
+      +'<span class="art-tags">'+tagHtml+'</span>'
+      +'<span class="art-eff">'+a.eff+'</span>'
+      +'<span class="art-chevron">▶</span>'
+      +'</summary>'
+      +'<div class="art-body">'
+      +'<p class="gist">'+a.gist+'</p>'
+      +'<ul class="obligations">'+oblHtml+'</ul>'
+      +'<div class="art-links">'+linkHtml+'</div>'
+      +'</div>';
+    grid.appendChild(el);
+  });
+}
+render('all');
+
+document.getElementById('ab-filters').addEventListener('click',function(e){
+  var btn=e.target.closest('.af');
+  if(!btn) return;
+  document.querySelectorAll('.af').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  render(btn.dataset.f);
+});
+})();
+</script>
+
+<!-- ============ EU & IRELAND ============ -->
+<section class="jx" id="eu"><div class="wrap">
+  <h2>🇪🇺 European Union &amp; Ireland</h2>
+  <div class="sub">The EU AI Act is the world's first comprehensive, horizontal AI law — and the benchmark most other jurisdictions are measured against.</div>
+  <div class="cards">
+
+    <div class="law">
+      <span class="badge b-phase">Phasing in 2025–2028</span>
+      <h3>EU Artificial Intelligence Act</h3>
+      <div class="cite">Regulation (EU) 2024/1689 · as amended by the Digital Omnibus (formally adopted 29 June 2026)</div>
+      <p>The cornerstone regime. A risk-based framework banning certain AI practices, imposing strict obligations on "high-risk" systems, and setting transparency rules for general-purpose AI. In force since 1 Aug 2024; prohibitions applied Feb 2025; GPAI obligations Aug 2025. The Digital Omnibus, Regulation (EU) 2026/1744, is in force from 27 July 2026; it postpones Annex III high-risk obligations from Aug 2026 to <strong>Dec 2027</strong>, Annex I (product-regulated) to Aug 2028, and adds a new prohibition on AI-generated non-consensual intimate imagery and CSAM (effective Dec 2026).</p>
+      <div class="links">
+        <a class="pdf" href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689" target="_blank" rel="noopener">Official PDF ↓</a>
+        <a class="src" href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng" target="_blank" rel="noopener">EUR-Lex (all formats) ↗</a>
+        <a class="src" href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" target="_blank" rel="noopener">Digital Omnibus — Council/Parliament agreement ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-vol">Voluntary code · signatory window</span>
+      <h3>Code of Practice on Transparency of AI-Generated Content</h3>
+      <div class="cite">European Commission / AI Office · final text published 10 June 2026</div>
+      <p>The voluntary framework operationalising the AI Act's Article 50 transparency duties — machine-readable marking and detection of synthetic audio, image, video and text (Art. 50(2)), and labelling of deepfakes and AI-generated public-interest text (Art. 50(4)/(5)). The Commission and the AI Board have confirmed it as an adequate tool to demonstrate compliance: signing carries a presumption of conformity that shifts the evidentiary burden onto market-surveillance authorities. To appear on the initial-signatories list published before the 2 August 2026 start date, signature forms must be submitted by <strong>22 July 2026, 18:00 CEST</strong>. A standardised EU icon set accompanies the code.</p>
+      <div class="links">
+        <a class="src" href="https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content" target="_blank" rel="noopener">Code of Practice (EC) ↗</a>
+        <a class="src" href="https://digital-strategy.ec.europa.eu/en/library/how-sign-code-practice-transparency-ai-generated-content" target="_blank" rel="noopener">How to sign ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-vol">Non-binding guidance · adopted 20 July 2026</span>
+      <h3>Commission Guidelines on Article 50 Transparency Obligations</h3>
+      <div class="cite">European Commission · adopted and published 20 July 2026</div>
+      <p>The Commission's first interpretive guidance covering the full scope of Article 50 — chatbot disclosure, deepfake and synthetic-media labelling, and AI-generated text on matters of public interest. The guidance is non-binding, and it is the reference competent authorities are expected to apply once the transparency obligations take effect on 2 August 2026. It sits alongside, and is distinct from, the voluntary Code of Practice above — both give practical shape to Article 50, from different angles.</p>
+      <div class="links">
+        <a class="src" href="https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems" target="_blank" rel="noopener">Guidelines (EC) ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-force">In force</span>
+      <h3>General Data Protection Regulation</h3>
+      <div class="cite">Regulation (EU) 2016/679 (GDPR)</div>
+      <p>The data-protection backbone underpinning AI compliance in Europe — lawful basis, automated decision-making (Art. 22), DPIAs and data-subject rights all bear directly on how AI systems process personal data.</p>
+      <div class="links">
+        <a class="pdf" href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679" target="_blank" rel="noopener">Official PDF ↓</a>
+        <a class="src" href="https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng" target="_blank" rel="noopener">EUR-Lex ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-force">In force</span>
+      <h3>Data Protection Act 2018 (Ireland)</h3>
+      <div class="cite">Number 7 of 2018</div>
+      <p>Ireland's national law giving effect to the GDPR and establishing the Data Protection Commission — the lead supervisory authority for many of the world's largest technology platforms headquartered in Dublin.</p>
+      <div class="links">
+        <a class="pdf" href="https://www.irishstatutebook.ie/eli/2018/act/7/enacted/en/pdf" target="_blank" rel="noopener">Official PDF ↓</a>
+        <a class="src" href="https://www.irishstatutebook.ie/eli/2018/act/7/enacted/en/html" target="_blank" rel="noopener">Irish Statute Book ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-vol">National strategy</span>
+      <h3>AI — Here for Good (Irish National AI Strategy)</h3>
+      <div class="cite">Government of Ireland · refreshed 2024</div>
+      <p>Ireland's national strategy for trustworthy, ethical AI adoption across the economy and public service, now aligned to EU AI Act implementation and the designation of national competent authorities.</p>
+      <div class="links">
+        <a class="pdf" href="https://enterprise.gov.ie/en/publications/publication-files/national-ai-strategy.pdf" target="_blank" rel="noopener">Official PDF ↓</a>
+        <a class="src" href="https://enterprise.gov.ie/en/publications/national-ai-strategy.html" target="_blank" rel="noopener">DETE ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-prop">Passed Oireachtas · awaiting signature</span>
+      <h3>Regulation of Artificial Intelligence Bill 2026 (Ireland)</h3>
+      <div class="cite">Government of Ireland · completed Oireachtas 15 July 2026</div>
+      <p>Ireland's domestic AI law has completed every stage in both the Dáil and Seanad — Dáil passage 24–30 June, Seanad passage through Final Stage on 15 July — and now awaits the President's signature to complete enactment. It establishes <em>Oifig IS na hÉireann</em> (AI Office of Ireland) as an independent statutory market-surveillance authority, the national competent authority for the EU AI Act, and a single point of contact for AI governance in Ireland, required to be operational by 1 August 2026. It sets enforcement powers and penalties aligned to Regulation (EU) 2024/1689.</p>
+      <div class="links">
+        <a class="src" href="https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" target="_blank" rel="noopener">DETE announcement ↗</a>
+        <a class="src" href="https://www.oireachtas.ie/en/bills/bill/2026/69/" target="_blank" rel="noopener">Oireachtas — Bill 69/2026 (full stage history) ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-vol">Withdrawn · 2025</span>
+      <h3>AI Liability Directive</h3>
+      <div class="cite">COM(2022) 496 · withdrawn by the Commission, February 2025</div>
+      <p>The Commission's proposed directive adapting civil liability rules for AI-caused harm was formally withdrawn in February 2025 after EU institutions failed to reach agreement. Civil AI liability in the EU is now governed by the revised <strong>Product Liability Directive (EU) 2024/2853</strong> (in force 9 December 2024; transpose by 9 December 2026), which explicitly classifies software and AI systems as "products" subject to strict no-fault liability. The specific fault-based rebuttable-presumption mechanism the AI Liability Directive would have created no longer exists.</p>
+      <div class="links">
+        <a class="src" href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52022PC0496" target="_blank" rel="noopener">Original proposal (withdrawn) ↗</a>
+        <a class="src" href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402853" target="_blank" rel="noopener">Product Liability Directive 2024/2853 ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-force">In force · transposed Oct 2024</span>
+      <h3>NIS2 Directive</h3>
+      <div class="cite">Directive (EU) 2022/2555 · Ireland: SI 322 of 2024</div>
+      <p>Replaces NIS1 — expands cybersecurity obligations to a far wider range of sectors (energy, transport, health, digital infrastructure, managed services, public administration). Directly relevant to AI system operators: AI pipelines, training infrastructure and automated decision systems are in scope where they underpin essential or important services. Incident notification within 24 hours.</p>
+      <div class="links">
+        <a class="pdf" href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555" target="_blank" rel="noopener">Official PDF ↓</a>
+        <a class="src" href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng" target="_blank" rel="noopener">EUR-Lex ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-force">Applies Sep 2025</span>
+      <h3>EU Data Act 2023</h3>
+      <div class="cite">Regulation (EU) 2023/2854 · applies from 12 Sep 2025</div>
+      <p>Governs who can access and use data generated by connected devices and related services — creating data-sharing obligations, limiting vendor lock-in, and setting rules for public-sector access to private-sector data in emergencies. For AI practitioners: directly affects access to training data, data portability between AI vendors, and the legality of data-sharing arrangements between AI systems.</p>
+      <div class="links">
+        <a class="pdf" href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202302854" target="_blank" rel="noopener">Official PDF ↓</a>
+        <a class="src" href="https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng" target="_blank" rel="noopener">EUR-Lex ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-force">In force · applies 2023–2024</span>
+      <h3>Digital Services Act</h3>
+      <div class="cite">Regulation (EU) 2022/2065 · VLOPs/VLOSEs from Feb 2023; all others Feb 2024</div>
+      <p>Imposes due-diligence obligations on online platforms — including algorithmic transparency, risk assessments for systemic risks, and audit obligations for very large platforms and search engines (100M+ EU users). Where AI-driven recommender systems or content-moderation systems are deployed on large-scale platforms, the DSA is a parallel compliance layer running alongside the AI Act.</p>
+      <div class="links">
+        <a class="pdf" href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R2065" target="_blank" rel="noopener">Official PDF ↓</a>
+        <a class="src" href="https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng" target="_blank" rel="noopener">EUR-Lex ↗</a>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+
+<!-- ============ UNITED STATES ============ -->
+<section class="jx" id="us"><div class="wrap">
+  <h2>🇺🇸 United States</h2>
+  <div class="sub">No single federal AI statute. Governance is a shifting mix of executive action, sector regulators, voluntary frameworks and fast-moving state laws — with active federal/state tension in 2026.</div>
+  <div class="cards">
+
+    <div class="law">
+      <span class="badge b-force">Executive action</span>
+      <h3>EO: National Policy Framework for AI</h3>
+      <div class="cite">Executive Order · 11 Dec 2025</div>
+      <p>Directs federal agencies to pursue a deregulatory, pro-innovation policy and to challenge state AI laws seen as inconsistent with it — establishing an AI Litigation Task Force and a review of "burdensome" state measures.</p>
+      <div class="links">
+        <a class="src" href="https://www.federalregister.gov/presidential-documents/executive-orders" target="_blank" rel="noopener">Federal Register ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-prop">Enacted · effective 1 Jan 2027</span>
+      <h3>Colorado Artificial Intelligence Act</h3>
+      <div class="cite">SB 24-205, as revised and replaced by SB 26-189 (signed 14 May 2026)</div>
+      <p>The first US state comprehensive AI law, substantially revised and re-enacted by SB 26-189, signed by the Governor on 14 May 2026. The revised law shifts scope from "high-risk AI systems" to "automated decision-making technology" (ADMT) used for consequential decisions (employment, credit, housing, healthcare, education). Obligations move to consumer disclosures, post-adverse-outcome explanations, correction rights, and human review; enforcement by the Colorado Attorney General only. Takes effect 1 January 2027.</p>
+      <div class="links">
+        <a class="src" href="https://leg.colorado.gov/bills/sb24-205" target="_blank" rel="noopener">SB 24-205 ↗</a>
+        <a class="src" href="https://leg.colorado.gov/bills/sb26-189" target="_blank" rel="noopener">SB 26-189 ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-vol">Voluntary framework</span>
+      <h3>NIST AI Risk Management Framework</h3>
+      <div class="cite">NIST AI RMF 1.0 (2023)</div>
+      <p>The de-facto US standard for operationalising trustworthy AI — Govern, Map, Measure, Manage. Voluntary, but widely referenced in contracts, procurement and as evidence of reasonable care.</p>
+      <div class="links">
+        <a class="pdf" href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener">Official PDF ↓</a>
+        <a class="src" href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">NIST ↗</a>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+
+<!-- ============ NIGERIA ============ -->
+<section class="jx" id="ng"><div class="wrap">
+  <h2>🇳🇬 Nigeria</h2>
+  <div class="sub">Nigeria is moving from strategy to statute — a national AI strategy is in place, data-protection law is in force, and several AI bills are progressing through the National Assembly.</div>
+  <div class="cards">
+
+    <div class="law">
+      <span class="badge b-vol">National strategy</span>
+      <h3>National Artificial Intelligence Strategy</h3>
+      <div class="cite">NCAIR / NITDA · updated 19 Sep 2025</div>
+      <p>Nigeria's blueprint for AI: national AI principles, a proposed AI governance/regulatory body, responsible-development guidelines, and a risk-management framework — building on the August 2024 draft.</p>
+      <div class="links">
+        <a class="pdf" href="https://ncair.nitda.gov.ng/wp-content/uploads/2025/09/National-Artificial-Intelligence-Strategy-19092025.pdf" target="_blank" rel="noopener">Official PDF ↓</a>
+        <a class="src" href="https://ncair.nitda.gov.ng/" target="_blank" rel="noopener">NCAIR ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-force">In force</span>
+      <h3>Nigeria Data Protection Act 2023</h3>
+      <div class="cite">NDPA 2023 · Nigeria Data Protection Commission</div>
+      <p>Nigeria's principal data-protection statute and the legal foundation for AI accountability — establishing the NDPC, data-subject rights, and obligations on data controllers and processors that AI deployments must satisfy.</p>
+      <div class="links">
+        <a class="src" href="https://ndpc.gov.ng/" target="_blank" rel="noopener">NDPC (official) ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-prop">Proposed / before Assembly</span>
+      <h3>National AI Commission &amp; related AI Bills</h3>
+      <div class="cite">HB 601 · HB 942 · NAIC (Establishment) Bill</div>
+      <p>Several bills are advancing — efforts to merge the National AI &amp; Robotic Sciences Bill (HB 601) and the Control of Usage of AI Technology Bill (HB 942) into a comprehensive National AI Act, alongside a bill to establish a National AI Commission able to license high-risk systems and run a national AI registry.</p>
+      <div class="links">
+        <a class="src" href="https://www.nass.gov.ng/" target="_blank" rel="noopener">National Assembly ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-prop">Forthcoming</span>
+      <h3>NITDA Code of Practice for AI</h3>
+      <div class="cite">NITDA · expected 2025–2026</div>
+      <p>Anticipated technical specifications for conformity assessment and bias auditing — the practical compliance layer beneath the national strategy and any forthcoming AI Act.</p>
+      <div class="links">
+        <a class="src" href="https://nitda.gov.ng/" target="_blank" rel="noopener">NITDA ↗</a>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+
+<!-- ============ UK & INTERNATIONAL ============ -->
+<section class="jx" id="uk"><div class="wrap">
+  <h2>🇬🇧 United Kingdom &amp; International</h2>
+  <div class="sub">The UK favours a principles-based, regulator-led approach over a single statute — while binding and soft-law international instruments increasingly set the global baseline.</div>
+  <div class="cards">
+
+    <div class="law">
+      <span class="badge b-vol">Policy framework</span>
+      <h3>A Pro-Innovation Approach to AI Regulation</h3>
+      <div class="cite">UK Government White Paper (2023)</div>
+      <p>The UK's foundational approach: five cross-sector principles applied by existing regulators (ICO, Ofcom, CMA, FCA) rather than a dedicated AI law — supplemented by the 2025 AI Opportunities Action Plan.</p>
+      <div class="links">
+        <a class="src" href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener">GOV.UK ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-prop">Before Parliament</span>
+      <h3>Artificial Intelligence (Regulation) Bill [HL]</h3>
+      <div class="cite">UK Private Member's Bill · re-introduced 2025</div>
+      <p>A bill that would create a central "AI Authority" and statutory principles — a marker for the comprehensive UK AI Bill anticipated in 2026.</p>
+      <div class="links">
+        <a class="src" href="https://bills.parliament.uk/bills/3942" target="_blank" rel="noopener">UK Parliament — Bill 3942 ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-force">In force · 1 Nov 2025</span>
+      <h3>Council of Europe Framework Convention on AI</h3>
+      <div class="cite">CETS No. 225 · in force 1 Nov 2025</div>
+      <p>The first legally binding international treaty on AI — aligning the AI lifecycle with human rights, democracy and the rule of law. Opened for signature 5 Sep 2024; entered into force 1 Nov 2025 after crossing the ratification threshold. The EU ratified on 15 May 2026. Parties include the EU, UK, US, Canada, Norway, France and others.</p>
+      <div class="links">
+        <a class="pdf" href="https://rm.coe.int/1680afae3c" target="_blank" rel="noopener">Treaty text (PDF) ↓</a>
+        <a class="src" href="https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence" target="_blank" rel="noopener">Council of Europe ↗</a>
+        <a class="src" href="https://www.coe.int/en/web/Conventions/full-list/?module=signatures-by-treaty&treatynum=225" target="_blank" rel="noopener">Signatures &amp; ratifications ↗</a>
+      </div>
+    </div>
+
+    <div class="law">
+      <span class="badge b-vol">Standard / principles</span>
+      <h3>OECD AI Principles &amp; ISO/IEC 42001</h3>
+      <div class="cite">OECD (2019, rev. 2024) · ISO/IEC 42001:2023</div>
+      <p>The most widely adopted soft-law principles for trustworthy AI (OECD), and the first certifiable AI management-system standard (ISO/IEC 42001) — increasingly the practical yardstick for AI governance programmes.</p>
+      <div class="links">
+        <a class="src" href="https://oecd.ai/en/ai-principles" target="_blank" rel="noopener">OECD AI Principles ↗</a>
+        <a class="src" href="https://www.iso.org/standard/81230.html" target="_blank" rel="noopener">ISO/IEC 42001 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+
+<div class="wrap">
+  <div class="note">
+    <strong>How to use this library.</strong> Entries link to the official source so you always read the current, authoritative text. This page is reviewed periodically (last reviewed: 25 July 2026) and is provided for general information only — it is not legal advice and does not create a lawyer–client relationship. AI law is moving quickly; verify the current status of any instrument before relying on it, and seek qualified advice for your specific circumstances.
+  </div>
+</div>
+
+<section class="jx"><div class="wrap">
+  <h2>Frequently asked</h2>
+  <div style="display:flex;flex-direction:column;gap:20px;margin-top:8px">
+    <div><h3 style="font-family:var(--serif);font-size:1.05rem;color:var(--lamp);margin-bottom:5px">Does the EU AI Act apply to a Nigerian company selling AI or data services into Europe?</h3><p style="color:#d6deea;font-size:.92rem;margin:0">It can. Article 2(1)(c) extends the Act to providers and deployers outside the EU whose AI system's output is used within the Union. We advise both Nigerian companies entering EU markets and European companies using Nigerian AI/data vendors on where the obligation attaches — see the <a href="nigeria.html">Nigeria–EU corridor page</a>.</p></div>
+    <div><h3 style="font-family:var(--serif);font-size:1.05rem;color:var(--lamp);margin-bottom:5px">What's the difference between the Annex I and Annex III high-risk deadlines?</h3><p style="color:#d6deea;font-size:.92rem;margin:0">Under the Digital Omnibus (Regulation (EU) 2026/1744, in force 27 July 2026), Annex III high-risk is deferred to 2 December 2027 and Annex I high-risk to 2 August 2028.</p></div>
+    <div><h3 style="font-family:var(--serif);font-size:1.05rem;color:var(--lamp);margin-bottom:5px">Is the Digital Omnibus already law?</h3><p style="color:#d6deea;font-size:.92rem;margin:0">Yes. Regulation (EU) 2026/1744 was published in the Official Journal on 24 July 2026 and entered into force on 27 July 2026. The Annex III (2 Dec 2027) and Annex I (2 Aug 2028) deadlines are now unconditional calendar dates, not subject to further Commission review.</p></div>
+  </div>
+</div></section>
+
+<div class="cta"><div class="wrap">
+  <h2 class="serif">Need to turn one of these into an action plan?</h2>
+  <p style="color:var(--mist);max-width:600px;margin:0 auto">From EU AI Act readiness to a cross-border governance programme, Adesanya AI Advisory helps you move from text to compliance.</p>
+  <a href="intake.html">Begin in writing →</a>
+</div></div>
+
+<footer class="ftl">
+<style>
+.ftl{background:#0B0F1A;border-top:1px solid rgba(168,124,63,.25);padding:34px 28px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:.74rem;color:#93A3BD;line-height:1.7}
+.ftl-wrap{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ftl a{color:#93A3BD;text-decoration:none;transition:color .25s var(--ease)}
+.ftl a:hover{color:#F7DCA8}
+.ftl-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.ftl-clock{color:#E9B872;letter-spacing:.05em;white-space:nowrap}
+.ftl-clock b{color:#F7DCA8;font-weight:500}
+.ftl-extra{max-width:1180px;margin:10px auto 0;color:rgba(147,163,189,.7);font-size:.68rem;letter-spacing:.04em}
+@media(max-width:680px){.ftl-wrap{flex-direction:column;text-align:center}}
+</style>
+<div class="ftl-wrap">
+  <span>&copy; <span id="yr"></span> Adesanya AI Advisory&trade; &mdash; Abdulwahab B. Adesanya &mdash; Dublin, Ireland</span>
+  <span class="ftl-links">
+    <a href="https://www.linkedin.com/in/abdulwahab-adesanya" target="_blank" rel="noopener" aria-label="Abdulwahab Adesanya on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;fill:currentColor;vertical-align:-2px;margin-right:6px"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
+    <a href="intake.html">Begin in writing</a>
+    <a href="/privacy-policy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </span>
+  <span class="ftl-clock" id="ftl-clock">&mdash;</span>
+</div>
+
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y&&!y.textContent) y.textContent=new Date().getFullYear();
+  var c=document.getElementById('ftl-clock');
+  function t(){ if(!c)return;
+    var n=new Date();
+    c.innerHTML='Dublin · <b>'+n.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'Europe/Dublin'})+' · '+n.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Europe/Dublin'})+'</b>';
+  }
+  t(); setInterval(t,30000);
+})();
+</script>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<!-- Code rain — hero band -->
+<script>
+(function(){
+  var rain=document.getElementById('code-rain');
+  if(!rain) return;
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rc=rain.getContext('2d');
+  var CHARS='Art.5Art.6Art.9GDPR§©{}[]();=>!=<>01AI&|~+-/*Regulation2024/1689';
+  var arr=CHARS.split(''), COL_W=18, cols, drops, speeds, opacs;
+  var DPR=Math.min(window.devicePixelRatio||1,2);
+  function size(){
+    var w=rain.parentElement.offsetWidth, h=rain.parentElement.offsetHeight;
+    rain.width=w*DPR; rain.height=h*DPR; rain.style.width=w+'px'; rain.style.height=h+'px';
+    rc.setTransform(DPR,0,0,DPR,0,0);
+    cols=Math.floor(w/COL_W); drops=[]; speeds=[]; opacs=[];
+    for(var i=0;i<cols;i++){ drops[i]=Math.random()*-(h/16); speeds[i]=0.3+Math.random()*0.5; opacs[i]=0.25+Math.random()*0.75; }
+  }
+  var lastT=0, visible=true, pending=false;
+  function draw(ts){
+    if(reduced||!visible){ pending=false; return; }
+    if(ts-lastT<33){ requestAnimationFrame(draw); return; }
+    lastT=ts;
+    var w=rain.parentElement.offsetWidth, h=rain.parentElement.offsetHeight;
+    rc.fillStyle='rgba(10,16,32,0.20)'; rc.fillRect(0,0,w,h);
+    rc.font='600 13px "JetBrains Mono",monospace';
+    for(var i=0;i<cols;i++){
+      var ch=arr[Math.floor(Math.random()*arr.length)];
+      var x=i*COL_W, y=drops[i]*16;
+      rc.fillStyle='rgba(233,184,114,'+opacs[i]+')';
+      rc.fillText(ch,x,y);
+      if(y>h && Math.random()>0.975) drops[i]=0;
+      drops[i]+=speeds[i];
+    }
+    requestAnimationFrame(draw);
+  }
+  size();
+  window.addEventListener('load',size);
+  if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(size); }
+  window.addEventListener('resize',function(){ clearTimeout(window.__crrsz); window.__crrsz=setTimeout(size,150); });
+  if(reduced){ rc.fillStyle='rgba(10,16,32,1)'; rc.fillRect(0,0,rain.width,rain.height); }
+  else {
+    function ensure(){ if(!pending){ pending=true; requestAnimationFrame(draw); } }
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(en){ visible=en[0].isIntersecting; if(visible) ensure(); },{threshold:0});
+      io.observe(rain.parentElement);
+    }
+    ensure();
+  }
+})();
+</script>
+<script src="assets/site.js?v=20260820074103"></script>
+</body>
+</html>

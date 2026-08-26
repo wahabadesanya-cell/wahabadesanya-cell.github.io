@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aegis Guard Gateway — Real-Time AI Compliance at the Point of Execution | Adesanya AI Advisory</title>
+<meta name="description" content="Aegis Guard Gateway enforces GDPR consent and EU AI Act Article 12 logging obligations in real time, at the moment AI processes personal data. Architecture Review, Pilot, and Retainer engagements available.">
+<link rel="canonical" href="https://adesanyaaiadvisory.com/aegis-guard">
+<meta property="og:title" content="Aegis Guard Gateway — Real-Time AI Compliance Enforcement">
+<meta property="og:description" content="Proprietary architecture that enforces GDPR consent and EU AI Act Article 12 logging at the point of AI execution. Transparency obligations: 2 August 2026. Annex III high-risk AI: 2 December 2027.">
+<meta property="og:image" content="https://adesanyaaiadvisory.com/og-image.png">
+<meta property="og:url" content="https://adesanyaaiadvisory.com/aegis-guard">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Adesanya AI Advisory">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aegis Guard Gateway — Real-Time AI Compliance Enforcement">
+<meta name="twitter:description" content="GDPR consent enforcement + EU AI Act Article 12 logging. Resolved at the architectural level. Horizon 1: 2 Aug 2026 · Horizon 2: 2 Dec 2027.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20260820074103">
+<style>
+/* ─── RESET & ROOT ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* This page keeps exactly one token of its own: a cool, blue-grey divider
+     that has no equivalent in the brand palette (which is warm/brass). Every
+     other value now comes from assets/site.css.
+
+     Before this migration the page defined --ink as its *ground* and painted
+     body with --chamber — the inverse of what those names mean everywhere
+     else on the site. That is why it was excluded from the earlier sweep. */
+  --hairline-cool: rgba(138,157,184,0.12);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--serif);
+  background: var(--night-ink);
+  color: var(--paper);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* ─── COUNTDOWN BAR ───────────────────────────── */
+.countdown-bar {
+  background: var(--ink-deep);
+  border-bottom: 1px solid var(--hairline);
+  padding: 9px 24px;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--mist);
+}
+.countdown-bar strong { color: var(--lamp); }
+
+/* ─── NAVIGATION ──────────────────────────────── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,14,28,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--hairline);
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+.nav-logo {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--lamp);
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  align-items: center;
+}
+.nav-links a {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mist);
+  text-decoration: none;
+  transition:color 0.2s var(--ease);
+}
+.nav-links a:hover { color: var(--lamp); }
+.nav-links a.active { color: var(--lamp); }
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--paper);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ─── SHARED SECTION STYLES ───────────────────── */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 88px 40px;
+}
+.section-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--lamp);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--paper);
+  margin-bottom: 20px;
+}
+.section-title em { font-style: italic; color: var(--lamp); }
+.section-intro {
+  font-size: 17px;
+  color: var(--mist);
+  line-height: 1.75;
+  max-width: 640px;
+  margin-bottom: 56px;
+}
+.divider {
+  border: none;
+  border-top: 1px solid var(--hairline-cool);
+}
+
+/* ─── HERO ────────────────────────────────────── */
+.hero {
+  background: var(--ink-deep);
+  padding: 100px 40px 88px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--lamp), transparent);
+}
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin-bottom: 12px;
+}
+.hero-eyebrow span { color: var(--lamp); }
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--paper);
+  max-width: 820px;
+  margin: 0 auto 24px;
+}
+.hero h1 em { font-style: italic; color: var(--lamp); }
+.hero-sub {
+  font-size: 18px;
+  color: var(--mist);
+  max-width: 620px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.btn-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--lamp);
+  color: var(--ink-deep);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 700;
+  transition:background 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.btn-primary:hover { background: var(--brass-bright); transform: translateY(-1px); }
+.btn-secondary {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 1px solid var(--hairline);
+  color: var(--mist);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition:border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+.btn-secondary:hover { border-color: var(--lamp); color: var(--lamp); }
+.hero-tags {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--mist);
+  margin-bottom: 48px;
+}
+.hero-tags strong { color: var(--lamp); }
+.trust-strip {
+  border-top: 1px solid var(--hairline-cool);
+  padding-top: 32px;
+}
+.trust-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+.trust-logos {
+  font-style: italic;
+  color: var(--mist);
+  font-size: 15px;
+  opacity: 0.6;
+}
+
+/* ─── THREE PRINCIPLES ────────────────────────── */
+.principles-bg {
+  background: var(--ink-deep);
+  border-top: 1px solid var(--hairline-cool);
+  border-bottom: 1px solid var(--hairline-cool);
+}
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--hairline-cool);
+  border: 1px solid var(--hairline-cool);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 48px;
+}
+.principle-card {
+  background: var(--glass-blue);
+  padding: 40px 32px;
+  transition:background 0.3s var(--ease);
+}
+.principle-card:hover { background: rgba(21,34,54,0.9); }
+.principle-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--lamp);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+.principle-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--paper);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.principle-card p {
+  font-size: 14px;
+  color: var(--mist);
+  line-height: 1.7;
+}
+.principle-disclaimer {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--mist);
+  opacity: 0.6;
+  margin-top: 14px;
+  letter-spacing: 0.05em;
+}
+
+/* ─── THE PROBLEM ─────────────────────────────── */
+.problem-bg {
+  background: var(--night-ink);
+}
+.camps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.camp-card {
+  background: var(--glass-blue);
+  border: 1px solid var(--hairline-cool);
+  border-radius: 12px;
+  padding: 36px 30px;
+  transition:border-color 0.3s var(--ease);
+}
+.camp-card:hover { border-color: var(--hairline); }
+.camp-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--lamp);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  opacity: 0.8;
+}
+.camp-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--paper);
+  margin-bottom: 12px;
+}
+.camp-card p {
+  font-size: 14px;
+  color: var(--mist);
+  line-height: 1.75;
+}
+.problem-kicker {
+  background: var(--ink-deep);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  padding: 36px 40px;
+  margin-top: 8px;
+}
+.problem-kicker h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--paper);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.problem-kicker h3 em { color: var(--lamp); }
+.problem-kicker p {
+  font-size: 15px;
+  color: var(--mist);
+  line-height: 1.75;
+}
+
+/* ─── HOW IT WORKS (REDESIGNED) ──────────────── */
+.how-bg {
+  background: var(--ink-deep);
+  border-top: 1px solid var(--hairline-cool);
+  border-bottom: 1px solid var(--hairline-cool);
+}
+
+/* Pipeline diagram */
+.pipeline {
+  display: grid;
+  grid-template-columns: 1fr 52px 1fr 52px 1fr 52px 1fr;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 72px;
+  padding: 36px 32px;
+  background: var(--night-ink);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.pipeline::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--lamp), transparent);
+  opacity: 0.5;
+}
+.pipe-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 22px 14px;
+  background: var(--glass-blue);
+  border: 1px solid var(--hairline-cool);
+  border-radius: 12px;
+  transition:border-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.pipe-node:hover { border-color: rgba(233,184,114,0.35); transform: translateY(-3px); }
+.pipe-node.aegis-node {
+  border-color: rgba(233,184,114,0.4);
+  background: linear-gradient(135deg, rgba(233,184,114,0.06) 0%, var(--glass-blue) 100%);
+}
+.node-icon { font-size: 24px; }
+.node-tag {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--lamp);
+  text-transform: uppercase;
+  text-align: center;
+}
+.node-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--paper);
+  text-align: center;
+  line-height: 1.3;
+}
+.node-detail {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--mist);
+  text-align: center;
+  line-height: 1.5;
+}
+.pipe-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0 2px;
+}
+.pipe-arrow svg { display: block; }
+.arrow-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  white-space: nowrap;
+}
+.arrow-label.fwd { color: var(--lamp); }
+.arrow-label.back { color: var(--mist); }
+.outcome-row {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--hairline-cool);
+}
+.outcome-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--mist);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.outcome-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(270deg, transparent, rgba(138,157,184,0.3), transparent);
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.badge-pass { background: rgba(52,211,153,0.12); color: #34D399; border: 1px solid rgba(52,211,153,0.25); }
+.badge-block { background: rgba(239,68,68,0.12); color: #F87171; border: 1px solid rgba(239,68,68,0.25); }
+
+/* Step connector + cards */
+.steps-connector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  margin-bottom: -20px;
+}
+.steps-connector::before {
+  content: '';
+  position: absolute;
+  left: calc(100% / 6);
+  right: calc(100% / 6);
+  top: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--lamp), rgba(233,184,114,0.3), var(--lamp));
+  z-index: 0;
+}
+.step-num-wrap { display: flex; justify-content: center; position: relative; z-index: 1; }
+.step-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ink-deep);
+  border: 2px solid var(--lamp);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--lamp);
+  box-shadow: 0 0 0 5px var(--ink-deep);
+  z-index: 2;
+}
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-top: 32px;
+  margin-bottom: 40px;
+}
+.step-card {
+  background: var(--night-ink);
+  border: 1px solid var(--hairline-cool);
+  border-radius: 16px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition:border-color 0.3s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.step-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--lamp), var(--brass-bright));
+  opacity: 0;
+  transition:opacity 0.3s var(--ease);
+}
+.step-card:hover {
+  border-color: rgba(233,184,114,0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+.step-card:hover::after { opacity: 1; }
+.step-icon {
+  width: 48px; height: 48px;
+  background: rgba(233,184,114,0.08);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.step-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--paper);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+.step-card > p {
+  font-size: 13px;
+  color: var(--mist);
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
+.step-benefits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.step-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--mist);
+  line-height: 1.5;
+}
+.dot-mark {
+  flex-shrink: 0;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: rgba(233,184,114,0.1);
+  border: 1px solid rgba(233,184,114,0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+.dot-mark::after {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--lamp);
+  display: block;
+}
+
+/* Demo strip */
+.demo-strip {
+  background: var(--night-ink);
+  border: 1px solid var(--hairline-cool);
+  border-radius: 12px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.demo-badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--lamp);
+  background: rgba(233,184,114,0.07);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.demo-text {
+  font-size: 13px;
+  color: var(--mist);
+  line-height: 1.6;
+  flex: 1;
+  min-width: 200px;
+}
+.demo-code {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--lamp);
+  background: rgba(233,184,114,0.05);
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--hairline);
+  white-space: nowrap;
+}
+
+/* ─── TECHNICAL BENCHMARKS ────────────────────── */
+.benchmarks-bg { background: var(--night-ink); }
+.benchmark-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.benchmark-card {
+  background: var(--glass-blue);
+  border: 1px solid var(--hairline-cool);
+  border-left: 3px solid rgba(233,184,114,0.22);
+  border-radius: 12px;
+  padding: 36px 30px;
+  transition:border-color 0.3s var(--ease), border-left-color 0.3s var(--ease);
+}
+.benchmark-card:hover { border-color: var(--hairline); border-left-color: rgba(233,184,114,0.6); }
+.benchmark-stat {
+  font-family: var(--mono);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--lamp);
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+  display: block;
+  line-height: 1;
+}
+.benchmark-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--paper);
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+.benchmark-card p {
+  font-size: 13px;
+  color: var(--mist);
+  line-height: 1.7;
+}
+
+/* ─── LEGAL FOUNDATION ────────────────────────── */
+.legal-bg {
+  background: var(--ink-deep);
+  border-top: 1px solid var(--hairline-cool);
+  border-bottom: 1px solid var(--hairline-cool);
+}
+.legal-intro {
+  font-size: 17px;
+  color: var(--paper);
+  line-height: 1.75;
+  max-width: 680px;
+  margin-bottom: 16px;
+}
+.legal-sub {
+  font-size: 15px;
+  color: var(--mist);
+  line-height: 1.75;
+  max-width: 680px;
+  margin-bottom: 48px;
+}
+
+/* Conflict row */
+.conflict-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  margin-bottom: 56px;
+  border: 1px solid var(--hairline-cool);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.conflict-panel {
+  padding: 36px 32px;
+  background: var(--glass-blue);
+}
+.conflict-panel.gdpr { border-right: 1px solid var(--hairline-cool); }
+.conflict-panel.aiact { border-left: 1px solid var(--hairline-cool); }
+.conflict-law-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.conflict-law-tag.gdpr-tag {
+  background: rgba(138,157,184,0.12);
+  color: var(--mist);
+  border: 1px solid rgba(138,157,184,0.25);
+}
+.conflict-law-tag.aiact-tag {
+  background: rgba(233,184,114,0.10);
+  color: var(--lamp);
+  border: 1px solid rgba(233,184,114,0.25);
+}
+.conflict-panel h4 {
+  font-size: 17px;
+  color: var(--paper);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+.conflict-panel p {
+  font-size: 14px;
+  color: var(--mist);
+  line-height: 1.7;
+}
+.conflict-panel .conflict-articles {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--mist);
+  opacity: 0.6;
+  margin-top: 16px;
+  letter-spacing: 0.08em;
+}
+.conflict-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  background: var(--ink-deep);
+  gap: 10px;
+  min-width: 120px;
+}
+.conflict-vs {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--mist);
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+.conflict-resolve-badge {
+  background: rgba(233,184,114,0.12);
+  border: 1px solid var(--lamp);
+  border-radius: 8px;
+  padding: 8px 14px;
+  text-align: center;
+}
+.conflict-resolve-badge span {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--lamp);
+  text-transform: uppercase;
+  display: block;
+}
+
+/* Obligation cards — 2×2 grid */
+.oblig-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.oblig-card {
+  background: var(--glass-blue);
+  border: 1px solid var(--hairline-cool);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:border-color 0.2s var(--ease);
+}
+.oblig-card:hover { border-color: rgba(233,184,114,0.3); }
+.oblig-card-top {
+  padding: 28px 28px 20px;
+  flex: 1;
+}
+.oblig-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.oblig-badge {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.oblig-badge.ai-act {
+  background: rgba(233,184,114,0.10);
+  color: var(--lamp);
+  border: 1px solid rgba(233,184,114,0.3);
+}
+.oblig-badge.gdpr {
+  background: rgba(138,157,184,0.10);
+  color: var(--mist);
+  border: 1px solid rgba(138,157,184,0.25);
+}
+.oblig-article {
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.oblig-badge.ai-act + .oblig-article { color: var(--lamp); }
+.oblig-badge.gdpr + .oblig-article { color: var(--mist); }
+.oblig-card-top h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--paper);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.oblig-card-top p {
+  font-size: 14px;
+  color: var(--mist);
+  line-height: 1.7;
+}
+.oblig-satisfy {
+  padding: 16px 28px;
+  background: rgba(233,184,114,0.05);
+  border-top: 1px solid rgba(233,184,114,0.12);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.oblig-satisfy-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--lamp);
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-top: 3px;
+  opacity: 0.8;
+}
+.oblig-satisfy p {
+  font-size: 13px;
+  color: var(--paper);
+  line-height: 1.6;
+  opacity: 0.85;
+}
+.proprietary-box {
+  background: var(--night-ink);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  padding: 32px;
+}
+.prop-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--mist);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  opacity: 0.7;
+}
+.prop-name {
+  font-family: var(--mono);
+  font-size: 15px;
+  color: var(--lamp);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+.proprietary-box p {
+  font-size: 13px;
+  color: var(--mist);
+  line-height: 1.75;
+}
+
+/* ─── ENGAGEMENT TIERS ────────────────────────── */
+.tiers-bg { background: var(--night-ink); }
+.tiers-intro {
+  font-size: 16px;
+  color: var(--mist);
+  margin-bottom: 48px;
+  max-width: 520px;
+}
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.tier-card {
+  background: var(--glass-blue);
+  border: 1px solid var(--hairline-cool);
+  border-radius: 16px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  transition:border-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.tier-card:hover { border-color: var(--hairline); transform: translateY(-3px); }
+.tier-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--lamp);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+.tier-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--paper);
+  margin-bottom: 8px;
+}
+.tier-price {
+  font-family: var(--mono);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--lamp);
+  margin-bottom: 4px;
+  letter-spacing: 0.03em;
+}
+.tier-period {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--mist);
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  display: block;
+}
+.tier-card > p {
+  font-size: 13px;
+  color: var(--mist);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.tier-features {
+  list-style: none;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.tier-features li {
+  font-size: 13px;
+  color: var(--mist);
+  line-height: 1.5;
+  padding-left: 16px;
+  position: relative;
+}
+.tier-features li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--lamp);
+  opacity: 0.6;
+}
+.tier-cta {
+  display: block;
+  text-align: center;
+  padding: 13px 20px;
+  border: 1px solid var(--hairline);
+  color: var(--lamp);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 6px;
+  transition:background 0.2s var(--ease), color 0.2s var(--ease);
+  margin-top: auto;
+}
+.tier-cta:hover { background: rgba(233,184,114,0.1); }
+.tier-flow {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--mist);
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+/* ─── WHO IT'S FOR ────────────────────────────── */
+.personas-bg {
+  background: var(--ink-deep);
+  border-top: 1px solid var(--hairline-cool);
+  border-bottom: 1px solid var(--hairline-cool);
+}
+.personas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.persona-card {
+  background: var(--glass-blue);
+  border: 1px solid var(--hairline-cool);
+  border-radius: 12px;
+  padding: 32px 26px;
+  transition:border-color 0.3s var(--ease);
+}
+.persona-card:hover { border-color: var(--hairline); }
+.persona-role {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--lamp);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+.persona-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--paper);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+.persona-card p {
+  font-size: 13px;
+  color: var(--mist);
+  line-height: 1.75;
+}
+
+/* ─── WHITEPAPERS ─────────────────────────────── */
+.whitepapers-bg { background: var(--night-ink); }
+.wp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+.wp-card {
+  background: var(--glass-blue);
+  border: 1px solid var(--hairline-cool);
+  border-radius: 12px;
+  padding: 36px 32px;
+}
+.wp-track {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--lamp);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  opacity: 0.8;
+}
+.wp-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--paper);
+  margin-bottom: 20px;
+  line-height: 1.35;
+}
+.wp-form { display: flex; flex-direction: column; gap: 10px; }
+.wp-form input {
+  background: var(--ink-deep);
+  border: 1px solid var(--hairline-cool);
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: var(--paper);
+  font-family: var(--serif);
+  font-size: 14px;
+  outline: none;
+  transition:border-color 0.2s var(--ease);
+}
+.wp-form input:focus { border-color: var(--lamp); }
+.wp-form input::placeholder { color: var(--mist); opacity: 0.6; }
+.wp-form .honeypot { display: none; }
+.wp-submit {
+  background: transparent;
+  border: 1px solid var(--hairline);
+  color: var(--lamp);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  transition:background 0.2s var(--ease);
+}
+.wp-submit:hover { background: rgba(233,184,114,0.08); }
+.wp-confirm {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--mist);
+  opacity: 0.7;
+  display: none;
+}
+
+/* ─── CONTACT ─────────────────────────────────── */
+.contact-bg {
+  background: var(--ink-deep);
+  border-top: 1px solid var(--hairline-cool);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-top: 48px;
+}
+.contact-left ol {
+  list-style: none;
+  counter-reset: steps;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+.contact-left ol li {
+  counter-increment: steps;
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: var(--mist);
+  line-height: 1.6;
+}
+.contact-left ol li::before {
+  content: counter(steps);
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--hairline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--lamp);
+  margin-top: 1px;
+}
+.contact-left ol li strong { color: var(--paper); }
+.contact-email {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--mist);
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+.contact-email a { color: var(--lamp); text-decoration: none; }
+.contact-location {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--mist);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.contact-form { display: flex; flex-direction: column; gap: 12px; }
+/* A <select> sizes to its widest option, so the engagement list set a 285px
+   floor. Capping the controls alone could not work: max-width:100% resolves
+   against a parent the select was itself sizing. The grid item is the one
+   that has to give — .contact-form defaulted to min-width:auto, which held
+   the .contact-grid track at 285px inside a 253px box. */
+.contact-form { min-width: 0; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea { max-width: 100%; min-width: 0; width: 100%; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  background: var(--glass-blue);
+  border: 1px solid var(--hairline-cool);
+  border-radius: 8px;
+  padding: 13px 16px;
+  color: var(--paper);
+  font-family: var(--serif);
+  font-size: 14px;
+  outline: none;
+  transition:border-color 0.2s var(--ease);
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus { border-color: var(--lamp); }
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: var(--mist); opacity: 0.5; }
+.contact-form select { appearance: none; }
+.contact-form select option { background: var(--glass-blue); color: var(--paper); }
+.contact-form textarea { resize: vertical; min-height: 100px; }
+.contact-form .honeypot { display: none; }
+.contact-gdpr {
+  font-size: 12px;
+  color: var(--mist);
+  opacity: 0.7;
+  line-height: 1.6;
+}
+.contact-gdpr a { color: var(--mist); }
+.contact-submit {
+  background: var(--lamp);
+  border: none;
+  color: var(--ink-deep);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  transition:background 0.2s var(--ease);
+  text-align: left;
+}
+.contact-submit:hover { background: var(--brass-bright); }
+
+/* ─── FOOTER ──────────────────────────────────── */
+footer {
+  background: var(--ink-deep);
+  border-top: 1px solid var(--hairline-cool);
+  padding: 28px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-tagline {
+  font-style: italic;
+  font-size: 13px;
+  color: var(--mist);
+  opacity: 0.7;
+  flex: 1;
+  text-align: center;
+}
+.footer-copy {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--mist);
+  opacity: 0.5;
+}
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+.footer-links a {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mist);
+  text-decoration: none;
+  opacity: 0.6;
+  transition:opacity 0.2s var(--ease);
+}
+.footer-links a:hover { opacity: 1; color: var(--lamp); }
+
+/* ─── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 900px) {
+  .principles-grid,
+  .camps-grid,
+  .steps-grid,
+  .benchmark-grid,
+  .tiers-grid,
+  .wp-grid,
+  .contact-grid { grid-template-columns: 1fr; }
+  .legal-grid { grid-template-columns: 1fr 1fr; }
+  .personas-grid { grid-template-columns: 1fr 1fr; }
+  .pipeline {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  /* Grid items default to min-width:auto and will not shrink past their
+     min-content, so the stacked single column still resolved to the node's
+     581px natural width and scrolled the whole page sideways. */
+  .pipe-node,
+  .outcome-row { min-width: 0; }
+  /* The outcome caption is nowrap by default, which kept the row 298px wide
+     even once the node itself could shrink. Let it wrap on a phone. */
+  .outcome-row { flex-wrap: wrap; row-gap: 8px; }
+  .outcome-label { white-space: normal; }
+  .outcome-line { min-width: 20px; }
+  .pipe-arrow { display: none; }
+  .steps-connector::before { display: none; }
+  .section { padding: 60px 24px; }
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+}
+@media (max-width: 600px) {
+
+  .legal-grid,
+  .personas-grid { grid-template-columns: 1fr; }
+  /* Neither of these ever stacked: .conflict-row stayed at `1fr auto 1fr`
+     and .oblig-grid at two columns, so both ran off a phone screen.
+     min-width:0 goes with it — grid items will not shrink past min-content
+     without it, which is what kept the pipeline wide too. */
+  .conflict-row { grid-template-columns: 1fr; }
+  .conflict-panel { min-width: 0; }
+  .oblig-grid { grid-template-columns: 1fr; }
+  .oblig-card, .oblig-satisfy { min-width: 0; }
+  .oblig-satisfy { flex-wrap: wrap; }
+  /* The demo strip is a flex row holding a badge and a command line. Let it
+     stack, and let the command scroll inside its own box rather than
+     widening the page — a command is one unbreakable token. */
+  .demo-strip { flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px; }
+  .demo-strip > * { min-width: 0; max-width: 100%; }
+  .demo-code { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  /* The badge is white-space:nowrap, so its 226px min-content sized the strip
+     wider than a 320px viewport even though its own box fit. Let it wrap. */
+  .demo-badge { white-space: normal; }
+  .hero { padding: 72px 24px 60px; }
+  footer { flex-direction: column; text-align: center; }
+}
+
+/* ─── PRINCIPLE DISCLAIMER ─────────────────────── */
+.principle-disclaimer {
+  margin-top: 18px !important;
+  padding-top: 14px !important;
+  border-top: 1px solid rgba(138,157,184,0.18) !important;
+  font-family: var(--mono) !important;
+  font-size: 9px !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: var(--mist) !important;
+  opacity: 0.55 !important;
+  line-height: 1.7 !important;
+}
+
+/* ─── TIER ENHANCEMENTS ─────────────────────────── */
+.tier-card-featured {
+  border-color: rgba(233,184,114,0.35);
+  background: linear-gradient(160deg, rgba(233,184,114,0.05) 0%, var(--glass-blue) 60%);
+}
+.tier-card-featured:hover { border-color: rgba(233,184,114,0.6) !important; }
+.tier-badge-start {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-deep);
+  background: var(--brass-bright);
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-bottom: 14px;
+}
+.tier-enterprise-note {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--mist);
+  opacity: 0.58;
+  letter-spacing: 0.02em;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.tier-price-enquiry {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mist);
+  border: 1px solid rgba(138,157,184,0.22);
+  border-radius: 4px;
+  padding: 7px 14px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+/* ─── PERSONA ACTION LINE ───────────────────────── */
+.persona-action {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(233,184,114,0.12);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: var(--lamp);
+  opacity: 0.72;
+  line-height: 1.55;
+}
+.persona-action::before {
+  content: 'Aegis →';
+  flex: none;
+  font-weight: 700;
+  opacity: 0.7;
+  margin-right: 2px;
+}
+
+/* ─── MECHANISM MEDIA (diagram + walkthrough video) ─────── */
+.mechanism-media { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--hairline); }
+.mechanism-media h3 { font-family: var(--serif); font-size: 1.5rem; color: var(--paper); margin-bottom: 14px; }
+.mechanism-media > p { color: var(--mist); max-width: 760px; margin-bottom: 28px; }
+.mechanism-media img, .mechanism-media video { max-width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--hairline); display: block; margin: 0 0 28px; background: var(--ink-deep); }
+.mechanism-caption { color: var(--mist); font-size: 0.95rem; max-width: 760px; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "Aegis Guard Gateway",
+ "url": "https://adesanyaaiadvisory.com/aegis-guard.html",
+ "description": "Compliance gateway architecture that enforces GDPR consent and EU AI Act Article 12 logging obligations in real time, at the point of AI execution.",
+ "brand": {
+  "@type": "Brand",
+  "name": "Adesanya AI Advisory"
+ },
+ "image": "https://adesanyaaiadvisory.com/og-image.png"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "VideoObject",
+ "name": "How Aegis Guard Gateway Enforces the EU AI Act Risk Taxonomy in Real Time",
+ "description": "A walkthrough of the Aegis Guard Gateway compliance mechanism: request interception, EU AI Act risk-taxonomy evaluation, fail-closed enforcement, and a HMAC-SHA256 tamper-evident audit trail anonymised at the point of capture.",
+ "thumbnailUrl": "https://adesanyaaiadvisory.com/aegis-guard-video-poster.png",
+ "uploadDate": "2026-07-26",
+ "contentUrl": "https://adesanyaaiadvisory.com/aegis-guard-mechanism-walkthrough.mp4",
+ "duration": "PT7M35S",
+ "publisher": {
+  "@type": "Organization",
+  "name": "Adesanya AI Advisory",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://adesanyaaiadvisory.com/og-image.png"
+  }
+ }
+}
+</script>
+</head>
+<body>
+
+<!-- COUNTDOWN BAR -->
+<div class="countdown-bar">
+  EU AI Act Horizon 1 <strong>·</strong> <span id="aegis-cdtxt"></span> <strong>·</strong> Annex III: <strong>2 Dec 2027</strong>
+</div>
+<script>
+(function(){
+  var h1=new Date('2026-08-02T00:00:00');
+  var now=new Date();
+  var d=Math.ceil((h1-now)/864e5);
+  var el=document.getElementById('aegis-cdtxt');
+  if(!el)return;
+  if(d>1)el.innerHTML=d+' days to <strong>2 Aug 2026</strong>';
+  else if(d===1)el.innerHTML='Tomorrow — <strong>2 Aug 2026</strong>';
+  else if(d===0)el.innerHTML='<strong>TODAY — 2 Aug 2026 NOW IN FORCE</strong>';
+  else el.innerHTML='<strong>2 Aug 2026 IN FORCE</strong> · Art.50 &amp; Art.4 active';
+})();
+</script>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="https://adesanyaaiadvisory.com/" class="nav-logo">ADESANYA AI ADVISORY™</a>
+  <button class="nav-toggle" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">☰</button>
+  <ul class="nav-links">
+    <li><a href="https://adesanyaaiadvisory.com/#practice">Practice</a></li>
+    <li><a href="https://adesanyaaiadvisory.com/#engagements">Engagements</a></li>
+    <li><a href="https://adesanyaaiadvisory.com/#insights">Insights</a></li>
+    <li><a href="https://adesanyaaiadvisory.com/#radar">Radar</a></li>
+    <li><a href="https://adesanyaaiadvisory.com/work-with-me">Work with me</a></li>
+    <li><a href="https://adesanyaaiadvisory.com/aegis-guard" class="active">Aegis Guard</a></li>
+    <li><a href="https://gateway.adesanyaaiadvisory.com/" target="_blank" rel="noopener">For Engineering Teams ↗</a></li>
+    <li><a href="#whitepapers">Research</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-eyebrow">Aegis Guard Gateway™ · <span>Adesanya AI Advisory™</span></p>
+  <h1>Compliance enforced at the <em>moment</em> AI executes.</h1>
+  <p class="hero-sub">Aegis Guard Gateway sits in your live AI data path and validates legal consent before personal data leaves your enterprise boundary — resolving the GDPR–AI Act compliance conflict at the architectural level.</p>
+  <div class="hero-ctas">
+    <a href="#contact" class="btn-primary">Request an Architecture Review</a>
+    <a href="#how-it-works" class="btn-secondary">See how it works</a>
+  </div>
+  <p class="hero-tags">EU AI Act Article 12 logging <strong>·</strong> Article 26(6) audit trails <strong>·</strong> GDPR Article 5 &amp; 17 compatibility <strong>·</strong> No extensions to 2 Aug 2026</p>
+</section>
+
+<!-- THREE PRINCIPLES -->
+<div class="principles-bg">
+  <div class="section">
+    <span class="section-label">Why Aegis Guard · Three Principles</span>
+    <h2 class="section-title">Built by a lawyer. Enforced like one.</h2>
+    <p class="section-intro">Aegis Guard Gateway is built on three pillars: the binding obligations of the EU AI Act, the governance architecture of ISO/IEC 42001, and real-time MCP data-flow runtime security. It is built to a legal specification rather than a security one, for organisations running multi-agent and Model Context Protocol architectures.</p>
+    <div class="principles-grid">
+      <div class="principle-card">
+        <p class="principle-num">Principle 01</p>
+        <h3>Legally Programmed Architecture</h3>
+        <p>Every compliance rule inside Aegis Guard maps directly to a statutory obligation — Article 12, Article 26(6), GDPR Article 7(3). Not software assumptions. Not best-guess policy. Law, expressed as code.</p>
+        <p class="principle-disclaimer">Compliance-supportive architecture. Not legal advice.</p>
+      </div>
+      <div class="principle-card">
+        <p class="principle-num">Principle 02</p>
+        <h3>Zero-Trust Data Sovereignty</h3>
+        <p>Aegis Guard runs inside your own network. Minimal configuration — redirect your API endpoint, nothing else touches your stack. No cloud connectivity. No external data sharing. Your data never crosses a boundary you don't control.</p>
+      </div>
+      <div class="principle-card">
+        <p class="principle-num">Principle 03</p>
+        <h3>The Regulatory Imperative</h3>
+        <p>The EU AI Act operates on two enforcement horizons. Transparency and AI literacy obligations are live from 2 August 2026. Annex III high-risk AI full obligations — including Art. 12 logging and Art. 26 deployer requirements — apply from 2 December 2027. CISOs, DPOs, and CROs need architecture that addresses both horizons. Aegis Guard is operational from day one of your Architecture Review.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- THE PROBLEM -->
+<div class="problem-bg">
+  <div class="section">
+    <span class="section-label">01 · The Problem</span>
+    <h2 class="section-title">Two regulations. One collision.</h2>
+    <p class="section-intro">The AI governance market has split into two camps — and left a dangerous gap between them. Most enterprises are sitting in that gap right now.</p>
+    <div class="camps-grid">
+      <div class="camp-card">
+        <p class="camp-label">Camp 1</p>
+        <h3>GRC Policy Platforms</h3>
+        <p>Governance, risk and compliance platforms are built for policy documentation, AI system inventorying, and impact assessments. They operate outside the live data path. If personal data is sent to an unapproved model at 3:00 AM, a GRC platform cannot block it. It records that a policy existed. Compliance is retrospective, not preventive.</p>
+      </div>
+      <div class="camp-card">
+        <p class="camp-label">Camp 2</p>
+        <h3>Technical API Gateways</h3>
+        <p>AI proxies and standard reverse gateways are built for engineers. They manage load balancing, caching, and API token consumption. They have no mechanism to verify whether a specific user revoked their GDPR data processing consent five minutes ago before routing a prompt to an external model. Security gateways address data loss prevention — not legal consent status.</p>
+      </div>
+    </div>
+    <div class="problem-kicker">
+      <h3>Neither camp can answer the question that kills deals and triggers DPC investigations: <em>"Did this person have valid GDPR consent at the moment AI processed their data?"</em></h3>
+      <p>Other tools tell you after a violation has occurred. Aegis Guard Gateway stops the request before it reaches the model — real-time legal enforcement at the point of AI execution, before a single byte of personal data leaves your enterprise boundary.</p>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS — REDESIGNED WITH 21ST.DEV PATTERN -->
+<div class="how-bg" id="how-it-works">
+  <div class="section">
+    <span class="section-label">02 · How It Works</span>
+    <h2 class="section-title">In the live path. <em>Before the data moves.</em></h2>
+    <p class="section-intro">Aegis Guard Gateway intercepts every AI execution request and validates the legal position before a single byte of personal data leaves your network boundary.</p>
+
+    <!-- Pipeline Flow Diagram -->
+    <div class="pipeline">
+      <div class="pipe-node">
+        <div class="node-icon">🏢</div>
+        <p class="node-tag">Origin</p>
+        <p class="node-name">Enterprise App</p>
+        <p class="node-detail">User request<br>+ personal data</p>
+      </div>
+
+      <div class="pipe-arrow">
+        <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
+          <path d="M0 4h34M30 1l6 3-6 3" stroke="#E9B872" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
+          <path d="M40 8H6M10 5l-6 3 6 3" stroke="#8A9DB8" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="pipe-node aegis-node">
+        <div class="node-icon">🛡</div>
+        <p class="node-tag">Aegis Guard</p>
+        <p class="node-name">Gateway</p>
+        <p class="node-detail">PII redaction<br>Injection defence<br>Art. 26(6) logging</p>
+      </div>
+
+      <div class="pipe-arrow">
+        <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
+          <path d="M0 4h34M30 1l6 3-6 3" stroke="#E9B872" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
+          <path d="M40 8H6M10 5l-6 3 6 3" stroke="#8A9DB8" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="pipe-node">
+        <div class="node-icon">✅</div>
+        <p class="node-tag">Consent Signal</p>
+        <p class="node-name">Rule Engine</p>
+        <p class="node-detail">Payload scanned<br>Consent language flagged</p>
+      </div>
+
+      <div class="pipe-arrow">
+        <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
+          <path d="M0 4h34M30 1l6 3-6 3" stroke="#E9B872" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div style="display:flex;flex-direction:column;gap:3px;align-items:center;">
+          <span class="arrow-label fwd">✓ PASS</span>
+          <span class="arrow-label back">✗ BLOCK</span>
+        </div>
+      </div>
+
+      <div class="pipe-node">
+        <div class="node-icon">🤖</div>
+        <p class="node-tag">Destination</p>
+        <p class="node-name">AI Model</p>
+        <p class="node-detail">GPT / Gemini<br>Claude / internal LLM</p>
+      </div>
+
+      <div class="outcome-row">
+        <span class="outcome-label">Response path ←</span>
+        <div class="outcome-line"></div>
+        <span class="badge badge-pass">✓ Compliant output</span>
+        <span class="outcome-label">Leakage filter · HMAC-SHA256 audit log written</span>
+        <span class="badge badge-block">✗ Blocked &amp; logged</span>
+      </div>
+    </div>
+
+    <!-- Step numbers with connecting line -->
+    <div class="steps-connector">
+      <div class="step-num-wrap"><div class="step-num">01</div></div>
+      <div class="step-num-wrap"><div class="step-num">02</div></div>
+      <div class="step-num-wrap"><div class="step-num">03</div></div>
+    </div>
+
+    <!-- Step cards -->
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-icon">🔒</div>
+        <h3>Intercept at the Boundary</h3>
+        <p>Every AI execution request — regardless of the model, vendor, or application — is intercepted by Aegis Guard Gateway before data exits the enterprise network. Nothing passes through uninspected.</p>
+        <ul class="step-benefits">
+          <li><span class="dot-mark"></span>Zero bypass — nothing passes uninspected</li>
+          <li><span class="dot-mark"></span>PII redaction at point of entry</li>
+          <li><span class="dot-mark"></span>Prompt injection detection built in</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-icon">⚡</div>
+        <h3>Flag Consent Signals in Real Time</h3>
+        <p>Aegis scans every payload for consent-related signals — opt-in language, lawful-basis markers, GDPR consent phrasing — as part of each classification pass, live at the moment of execution. Direct API integration with named consent platforms, including OneTrust, is planned for a coming release.</p>
+        <ul class="step-benefits">
+          <li><span class="dot-mark"></span>Consent-language detection built into every classification pass</li>
+          <li><span class="dot-mark"></span>Direct consent-platform integrations planned for a coming release</li>
+          <li><span class="dot-mark"></span>Sub-15ms validation overhead</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-icon">📋</div>
+        <h3>Log, Anonymise, Enforce</h3>
+        <p>Approved requests proceed to the AI model with full Article 12 audit logging. Denied requests are blocked and logged with the reason. All logs are anonymised at the point of capture — GDPR data minimisation preserved, AI Act audit trail maintained.</p>
+        <ul class="step-benefits">
+          <li><span class="dot-mark"></span>HMAC-SHA256 tamper-resistant logs</li>
+          <li><span class="dot-mark"></span>GDPR data minimisation preserved</li>
+          <li><span class="dot-mark"></span>Forwarded to your SIEM over HTTPS when you connect one</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Demo strip -->
+    <div class="demo-strip">
+      <span class="demo-badge">Live Technical Walkthrough · By Request</span>
+      <p class="demo-text">Two minutes, run live on the call — not a file we hand you. A real MCP client drives seven real tool calls through the gateway: a Prohibited-tier block, a High-Risk case blocked by aggravating PII, that same case flagged but allowed without it, a Critical-PII data-loss block, and three clean passes. Every allow is independently re-verified on screen; every block shows why no audit entry exists yet. Bring your technical team to the Architecture Review call and we'll run it together.</p>
+      <span class="demo-code">python3 -m aegis_guard.demo.live_demo_client</span>
+    </div>
+
+    <!-- MECHANISM WALKTHROUGH: diagram + video -->
+    <div class="mechanism-media">
+      <h3>Watch the mechanism, end to end.</h3>
+      <p>A tool call enters the AI data path. Aegis Guard Gateway evaluates it against the EU AI Act risk taxonomy — Prohibited, High-Risk, Transparency — before the request reaches the model, applies a fail-closed enforcement decision, and writes the outcome to a tamper-evident audit trail that is anonymised at the point of capture, not after. The diagram and the walkthrough below show the same enforcement path at two levels of depth.</p>
+
+      <img src="/aegis-guard-realtime-compliance-workflow.png"
+           alt="Diagram of the Aegis Guard Gateway real-time AI compliance workflow: request interception, EU AI Act risk-taxonomy evaluation, fail-closed enforcement, and HMAC-SHA256 tamper-evident audit trail"
+           loading="lazy" width="1600" height="893">
+
+      <video controls preload="metadata"
+             poster="/aegis-guard-video-poster.png"
+             aria-label="Aegis Guard Gateway mechanism walkthrough">
+        <source src="/aegis-guard-mechanism-walkthrough.mp4" type="video/mp4">
+        Your browser does not support embedded video. <a href="/aegis-guard-mechanism-walkthrough.mp4">Download the walkthrough (MP4)</a>.
+      </video>
+
+      <p class="mechanism-caption">The gateway resolves a specific legal collision: the EU AI Act's Article 26(6) deployer log-retention duty (deferred to 2 December 2027 under the Digital Omnibus, Regulation (EU) 2026/1744, in force 27 July 2026) requires a tamper-evident record kept for at least six months, while GDPR Articles 5 and 17 require personal data to stay minimised and erasable. Aegis Guard resolves it before the log is written — every entry is anonymised at the point of capture, signed with HMAC-SHA256, and stored inside the client's own network boundary.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TECHNICAL BENCHMARKS -->
+<div class="benchmarks-bg">
+  <div class="section">
+    <span class="section-label">02b · Technical Benchmarks</span>
+    <h2 class="section-title">Infrastructure built for enterprise load.</h2>
+    <div class="benchmark-grid">
+      <div class="benchmark-card">
+        <span class="benchmark-stat">Sub-15ms</span>
+        <p class="benchmark-title">Gateway Latency Target</p>
+        <p>Rule evaluation and PII scanning run inline before each AI tool call; the signed audit entry is written immediately after. The architecture is designed for sub-15ms total overhead. Precise latency benchmarks are established during the Pilot, scoped to your specific AI execution environment.</p>
+      </div>
+      <div class="benchmark-card">
+        <span class="benchmark-stat">Fail-Closed</span>
+        <p class="benchmark-title">Blocked At The Protocol Layer</p>
+        <p>Aegis Guard intercepts every tool call through a compliance_gate decorator that runs before the underlying handler executes. On a rule violation or evaluation fault, the call is blocked at the MCP protocol layer — not proxied, not silently passed through — and returned to the caller as a JSON-RPC error, never a partial result. Cannot be bypassed by Client configuration.</p>
+      </div>
+      <div class="benchmark-card">
+        <span class="benchmark-stat">HMAC-SHA256</span>
+        <p class="benchmark-title">Audit-Ready by Default</p>
+        <p>Every transaction signed with HMAC-SHA256, key held inside your own network boundary — a tamper-evident record your legal team can present to a regulator without a developer in the room. Forwarded to your SIEM over HTTPS when you connect one, ready for WORM-configured retention on your side. Built to support the Article 26(6) log-integrity requirement.</p>
+      </div>
+      <div class="benchmark-card">
+        <span class="benchmark-stat">MCP-Aware</span>
+        <p class="benchmark-title">MCP Runtime Validation</p>
+        <p>When your AI system calls another AI system via Model Context Protocol, Aegis Guard validates the data flow at each node — logging tamper-evident interaction records, enforcing content boundaries, and mapping accountability to the correct deployer. This is the gap standard compliance middleware does not address.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEGAL FOUNDATION -->
+<div class="legal-bg">
+  <div class="section">
+    <span class="section-label">03 · Legal Foundation</span>
+    <h2 class="section-title">The GDPR–AI Act conflict, resolved.</h2>
+    <p class="legal-intro">Two bodies of law. One data pipeline. Obligations that appear to contradict each other — until you resolve them at the architecture level.</p>
+    <p class="legal-sub">Aegis does not resolve the conflict in a policy document. It resolves it in the code that runs before data moves. Logs are anonymised inside your enterprise boundary before being written. Personal identifiers are stripped at the point of capture. The result is an AI Act-compliant audit trail that contains no personal data requiring GDPR management.</p>
+
+    <!-- Conflict visualisation -->
+    <div class="conflict-row">
+      <div class="conflict-panel gdpr">
+        <span class="conflict-law-tag gdpr-tag">GDPR</span>
+        <h4>Data minimisation and erasure</h4>
+        <p>Personal data must not be retained beyond its purpose. Individuals hold the right to demand erasure at any time. Retaining detailed AI interaction logs risks triggering Art. 17 erasure requests and Art. 5(1)(e) storage-limitation violations.</p>
+        <p class="conflict-articles">Art. 5 · Art. 6–7 · Art. 17</p>
+      </div>
+      <div class="conflict-center">
+        <span class="conflict-vs">vs</span>
+        <div class="conflict-resolve-badge">
+          <span>Aegis</span>
+          <span>resolves</span>
+        </div>
+        <span class="conflict-vs">↕</span>
+      </div>
+      <div class="conflict-panel aiact">
+        <span class="conflict-law-tag aiact-tag">EU AI Act</span>
+        <h4>Continuous automated logging</h4>
+        <p>Providers and deployers of Annex III high-risk AI systems must build automatic, tamper-resistant logging across the full operational lifecycle. Logs must be retained for a minimum of six months and produced on request to supervisory authorities.</p>
+        <p class="conflict-articles">Art. 12 · Art. 26(6)</p>
+      </div>
+    </div>
+
+    <!-- Obligation cards 2×2 -->
+    <p class="section-label" style="margin-bottom:20px;">Four obligations. One architecture.</p>
+    <div class="oblig-grid">
+
+      <div class="oblig-card">
+        <div class="oblig-card-top">
+          <div class="oblig-header">
+            <span class="oblig-badge ai-act">EU AI Act</span>
+            <span class="oblig-article">Art. 12</span>
+          </div>
+          <h4>Automatic logging for high-risk AI</h4>
+          <p>Providers of Annex III systems must build automatic, tamper-resistant logging across the full operational lifecycle. Full enforcement: 2 December 2027 (Digital Omnibus, Regulation (EU) 2026/1744, published in the Official Journal 24 July 2026, in force 27 July 2026).</p>
+        </div>
+        <div class="oblig-satisfy">
+          <span class="oblig-satisfy-label">Aegis →</span>
+          <p>Captures HMAC-SHA256 timestamped logs at the execution point, inside your network boundary, before any data leaves the enterprise.</p>
+        </div>
+      </div>
+
+      <div class="oblig-card">
+        <div class="oblig-card-top">
+          <div class="oblig-header">
+            <span class="oblig-badge ai-act">EU AI Act</span>
+            <span class="oblig-article">Art. 26(6)</span>
+          </div>
+          <h4>Deployer log retention</h4>
+          <p>Deployers of high-risk AI must retain system logs for a minimum of six months. The evidentiary burden rests with the deployer — not the provider — and regulators may request production at any time.</p>
+        </div>
+        <div class="oblig-satisfy">
+          <span class="oblig-satisfy-label">Aegis →</span>
+          <p>Stores logs inside your boundary in a structured, regulator-ready format. Six-month minimum retention enforced by configuration, not policy.</p>
+        </div>
+      </div>
+
+      <div class="oblig-card">
+        <div class="oblig-card-top">
+          <div class="oblig-header">
+            <span class="oblig-badge gdpr">GDPR</span>
+            <span class="oblig-article">Art. 5, 17</span>
+          </div>
+          <h4>Data minimisation and right to erasure</h4>
+          <p>Personal data must not be retained beyond its purpose. Individuals may demand erasure. AI interaction logs that contain personal data create a direct conflict with both obligations — unless the personal data never enters the log.</p>
+        </div>
+        <div class="oblig-satisfy">
+          <span class="oblig-satisfy-label">Aegis →</span>
+          <p>Anonymises all log content at the point of capture. Personal identifiers are stripped before writing. Logs contain no personal data that triggers retention or erasure obligations.</p>
+        </div>
+      </div>
+
+      <div class="oblig-card">
+        <div class="oblig-card-top">
+          <div class="oblig-header">
+            <span class="oblig-badge gdpr">GDPR</span>
+            <span class="oblig-article">Art. 6–7</span>
+          </div>
+          <h4>Lawful basis and consent validity</h4>
+          <p>Where consent is the lawful basis for AI processing, it must be freely given, specific, informed, and current at the moment of processing — not assumed from a prior interaction or cached from a previous session.</p>
+        </div>
+        <div class="oblig-satisfy">
+          <span class="oblig-satisfy-label">Aegis →</span>
+          <p>Flags consent-related language in every payload at classification time — opt-in wording, lawful-basis markers, GDPR consent phrasing. Live circuit-breaker enforcement against your consent platform's real-time policy state (AEGIS_NO_LAWFUL_BASIS) is on the product roadmap.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="proprietary-box">
+      <p class="prop-tag">Proprietary Architecture</p>
+      <p class="prop-name">AEGIS_NO_LAWFUL_BASIS</p>
+      <p>This is a proprietary runtime consent-enforcement architecture designed by Adesanya AI Advisory. It is not a regulatory standard or a term defined in EU law. It is the specific technical configuration built to convert your consent platform's policy state into an active, real-time circuit breaker — preventing AI execution when legal permission is absent. The name refers to the enforcement mode that activates when your consent platform returns a no-consent signal for the data subject at the moment of the AI call. Live consent-platform circuit-breaker enforcement is on the product roadmap; today, Aegis flags consent-related signals within payload content at classification time.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ENGAGEMENT TIERS -->
+<div class="tiers-bg">
+  <div class="section">
+    <span class="section-label">04 · Engagement Tiers</span>
+    <h2 class="section-title">Three ways to begin.</h2>
+    <p class="tiers-intro">Every engagement starts with a written scope and a fixed fee. No meters running. The Architecture Review is the usual starting point.</p>
+    <div class="tiers-grid">
+      <div class="tier-card tier-card-featured">
+        <p class="tier-label">TIER 01</p>
+        <span class="tier-badge-start">Start here</span>
+        <h3>Architecture Review</h3>
+        <div class="tier-price-enquiry">Fixed fee · on enquiry</div>
+        <span class="tier-period">5–7 working days</span>
+        <p class="tier-enterprise-note">Enterprise and multi-system engagements scoped separately — begin with a written enquiry.</p>
+        <p>A structured review of your current AI data-flow, consent mechanisms, and logging architecture against EU AI Act Article 12 and GDPR obligations. Written report with findings and a prioritised remediation roadmap.</p>
+        <ul class="tier-features">
+          <li>Mapping of all AI execution paths and data flows</li>
+          <li>Gap assessment against Article 12 logging requirements</li>
+          <li>Consent mechanism review and validity analysis</li>
+          <li>GDPR–AI Act conflict identification and remediation options</li>
+          <li>Written report with prioritised recommendations</li>
+          <li>60-minute debrief call included</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Request Architecture Review</a>
+      </div>
+      <div class="tier-card">
+        <p class="tier-label">TIER 02</p>
+        <h3>30-Day Sandbox Pilot</h3>
+        <div class="tier-price-enquiry">Fixed fee · on enquiry</div>
+        <span class="tier-period">Scoped to your environment · 30 calendar days</span>
+        <p>Live deployment of Aegis Guard Gateway in a sandboxed environment against one defined AI execution path. Documented compliance outcomes, full audit log review, and a signed compliance report suitable for DPC or internal board reporting.</p>
+        <ul class="tier-features">
+          <li>Aegis Guard Gateway configured for your environment</li>
+          <li>One AI execution path fully instrumented</li>
+          <li>30 days of live consent validation and logging</li>
+          <li>Full audit log review and anomaly report</li>
+          <li>GDPR–AI Act reconciliation documentation</li>
+          <li>Compliance report for board or regulator</li>
+          <li>Architecture Review included (no separate charge)</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Start the Pilot</a>
+      </div>
+      <div class="tier-card">
+        <p class="tier-label">TIER 03</p>
+        <h3>Ongoing Retainer</h3>
+        <div class="tier-price-enquiry">Monthly retainer · on enquiry</div>
+        <span class="tier-period">Minimum 3 months · rolling</span>
+        <p>Continuous governance monitoring after a completed pilot. For organisations that need ongoing compliance assurance as AI systems evolve and the regulatory landscape develops around AI Act enforcement.</p>
+        <ul class="tier-features">
+          <li>Monthly AI system risk review against current obligations</li>
+          <li>Ongoing consent architecture monitoring</li>
+          <li>Regulatory update briefings as guidance issues</li>
+          <li>4 hours of advisory time per month</li>
+          <li>Quarterly gap assessment refresh</li>
+          <li>Priority response on DPC or supervisory authority queries</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Discuss the Retainer</a>
+      </div>
+    </div>
+    <p class="tier-flow">ARCHITECTURE REVIEW → PILOT → RETAINER · Each tier stands alone or builds on the last</p>
+  </div>
+</div>
+
+<!-- WHO IT'S FOR -->
+<div class="personas-bg">
+  <div class="section">
+    <span class="section-label">05 · Who It's For</span>
+    <h2 class="section-title">The people who carry the accountability.</h2>
+    <p class="section-intro">Aegis Guard Gateway is built for the individuals named on compliance documentation — the people who cannot afford a DPC investigation.</p>
+    <div class="personas-grid">
+      <div class="persona-card">
+        <p class="persona-role">Data Protection Officer</p>
+        <h3>You need evidence, not assurance.</h3>
+        <p>Regulators do not accept policy documents as proof of compliance. Aegis produces timestamped, tamper-resistant logs that demonstrate GDPR consent was validated before each AI execution — the kind of evidence that closes a DPC inquiry before it escalates.</p>
+        <p class="persona-action">Timestamped, tamper-resistant audit logs ready for a DPC inquiry.</p>
+      </div>
+      <div class="persona-card">
+        <p class="persona-role">Chief Information Security Officer</p>
+        <h3>The control gap is in the legal layer.</h3>
+        <p>Your security stack monitors data in transit. It does not check whether the person whose data is in transit consented to AI processing it. Aegis closes that legal blind spot without requiring changes to your existing security architecture.</p>
+        <p class="persona-action">Closes the legal blind spot without touching your security stack.</p>
+      </div>
+      <div class="persona-card">
+        <p class="persona-role">General Counsel / Head of Legal</p>
+        <h3>The GDPR–AI Act conflict needs a legal answer.</h3>
+        <p>You have advised the business on GDPR for years. The AI Act creates new logging obligations that appear to conflict with data minimisation. Aegis provides the legal and technical architecture that resolves this conflict — documented, auditable, and defensible to a supervisory authority.</p>
+        <p class="persona-action">Documented GDPR–AI Act conflict resolution — auditable and defensible.</p>
+      </div>
+      <div class="persona-card">
+        <p class="persona-role">Chief Compliance Officer</p>
+        <h3>The Annex III deadline moved. The preparation window just became the compliance window.</h3>
+        <p>High-risk AI obligations — Art. 12 logging and Art. 26 deployer requirements — apply from 2 December 2027 under the EU AI Act Digital Omnibus. For financial services, insurance, and essential services, that is 17 months to build architecture that works. The organisations that start now will not be scrambling in 2027.</p>
+        <p class="persona-action">Architecture designed for 2 Dec 2027 — 17 months to build it right.</p>
+      </div>
+      <div class="persona-card">
+        <p class="persona-role">Founder / Managing Director</p>
+        <h3>Someone just asked if you're compliant. You need an answer.</h3>
+        <p>Your enterprise customer, your investor, your insurer, or your board has asked whether your AI systems comply with the EU AI Act. You don't have a dedicated legal or compliance team — you are the team. Aegis Guard Gateway gives you the architecture, the documentation, and the audit trail to answer that question credibly — before the next meeting, not after an incident.</p>
+        <p class="persona-action">Audit trail and documentation — credible before the next board meeting.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHITEPAPERS -->
+<div class="whitepapers-bg" id="whitepapers">
+  <div class="section">
+    <span class="section-label">06 · Research</span>
+    <h2 class="section-title">Whitepaper library.</h2>
+    <p class="section-intro">Two practical guides — one for enterprises subject to EU AI Act obligations, one for US AI SaaS providers navigating the EU market. Download free. No spam.</p>
+    <div class="wp-grid">
+      <div class="wp-card">
+        <p class="wp-track">EU Track · High-Risk AI Systems</p>
+        <h3>The Production-Stage Audit Trail for High-Risk AI Systems under the EU AI Act</h3>
+        <form class="wp-form" name="aaa-wp-eu" method="POST" action="https://formsubmit.co/abdulwahab@adesanyaaiadvisory.com">
+          <input type="hidden" name="form-name" value="aaa-wp-eu">
+          <input type="hidden" name="_next" value="https://adesanyaaiadvisory.com/thank-you.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off">
+          <input type="email" name="email" placeholder="Corporate email" required>
+          <input type="text" name="org" placeholder="Organisation">
+          <input type="text" name="role" placeholder="Your role">
+          <button type="submit" class="wp-submit">Download EU Whitepaper →</button>
+          <p class="wp-confirm">✓ Received. We'll email you the PDF within one business day.</p>
+        </form>
+      </div>
+      <div class="wp-card">
+        <p class="wp-track">US / Global Track · Market Entry</p>
+        <h3>The Extraterritorial Blueprint: Selling US AI SaaS into the European Market</h3>
+        <form class="wp-form" name="aaa-wp-us" method="POST" action="https://formsubmit.co/abdulwahab@adesanyaaiadvisory.com">
+          <input type="hidden" name="form-name" value="aaa-wp-us">
+          <input type="hidden" name="_next" value="https://adesanyaaiadvisory.com/thank-you.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off">
+          <input type="email" name="email" placeholder="Corporate email" required>
+          <input type="text" name="org" placeholder="Organisation">
+          <input type="text" name="role" placeholder="Your role">
+          <button type="submit" class="wp-submit">Download US Whitepaper →</button>
+          <p class="wp-confirm">✓ Received. We'll email you the PDF within one business day.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-bg" id="contact">
+  <div class="section">
+    <span class="section-label">07 · Contact</span>
+    <h2 class="section-title">Begin the Architecture Review.</h2>
+    <p class="section-intro">Write briefly. Describe the AI system or data-flow you are concerned about, and any deadline you are working to. A response usually follows within one business day.</p>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <ol>
+          <li><strong>Architecture Review</strong> — fixed fee, confirmed on enquiry. Written scope confirmed within 24 hours of enquiry.</li>
+          <li><strong>Findings debrief</strong> — Written gap report and remediation priorities delivered within the review period.</li>
+          <li><strong>Pilot or retainer</strong> — Your decision, with no obligation. Either engagement is scoped and fixed before work begins.</li>
+        </ol>
+        <p class="contact-email"><a href="mailto:abdulwahab@adesanyaaiadvisory.com">abdulwahab@adesanyaaiadvisory.com</a></p>
+        <p class="contact-location">Dublin · Ireland</p>
+      </div>
+      <form class="contact-form" name="aaa-contact-aegis" method="POST" action="https://formsubmit.co/abdulwahab@adesanyaaiadvisory.com">
+        <input type="hidden" name="form-name" value="aaa-contact-aegis">
+        <input type="hidden" name="_next" value="https://adesanyaaiadvisory.com/intake.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Work email" required>
+        <input type="text" name="org" placeholder="Organisation">
+        <select name="role">
+          <option value="" disabled selected>Your role (optional)</option>
+          <option>Data Protection Officer</option>
+          <option>Chief Information Security Officer</option>
+          <option>General Counsel / Head of Legal</option>
+          <option>Chief Compliance Officer</option>
+          <option>CTO / Head of Engineering</option>
+          <option>Founder / Managing Director</option>
+          <option>Other</option>
+        </select>
+        <select name="engagement">
+          <option value="" disabled selected>Engagement interest (optional)</option>
+          <option>Architecture Review</option>
+          <option>30-Day Sandbox Pilot — request quote</option>
+          <option>Ongoing Retainer — request quote</option>
+          <option>Not sure yet — want to discuss</option>
+        </select>
+        <textarea name="message" placeholder="Describe your AI system or concern"></textarea>
+        <p class="contact-gdpr">I agree to my data being processed to respond to my enquiry, per the <a href="https://adesanyaaiadvisory.com/privacy-policy">privacy policy</a>.</p>
+        <button type="submit" class="contact-submit">Request the Architecture Review →</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="ftl">
+<style>
+.ftl{background:#0B0F1A;border-top:1px solid rgba(168,124,63,.25);padding:34px 28px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:.74rem;color:#93A3BD;line-height:1.7}
+.ftl-wrap{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ftl a{color:#93A3BD;text-decoration:none;transition:color .25s var(--ease)}
+.ftl a:hover{color:#F7DCA8}
+.ftl-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.ftl-clock{color:#E9B872;letter-spacing:.05em;white-space:nowrap}
+.ftl-clock b{color:#F7DCA8;font-weight:500}
+.ftl-extra{max-width:1180px;margin:10px auto 0;color:rgba(147,163,189,.7);font-size:.68rem;letter-spacing:.04em}
+@media(max-width:680px){.ftl-wrap{flex-direction:column;text-align:center}}
+</style>
+<div class="ftl-wrap">
+  <span>&copy; <span id="yr"></span> Adesanya AI Advisory&trade; &mdash; Abdulwahab B. Adesanya &mdash; Dublin, Ireland</span>
+  <span class="ftl-links">
+    <a href="https://www.linkedin.com/in/abdulwahab-adesanya" target="_blank" rel="noopener" aria-label="Abdulwahab Adesanya on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;fill:currentColor;vertical-align:-2px;margin-right:6px"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
+    <a href="intake.html">Begin in writing</a>
+    <a href="/privacy-policy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </span>
+  <span class="ftl-clock" id="ftl-clock">&mdash;</span>
+</div>
+<div class="ftl-extra">EU AI Act compliance architecture, designed by a lawyer.</div>
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y&&!y.textContent) y.textContent=new Date().getFullYear();
+  var c=document.getElementById('ftl-clock');
+  function t(){ if(!c)return;
+    var n=new Date();
+    c.innerHTML='Dublin · <b>'+n.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'Europe/Dublin'})+' · '+n.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Europe/Dublin'})+'</b>';
+  }
+  t(); setInterval(t,30000);
+})();
+</script>
+</footer>
+
+<script src="assets/site.js?v=20260820074103"></script>
+</body>
+</html>

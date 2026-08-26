@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EU AI Act Obligation Checker — Free Interactive Tool — Adesanya AI Advisory</title>
+<meta name="description" content="Answer six questions and see which EU AI Act obligations apply to your organisation — with the deadlines that matter. Free, no email required.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://adesanyaaiadvisory.com/obligation-checker.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Adesanya AI Advisory">
+<meta property="og:title" content="EU AI Act Obligation Checker — which obligations apply to you, and when">
+<meta property="og:description" content="Six questions. Your applicable EU AI Act articles and deadlines. Free, no email required.">
+<meta property="og:url" content="https://adesanyaaiadvisory.com/obligation-checker.html">
+<meta property="og:image" content="https://adesanyaaiadvisory.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://adesanyaaiadvisory.com/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20260820074103">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--night-ink);color:var(--paper);line-height:1.7}
+  a{color:var(--lamp)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px}
+  .hero{border-bottom:1px solid var(--hairline);background:linear-gradient(180deg,var(--chamber),var(--night-ink))}
+  .hero .wrap{padding:44px 24px 30px}
+  .tag{display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--lamp)}
+  h1{font-family:var(--serif);font-weight:300;font-size:2.2rem;margin:10px 0 12px;line-height:1.14;letter-spacing:-.01em}
+  .lede{color:var(--mist);max-width:640px}
+  .meta{font-family:var(--mono);color:var(--mist);font-size:.78rem;letter-spacing:.04em;margin-top:14px}
+  main{padding:40px 0 30px}
+  .card{background:var(--chamber);border:1px solid var(--hairline);border-radius:14px;padding:28px;margin-bottom:20px}
+  .qnum{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--lamp);margin-bottom:8px}
+  .card h2{font-family:var(--serif);font-weight:600;font-size:1.3rem;margin-bottom:6px}
+  .qhelp{color:var(--mist);font-size:.92rem;margin-bottom:16px}
+  .opts{display:grid;gap:10px}
+  .opt{display:flex;gap:12px;align-items:flex-start;background:var(--night-ink);border:1px solid var(--hairline);border-radius:10px;padding:13px 16px;cursor:pointer;transition:border-color .2s var(--ease);font-size:.95rem}
+  .opt:hover{border-color:var(--brass)}
+  .opt input{margin-top:5px;accent-color:var(--brass)}
+  .nav-row{display:flex;justify-content:space-between;align-items:center;margin-top:22px}
+  .btn{display:inline-block;background:var(--brass);color:#1a1205;text-decoration:none;font-weight:700;font-family:var(--mono);font-size:.9rem;padding:12px 26px;border-radius:10px;border:none;cursor:pointer}
+  .btn[disabled]{opacity:.45;cursor:not-allowed}
+  .btn-ghost{background:none;border:1px solid var(--hairline);color:var(--mist);font-family:var(--mono);font-size:.85rem;padding:11px 20px;border-radius:10px;cursor:pointer}
+  .progress{height:4px;background:var(--hairline);border-radius:99px;margin-bottom:26px;overflow:hidden}
+  .progress i{display:block;height:100%;background:var(--brass);width:0;transition:width .3s var(--ease)}
+  /* results */
+  .ob{border:1px solid var(--hairline);border-left:3px solid var(--brass);border-radius:10px;background:var(--night-ink);padding:18px 20px;margin-bottom:14px}
+  .ob h3{font-family:var(--serif);font-weight:600;font-size:1.08rem;color:var(--lamp)}
+  .ob .when{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;color:var(--paper);background:rgba(201,161,74,.15);border:1px solid rgba(201,161,74,.4);border-radius:999px;padding:2px 10px;display:inline-block;margin:6px 0 8px}
+  .ob p{color:#dde4ee;font-size:.93rem}
+  .ob .prov{font-family:var(--mono);font-size:.74rem;color:var(--mist);margin-top:8px}
+  .warn{border-left-color:#c96a4a}
+  .warn h3{color:#e8a58b}
+  .cta-band{background:var(--chamber);border:1px solid var(--hairline);border-radius:14px;padding:28px;text-align:center;margin-top:28px}
+  .cta-band p{font-family:var(--serif);font-size:1.15rem;margin-bottom:4px}
+  .cta-band small{display:block;color:var(--mist);margin-bottom:10px}
+  .share-band{text-align:center;margin-top:22px}
+  .share-lead{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--mist);margin-bottom:12px}
+  .share-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .share-actions .btn-ghost{font-size:.8rem}
+  .disc{color:var(--mist);font-size:.83rem;border-top:1px solid var(--hairline);margin-top:30px;padding-top:18px}
+  .gate{border-top:1px dashed var(--hairline);margin-top:28px;padding-top:26px}
+  .gate .qnum{margin-bottom:10px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-family:var(--mono);font-size:.78rem;color:var(--mist);margin-bottom:6px}
+  .field input[type=text],.field input[type=email],.field select,.field textarea{width:100%;background:var(--night-ink);border:1px solid var(--hairline);border-radius:8px;padding:11px 14px;color:var(--paper);font-size:.95rem;font-family:inherit}
+  .field textarea{resize:vertical;min-height:64px}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--mist);margin:16px 0}
+  .consent input{margin-top:4px;accent-color:var(--brass)}
+  .gate-err{color:#e8a58b;font-size:.85rem;margin-top:10px}
+  footer{border-top:1px solid var(--hairline);padding:26px 0;color:var(--mist);font-size:.82rem;margin-top:36px}
+  footer a{color:var(--lamp)}
+  .hide{display:none}
+  @media (prefers-reduced-motion: reduce){ .progress i{transition:none} }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"EU AI Act Obligation Checker","url":"https://adesanyaaiadvisory.com/obligation-checker.html","applicationCategory":"BusinessApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"Adesanya AI Advisory","url":"https://adesanyaaiadvisory.com"}}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Which EU AI Act obligations apply to my organisation?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It depends on whether you provide or deploy AI, and how your system is classified — prohibited, high-risk (Annex III), limited-risk (transparency, Article 50), or minimal-risk. This free checker answers six questions and returns your applicable obligations and their deadlines in about two minutes."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is the EU AI Act Obligation Checker free?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. It is free, takes about two minutes, and no email address is required to see your result."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What happens after I get my result?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The checker tells you which obligations apply. For a written, defensible position — including Annex III classification, Article 26 gap analysis and a remediation roadmap — Adesanya AI Advisory offers a fixed-fee Readiness Assessment or Readiness Sprint."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body class="has-nav">
+<header class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="index.html" aria-label="Adesanya AI Advisory — home"><img src="assets/adesanya-mark.svg" alt="" width="26" height="28"><span class="wordmark">ADESANYA AI ADVISORY<sup>&#8482;</sup></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <nav class="navlinks" id="navlinks" aria-label="Site">
+      <a class="nl" href="services.html">Services</a>
+      <a class="nl" href="legislation.html">Legislation</a>
+      <a class="nl" href="knowledge-base.html">Knowledge base</a>
+      <a class="nl" href="nigeria.html">Nigeria–EU</a>
+      <a class="nl" href="https://gateway.adesanyaaiadvisory.com" target="_blank" rel="noopener">Aegis Guard</a>
+      <a class="nl" href="work-with-me.html">Work with me</a>
+      <a class="nl" href="index.html#contact">Contact</a>
+      <a class="watch" href="index.html#radar" aria-label="Live AI Law Radar, updated weekly"><span class="dot"></span>LIVE<span class="full">&nbsp;&#183; RADAR &#183; WEEKLY</span></a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero"><div class="wrap">
+<span class="tag">Free Interactive Tool</span>
+<h1>Which EU AI Act obligations apply to you — and when?</h1>
+<p class="lede">Six questions. No email address required. You get the specific Articles that apply to your organisation, with the enforcement dates that matter — including where the Digital Omnibus has moved them.</p>
+<p class="meta">≈ 2 minutes · answers never leave your browser</p>
+</div></div>
+
+<main><div class="wrap">
+<div class="progress"><i id="bar"></i></div>
+
+<!-- Q1 -->
+<div class="card q" id="q0">
+  <div class="qnum">Question 1 of 6 · Your role</div>
+  <h2>What is your organisation's relationship to the AI systems it uses?</h2>
+  <p class="qhelp">Under the AI Act, obligations differ by role. Pick the closest fit; many organisations are both.</p>
+  <div class="opts">
+    <label class="opt"><input type="radio" name="role" value="deployer"><span><b>Deployer</b> — we use AI systems built by others (SaaS AI tools, vendor models, APIs)</span></label>
+    <label class="opt"><input type="radio" name="role" value="provider"><span><b>Provider</b> — we build or substantially modify AI systems placed on the market or into service</span></label>
+    <label class="opt"><input type="radio" name="role" value="both"><span><b>Both</b> — we build some systems and use others</span></label>
+    <label class="opt"><input type="radio" name="role" value="gpai"><span><b>GPAI model provider</b> — we train or provide general-purpose AI models</span></label>
+  </div>
+</div>
+
+<!-- Q2 -->
+<div class="card q hide" id="q1">
+  <div class="qnum">Question 2 of 6 · People-facing AI</div>
+  <h2>Do any of your AI systems interact directly with people?</h2>
+  <p class="qhelp">Chatbots, AI assistants, voice agents, customer-service bots — anywhere a person converses with the system.</p>
+  <div class="opts">
+    <label class="opt"><input type="radio" name="chat" value="yes"><span>Yes — people interact with our AI directly</span></label>
+    <label class="opt"><input type="radio" name="chat" value="no"><span>No — our AI works behind the scenes only</span></label>
+  </div>
+</div>
+
+<!-- Q3 -->
+<div class="card q hide" id="q2">
+  <div class="qnum">Question 3 of 6 · Generated content</div>
+  <h2>Do your systems generate synthetic content — text, images, audio or video?</h2>
+  <p class="qhelp">Includes marketing copy, generated imagery, synthetic voices, and AI-produced video.</p>
+  <div class="opts">
+    <label class="opt"><input type="radio" name="gen" value="new"><span>Yes — with systems placed on the market <b>from 2 August 2026</b> (or we're unsure of timing)</span></label>
+    <label class="opt"><input type="radio" name="gen" value="old"><span>Yes — only with generative systems already on the market <b>before 2 August 2026</b></span></label>
+    <label class="opt"><input type="radio" name="gen" value="deepfake"><span>Yes — including realistic depictions of real people, places or events ("deepfakes") or synthetic voice</span></label>
+    <label class="opt"><input type="radio" name="gen" value="no"><span>No generated content</span></label>
+  </div>
+</div>
+
+<!-- Q4 -->
+<div class="card q hide" id="q3">
+  <div class="qnum">Question 4 of 6 · High-risk areas</div>
+  <h2>Is AI used in any of these Annex III areas?</h2>
+  <p class="qhelp">These are the AI Act's designated high-risk use categories.</p>
+  <div class="opts">
+    <label class="opt"><input type="radio" name="hr" value="yes"><span>Yes — one or more of: <b>employment/HR screening · credit scoring or essential services · biometrics · education · critical infrastructure · law enforcement · migration · justice</b></span></label>
+    <label class="opt"><input type="radio" name="hr" value="unsure"><span>Not sure — some uses might qualify</span></label>
+    <label class="opt"><input type="radio" name="hr" value="no"><span>No — none of those areas</span></label>
+  </div>
+</div>
+
+<!-- Q5 -->
+<div class="card q hide" id="q4">
+  <div class="qnum">Question 5 of 6 · Prohibited practices screen</div>
+  <h2>Do any systems do any of the following?</h2>
+  <p class="qhelp">These practices are banned outright — already in force since February 2025.</p>
+  <div class="opts">
+    <label class="opt"><input type="radio" name="proh" value="yes"><span>Possibly — we use: <b>emotion recognition in the workplace/education · social scoring · untargeted facial-image scraping · manipulative or exploitative techniques · real-time remote biometric ID in public spaces</b></span></label>
+    <label class="opt"><input type="radio" name="proh" value="no"><span>No — none of those</span></label>
+  </div>
+</div>
+
+<!-- Q6 -->
+<div class="card q hide" id="q5">
+  <div class="qnum">Question 6 of 6 · Your people</div>
+  <h2>Do staff members use AI tools in their work?</h2>
+  <p class="qhelp">Any AI use at all — including general-purpose assistants like ChatGPT or Copilot.</p>
+  <div class="opts">
+    <label class="opt"><input type="radio" name="lit" value="yes"><span>Yes — staff use AI tools</span></label>
+    <label class="opt"><input type="radio" name="lit" value="no"><span>No AI use by staff at all</span></label>
+  </div>
+</div>
+
+<div class="nav-row" id="navrow">
+  <button class="btn-ghost hide" id="back" type="button">← Back</button>
+  <span></span>
+  <button class="btn" id="next" type="button" disabled>Next →</button>
+</div>
+
+<!-- RESULTS -->
+<section id="results" class="hide">
+  <div class="card">
+    <div class="qnum">Your result</div>
+    <h2 id="rtitle">Your applicable EU AI Act obligations</h2>
+    <p class="qhelp" id="rsub"></p>
+  </div>
+  <div id="oblist"></div>
+  <div class="cta-band">
+    <p>Now you know <em>which</em> obligations apply. The harder question is whether your governance would hold under enforcement.</p>
+    <small>Fixed-fee written engagements · response within one business day</small>
+    <a class="btn" href="intake.html">Begin in writing →</a>
+  </div>
+  <div class="gate" id="authorityGate">
+    <div class="qnum">Ireland-specific · optional</div>
+    <h2 style="font-family:var(--serif);font-weight:600;font-size:1.25rem;margin-bottom:6px">Which regulator would actually examine you — and what would they ask for?</h2>
+    <p class="qhelp">Ireland's newly enacted Regulation of Artificial Intelligence Act 2026 (No. 31 of 2026) names a specific competent authority for your sector, and a specific evidence checklist under section 84. This part does ask for your details — it's what feeds a full readiness assessment if you want one.</p>
+    <form id="gateForm" name="obligation-checker-authority-gate" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="obligation-checker-authority-gate">
+      <p class="hide"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+      <div class="field">
+        <label for="gSector">Your sector</label>
+        <select id="gSector" name="sector" required>
+          <option value="" disabled selected>Select your sector…</option>
+          <option value="fs">Banking / insurance / investment / payments (financial services)</option>
+          <option value="telecoms">Telecoms / postal</option>
+          <option value="energy">Energy / water utilities</option>
+          <option value="rail">Rail transport</option>
+          <option value="transport">Other public transport</option>
+          <option value="media">Broadcasting / online media / video-sharing</option>
+          <option value="health">Health services (delivery)</option>
+          <option value="medicines">Medicines / medical devices</option>
+          <option value="maritime">Maritime / shipping</option>
+          <option value="education">Education</option>
+          <option value="public">Public sector / justice</option>
+          <option value="consumer">Other consumer-facing business</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="field"><label for="gName">Name</label><input type="text" id="gName" name="name" required></div>
+      <div class="field"><label for="gEmail">Work email</label><input type="email" id="gEmail" name="email" required></div>
+      <div class="field"><label for="gOrg">Organisation</label><input type="text" id="gOrg" name="organisation" required></div>
+      <div class="field"><label for="gRole">Role / title</label><input type="text" id="gRole" name="role"></div>
+      <div class="field"><label for="gPrompt">What prompted you to check today? (optional)</label><textarea id="gPrompt" name="prompt"></textarea></div>
+      <label class="consent"><input type="checkbox" id="gConsent" name="consent" required><span>I agree to be contacted about my results and related services. Adesanya AI Advisory will not share my details with third parties.</span></label>
+      <div class="gate-err hide" id="gateErr">Please select your sector, fill in the required fields, and confirm consent.</div>
+      <button class="btn" type="submit" id="gateSubmit">Show my competent authority →</button>
+    </form>
+    <div id="gateResult" class="hide"></div>
+  </div>
+
+  <div class="share-band" id="shareBand">
+    <p class="share-lead">Know someone else who should check theirs?</p>
+    <div class="share-actions">
+      <button class="btn-ghost" id="shareCopy" type="button">Copy result to share</button>
+      <a class="btn-ghost" id="shareLi" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fadesanyaaiadvisory.com%2Fobligation-checker.html" target="_blank" rel="noopener">Share on LinkedIn</a>
+      <button class="btn-ghost" id="shareImg" type="button">Download image card</button>
+    </div>
+  </div>
+  <p class="disc">This tool provides general information based on your answers, not legal advice, and does not create an advisor–client relationship. Classifications are indicative; borderline cases turn on facts a questionnaire cannot capture. Dates marked "Omnibus" reflect Regulation (EU) 2026/1744 (the Digital Omnibus on AI), in force from 27 July 2026. Adesanya AI Advisory — Abdulwahab B. Adesanya, LL.M in Intellectual Property &amp; IT Law (UCD).</p>
+  <p style="margin-top:14px"><button class="btn-ghost" id="restart" type="button">Start again</button></p>
+</section>
+
+<section style="padding-top:6px">
+  <div class="qnum">Frequently asked</div>
+  <div style="display:flex;flex-direction:column;gap:16px;margin-top:6px">
+    <div><h2 style="font-family:var(--serif);font-weight:600;font-size:1.05rem;color:var(--lamp);margin-bottom:4px">Which EU AI Act obligations apply to my organisation?</h2><p style="color:var(--mist);font-size:.9rem;margin:0">It depends on whether you provide or deploy AI, and how your system is classified — prohibited, high-risk (Annex III), limited-risk (Article 50 transparency), or minimal-risk. Answer six questions above to see your applicable obligations and deadlines.</p></div>
+    <div><h2 style="font-family:var(--serif);font-weight:600;font-size:1.05rem;color:var(--lamp);margin-bottom:4px">Is this checker free?</h2><p style="color:var(--mist);font-size:.9rem;margin:0">Yes — free, about two minutes, no email required.</p></div>
+    <div><h2 style="font-family:var(--serif);font-weight:600;font-size:1.05rem;color:var(--lamp);margin-bottom:4px">What happens after I get my result?</h2><p style="color:var(--mist);font-size:.9rem;margin:0">For a written, defensible position — Annex III classification, Article 26 gap analysis and a remediation roadmap — Adesanya AI Advisory offers a fixed-fee Readiness Assessment or Readiness Sprint.</p></div>
+  </div>
+</section>
+</div></main>
+
+<footer class="ftl">
+<style>
+.ftl{background:#0B0F1A;border-top:1px solid rgba(168,124,63,.25);padding:34px 28px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:.74rem;color:#93A3BD;line-height:1.7}
+.ftl-wrap{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ftl a{color:#93A3BD;text-decoration:none;transition:color .25s var(--ease)}
+.ftl a:hover{color:#F7DCA8}
+.ftl-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.ftl-clock{color:#E9B872;letter-spacing:.05em;white-space:nowrap}
+.ftl-clock b{color:#F7DCA8;font-weight:500}
+.ftl-extra{max-width:1180px;margin:10px auto 0;color:rgba(147,163,189,.7);font-size:.68rem;letter-spacing:.04em}
+@media(max-width:680px){.ftl-wrap{flex-direction:column;text-align:center}}
+</style>
+<div class="ftl-wrap">
+  <span>&copy; <span id="yr"></span> Adesanya AI Advisory&trade; &mdash; Abdulwahab B. Adesanya &mdash; Dublin, Ireland</span>
+  <span class="ftl-links">
+    <a href="https://www.linkedin.com/in/abdulwahab-adesanya" target="_blank" rel="noopener" aria-label="Abdulwahab Adesanya on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;fill:currentColor;vertical-align:-2px;margin-right:6px"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
+    <a href="intake.html">Begin in writing</a>
+    <a href="/privacy-policy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </span>
+  <span class="ftl-clock" id="ftl-clock">&mdash;</span>
+</div>
+
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y&&!y.textContent) y.textContent=new Date().getFullYear();
+  var c=document.getElementById('ftl-clock');
+  function t(){ if(!c)return;
+    var n=new Date();
+    c.innerHTML='Dublin · <b>'+n.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'Europe/Dublin'})+' · '+n.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Europe/Dublin'})+'</b>';
+  }
+  t(); setInterval(t,30000);
+})();
+</script>
+</footer>
+
+<script>
+(function(){
+  var step=0, N=6, ans={};
+  var bar=document.getElementById('bar'), next=document.getElementById('next'), back=document.getElementById('back');
+
+  function show(){
+    for(var i=0;i<N;i++) document.getElementById('q'+i).classList.toggle('hide', i!==step);
+    back.classList.toggle('hide', step===0);
+    bar.style.width=((step)/N*100)+'%';
+    next.textContent = step===N-1 ? 'See my obligations →' : 'Next →';
+    var name=document.getElementById('q'+step).querySelector('input').name;
+    next.disabled = !ans[name];
+  }
+  document.addEventListener('change', function(e){
+    if(e.target.type==='radio'){ ans[e.target.name]=e.target.value; next.disabled=false; }
+  });
+  next.addEventListener('click', function(){
+    if(step<N-1){ step++; show(); } else { render(); }
+  });
+  back.addEventListener('click', function(){ if(step>0){ step--; show(); } });
+  document.getElementById('restart').addEventListener('click', function(){ location.reload(); });
+
+  function ob(title, when, body, prov, warn){
+    return '<div class="ob'+(warn?' warn':'')+'"><h3>'+title+'</h3><span class="when">'+when+'</span><p>'+body+'</p><p class="prov">'+prov+'</p></div>';
+  }
+
+  function render(){
+    for(var i=0;i<N;i++) document.getElementById('q'+i).classList.add('hide');
+    document.getElementById('navrow').classList.add('hide');
+    bar.style.width='100%';
+    var out=[], role=ans.role;
+
+    if(ans.proh==='yes'){
+      out.push(ob('⚠ Prohibited practices — immediate review needed','IN FORCE SINCE FEB 2025',
+        'One or more of your uses may fall under Article 5’s outright bans. These are not "high-risk with paperwork" — they are prohibited, and enforcement is live. This needs a factual legal review before anything else on this list.',
+        'Article 5 — penalties up to €35M or 7% of worldwide turnover', true));
+    }
+    if(ans.lit==='yes'){
+      out.push(ob('AI literacy for your staff','IN FORCE FEB 2025 · ENFORCEMENT FROM 2 AUG 2026',
+        'Article 4 requires a sufficient level of AI literacy for staff dealing with AI systems — proportionate to their role and the systems used. It has applied since February 2025; national enforcement powers arrive 2 August 2026. Training records are your evidence.',
+        'Article 4 — applies to providers and deployers alike'));
+    }
+    if(ans.chat==='yes'){
+      out.push(ob('Tell people they’re talking to AI','2 AUGUST 2026',
+        'Article 50(1) requires that people interacting with an AI system are informed they are dealing with AI, unless it is obvious from context. Design the disclosure into the interface — a buried terms-page mention is weak evidence.',
+        'Article 50(1) — transparency for interactive systems'));
+    }
+    if(ans.gen==='new'){
+      out.push(ob('Machine-readable marking of generated content','2 AUGUST 2026 (systems newly placed on market)',
+        'Article 50(2) requires outputs of generative systems to be marked machine-readable as AI-generated, as far as technically feasible. For systems newly placed on the market from 2 August 2026 the duty lands immediately.',
+        'Article 50(2) — provider-side marking duty'));
+    } else if(ans.gen==='old'){
+      out.push(ob('Machine-readable marking — transitional window','2 DECEMBER 2026 (Omnibus, in force)',
+        'Generative systems already on the market before 2 August 2026 get a transitional window to 2 December 2026 under the Digital Omnibus (Regulation (EU) 2026/1744, in force 27 July 2026). This is a grandfathering rule, not an exemption — use the window to implement, not to wait.',
+        'Article 50(2) + Omnibus transitional rule'));
+    } else if(ans.gen==='deepfake'){
+      out.push(ob('Deepfake and synthetic-voice labelling','2 AUGUST 2026',
+        'Article 50(4) requires clear disclosure where content constitutes a deep fake — realistic depictions of real people, places or events, including synthetic audio — and for AI-generated text published to inform the public on matters of public interest. This is the visible-label duty, on top of the machine-readable marking under Article 50(2).',
+        'Article 50(4) — deployer-side disclosure duty'));
+      out.push(ob('Machine-readable marking of generated content','2 AUG 2026 NEW SYSTEMS · 2 DEC 2026 PRE-EXISTING (Omnibus)',
+        'Because you generate synthetic content, Article 50(2) marking also applies — from 2 August 2026 for systems newly placed on the market, with a transitional window to 2 December 2026 for pre-existing generative systems under the Digital Omnibus (Regulation (EU) 2026/1744, in force 27 July 2026).',
+        'Article 50(2)'));
+    }
+    if(ans.hr==='yes' || ans.hr==='unsure'){
+      var lead = ans.hr==='unsure' ? 'Some of your uses may fall within Annex III — the classification exercise itself is the first obligation to get right. ' : '';
+      out.push(ob('High-risk regime — your runway, and your trap','2 DECEMBER 2027 (Omnibus, in force)',
+        lead+'The full high-risk obligations (risk management, data governance, logging, human oversight — Articles 9–17, plus deployer duties under Article 26) are deferred to 2 December 2027 by the Digital Omnibus (Regulation (EU) 2026/1744, in force 27 July 2026, an unconditional calendar date). One caution: the transparency and literacy duties above still land in 2026 regardless.',
+        'Annex III + Articles 9–17, 26 — '+(role==='deployer'?'deployer duties under Art. 26 are yours':'provider conformity duties apply')+' · classification first'));
+    }
+    if(role==='gpai'){
+      out.push(ob('GPAI model obligations','2 AUGUST 2026',
+        'General-purpose AI model providers face documentation, copyright-policy and training-data summary duties, with additional obligations for models posing systemic risk. Enforcement begins 2 August 2026.',
+        'Articles 53 and 55 — GPAI providers'));
+    }
+    var realCount = out.length;
+    if(!out.length){
+      out.push(ob('Minimal obligations on today’s answers','KEEP A RECORD',
+        'On your answers, none of the headline AI Act duties bite today. Two cautions: your AI inventory changes faster than your compliance review cycle, and "no AI use by staff" rarely survives an honest audit. Re-run this check quarterly.',
+        'Recommendation: maintain a lightweight AI register as your evidence base'));
+    }
+    document.getElementById('rsub').textContent =
+      'Based on your six answers · '+out.length+' obligation area'+(out.length!==1?'s':'')+' identified · dates current to the Digital Omnibus, Regulation (EU) 2026/1744';
+    document.getElementById('oblist').innerHTML = out.join('');
+    document.getElementById('results').classList.remove('hide');
+    window.scrollTo({top:0});
+    wireShare(realCount);
+    var titleEls = document.querySelectorAll('#oblist .ob h3');
+    var titles = Array.prototype.map.call(titleEls, function(el){ return el.textContent; });
+    wireShareImage(realCount, titles);
+  }
+
+  // Share block: reads the visitor's own rendered result — nothing is sent anywhere,
+  // this only builds a caption for them to copy or hand to LinkedIn's share dialog.
+  function wireShare(count){
+    var btn=document.getElementById('shareCopy');
+    if(!btn) return;
+    var url='adesanyaaiadvisory.com/obligation-checker.html';
+    var caption = count===0
+      ? 'Ran my organisation’s AI use through the EU AI Act Obligation Checker — came back clean today, but worth re-checking quarterly as AI use grows. Free, 2 minutes, answers never leave your browser.'
+      : 'I just ran my organisation’s AI use through the EU AI Act Obligation Checker — '+count+' obligation area'+(count!==1?'s':'')+' came back, and I’d only mapped some of them. Free, 2 minutes, answers never leave your browser.';
+    var text = caption+'\n\n'+url;
+    var resetLabel='Copy result to share';
+    btn.addEventListener('click', function(){
+      function done(ok){
+        btn.textContent = ok ? 'Copied — paste into LinkedIn' : 'Select and copy manually';
+        setTimeout(function(){ btn.textContent=resetLabel; }, 2200);
+      }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ fallbackCopy(text, done); });
+      } else {
+        fallbackCopy(text, done);
+      }
+    });
+  }
+  function fallbackCopy(text, done){
+    try{
+      var ta=document.createElement('textarea');
+      ta.value=text; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0';
+      document.body.appendChild(ta); ta.select();
+      var ok=document.execCommand('copy');
+      document.body.removeChild(ta);
+      done(ok);
+    } catch(e){ done(false); }
+  }
+
+  // Downloadable branded result card (v2 of the share feature). Same privacy promise as
+  // the copy-to-share text: this only reads what's already rendered on the visitor's own
+  // screen and draws it into an in-browser canvas — nothing is sent to a server, no new
+  // data collection. Ships as a PNG download.
+  function wrapText(ctx, text, x, y, maxWidth, lineHeight){
+    var words = text.split(' '), line = '', lines = [];
+    for(var n=0; n<words.length; n++){
+      var test = line + words[n] + ' ';
+      if(ctx.measureText(test).width > maxWidth && n > 0){
+        lines.push(line.trim()); line = words[n] + ' ';
+      } else { line = test; }
+    }
+    lines.push(line.trim());
+    lines.forEach(function(l, i){ ctx.fillText(l, x, y + i*lineHeight); });
+    return lines.length;
+  }
+
+  function buildResultCard(count, titles){
+    var loads = ['600 66px Fraunces','400 27px Fraunces','600 30px Fraunces',
+      '600 21px "JetBrains Mono"','400 20px "JetBrains Mono"','600 26px "JetBrains Mono"']
+      .map(function(f){ return document.fonts.load(f); });
+    return Promise.all(loads).then(function(){
+      var W=1080, H=1080, PAD=76;
+      var canvas=document.createElement('canvas');
+      canvas.width=W; canvas.height=H;
+      var ctx=canvas.getContext('2d');
+
+      var g=ctx.createLinearGradient(0,0,0,H);
+      g.addColorStop(0,'#101A2E'); g.addColorStop(1,'#0A1020');
+      ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+      ctx.strokeStyle='rgba(201,161,74,.35)'; ctx.lineWidth=2;
+      ctx.strokeRect(20,20,W-40,H-40);
+
+      var y=130;
+      ctx.fillStyle='#e8c77b';
+      ctx.font='600 21px "JetBrains Mono", monospace';
+      ctx.fillText('EU AI ACT · YOUR RESULT', PAD, y);
+
+      y+=76;
+      ctx.fillStyle='#e9eef6';
+      ctx.font='600 66px Fraunces, Georgia, serif';
+      var headline = count===0 ? 'Minimal obligations' : (count+' obligation area'+(count!==1?'s':''));
+      var hLines = wrapText(ctx, headline, PAD, y, W-2*PAD, 74);
+      y += hLines*74 + 6;
+
+      ctx.fillStyle='#9fb0c7';
+      ctx.font='400 27px Fraunces, Georgia, serif';
+      var sub = count===0
+        ? 'on today’s answers — worth a quarterly re-check as AI use grows'
+        : 'identified on today’s answers, out of six checked';
+      var sLines = wrapText(ctx, sub, PAD, y+38, W-2*PAD, 36);
+      y += 38 + sLines*36 + 40;
+
+      ctx.strokeStyle='rgba(201,161,74,.3)'; ctx.lineWidth=1;
+      ctx.beginPath(); ctx.moveTo(PAD,y); ctx.lineTo(W-PAD,y); ctx.stroke();
+      y+=50;
+
+      if(count===0){
+        ctx.fillStyle='#dde4ee';
+        ctx.font='400 27px Fraunces, Georgia, serif';
+        var mLines = wrapText(ctx, 'None of the headline duties bite today — keep a lightweight AI register as your evidence base.', PAD, y, W-2*PAD, 36);
+        y += mLines*36 + 20;
+      } else {
+        var shown = titles.slice(0,2);
+        ctx.font='600 30px Fraunces, Georgia, serif';
+        shown.forEach(function(title){
+          ctx.fillStyle='#c9a14a';
+          ctx.beginPath(); ctx.arc(PAD+6, y-10, 5, 0, Math.PI*2); ctx.fill();
+          ctx.fillStyle='#e9eef6';
+          var lines = wrapText(ctx, title, PAD+30, y, W-2*PAD-30, 38);
+          y += lines*38 + 22;
+        });
+        if(titles.length>shown.length){
+          ctx.fillStyle='#9fb0c7';
+          ctx.font='400 24px "JetBrains Mono", monospace';
+          ctx.fillText('+ '+(titles.length-shown.length)+' more area'+((titles.length-shown.length)!==1?'s':''), PAD+30, y);
+          y+=40;
+        }
+      }
+
+      var by=H-168;
+      ctx.strokeStyle='rgba(201,161,74,.3)'; ctx.lineWidth=1;
+      ctx.beginPath(); ctx.moveTo(PAD,by); ctx.lineTo(W-PAD,by); ctx.stroke();
+      ctx.fillStyle='#e8c77b';
+      ctx.font='600 26px "JetBrains Mono", monospace';
+      ctx.fillText('adesanyaaiadvisory.com', PAD, by+48);
+      var footY = by+48;
+      ctx.fillStyle='#9fb0c7';
+      ctx.font='400 18px "JetBrains Mono", monospace';
+      var footLines = wrapText(ctx, 'EU AI Act Obligation Checker · free · 2 minutes · answers never leave your browser', PAD, footY+34, W-2*PAD, 26);
+      footY += 34 + footLines*26 + 12;
+
+      var today = new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+      ctx.fillStyle='rgba(159,176,199,.75)';
+      ctx.font='400 15px "JetBrains Mono", monospace';
+      wrapText(ctx, 'General information, not legal advice · as of '+today+' · dates per the Digital Omnibus, Regulation (EU) 2026/1744', PAD, footY, W-2*PAD, 22);
+
+      return canvas.toDataURL('image/png');
+    });
+  }
+
+  function wireShareImage(count, titles){
+    var btn=document.getElementById('shareImg');
+    if(!btn) return;
+    var resetLabel='Download image card';
+    btn.addEventListener('click', function(){
+      btn.disabled=true; btn.textContent='Building image…';
+      buildResultCard(count, titles).then(function(dataUrl){
+        var a=document.createElement('a');
+        a.href=dataUrl; a.download='eu-ai-act-obligation-result.png';
+        document.body.appendChild(a); a.click(); a.remove();
+        btn.textContent='Downloaded ✓';
+        setTimeout(function(){ btn.textContent=resetLabel; btn.disabled=false; }, 2200);
+      }).catch(function(){
+        btn.textContent='Could not build image';
+        setTimeout(function(){ btn.textContent=resetLabel; btn.disabled=false; }, 2200);
+      });
+    });
+  }
+
+  show();
+})();
+</script>
+
+<!-- Ireland competent-authority gate — separate, self-contained; does not touch the six-question checker above -->
+<script>
+(function(){
+  var form=document.getElementById('gateForm');
+  if(!form) return;
+  var errBox=document.getElementById('gateErr');
+  var resultBox=document.getElementById('gateResult');
+
+  var AUTHORITY = {
+    fs:       {name:'Central Bank of Ireland', basis:'Part 8, ss.128–133 — its own inquiry/fine track, separate from the Act’s Part 6 adjudication route'},
+    telecoms: {name:'Commission for Communications Regulation (ComReg)', basis:'s.78(c); also s.138'},
+    energy:   {name:'Commission for Regulation of Utilities', basis:'s.78(d)'},
+    rail:     {name:'Commission for Railway Regulation', basis:'s.78(b)'},
+    transport:{name:'National Transport Authority', basis:'s.78(j)'},
+    media:    {name:'Coimisiún na Meán', basis:'s.78(a)'},
+    health:   {name:'Health Service Executive', basis:'s.78(h)'},
+    medicines:{name:'Health Products Regulatory Authority', basis:'s.78(g)'},
+    maritime: {name:'Marine Survey Office (Department of Transport)', basis:'s.78(i)'},
+    consumer: {name:'Competition and Consumer Protection Commission', basis:'Part 9, ss.134–137 — its own Part 2A regime inserted into the Competition and Consumer Protection Act 2014'},
+    education:{name:null, basis:null},
+    public:   {name:null, basis:null},
+    other:    {name:null, basis:null}
+  };
+
+  function encode(data){
+    return Object.keys(data).map(function(k){ return encodeURIComponent(k)+'='+encodeURIComponent(data[k]); }).join('&');
+  }
+
+  function renderResult(sectorKey, fields){
+    var a = AUTHORITY[sectorKey] || AUTHORITY.other;
+    var lines = [];
+
+    lines.push('<div class="card" style="margin-top:20px">');
+    lines.push('<div class="qnum">Your Irish competent authority</div>');
+    if(a.name){
+      lines.push('<h3 style="font-family:var(--serif);font-weight:600;font-size:1.15rem;color:var(--lamp)">'+a.name+'</h3>');
+      lines.push('<p class="prov" style="margin-top:4px">Statutory basis: '+a.basis+'</p>');
+    } else {
+      lines.push('<h3 style="font-family:var(--serif);font-weight:600;font-size:1.15rem;color:var(--lamp)">Not confidently mappable from sector alone</h3>');
+      lines.push('<p class="prov" style="margin-top:4px">Public sector, justice, education, and “other” use cases don’t map to a single sectoral body from a sector answer alone under the Regulation of Artificial Intelligence Act 2026 (No. 31 of 2026) — flagged here for manual review rather than guessed.</p>');
+    }
+    lines.push('<p style="margin-top:10px;color:#dde4ee;font-size:.9rem"><b>Always cross-cutting, regardless of sector:</b> the Data Protection Commission (s.78(e)), wherever personal data is processed; the Workplace Relations Commission (s.78(k)), wherever the use case touches employment; the Health and Safety Authority (s.78(f)), if workplace safety is touched.</p>');
+    lines.push('</div>');
+
+    lines.push('<div class="card">');
+    lines.push('<div class="qnum">Your evidence checklist</div>');
+    lines.push('<p class="qhelp" style="margin-bottom:10px">Built from section 84’s documentation-handover checklist — what an authorised officer can already compel today under section 70:</p>');
+    lines.push('<ul style="margin:0 0 4px 20px;color:#dde4ee;font-size:.92rem;line-height:1.8">');
+    lines.push('<li>Description of your AI system(s) and their purpose</li>');
+    lines.push('<li>Records of use — s.70(11)’s broad "record" definition covers logs, configs, prompts, and outputs, in any stored form</li>');
+    lines.push('<li>Technical documentation status (Article 11 / Annex IV)</li>');
+    lines.push('<li>Confirmation of log retention ≥ 6 months (Article 19 / 26(6))</li>');
+    lines.push('<li>If flagged high-risk above: human-oversight and monitoring arrangements (Article 26)</li>');
+    lines.push('</ul>');
+    lines.push('<p style="margin-top:14px;color:#dde4ee;font-size:.9rem"><b>If this gets escalated:</b> an authorised officer can compel these records under section 70, and a documentation gap is itself grounds for further scrutiny under Article 77 — deferred to 2 December 2027 by the Digital Omnibus (Regulation (EU) 2026/1744), not the commonly-quoted 2026 date.</p>');
+    lines.push('</div>');
+
+    lines.push('<div class="cta-band">');
+    lines.push('<p>Want a full readiness assessment against these findings?</p>');
+    lines.push('<a class="btn" href="intake.html">Book a call →</a>');
+    lines.push('</div>');
+
+    lines.push('<p class="disc">This tool provides a preliminary, indicative assessment based only on the answers given. It is not legal advice, does not constitute a conformity assessment under Regulation (EU) 2024/1689, and should not be relied on as a final determination of your obligations. This tool does not provide advice on Irish law. For a definitive assessment, book a readiness assessment.</p>');
+
+    resultBox.innerHTML = lines.join('');
+    resultBox.classList.remove('hide');
+    form.classList.add('hide');
+    resultBox.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var sector=document.getElementById('gSector').value;
+    var name=document.getElementById('gName').value.trim();
+    var email=document.getElementById('gEmail').value.trim();
+    var org=document.getElementById('gOrg').value.trim();
+    var consent=document.getElementById('gConsent').checked;
+
+    if(!sector || !name || !email || !org || !consent){
+      errBox.classList.remove('hide');
+      return;
+    }
+    errBox.classList.add('hide');
+
+    var submitBtn=document.getElementById('gateSubmit');
+    submitBtn.disabled=true; submitBtn.textContent='Submitting…';
+
+    var data={
+      'form-name':'obligation-checker-authority-gate',
+      sector: sector,
+      name: name,
+      email: email,
+      organisation: org,
+      role: document.getElementById('gRole').value.trim(),
+      prompt: document.getElementById('gPrompt').value.trim()
+    };
+
+    fetch('https://formsubmit.co/ajax/abdulwahab@adesanyaaiadvisory.com', {
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body: encode(data)
+    }).then(function(){
+      renderResult(sector, data);
+    }).catch(function(){
+      // Lead capture failed silently (e.g. offline) — still show the result;
+      // the visitor's own answers aren't lost, only the lead notification is.
+      renderResult(sector, data);
+    });
+  });
+})();
+</script>
+<script src="assets/site.js?v=20260820074103"></script>
+</body>
+</html>
