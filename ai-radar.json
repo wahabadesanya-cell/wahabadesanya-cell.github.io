@@ -1,11 +1,56 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-08-19",
+    "updated": "2026-08-30",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
-    "jurisdictions": ["EU", "Ireland", "UK", "US", "Nigeria", "NBA", "Cases", "France", "Germany", "Greece", "Spain", "Poland"]
+    "jurisdictions": [
+      "EU",
+      "Ireland",
+      "UK",
+      "US",
+      "Nigeria",
+      "NBA",
+      "Cases",
+      "France",
+      "Germany",
+      "Greece",
+      "Spain",
+      "Poland"
+    ]
   },
   "items": [
+    {
+      "j": "NBA",
+      "date": "2026-08-29",
+      "title": "LawPavilion launches Nigerian-corpus legal AI at NBA AGC, pitched on 'no hallucination'",
+      "summary": "At the NBA Annual General Conference in Port Harcourt, LawPavilion unveiled an AI platform trained solely on verified Nigerian legal materials — Supreme Court and Court of Appeal authorities, federal laws, procedural rules and agency regulations — alongside LawPavilion Elite, a combined eLibrary, AI and matter-management platform. The 'does not hallucinate' framing is a marketing claim, not a verified benchmark, so treat it as a retrieval-grounded design choice rather than a guarantee; a firm relying on it still owes independent verification of every cited authority. The more checkable detail for compliance purposes is the data-handling layer: automatic redaction of named entities on upload, access controls, and an assurance that client documents stay off the public internet — exactly the points a Nigerian firm should get in writing under NDPA 2023 before putting privileged material through any vendor's model.",
+      "source": "THISDAY",
+      "url": "https://www.thisdaylive.com/2026/08/29/lawpavilion-unveils-ai-that-does-not-hallucinate-for-nigerian-legal-industry/"
+    },
+    {
+      "j": "NBA",
+      "date": "2026-08-24",
+      "title": "CJN's AGC keynote: adopt AI responsibly — with mandatory e-filing already live since 1 July",
+      "summary": "At the NBA Annual General Conference in Port Harcourt, the Chief Justice of Nigeria (delivered by Rivers State Chief Judge Simeon Amadi) charged lawyers and judges to adopt AI and technology responsibly, warning that complacency will leave the profession behind global standards. The substance sits underneath the exhortation: mandatory electronic filing of processes and records took effect 1 July 2026 and the National Case Management System is rolling out from the Supreme Court down. For Nigerian practitioners the direction is now set from the top of the judiciary — AI-assisted practice is expected, but with competence and professional discipline, not delegation of judgment. Counsel advising on court-facing AI use should treat the e-filing mandate as the operative compliance date, not a future aspiration.",
+      "source": "Lawyard",
+      "url": "https://www.lawyard.org/news/nba-agc-2026-cjn-urges-legal-profession-to-embrace-responsible-use-of-ai-in-legal-practice/"
+    },
+    {
+      "j": "NBA",
+      "date": "2026-08-23",
+      "title": "NBA's 66th Annual General Conference opens in Port Harcourt under 'Beyond Limits' — technology on the agenda",
+      "summary": "The Nigerian Bar Association's Annual General Conference formally opened at Yakubu Gowon Stadium, Port Harcourt on 23 August 2026, running through 28 August under the theme 'Beyond Limits'. President Afam Osigwe SAN's opening remarks centred on institutional strengthening and economic resilience, and the published programme lists plenary and breakout sessions examining 'the role of institutions, technology and leadership in a changing world' — this year's version of the AI-and-justice thread that ran through the branch Law Weeks earlier in 2026 (Sokoto, Birnin Kebbi, Lagos). Supersedes our 30 July item on the LOC's formation, now that the conference itself is underway; worth checking the published session list for the specific AI/tech panel timing.",
+      "source": "Nigerian Bar Association (official blog)",
+      "url": "https://blog.nigerianbar.org.ng/2026/08/24/agc-2026-opens-in-grand-style-as-nba-raises-the-curtain-on-beyond-limits/"
+    },
+    {
+      "j": "Nigeria",
+      "date": "2026-08-19",
+      "title": "NDPC pushes state governments to strengthen data protection enforcement, flags AI risk to the 2027 elections",
+      "summary": "At a Nigerian Governors' Forum implementation workshop in Abuja on 19 August 2026, NDPC national commissioner Dr Vincent Olatunji urged state governments to take a more active role enforcing the NDPA at subnational level, arguing that federal-level rules mean little without state-level follow-through. The push sits alongside the NDPC's separate June 2026 announcement that it intends to review the Act itself to address AI, robotics and big data, and a related warning that AI-driven disinformation and political micro-targeting could threaten the integrity of Nigeria's 2027 general election — useful context for any client advising Nigerian public bodies or campaigns on data governance ahead of that vote.",
+      "source": "Nigeria Communications Week",
+      "url": "https://www.nigeriacommunicationsweek.com.ng/2026/08/19/ndpc-governors-forum-urges-states-to-strengthen-data-protection-implementation"
+    },
     {
       "j": "UK",
       "date": "2026-08-17",
@@ -87,6 +132,30 @@
       "url": "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/"
     },
     {
+      "j": "EU",
+      "date": "2026-08-02",
+      "title": "AI Act enforcement powers switch on — Commission confirms GPAI fines and Article 50 disclosure duties are now live",
+      "summary": "The European Commission confirmed on 2 August 2026 that its enforcement powers over general-purpose AI providers, and the Article 50 transparency duties (chatbot disclosure, deepfake and synthetic-content labelling), have moved from paper to practice: the AI Office can now demand documentation, evaluate models directly, order corrective measures, and fine up to €15M/3% of global turnover for Article 50 breaches, or up to €35M/7% for GPAI systemic-risk violations. National market surveillance authorities gained parallel investigation and sanction powers the same day, though the Commission itself flagged that several Member States (France among them) have still not finished designating theirs, so enforcement capacity will be uneven through the rest of 2026. The Annex III high-risk regime remains deferred to 2 December 2027 under the Digital Omnibus — nothing about that changed today. For anyone running a chatbot or shipping synthetic media into the EU, today is the day the summer's transparency-notice and content-marking work gets tested against a live regulator rather than a guideline.",
+      "source": "European Commission — Shaping Europe's Digital Future",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+    },
+    {
+      "j": "US",
+      "date": "2026-08-02",
+      "title": "California's AI Transparency Act goes live — first US state content-provenance mandate, timed to match EU Article 50",
+      "summary": "California's AI Transparency Act (AB 853) became operative on 2 August 2026 — a date the legislature deliberately moved from 1 January 2026 specifically to line up with the EU AI Act's Article 50 deadline. Any generative AI image, video or audio system with over one million California monthly users must now embed machine-readable provenance metadata in its outputs, offer a free public AI-content detection tool, let users add a visible 'AI-generated' label, and pass the same disclosure duty down to third-party licensees; penalties run $5,000 per violation, with each day of non-compliance counted separately. Early coverage already flags Midjourney as shipping without the required watermark on day one. For any client running parallel US/EU content operations, this is now a second live enforcement track asking for functionally the same disclosure architecture as Article 50 — a single well-built provenance layer should satisfy both.",
+      "source": "Tech Times",
+      "url": "https://www.techtimes.com/articles/322713/20260802/california-ai-transparency-act-operative-midjourney-has-no-watermark-fines-start-today.htm"
+    },
+    {
+      "j": "US",
+      "date": "2026-08-01",
+      "title": "Federal preemption fight sharpens: state AGs lean on existing law to fill gaps while the 'Great American AI Act' draft sits with Congress",
+      "summary": "With Representatives Obernolte and Trahan's 270-page Great American Artificial Intelligence Act discussion draft still pending formal introduction — its central feature a three-year preemption of state laws that regulate how frontier models are built, though not how they're used — state attorneys general are not waiting: 2026 commentary confirms bipartisan multistate coalitions are already enforcing AI governance through ordinary UDAP, consumer-protection and licensing statutes rather than AI-specific laws, filling the gap federal legislation would otherwise leave. For clients with US-facing AI products, the practical exposure right now runs through state AG consumer-protection enforcement and frontier laws like California's and New York's, not a not-yet-enacted federal framework.",
+      "source": "Regulatory Oversight (Troutman Pepper Locke)",
+      "url": "https://www.regulatoryoversight.com/2026/08/2026-state-ag-enforcement-key-focus-areas-for-the-remainder-of-the-year/"
+    },
+    {
       "j": "Cases",
       "date": "2026-07-31",
       "title": "Munich court rules against Suno: AI training abroad no shield, EU AI Act compliance no defence",
@@ -133,6 +202,14 @@
       "summary": "The Commission's AI Office announced on 31 July it is adding 38 staff in Brussels to police AI Act compliance from 2 August, covering everyone from EU startups to OpenAI and DeepSeek. Alongside the headcount it switched on two new reporting channels: an AI Act Whistleblower Tool letting anyone professionally connected to a GPAI provider confidentially report harmful practices (legal retaliation protection under the Whistleblower Directive attaches from 2 August), and a separate Compliance Tool for users to flag suspected violations. Executive VP Henna Virkkunen framed it as the enforcement phase proper — investigators can now demand technical documentation, interview company staff, and pursue fines or market withdrawal. Useful to cite over the bare statutory date when a client asks what 'enforcement begins 2 August' actually looks like on the ground — this is the machinery being staffed, not just the law switching on.",
       "source": "Associated Press (via ABC News); AI Office Whistleblower Tool page confirms the mechanism",
       "url": "https://abcnews.com/Technology/wireStory/eu-crack-ai-deepfakes-illicit-imagery-hacking-new-135253152"
+    },
+    {
+      "j": "EU",
+      "date": "2026-07-31",
+      "title": "Code of Practice on Transparency of AI-Generated Content passes 190 signatories as implementation task forces prepare to launch",
+      "summary": "By the end of July 2026 roughly 190 organisations — spanning the major model providers (OpenAI, Google, Anthropic, Meta, Mistral) and downstream deployers across telecom, retail and education — had signed the voluntary Code of Practice on Transparency of AI-Generated Content, with signature still open on a rolling basis. Two implementation task forces are due to launch in September 2026 to share best practice and troubleshoot the marking/labelling mechanics behind Article 50. For clients weighing whether to sign, the growing signatory base strengthens the practical case that non-signature is becoming the outlier position among peers, not the norm.",
+      "source": "European Commission — Shaping Europe's Digital Future",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content"
     },
     {
       "j": "Ireland",
@@ -221,6 +298,14 @@
       "summary": "Spain's Council of Ministers approved the draft Organic Law for the Good Use and Governance of Artificial Intelligence on 26 May 2026 and sent it to Congress, where it was published on 12 June and referred to the Committee on Economy, Trade and Digital Transformation. The Bill would implement Regulation (EU) 2024/1689 domestically, naming AESIA, the AEPD and the CGPJ as notifying and market-surveillance authorities, setting infringements and penalties, creating regulatory sandboxes, and requiring the public sector to register and publish its AI use. Its amendment window currently runs to 2 September 2026 per the Congress record — a materially slower track than Ireland (both Houses complete 15 July) or Greece (enacted 17 July), useful context when comparing Member State implementation readiness.",
       "source": "Congreso de los Diputados",
       "url": "https://www.congreso.es/es/proyectos-de-ley?p_p_id=iniciativas&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_iniciativas_mode=mostrarDetalle&_iniciativas_legislatura=XV&_iniciativas_id=121%2F000096"
+    },
+    {
+      "j": "NBA",
+      "date": "2026-07-07",
+      "title": "Chief Justice opens NBA Lagos Law Week with a judiciary digital-reform roadmap — and a pointed warning on AI use in filings",
+      "summary": "Nigeria's Chief Justice delivered the keynote at NBA Lagos Branch's 2026 Law Week ('Lawyering in the Digital Age') on 7 July, setting out a roadmap for digitising the judiciary that builds on the Supreme Court's e-filing system (NCMS, launched 1 July). Alongside the reform agenda, the CJN issued a direct caution to practitioners: AI tools cannot substitute for a judge's constitutional responsibility, moral conscience or independent reasoning, and lawyers who file AI-generated submissions citing fictitious authorities without independent verification risk professional-misconduct findings — pointing to the pattern of sanctions cases already seen abroad. The Law Week paired the warning with hands-on AI training sessions for practitioners, treating competent, verified AI use — rather than AI avoidance — as the actual professional-conduct bar going forward. Directly relevant to any Nigerian-qualified practitioner's AI-use policy: the standard being set is verify-before-file, not don't-use.",
+      "source": "ThisDay",
+      "url": "https://www.thisdaylive.com/2026/07/07/cjn-unveils-judiciary-digital-reform-cautions-on-ai/"
     },
     {
       "j": "Cases",
@@ -374,7 +459,6 @@
       "source": "European Commission",
       "url": "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en"
     },
-
     {
       "j": "Nigeria",
       "date": "2026-07-03",
@@ -737,13 +821,37 @@
     }
   ],
   "trackers": [
-    {"name": "EU AI Act (official)", "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"},
-    {"name": "EU AI Act Implementation Timeline", "url": "https://artificialintelligenceact.eu/implementation-timeline/"},
-    {"name": "Data Protection Commission Ireland", "url": "https://www.dataprotection.ie/en/news-media/latest-news"},
-    {"name": "IAPP Global AI Law Tracker", "url": "https://iapp.org/resources/article/global-ai-legislation-tracker/"},
-    {"name": "White & Case AI Watch (global tracker)", "url": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker"},
-    {"name": "NITDA Nigeria", "url": "https://nitda.gov.ng/"},
-    {"name": "NBA Official Blog", "url": "https://blog.nigerianbar.org.ng/"},
-    {"name": "AI Copyright Lawsuit Tracker", "url": "https://ailawsuittracker.com/"}
+    {
+      "name": "EU AI Act (official)",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    },
+    {
+      "name": "EU AI Act Implementation Timeline",
+      "url": "https://artificialintelligenceact.eu/implementation-timeline/"
+    },
+    {
+      "name": "Data Protection Commission Ireland",
+      "url": "https://www.dataprotection.ie/en/news-media/latest-news"
+    },
+    {
+      "name": "IAPP Global AI Law Tracker",
+      "url": "https://iapp.org/resources/article/global-ai-legislation-tracker/"
+    },
+    {
+      "name": "White & Case AI Watch (global tracker)",
+      "url": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker"
+    },
+    {
+      "name": "NITDA Nigeria",
+      "url": "https://nitda.gov.ng/"
+    },
+    {
+      "name": "NBA Official Blog",
+      "url": "https://blog.nigerianbar.org.ng/"
+    },
+    {
+      "name": "AI Copyright Lawsuit Tracker",
+      "url": "https://ailawsuittracker.com/"
+    }
   ]
 }
