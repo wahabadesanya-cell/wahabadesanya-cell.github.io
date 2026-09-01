@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /thank-you.html
-Disallow: /checklist-thank-you.html
+# Thank-you pages carry <meta robots noindex>. They are deliberately NOT
+# disallowed here: a blocked crawl never reads the noindex, so the URL can
+# still be indexed without its content.
 
 Sitemap: https://adesanyaaiadvisory.com/sitemap.xml
