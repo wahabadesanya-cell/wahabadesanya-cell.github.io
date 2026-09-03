@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-02",
+    "updated": "2026-09-03",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,14 @@
     ]
   },
   "items": [
+    {
+      "j": "Ireland",
+      "date": "2026-09-02",
+      "title": "DPC fines the HSE €645,000 over paper records: storage limitation is now an enforcement risk",
+      "summary": "The Data Protection Commission's final decision, notified to the HSE on 25 August and announced on 2 September, imposes fines totalling €645,000, a reprimand and corrective orders after 12 nationwide site inspections found medical records rotting in derelict buildings, shipping containers and disused bathrooms. Two of the four fines are the headline: €300,000 for security failings under Articles 5(1)(f) and 32(1), and an equal €300,000 purely for keeping records longer than necessary under Article 5(1)(e). The DPC has now priced storage limitation at the same level as a security breach, which is the point deployers should take back to their own retention schedules — including the training sets, prompt logs and model inputs that quietly accumulate around an AI deployment. Smaller fines for late breach notification (Article 33) and for failing to tell the affected patients (Article 34) round out a decision aggravated by the HSE's prior record on paper files.",
+      "source": "Data Protection Commission (Ireland)",
+      "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-announces-final-decision-following-inquiry-health-service-executive-hse"
+    },
     {
       "j": "Nigeria",
       "date": "2026-09-01",
