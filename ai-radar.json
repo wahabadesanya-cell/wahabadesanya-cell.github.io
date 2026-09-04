@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-03",
+    "updated": "2026-09-04",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,14 @@
     ]
   },
   "items": [
+    {
+      "j": "Cases",
+      "date": "2026-09-01",
+      "title": "US DOJ tells the NYT v OpenAI court that training LLMs on copyrighted works is fair use",
+      "summary": "On 1 September 2026 the United States filed a Statement of Interest (ECF 1682) in In re OpenAI, Inc. Copyright Infringement Litigation, MDL 25-md-3143 (SDNY, Judge Stein), arguing that copying written works to train a large language model is 'exceedingly transformative' fair use, that the plaintiffs' 'market dilution' theory of harm is 'deeply flawed', and that licensing barriers would hand the largest companies an oligopoly on LLM training. The brief binds no one; the court can weigh it as it sees fit. What it does is put the executive branch formally on the AI providers' side across every publisher and author claim in the MDL, ahead of summary judgment. For any organisation licensing or building on US-trained models, the practical reading is that compensation for training data will be won through licensing deals or legislation, not from a judgment. Note the contrast with Europe, where text-and-data-mining sits on an opt-out right under the DSM Directive and the AI Act's GPAI copyright duties, not on a fair-use defence.",
+      "source": "Statement of Interest of the United States, SDNY MDL 25-md-3143, ECF 1682 (via Chat GPT Is Eating the World)",
+      "url": "https://chatgptiseatingtheworld.com/2026/09/02/united-states-files-statement-of-interest-in-openai-lawsuits-ai-training-is-fair-use-dilution-is-deeply-flawed-theory-in-the-view-of-the-united-states/"
+    },
     {
       "j": "Ireland",
       "date": "2026-09-02",
