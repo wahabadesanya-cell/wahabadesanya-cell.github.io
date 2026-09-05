@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-04",
+    "updated": "2026-09-05",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,14 @@
     ]
   },
   "items": [
+    {
+      "j": "US",
+      "date": "2026-08-31",
+      "title": "California closes session with ~30 AI bills on Newsom's desk; SB 1119 chatbot-safety bill passed 69-4",
+      "summary": "California's Legislature adjourned on 31 August having sent roughly 30 AI-related bills to Governor Newsom, who has until 30 September to sign or veto. The flagship is SB 1119 (Padilla), the companion-chatbot child-safety bill known as Adam's Law: Assembly 69-4 and Senate concurrence 40-0 on the final night. It would require age assurance, a risk assessment before releasing a new or substantially modified companion chatbot, in-app crisis referral and parental notice, independent compliance audits reported to the Attorney General, and a private right of action for families. Alongside it sit AB 1405 (a state registry for AI auditors), SB 813 (independent verification organisations) and AB 2713 (tightening the AI Transparency Act's provenance disclosures). For any provider whose chatbot reaches California users, the practical read is that pre-release risk assessment plus third-party audit is becoming the US baseline, converging with the EU's Article 9 and Article 50 logic; watch the 30 September deadline before updating any compliance roadmap.",
+      "source": "California Legislature via LegiScan (bill history and roll calls); Transparency Coalition session wrap",
+      "url": "https://legiscan.com/CA/bill/SB1119/2025"
+    },
     {
       "j": "Cases",
       "date": "2026-09-01",
