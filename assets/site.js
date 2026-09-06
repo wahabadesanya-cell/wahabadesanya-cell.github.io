@@ -175,3 +175,50 @@
     setTimeout(revealAll, 4000);   /* final backstop: content over animation */
   });
 })();
+
+/* ── Analytics, consent-gated ──────────────────────────────────────────────
+   Moved here 6 Sep 2026. It had been inlined in four pages and absent from
+   the other forty-six -- every article and every briefing, which is the whole
+   search-traffic surface -- so any read on which writing worked was being
+   made blind. 49 of the 50 pages already load this file; the exception is the
+   Google site-verification stub, which should not carry analytics anyway.
+
+   The consent behaviour is unchanged and deliberate: nothing is sent, and the
+   Google script is not even fetched, until the visitor accepts. A decline is
+   remembered and never re-asked. */
+(function(){
+  if(window.__aaaAnalytics) return;   /* one initialisation per page */
+  window.__aaaAnalytics = true;
+
+  var GA_ID='G-VPL2XEB7GK';
+  function loadGA(){
+    var s=document.createElement('script');
+    s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){dataLayer.push(arguments);};
+    gtag('js',new Date());gtag('config',GA_ID);
+  }
+  var stored=null;
+  try{ stored=localStorage.getItem('ga_consent'); }catch(e){ return; }
+  if(stored==='granted'){loadGA();return;}
+  window.gtag=window.gtag||function(){};
+  if(stored==='denied'){return;}
+
+  function banner(){
+    if(document.getElementById('cookie-banner')) return;
+    var b=document.createElement('div');b.id='cookie-banner';
+    b.innerHTML='<p style="margin:0;max-width:560px;font-size:.875rem;line-height:1.5">We use Google Analytics to understand how visitors use this site. <a href="/privacy-policy.html" style="color:inherit;text-decoration:underline">Privacy policy</a>.</p>'
+      +'<div style="display:flex;gap:8px;flex-wrap:wrap">'
+      +'<button id="cb-accept" style="background:#E9B872;color:#231905;border:none;padding:9px 20px;border-radius:4px;font-weight:700;font-size:.8125rem;cursor:pointer">Accept analytics</button>'
+      +'<button id="cb-decline" style="background:transparent;color:#E9B872;border:1px solid rgba(233,184,114,.5);padding:9px 20px;border-radius:4px;font-weight:600;font-size:.8125rem;cursor:pointer">Decline</button>'
+      +'</div>';
+    Object.assign(b.style,{position:'fixed',bottom:'0',left:'0',right:'0',background:'#0A1020',borderTop:'1px solid rgba(168,124,63,.28)',padding:'16px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'16px',zIndex:'9999',flexWrap:'wrap',color:'#EFE8DA'});
+    document.body.appendChild(b);
+    document.getElementById('cb-accept').onclick=function(){try{localStorage.setItem('ga_consent','granted');}catch(e){} b.remove(); loadGA();};
+    document.getElementById('cb-decline').onclick=function(){try{localStorage.setItem('ga_consent','denied');}catch(e){} b.remove();};
+  }
+  /* This file loads at the end of body, so the DOM is already parsed. */
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',banner);
+  else banner();
+})();

@@ -3,36 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Cookie consent — GA4 loaded only after visitor accepts -->
-<script>
-(function(){
-  var GA_ID='G-VPL2XEB7GK';
-  function loadGA(){
-    var s=document.createElement('script');
-    s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
-    document.head.appendChild(s);
-    window.dataLayer=window.dataLayer||[];
-    window.gtag=function(){dataLayer.push(arguments);};
-    gtag('js',new Date());gtag('config',GA_ID);
-  }
-  var stored=localStorage.getItem('ga_consent');
-  if(stored==='granted'){loadGA();return;}
-  window.gtag=function(){};
-  if(stored==='denied'){return;}
-  document.addEventListener('DOMContentLoaded',function(){
-    var b=document.createElement('div');b.id='cookie-banner';
-    b.innerHTML='<p style="margin:0;max-width:560px;font-size:.875rem;line-height:1.5">We use Google Analytics to understand how visitors use this site. <a href="/privacy-policy.html" style="color:inherit;text-decoration:underline">Privacy policy</a>.</p>'
-      +'<div style="display:flex;gap:8px;flex-wrap:wrap">'
-      +'<button id="cb-accept" style="background:#E9B872;color:#231905;border:none;padding:9px 20px;border-radius:4px;font-weight:700;font-size:.8125rem;cursor:pointer">Accept analytics</button>'
-      +'<button id="cb-decline" style="background:transparent;color:#E9B872;border:1px solid rgba(233,184,114,.5);padding:9px 20px;border-radius:4px;font-weight:600;font-size:.8125rem;cursor:pointer">Decline</button>'
-      +'</div>';
-    Object.assign(b.style,{position:'fixed',bottom:'0',left:'0',right:'0',background:'#0A1020',borderTop:'1px solid rgba(168,124,63,.28)',padding:'16px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'16px',zIndex:'9999',flexWrap:'wrap',color:'#EFE8DA'});
-    document.body.appendChild(b);
-    document.getElementById('cb-accept').onclick=function(){localStorage.setItem('ga_consent','granted');b.remove();loadGA();};
-    document.getElementById('cb-decline').onclick=function(){localStorage.setItem('ga_consent','denied');b.remove();};
-  });
-})();
-</script>
 <title>Adesanya AI Advisory — The Lawyer Who Reads Code | EU AI Act Compliance Specialist</title>
 <meta name="description" content="EU AI Act Compliance Specialist, Dublin. Helping enterprises move from paper governance to runtime compliance. EU AI Act readiness, AI contracting, governance and data privacy. LLM in IP and IT Law (UCD).">
 <link rel="canonical" href="https://adesanyaaiadvisory.com/">
@@ -1327,6 +1297,14 @@ document.addEventListener('DOMContentLoaded',function(){
     return pts;
   }
   function build(){
+    /* The 0x0 guard belongs HERE, not only in size(). size() returns early
+       before its own build() call, but the one-second interval below calls
+       build() directly, and that path reached sample()'s
+       getImageData(0,0,0,0) before layout gave the stage a box -- three
+       uncaught IndexSizeErrors on every homepage load, still thrown after
+       the guard in size() was added. The ResizeObserver re-runs this once
+       there is a real box. */
+    if(W < 1 || H < 1) return;
     var t=dublinParts(); lastText=t.h+':'+t.m;
     targets=sample(lastText);
     while(parts.length<targets.length) parts.push({x:Math.random()*W,y:Math.random()*H,vx:0,vy:0,r:.7+Math.random()*1.5,tw:Math.random()*Math.PI*2});
@@ -1983,6 +1961,6 @@ if(document.getElementById('aQuiz'))aRn();
   document.querySelectorAll('canvas.code-rain').forEach(initRain);
 })();
 </script>
-<script src="assets/site.js?v=20260820074103"></script>
+<script src="assets/site.js?v=20260906020000"></script>
 </body>
 </html>
