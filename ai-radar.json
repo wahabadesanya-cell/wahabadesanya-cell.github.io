@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-05",
+    "updated": "2026-09-06",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,14 @@
     ]
   },
   "items": [
+    {
+      "j": "Cases",
+      "date": "2026-09-04",
+      "title": "NYT v OpenAI/Microsoft: all sides move for summary judgment on fair use, 10.8M articles",
+      "summary": "On 4 September 2026 OpenAI, Microsoft and the consolidated news plaintiffs (New York Times, the Daily News group, Ziff Davis, Center for Investigative Reporting, The Intercept) each filed for summary judgment before Judge Sidney Stein in the SDNY multidistrict litigation 25-md-3143, the last day to head off a jury trial. OpenAI asks the court to hold that pre-training and its Browse retrieval feature are fair use, that pages fetched before publishers blocked its crawler in robots.txt were impliedly licensed, and that the DMCA copyright-management-information claim fails; its filing counts 24 verbatim reproductions in a 20-million-conversation sample. The publishers seek liability findings for copying at five stages (acquisition, training, grounding, outputs and a redacted fifth) and press a market-dilution theory built on synthetic news costing roughly $6,800 per million articles. Practitioner's take: the fight has moved from whether copying happened to whether the fourth factor can be proved with traffic and licensing evidence, and OpenAI's robots.txt argument turns crawler configuration into litigation evidence. Any organisation feeding third-party content into a RAG pipeline should now be able to show when it honoured opt-outs and what it retrieved. Decision expected in the coming weeks; the DOJ's fair-use statement of interest landed the day before. Primary briefs not reached (PACER/CourtListener); summary based on PPC Land's reading of the public filings.",
+      "source": "PPC Land (reporting on SDNY filings, 25-md-3143)",
+      "url": "https://ppc.land/openai-and-microsoft-ask-judge-to-end-10-8-million-article-copyright-case/"
+    },
     {
       "j": "US",
       "date": "2026-08-31",
