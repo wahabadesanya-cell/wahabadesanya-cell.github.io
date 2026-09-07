@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-06",
+    "updated": "2026-09-07",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,14 @@
     ]
   },
   "items": [
+    {
+      "j": "Cases",
+      "date": "2026-09-03",
+      "title": "AG Szpunar: Belgium's 2022 data-retention law fails EU proportionality — separation of data is the test",
+      "summary": "On 3 September 2026 Advocate General Szpunar delivered his Opinion in Case C-661/24 Académie Fiscale and Others, a reference from the Belgian Constitutional Court on the 2022 law requiring telecoms providers to retain identification data and metadata. He proposes that the Court find EU law precludes several of its rules. Two points carry beyond Belgium. First, he would extend the La Quadrature du Net II reasoning to every retention regime: general and indiscriminate retention of traffic and location data can be lawful only under technical arrangements that keep the categories of data genuinely separate and prevent their combined use for the whole retention period, so that precise conclusions on users' private lives cannot be drawn. Second, leaving providers to decide which data to keep and for how long makes a regime insufficiently clear and precise, and a national court may not keep incompatible provisions alive temporarily. For any organisation designing retention around telemetry, logs or model inputs, the practitioner's take is that architecture is now doing legal work: proportionality is assessed on how data is segregated in storage, not only on why it is kept. The Opinion is not binding; judgment follows.",
+      "source": "Court of Justice of the EU — Press Release No 117/26",
+      "url": "https://curia.europa.eu/site/upload/docs/application/pdf/2026-09/cp260117en.pdf"
+    },
     {
       "j": "Cases",
       "date": "2026-09-04",
