@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-07",
+    "updated": "2026-09-08",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,22 @@
     ]
   },
   "items": [
+    {
+      "j": "Cases",
+      "date": "2026-09-02",
+      "title": "India's Supreme Court voids ₹4.25bn customs penalty built on AI-hallucinated case law",
+      "summary": "On 2 September 2026, in Vijay Ghanshyam Gadiya v. Union of India (2026 INSC 947), a bench of Datta and Nagu JJ set aside a ₹4.25 billion (₹425.28 crore) penalty imposed by the Additional Commissioner of Customs, Surat, together with the Gujarat High Court order that had upheld it. The Court checked the authorities cited in the penalty order itself and found that some \"are either non-existent or have fake citations\", while others that do exist \"do not lay down the ratio deduced therefrom and it appears to be a hallucination of AI\". It did not touch the underlying misdeclaration allegation: the process defect alone was fatal, the matter goes back to a different officer of the same rank, and disciplinary action against the author of the order is left to the appointing authority. Applying its own Pooja Ramesh Singh precedent that a decision resting on hallucinated material \"is no decision in the eyes of the law\", the bench — noting that the Court's own draft Regulations for Use of Artificial Intelligence in Courts, 2026 are out for comment — added that AI \"may well serve as training wheels but entrusting it with the pilot's seat would be both imprudent and dangerous\". The practitioner's take: the exposure has moved from the advocate who cites a fake case to the decision-maker who relies on one. Any organisation using generative AI inside a process that decides something about a person or a company — a regulator, an internal disciplinary panel, an HR or credit function — now has a clear precedent that unverified AI reasoning makes the outcome void, not merely embarrassing. For EU deployers that is the practical content of the Article 4 literacy duty and the Article 26 deployer obligations: verification is the control, and it has to be documented.",
+      "source": "Supreme Court of India — Vijay Ghanshyam Gadiya v. Union of India, 2026 INSC 947 (order of 2 September 2026)",
+      "url": "https://www.verdictum.in/pdf_upload/2026/09/03/2199sc-1783683.pdf"
+    },
+    {
+      "j": "US",
+      "date": "2026-09-02",
+      "title": "G20 adopts US-led 'Carolina Principles': sector rules first, new AI rules only where novel",
+      "summary": "The G20 Innovation Ministerial in Chapel Hill, hosted by the US Department of Commerce and the White House OSTP, closed on 2 September 2026 with a consensus statement and the Carolina Principles for Emerging Technologies. The regulatory pillar commits members to \"applying existing sector-specific regulatory approaches to govern the use of emerging technologies where appropriate, focusing any new regulation on novel technology considerations that existing frameworks cannot address\". The EU, Germany, France, Italy, Poland and the UK were at the table alongside China, India and the African Union. The document is soft law and carries its own escape hatch: members \"develop their own policies and preserve national sovereignty in the governance of emerging technologies\". The practitioner's take: nothing in Chapel Hill displaces the AI Act, and the Commission can fairly read the text as consistent with a risk-based regime that already leans on sectoral supervisors. What it does is fix the rhetoric Washington will bring to the reported mid-September US–China AI talks and to any federal push to pre-empt state AI laws. For an organisation deploying AI in Ireland the operative obligations are unchanged; expect US vendors to cite these principles in contract and DPA negotiations as if they were a standard, and price that accordingly.",
+      "source": "U.S. Department of Commerce — G20 Innovation Ministerial Statement (2 September 2026)",
+      "url": "https://www.commerce.gov/issues/g20-innovation-ministerial-statement-pillars"
+    },
     {
       "j": "Cases",
       "date": "2026-09-03",
