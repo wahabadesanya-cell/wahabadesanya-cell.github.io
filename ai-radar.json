@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-08",
+    "updated": "2026-09-10",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,14 @@
     ]
   },
   "items": [
+    {
+      "j": "Cases",
+      "date": "2026-09-08",
+      "title": "Andersen v. Stability AI goes to jury: first US trial on AI image-training liability",
+      "summary": "The consolidated artist class action against Stability AI, Midjourney, DeviantArt and Runway (N.D. Cal., Judge Orrick, docket 3:23-cv-00201) reached a jury on 8 September 2026, the first US trial testing whether training an image generator on scraped copyrighted artwork infringes, alongside a Lanham Act false-endorsement claim the fair-use defence cannot reach. No verdict has been reported as at 10 September. Distinct from the text-based fair-use rulings already on file (Anthropic settlement, NYT v OpenAI), a verdict here becomes the reference point for image-model training liability and style-mimicry claims specifically, relevant to any client building on or deploying Stable Diffusion-family tools.",
+      "source": "CourtListener docket 3:23-cv-00201 (N.D. Cal.), via The World of AI litigation tracker",
+      "url": "https://theworldofai.org/ai-lawsuits/andersen-v-stability/"
+    },
     {
       "j": "Cases",
       "date": "2026-09-02",
