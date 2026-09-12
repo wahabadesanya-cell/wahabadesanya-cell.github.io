@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-10",
+    "updated": "2026-09-12",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,22 @@
     ]
   },
   "items": [
+    {
+      "j": "US",
+      "date": "2026-09-09",
+      "title": "Newsom signs first US framework for independent AI auditors (SB 813, AB 1405)",
+      "summary": "California enacted the first US statutory framework letting independent third-party organisations formally verify AI systems for state-law compliance (SB 813), paired with AB 1405, which creates a state registry of AI auditors and sets standards for their independence, transparency and integrity. Until now, compliance claims from AI developers were essentially self-certified; this creates the first accreditation layer a customer or regulator can point to. Watch for the registry's standards once published, since they will likely become the practical benchmark for what counts as a credible third-party AI audit ahead of any EU AI Act conformity-assessment comparison.",
+      "source": "Governor of California, official press release",
+      "url": "https://www.gov.ca.gov/2026/09/09/governor-newsom-signs-first-in-the-nation-ai-safeguards-to-protect-californians-calls-on-the-federal-government-to-do-its-part/"
+    },
+    {
+      "j": "US",
+      "date": "2026-09-10",
+      "title": "Newsom signs \"Adam's Law\" and child-safety chatbot/social-media package",
+      "summary": "Governor Newsom signed a 13-bill California package strengthening protections for minors around AI companion chatbots and social media, headlined by SB 1119 (\"Adam's Law\", named for Adam Raine), which requires crisis protocols for suicidal ideation, parental controls, and the first US mandate for independent child-safety audits and annual risk assessments of companion chatbots. Companion bills bar addictive feeds (autoplay, algorithmic feeds) for under-16 social media users, extend child sexual exploitation law to AI-generated depictions of minors, and restrict AI use of K-12 pupil data. For any client with a chatbot or companion-AI product touching under-18 users in California, this is now the toughest state-level compliance bar in the US and a template other states are expected to copy.",
+      "source": "Governor of California, official press release",
+      "url": "https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/"
+    },
     {
       "j": "Cases",
       "date": "2026-09-08",
