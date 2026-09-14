@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-12",
+    "updated": "2026-09-14",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,30 @@
     ]
   },
   "items": [
+    {
+      "j": "UK",
+      "date": "2026-09-14",
+      "title": "JCHR calls for standalone UK AI Bill with statutory oversight body",
+      "summary": "The Joint Committee on Human Rights published its report on 14 September 2026 after a year long inquiry, concluding that no country including the UK currently regulates AI in a way that is fit for purpose. It recommends a new AI Bill establishing a single independent statutory oversight body, a risk based classification regime with stronger duties on higher risk systems, and obligations running across the full AI lifecycle, covering those who design, amend and use systems, not just providers. Government must respond within 60 days under parliamentary convention. For a practice advising on UK exposure alongside the EU AI Act, this is the clearest signal yet that Westminster may move toward a general AI statute rather than continuing sector by sector guidance.",
+      "source": "Joint Committee on Human Rights (UK Parliament), 4th Report, HC 160 / HL Paper 56",
+      "url": "https://publications.parliament.uk/pa/jt5902/jtselect/jtrights/160/report.html"
+    },
+    {
+      "j": "UK",
+      "date": "2026-09-10",
+      "title": "MHRA backed Commission sets recommendations for AI in NHS care",
+      "summary": "The independent National Commission into the Regulation of AI in Healthcare, established by the MHRA, published its recommendations on 10 September 2026 after gathering evidence from over 12,000 people over a year, the largest engagement of its kind on UK healthcare technology regulation. Headline proposals include staged, learner driver style authorisations for new AI models under close supervision before full approval, continuous real world monitoring of AI enabled devices across their working life rather than a single point in time approval, a public facing safety information tool modelled on the MHRA's Drug Analysis Profiles, and enhanced MHRA enforcement powers. Government and the MHRA will issue a formal response in due course. Useful read across for an EU facing practice: it shows a UK sector regulator moving toward the same continuous, lifecycle monitoring logic that Article 9 risk management and Article 26 deployer obligations already require under the EU AI Act, so a client running AI across both markets can build one control framework rather than two.",
+      "source": "Medicines and Healthcare products Regulatory Agency (MHRA), UK Government",
+      "url": "https://www.gov.uk/government/news/independent-commission-led-by-nhs-doctors-sets-out-blueprint-to-accelerate-safe-ai-adoption-in-healthcare"
+    },
+    {
+      "j": "UK",
+      "date": "2026-09-09",
+      "title": "MP introduces Personal Data (Digital Twins) Bill in UK Commons",
+      "summary": "Dame Chi Onwurah presented the Personal Data (Digital Twins) Bill under the Ten Minute Rule in the House of Commons on 9 September 2026, with cross party backing including Conservative and Liberal Democrat MPs. The Bill would regulate software or algorithms that use personal data to model an individual's preferences or likely behaviour, require express permission before a digital twin of a real person is created, and give individuals rights over the holding and use of their data by such systems, with express protection for children. Ten Minute Rule bills rarely become law without government support, so treat this as an early marker of parliamentary appetite rather than a live compliance deadline. It is directly relevant to any client using behavioural modelling, personalisation engines or synthetic persona tools on UK data subjects, since it would sit alongside, not replace, existing UK GDPR obligations.",
+      "source": "UK Parliament, Parliamentary Bills",
+      "url": "https://bills.parliament.uk/bills/4295"
+    },
     {
       "j": "US",
       "date": "2026-09-09",
