@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-14",
+    "updated": "2026-09-18",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,22 @@
     ]
   },
   "items": [
+    {
+      "j": "Cases",
+      "date": "2026-09-14",
+      "title": "N.D. Illinois lets Keene defamation claim over Google AI Overviews proceed",
+      "summary": "Judge Thomas Durkin denied Google's motion to dismiss two of four defamation claims over AI Overviews that falsely told users author Jimmy Keene was serving a life sentence for murder. The court held that citing a source does not convert a false AI-generated factual claim into opinion, and that Keene's repeated notice to Google of the error was enough to plead actual malice at this stage. Practical read: disclaimers and source links will not by themselves defeat a defamation claim over AI-generated content once the platform has notice the output is false.",
+      "source": "U.S. District Court for the Northern District of Illinois",
+      "url": "https://law.justia.com/cases/federal/district-courts/illinois/ilndce/1:2025cv11431/486629/29/"
+    },
+    {
+      "j": "Nigeria",
+      "date": "2026-09-15",
+      "title": "NDPC opens new Abuja headquarters, Africa's largest data protection authority office",
+      "summary": "Nigeria's Data Protection Commission commissioned a new Abuja headquarters on 15 September, an asset recovered by the EFCC and reallocated to the Commission, built out in about six months. Commissioner Vincent Olatunji called it the largest Data Protection Authority office in Africa, and the Ministry framed it as capacity building for AI-driven enforcement across a digital economy of over 200 million people. This is an institutional capacity signal, not a change to the underlying NDPA or GAID 2025 obligations the corridor practice runs on.",
+      "source": "Federal Ministry of Communications, Innovation and Digital Economy (Nigeria)",
+      "url": "https://fmcide.gov.ng/honourable-minister-dr-bosun-tijani-commissions-nigeria-data-protection-commission-headquarters-extols-president-bola-ahmed-tinubu-visionary-leadership/"
+    },
     {
       "j": "UK",
       "date": "2026-09-14",
