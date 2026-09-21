@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-18",
+    "updated": "2026-09-21",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,38 @@
     ]
   },
   "items": [
+    {
+      "j": "Cases",
+      "date": "2026-09-18",
+      "title": "Class action: Anthropic, OpenAI, Google, xAI colluded on an illegal 'AI slowdown' pact",
+      "summary": "Four paid ChatGPT/Claude/Gemini/Grok subscribers filed a proposed antitrust class action (Buist et al. v. Anthropic PBC et al., N.D. Cal., filed 18 Sept 2026) alleging the labs' 12 Sept public exchange on pacing AI development, triggered by Dario Amodei's essay urging industry-wide safety coordination, amounted to an illegal agreement to slow development and reduce the value of paid subscriptions. For advisory clients this is a live illustration of the antitrust exposure in any cross-lab 'safety coordination' talk: a genuine AI-safety rationale does not itself immunise coordinated conduct from Sherman Act scrutiny, and any client considering joint industry statements on capability pacing needs antitrust counsel alongside AI-safety counsel before speaking publicly.",
+      "source": "Associated Press, via Fortune",
+      "url": "https://fortune.com/2026/09/19/lawsuit-anthropic-openai-spacexai-google-antitrust-laws-ai-slowdown-subscription-value/"
+    },
+    {
+      "j": "Cases",
+      "date": "2026-09-17",
+      "title": "Unsealed NYT v. OpenAI/Microsoft filing: internal admissions cut against the fair-use defence",
+      "summary": "Judge Stein unsealed a New York Times brief in the NYT/Daily News/CIR copyright suit against OpenAI and Microsoft showing internal admissions that go to the heart of the fair-use market-harm test: a Microsoft director privately called the scraping practice theft of an extraordinary scale, Microsoft's own data reportedly showed Copilot cutting click-throughs to NYT content by as much as 93%, and OpenAI's head of ChatGPT is said to have described chatbot outputs internally as substitutive for the original journalism. Much of the detail comes from the Times' own brief rather than the still-sealed underlying exhibits, so treat the specifics as reported, not confirmed from the primary document. The practitioner point: courts assessing AI fair-use defences are increasingly going to weigh a provider's own internal characterisation of its practices, not just the technical training process, which is a live risk for any client's AI vendor-diligence and content-licensing decisions.",
+      "source": "TechCrunch (Rebecca Bellan), reporting on the unsealed court filing",
+      "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/"
+    },
+    {
+      "j": "EU",
+      "date": "2026-09-17",
+      "title": "AI Board's ninth meeting reviews enforcement priorities, cybersecurity plan",
+      "summary": "The AI Board met on 17 September under the Irish Presidency, its first session attended by Moldova as an observer. The Commission updated members on enforcement activity since the 2 August transparency deadline, on AI literacy recommendations, and on cooperation between market surveillance authorities ahead of the first wave of compliance inspections. For a practice built on Article 50 and Article 4 work, this is the clearest signal yet that the Commission is moving from guidance toward active supervision, and it sets a firm date: the tenth meeting sits alongside the Apply AI Summit on 17 November, itself preceded by AI Innovation Month opening in Dublin on 14 October.",
+      "source": "European Commission (Digital Strategy)",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/ai-board-holds-its-ninth-meeting"
+    },
+    {
+      "j": "Cases",
+      "date": "2026-09-16",
+      "title": "Ninth Circuit affirms dismissal of DMCA claim against GitHub Copilot, OpenAI",
+      "summary": "The Ninth Circuit affirmed dismissal of the lead DMCA claim in Doe v. GitHub, the first copyright case brought against OpenAI's generative tools, in an opinion filed 16 September. The panel held that Copilot and Codex \"create new works that never contained\" the copyright management information plaintiffs point to, so AI output that resembles licensed code but omits attribution stays outside section 1202(b)'s reach. Breach of contract claims, and the underlying question of whether training on code requires the author's permission, both continue in the district court. For clients building or licensing into AI coding tools, copyright and contract terms remain the operative exposure; a DMCA attribution claim is a narrow route.",
+      "source": "US Court of Appeals for the Ninth Circuit",
+      "url": "https://www.courthousenews.com/wp-content/uploads/2026/09/doe-vs-github-ninth-circuit.pdf"
+    },
     {
       "j": "Cases",
       "date": "2026-09-14",
