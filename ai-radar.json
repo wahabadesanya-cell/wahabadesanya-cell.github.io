@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-21",
+    "updated": "2026-09-27",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,62 @@
     ]
   },
   "items": [
+    {
+      "j": "Ireland",
+      "date": "2026-09-25",
+      "title": "WRC confirmed as market surveillance authority over workplace AI under AI Act",
+      "summary": "The Workplace Relations Commission has set out its role as a Market Surveillance Authority under the EU AI Act for employment-related AI — recruitment, screening, work allocation, performance monitoring and emotion-inference systems, several of which sit in the Act's high-risk or prohibited categories. Employers deploying HR or people-analytics AI in Ireland now have a named regulator with inspection powers on top of the Data Protection Commission and WRC adjudication itself, so a pre-deployment check should cover equality, data protection and employment-law risk, not just GDPR. The WRC notes several high-risk obligations remain on a delayed timeline, so this is a designation of authority now with fuller enforcement detail still to come.",
+      "source": "Workplace Relations Commission",
+      "url": "https://www.workplacerelations.ie/en/what_you_should_know/ai-act/"
+    },
+    {
+      "j": "US",
+      "date": "2026-09-23",
+      "title": "27 state AGs urge Congress: federal AI law must not preempt state authority",
+      "summary": "A bipartisan coalition of 27 state attorneys general, including Minnesota's Keith Ellison, wrote congressional leaders calling for mandatory federal safety testing, incident reporting, and international coordination on frontier AI — but insisting any federal statute must expressly preserve state AI laws and give state AGs enforcement authority. For organisations tracking the federal preemption push (the August 2026 executive order and pending bills), this is the clearest sign yet that Congress faces a united 27-state bloc resisting a preemption-only deal, which keeps the current patchwork of state AI laws live as a compliance baseline regardless of what Washington does next.",
+      "source": "Minnesota Attorney General's Office",
+      "url": "https://www.ag.state.mn.us/Office/Communications/2026/docs/Federal-AI-Regulation_Ltr.pdf"
+    },
+    {
+      "j": "US",
+      "date": "2026-09-23",
+      "title": "Sanders/Casar introduce Ban Artificial Superintelligence Act, new AI department",
+      "summary": "Sen. Sanders and Rep. Casar filed a bill that would ban developing or deploying an AI \"that exceeds human cognitive performance and capabilities across most domains,\" pause advanced AI development until a new federal AI regulator is operating with clear rules, and create a cabinet-level Department of Artificial Intelligence. Violations carry corporate dissolution (\"corporate death penalty\") for entities and up to 20 years in prison for individuals -- penalties the sponsors compare to unlawful nuclear weapons development. It has no realistic near-term path in this Congress, but it resets the outer boundary of the US debate and gives advocacy groups a marker to cite; deployers should treat it as a signal of direction, not a compliance trigger.",
+      "source": "Office of Senator Bernie Sanders",
+      "url": "https://www.sanders.senate.gov/press-releases/news-sanders-casar-introduce-legislation-to-create-new-federal-agency-to-ban-artificial-superintelligence-pause-advanced-ai-development/"
+    },
+    {
+      "j": "Ireland",
+      "date": "2026-09-21",
+      "title": "DPC fines Google €403m over Web & App Activity, Location History, Location Accuracy",
+      "summary": "The DPC's fourth-largest fine to date covers three Google features processing location data between May 2018 and February 2020, finding failures on lawfulness, fairness, transparency and retention limits — people could be profiled and targeted with ads without ever realising their location was the input. For anyone running location-aware features through an AI pipeline (personalisation, agentic assistants, ad targeting), the practical read is that burying the processing in a privacy policy does not satisfy transparency, and indefinite or undefined retention needs an active, documented justification. Coming weeks after the DPC's HSE decision, this confirms a tightening enforcement posture: audit consent flows and retention schedules now rather than at the next scheduled DPIA cycle.",
+      "source": "Data Protection Commission (Ireland)",
+      "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location"
+    },
+    {
+      "j": "EU",
+      "date": "2026-09-17",
+      "title": "Commission proposes EU KIDS Act: AI chatbots and companions must be off by default for minors",
+      "summary": "Alongside the expected minimum age of 15 for social media accounts, the proposal reaches further into AI product design: chatbots and AI companions must ship off by default for under-18 users and are barred from features that foster emotional dependency, and very large platforms lose profiling-based recommender feeds, infinite scroll and other addictive-design patterns for that age group. Enforcement follows the DSA playbook — mandatory compliance plans, independent audits, and fines up to 6% of global annual turnover. For any client building or deploying a consumer-facing chatbot or companion product with an EU user base that includes minors, this is a new, freestanding compliance layer on top of the AI Act and DSA; it is still a Commission proposal moving through Parliament and Council, not yet binding law, but the design requirement (default-off, no dependency-fostering UX) should be scoped into product roadmaps now.",
+      "source": "European Commission",
+      "url": "https://commission.europa.eu/news-and-media/news/eu-kids-act-helping-children-navigate-safer-online-world-2026-09-17_en"
+    },
+    {
+      "j": "US",
+      "date": "2026-09-16",
+      "title": "California enacts SB 1050: mandatory disclosure of AI-generated ad performers",
+      "summary": "SB 1050, signed 16 September, requires \"explicit disclosure on any video or audio advertisement that uses AI-generated performers to sell a product or service,\" and bars continued use of a non-compliant ad once it is found in violation. It follows New York's synthetic-performer disclosure law and extends California's AI-labelling push from chatbots and companions into advertising specifically. Any organisation running AI-generated or AI-enhanced talent in ads reaching California consumers needs a compliance review of ad creative and takedown procedures now, ahead of enforcement rather than after it.",
+      "source": "Office of Governor Gavin Newsom",
+      "url": "https://www.gov.ca.gov/2026/09/16/governor-newsom-signs-new-law-to-protect-workers-require-disclosures-on-ai-generated-advertising/"
+    },
+    {
+      "j": "US",
+      "date": "2026-09-18",
+      "title": "Newsom EO advances AI 'kill switch,' independent frontier oversight",
+      "summary": "Newsom's 18 September executive order speeds up implementation of SB 813 and AB 1405, California's frontier-AI safety and independent-auditor laws, and directs the Government Operations Agency to convene experts within two months on strengthening state law, including a 'kill switch' for frontier models \"verified on an ongoing basis by an independent verification organization\" and updated definitions of critical safety incidents. This is a planning and rulemaking directive, not a new statute, but it signals where California's audit regime is heading. Any organisation running frontier models with a California footprint should track the two-month recommendations for what \"independent verification\" and kill-switch efficacy will actually require operationally.",
+      "source": "Office of Governor Gavin Newsom",
+      "url": "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/"
+    },
     {
       "j": "Cases",
       "date": "2026-09-18",
