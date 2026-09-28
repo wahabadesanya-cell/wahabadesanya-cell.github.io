@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-27",
+    "updated": "2026-09-28",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,30 @@
     ]
   },
   "items": [
+    {
+      "j": "Cases",
+      "date": "2026-09-25",
+      "title": "D.C. Circuit upholds Pentagon's exclusion of Anthropic's Claude from procurement",
+      "summary": "In a 2-1 ruling in Anthropic PBC v. Department of War (No. 26-1049), the D.C. Circuit held that Anthropic's contractual limits on lethal-autonomous-weapons and domestic-surveillance uses of Claude qualify as a 'supply chain risk' under 10 U.S.C. 4713, even absent bad intent, letting the Pentagon's exclusion stand. For any vendor selling AI into government supply chains, the lesson is blunt: safety guardrails you build into a model can themselves be treated as the risk a security statute targets, not just a mitigation of it. Judge Henderson's dissent leaves the door open for further review, but for now this is binding D.C. Circuit precedent on how broadly 'manipulate' can be read under FASCSA.",
+      "source": "U.S. Court of Appeals for the D.C. Circuit (via Justia)",
+      "url": "https://law.justia.com/cases/federal/appellate-courts/cadc/26-1049/26-1049-2026-09-25.html"
+    },
+    {
+      "j": "Ireland",
+      "date": "2026-09-25",
+      "title": "Irish DPC publishes five-year AI Insights Report covering ~180 products",
+      "summary": "The Data Protection Commission's report reviews its AI oversight from 2021-2025, covering roughly 180 AI products and services including LLMs, facial recognition and recommender systems, and flags legitimate interest as a basis for AI training and transparency for novel processing as the two live pressure points. Most engagements closed with recommendations rather than formal action, but the DPC signals it will intervene urgently where risk mitigation is inadequate. For any organisation deploying AI in Ireland, this is the clearest signal yet of what 'early engagement' with the regulator actually looks like in practice, and where the DPC's patience runs out.",
+      "source": "Data Protection Commission (Ireland)",
+      "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-publishes-ai-insights-report"
+    },
+    {
+      "j": "US",
+      "date": "2026-09-22",
+      "title": "Illinois Gov. Pritzker signs EO 2026-07 creating state AI Cabinet",
+      "summary": "Executive Order 2026-07 stands up an Illinois AI Cabinet drawing on eight state agencies (Innovation & Technology, Emergency Management, Financial & Professional Regulation, Commerce Commission, State Police, Commerce & Economic Opportunity, EPA and Public Health) plus outside academic, legal and ethics experts, tasked with assessing AI risks to residents, building incident-response procedures, and evaluating options including data-center incentive conditions and strict-liability frameworks for AI-caused harm. This joins Oregon and California in the pattern of states moving via executive action rather than waiting on legislatures, and the strict-liability study in particular is worth tracking for anyone with Illinois exposure.",
+      "source": "Office of the Governor of Illinois",
+      "url": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-establishs-illinois-artificial-intelligence-ai-cabinet"
+    },
     {
       "j": "Ireland",
       "date": "2026-09-25",
