@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-28",
+    "updated": "2026-09-29",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,14 @@
     ]
   },
   "items": [
+    {
+      "j": "US",
+      "date": "2026-09-23",
+      "title": "Bennet and Welch propose AI Regulator Act: pre-certification and pause power for frontier models",
+      "summary": "Senators Bennet and Welch have published a proposal to create an independent Federal Digital Commission with mandatory pre-release testing of frontier models, power to pause distribution of a disapproved model for up to six months, 15-day reporting of critical safety incidents, and civil penalties capped at 15 percent of prior-year global revenue. It is a proposal with a section-by-section, not an enacted or (on the materials fetched) formally introduced bill, so it carries no compliance duty today. For EU-facing providers it is a signal of where US frontier-model oversight could head, and a useful contrast with the AI Act's GPAI regime; watch whether it gains Republican co-sponsors before treating it as more than a marker.",
+      "source": "Office of Sen. Michael Bennet (press release and section-by-section)",
+      "url": "https://www.bennet.senate.gov/2026/09/23/bennet-welch-release-proposal-to-establish-new-federal-agency-to-prevent-catastrophic-ai-risk-regulate-big-tech/"
+    },
     {
       "j": "Cases",
       "date": "2026-09-25",
