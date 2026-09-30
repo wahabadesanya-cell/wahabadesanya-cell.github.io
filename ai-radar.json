@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-29",
+    "updated": "2026-09-30",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,14 @@
     ]
   },
   "items": [
+    {
+      "j": "US",
+      "date": "2026-09-29",
+      "title": "White House 'Super Intelligence' EO renames AI in federal use; voluntary frontier accord signed",
+      "summary": "The 29 Sept executive order 'Inaugurating the Era of Super Intelligence' tells federal agencies to say 'Super Intelligence' instead of 'AI' in official materials and gives the President's science adviser 60 days to propose a statutory definition and say whether it should modify existing AI statutes. It contains no preemption clause and no state-law language. Separately, six frontier-lab and chip leaders signed a voluntary accord (text as published by the Washington Examiner; the primary copy was not reached on whitehouse.gov) built on internal controls, an internal oversight team, an independent external auditor and a board-level committee. For deployers: nothing here creates a binding obligation, but the four-layer model is a likely benchmark for vendor due diligence and for what a regulator later calls reasonable. Watch the 60-day definition, which could reopen scope in US AI statutes.",
+      "source": "The White House (Executive Order, 29 Sep 2026); accord text via Washington Examiner",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/"
+    },
     {
       "j": "US",
       "date": "2026-09-23",
