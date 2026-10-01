@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-09-30",
+    "updated": "2026-10-01",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,14 @@
     ]
   },
   "items": [
+    {
+      "j": "Cases",
+      "date": "2026-09-29",
+      "title": "Third Circuit affirms: ROSS's AI training on Westlaw headnotes was not fair use",
+      "summary": "In Thomson Reuters v. ROSS Intelligence (No. 25-2153), a Third Circuit panel (Restrepo, Montgomery-Reeves, Bove JJ; opinion by Montgomery-Reeves) affirmed that ROSS's use of Westlaw headnotes to build a competing legal-research AI was not fair use. It weighed purpose and character, amount copied and market effect against ROSS, finding harm to both Westlaw's market and the emerging market for licensing headnotes as AI training data; the nature-of-the-work factor leaned slightly towards ROSS. This is an appellate ruling on fair use in AI training, but it turns on a non-generative tool competing directly with its source, so it does not settle the LLM cases. For a deployer, the practical point is that training on a competitor's content to build a substitute product carries real exposure, and vendor warranties and indemnities on training-data provenance now matter more.",
+      "source": "U.S. Court of Appeals for the Third Circuit (opinion)",
+      "url": "https://www2.ca3.uscourts.gov/opinarch/252153p.pdf"
+    },
     {
       "j": "US",
       "date": "2026-09-29",
