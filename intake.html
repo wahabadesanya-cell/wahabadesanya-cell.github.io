@@ -410,6 +410,7 @@
   <input type="hidden" name="form-name" value="aaa-intake-iq001">
   <input type="hidden" name="_next" value="https://adesanyaaiadvisory.com/thank-you.html">
   <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="src_tag" id="src-tag" value="">
   <p class="hidden"><label>Do not fill this in: <input name="bot-field" autocomplete="off"></label></p>
 
   <!-- ── SECTION: YOUR DETAILS -->
@@ -791,6 +792,14 @@
       wrap.classList.toggle('visible', this.value === 'Yes — please see details below');
     });
   });
+
+  // SOURCE TAG: record which link sent the visitor here (for example ?src=p0 from a LinkedIn post).
+  // Only letters, digits, hyphen and underscore are kept, up to 32 characters.
+  (function () {
+    var m = /[?&]src=([A-Za-z0-9_-]{1,32})(?:&|#|$)/.exec(window.location.search);
+    var tag = document.getElementById('src-tag');
+    if (m && tag) { tag.value = m[1]; }
+  })();
 
   // ── 4. PROGRESS BAR + TIME REMAINING + SECTION COMPLETION
   var TOTAL = 11;
