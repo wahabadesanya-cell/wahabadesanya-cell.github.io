@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-10-01",
+    "updated": "2026-10-05",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,22 @@
     ]
   },
   "items": [
+    {
+      "j": "Cases",
+      "date": "2026-09-28",
+      "title": "Florida AG seeks injunction against OpenAI: third-party approval before any new AI model",
+      "summary": "Florida's Attorney General has moved for a temporary injunction in the Highlands County circuit court (Office of the Attorney General v. OpenAI Global, LLC et al., case no. 26000295GCAXMX). The motion asks the court to bar ChatGPT being offered to minors in Florida, to stop data collection from under-13s without verifiable parental consent, and to bar developing AI models without independent third-party guardrails and approval, on FDUTPA, COPPA and public-nuisance grounds. Nothing has been ordered, and the third-party-approval demand is the outlier, but for any deployer the pleaded theories (deceptive safety claims, human-like presentation, engagement-prolonging design) are the checklist state regulators are now applying to consumer-facing chatbots.",
+      "source": "Florida Office of the Attorney General (motion for temporary injunction)",
+      "url": "https://www.myfloridalegal.com/sites/default/files/plaintiffs_motion_for_temporary_injunction.pdf"
+    },
+    {
+      "j": "US",
+      "date": "2026-10-01",
+      "title": "Connecticut PA 26-15 first wave live: AI hiring-tech duties, provenance data, WARN AI disclosure",
+      "summary": "Connecticut's Public Act 26-15 (An Act Concerning Online Safety) took effect in part on 1 October 2026. The first wave covers subscription-based AI provider disclosures, automated employment-decision technology requirements, generative-AI provenance data and a new disclosure on federal WARN layoff notices of whether the layoffs relate to the employer's use of AI. Section 2 separately protects employees who report catastrophic risks at frontier developers. The AI companion restrictions follow on 1 January 2027. If you deploy HR or generative tools touching Connecticut, map which of these sections attach to you as provider or deployer now, rather than at the 2027 dates.",
+      "source": "Connecticut General Assembly (Public Act 26-15)",
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00015-R00SB-00005-PA.pdf"
+    },
     {
       "j": "Cases",
       "date": "2026-09-29",
