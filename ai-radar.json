@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-10-05",
+    "updated": "2026-10-12",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,14 @@
     ]
   },
   "items": [
+    {
+      "j": "EU",
+      "date": "2026-10-09",
+      "title": "Commission convenes AI Act scientific panel on frontier-model loss-of-control incidents",
+      "summary": "The Commission held a special meeting of its Scientific Panel of 60 independent experts, with Executive Vice-President Virkkunen attending, to present recommendations on frontier AI safety and security risks. The panel and the AI Office have prepared questions for the developers of the models involved in recent loss-of-control incidents; the page names neither the incidents nor the companies. For deployers, this is the clearest sign yet that systemic-risk scrutiny is moving from information requests to incident-driven inquiry: expect GPAI providers to tighten incident reporting and downstream contract terms, and check what notice your own vendors owe you if a model you rely on is in scope. Only the Commission's announcement has been reached; no recommendations or deadlines are published yet.",
+      "source": "European Commission, Digital Strategy",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-holds-special-meeting-scientific-panel-frontier-ai-safety-and-risks"
+    },
     {
       "j": "Cases",
       "date": "2026-09-28",
