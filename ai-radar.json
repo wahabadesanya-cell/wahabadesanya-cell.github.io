@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-10-12",
+    "updated": "2026-10-13",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,14 @@
     ]
   },
   "items": [
+    {
+      "j": "US",
+      "date": "2026-10-07",
+      "title": "Cantwell six-point frontier AI framework: NIST standards, audits before release",
+      "summary": "Senator Cantwell, ranking Democrat on Senate Commerce, has outlined a framework (not a bill) for frontier AI: NIST-developed safety standards, independent audits of covered models before release, and continuous government and expert testing, plus human review of consequential AI decisions. No threshold defines a 'covered model', no bill text exists, and a minority-party framework has no near-term path to law. Treat it as a signal of where US federal oversight could go, and as another data point for pre-deployment audit evidence, rather than as an obligation.",
+      "source": "U.S. Senate Committee on Commerce, Science, and Transportation",
+      "url": "https://www.commerce.senate.gov/?p=57704"
+    },
     {
       "j": "EU",
       "date": "2026-10-09",
