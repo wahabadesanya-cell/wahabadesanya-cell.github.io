@@ -40,6 +40,20 @@
       "to_verify": ["Current list of cited standards", "M/613 deliverable status"]
     }
   ],
+  "acquisition": {
+    "status": "OWNER DECISION: purchase planned 2026-10-20. Not yet bought.",
+    "price_label": "REPORTED (search summaries, 2026-10-20; shop pages not opened). Re-check before buying.",
+    "sellers": [
+      {"body": "EVS (Estonia)", "edition": "EVS-EN 18286:2026 PDF", "price": "EUR 32.24 incl. tax", "url": "https://www.evs.ee/en/evs-en-18286-2026"},
+      {"body": "NEN (Netherlands)", "edition": "NEN-EN 18286:2026 PDF", "price": "EUR 111.18 listed; EUR 102.00 shown as current", "url": "https://www.nen.nl/en/nen-en-18286-2026-en-354718"},
+      {"body": "DIN (Germany)", "edition": "DIN EN 18286, 2026-09", "price": "from EUR 149.80 incl. VAT (German); EUR 187.30 with English translation", "url": "https://www.dinmedia.de/en/standard/din-en-18286/403880292"},
+      {"body": "BSI via Nimonik", "edition": "BS EN 18286:2026 online PDF", "price": "USD 431.32", "url": "https://standards.nimonik.com/products/bsi/bs-en-18286/"},
+      {"body": "NSAI (Ireland)", "edition": "Only the superseded draft DIN EN 18286:2025-12 found; final not confirmed", "price": "not found", "url": "https://shop.standards.ie/en-ie/standards/din-en-18286-2025-12-draft--1449242_saig_din_din_3776983/"}
+    ],
+    "do_not_buy": "prEN 18286 draft editions (pre-publication text).",
+    "inferred": "The EN text should be identical across CEN members; national forewords differ. Confirm the PDF is the English version.",
+    "record_on_purchase": {"body": null, "edition_designation": null, "language": null, "purchase_date": null, "price_paid": null, "file_sha256": null}
+  },
   "secondary_references": [
     {"title": "Nemko Digital: EN 18286 cited as harmonised QMS standard", "url": "https://digital.nemko.com/news/en-18286-eu-ai-act-cites-new-harmonized-qms-standard", "label": "REPORTED"},
     {"title": "Lovguiden: Commission publishes first harmonised AI standard EN 18286 (2026-10-14)", "url": "https://www.lovguiden.dk/en/det-offentlige/eur-lex-eu-tidende/2026-10-14-eu-kommissionen-offentliggoer-foerste-harmoniserede-ai-standard-en-18286", "label": "REPORTED"},
