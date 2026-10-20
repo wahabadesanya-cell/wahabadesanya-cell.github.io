@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Aegis Guard standards watch register",
+    "purpose": "References to harmonised standards and related instruments under the EU AI Act, with evidence labels and update triggers. References only; no product claims.",
+    "created": "2026-10-20",
+    "last_checked": "2026-10-20",
+    "checked_by": "AI-assisted internal review (not independent external validation)",
+    "label_key": "VERIFIED | MEASURED | REPORTED | INFERRED | PROVISIONAL | UNREPRODUCIBLE | OWNER DECISION REQUIRED | EXTERNAL REVIEW REQUIRED",
+    "access_note": "On 2026-10-20 the review environment could not open eur-lex.europa.eu, cencenelec.eu, digital-strategy.ec.europa.eu or the secondary pages (network policy). Every status below is therefore REPORTED from search-result summaries unless stated. No primary text was read."
+  },
+  "primary_references": [
+    {
+      "id": "impl-dec-2026-2274",
+      "title": "Commission Implementing Decision (EU) 2026/2274 citing EN 18286:2026 as a harmonised standard (Art. 40 AI Act)",
+      "url": "https://eur-lex.europa.eu/eli/dec_impl/2026/2274/oj",
+      "url_status": "Constructed from the standard ELI pattern; not opened.",
+      "claimed_dates": {"adopted": "2026-10-12", "published_oj": "2026-10-14", "in_force": "day of publication"},
+      "label": "REPORTED",
+      "basis": "Secondary summaries (law-firm, compliance-vendor and news pages) and the CEN and CENELEC post forwarded by the owner. The OJ date rests on one secondary source.",
+      "to_verify": ["Decision number, adoption and OJ publication dates", "Wording of Article 1 and the Annex", "Whether any restriction or reservation is stated"],
+      "required_action": "EXTERNAL REVIEW REQUIRED: read the OJ text before any external use."
+    },
+    {
+      "id": "en-18286-annex-za",
+      "title": "EN 18286:2026 Annex ZA (Table ZA.1): which AI Act requirements the presumption covers",
+      "url": "https://www.cencenelec.eu/news-events/news/2026/en-in-the-spotlight/2026-07-30-ai-quality-management/",
+      "url_status": "URL already recorded in data.json (id en-18286); not opened in this review.",
+      "label": "REPORTED",
+      "basis": "Secondary sources say Table ZA.1 maps Article 17(1) points (a) to (m) and the first sentence of Article 11(1); Article 17(2)-(4) are reported as not covered; Article 72 is reported as having no Annex ZA row. Sources disagree on detail.",
+      "to_verify": ["Full Table ZA.1 and the conditions on each row", "Whether Art. 17(2)-(4) and Art. 72 are excluded", "Any Annex ZB or similar caveat"],
+      "required_action": "OWNER DECISION REQUIRED: obtain the standard text (via the Irish national standards body or CEN-CENELEC) before mapping clauses."
+    },
+    {
+      "id": "ec-ai-act-standardisation",
+      "title": "European Commission: AI Act standardisation page (voluntary nature of standards, M/613 status)",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation",
+      "url_status": "Surfaced by search; not opened.",
+      "label": "REPORTED",
+      "basis": "Search summary states application of standards is voluntary and other means of showing compliance remain open.",
+      "to_verify": ["Current list of cited standards", "M/613 deliverable status"]
+    }
+  ],
+  "secondary_references": [
+    {"title": "Nemko Digital: EN 18286 cited as harmonised QMS standard", "url": "https://digital.nemko.com/news/en-18286-eu-ai-act-cites-new-harmonized-qms-standard", "label": "REPORTED"},
+    {"title": "Lovguiden: Commission publishes first harmonised AI standard EN 18286 (2026-10-14)", "url": "https://www.lovguiden.dk/en/det-offentlige/eur-lex-eu-tidende/2026-10-14-eu-kommissionen-offentliggoer-foerste-harmoniserede-ai-standard-en-18286", "label": "REPORTED"},
+    {"title": "Modulos: EN 18286 Annex ZA and presumption", "url": "https://docs.modulos.ai/frameworks/eu-ai-act/harmonized-standards/en-18286/annex-za-and-presumption", "label": "REPORTED"},
+    {"title": "Lumenova: EN 18286:2026 early breakdown", "url": "https://www.lumenova.ai/blog/en-18286-eu-ai-act-standard/", "label": "REPORTED"},
+    {"title": "AI Act Insight: where the presumption stands", "url": "https://aiactinsight.eu/en/standards/harmonised-standards/", "label": "REPORTED"},
+    {"title": "CMS: prEN 18286 first draft for public consultation", "url": "https://cms.law/en/aut/legal-updates/the-first-draft-ai-act-standard-for-public-consultation-what-pren-18286-quality-management-system-for-eu-ai-act-regulatory-purposes-signals-for", "label": "REPORTED"}
+  ],
+  "watch_items": [
+    {"id": "w-impl-dec-changes", "watch": "Corrigenda, amendments or withdrawal of Implementing Decision (EU) 2026/2274", "why": "Any change alters or removes the presumption.", "check": "EUR-Lex, Official Journal L series"},
+    {"id": "w-other-standards", "watch": "Further JTC 21 harmonised standards and their OJ citation (risk management, data governance, record-keeping/logging, human oversight, accuracy/robustness, cybersecurity, conformity assessment)", "why": "The record-keeping and cybersecurity standards are the closest fit to Aegis Guard's Article 12 and gateway-security functions. Draft numbers and status are not verified here.", "check": "CEN-CENELEC JTC 21 work programme; Commission standardisation page", "label": "REPORTED (delivery expected end of 2026 at the earliest per search summaries)"},
+    {"id": "w-omnibus", "watch": "Digital Omnibus on AI: final text, dates for Annex III and Annex I high-risk obligations, and any link between application dates and standards availability", "why": "aegis-guard.html cites Regulation (EU) 2026/1744 and a 2 Dec 2027 date; those claims were not re-verified in this review.", "check": "EUR-Lex; Council and Parliament press pages", "label": "UNVERIFIED in this review"},
+    {"id": "w-ireland-access", "watch": "Availability and price of the standard through the Irish national standards body", "why": "Needed to map Aegis Guard evidence to clauses.", "check": "Irish national standards body catalogue"},
+    {"id": "w-guidance", "watch": "Commission guidelines on high-risk classification and on Article 17 QMS expectations", "why": "May change how providers use the standard.", "check": "Commission AI Act pages"}
+  ],
+  "update_protocol": [
+    "Re-check each primary reference and watch item at the agreed cadence.",
+    "Record the check date and what was actually opened. If a primary source could not be opened, say so and leave the label at REPORTED.",
+    "Never promote a label to VERIFIED without reading the primary text.",
+    "Do not change public site copy (data.json, legislation.html, aegis-guard.html) without an owner decision."
+  ]
+}
