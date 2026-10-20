@@ -6,68 +6,167 @@
     "last_checked": "2026-10-20",
     "checked_by": "AI-assisted internal review (not independent external validation)",
     "label_key": "VERIFIED | MEASURED | REPORTED | INFERRED | PROVISIONAL | UNREPRODUCIBLE | OWNER DECISION REQUIRED | EXTERNAL REVIEW REQUIRED",
-    "access_note": "On 2026-10-20 the review environment could not open eur-lex.europa.eu, cencenelec.eu, digital-strategy.ec.europa.eu or the secondary pages (network policy). Every status below is therefore REPORTED from search-result summaries unless stated. No primary text was read."
+    "access_note": "2026-10-20 (second check): cencenelec.eu, ec.europa.eu, evs.ee and secondary pages were readable. eur-lex.europa.eu returned an empty HTTP 202 (script challenge), so the text of Implementing Decision (EU) 2026/2274 itself was NOT read. Institutional statements (Commission page, CEN-CENELEC notice) were read. Table ZA.1 content comes from a secondary page (Modulos) and has not been compared with the standard text."
   },
   "primary_references": [
     {
       "id": "impl-dec-2026-2274",
       "title": "Commission Implementing Decision (EU) 2026/2274 citing EN 18286:2026 as a harmonised standard (Art. 40 AI Act)",
       "url": "https://eur-lex.europa.eu/eli/dec_impl/2026/2274/oj",
-      "url_status": "Constructed from the standard ELI pattern; not opened.",
-      "claimed_dates": {"adopted": "2026-10-12", "published_oj": "2026-10-14", "in_force": "day of publication"},
-      "label": "REPORTED",
-      "basis": "Secondary summaries (law-firm, compliance-vendor and news pages) and the CEN and CENELEC post forwarded by the owner. The OJ date rests on one secondary source.",
-      "to_verify": ["Decision number, adoption and OJ publication dates", "Wording of Article 1 and the Annex", "Whether any restriction or reservation is stated"],
-      "required_action": "EXTERNAL REVIEW REQUIRED: read the OJ text before any external use."
+      "url_status": "EUR-Lex returns an empty script-challenge response to automated fetch; open it in a browser.",
+      "claimed_dates": {
+        "adopted": "2026-10-12",
+        "published_oj": "2026-10-14",
+        "in_force": "day of publication"
+      },
+      "label": "VERIFIED (citation and decision number, from the Commission page); REPORTED (adoption and OJ dates, decision wording)",
+      "basis": "European Commission AI Act standardisation page (read 2026-10-20) states the reference to the first harmonised standard was published in the Official Journal as Commission Implementing Decision (EU) 2026/2274, that application of standards is voluntary, and that applying a referenced harmonised standard gives a presumption of compliance. CEN-CENELEC posted 'EN 18286:2026 published in OJEU' on 2026-10-15; Commission news item dated 19 Oct 2026. Adoption 12 Oct and OJ 14 Oct 2026 come from secondary sources only.",
+      "to_verify": [
+        "Exact adoption and OJ dates",
+        "Wording of Article 1 and the Annex (reported: reference given without restriction)"
+      ],
+      "required_action": "OWNER: open the EUR-Lex page in a browser and confirm; EXTERNAL REVIEW REQUIRED before any external use of the decision's wording."
     },
     {
       "id": "en-18286-annex-za",
       "title": "EN 18286:2026 Annex ZA (Table ZA.1): which AI Act requirements the presumption covers",
-      "url": "https://www.cencenelec.eu/news-events/news/2026/en-in-the-spotlight/2026-07-30-ai-quality-management/",
-      "url_status": "URL already recorded in data.json (id en-18286); not opened in this review.",
+      "url": "https://www.cencenelec.eu/news-events/news/2026/en-in-the-spotlight/2026-10-15-en-18286-2026-published-in-ojeu/",
+      "url_status": "CEN-CENELEC notice (2026-10-15) read; it does not reproduce Annex ZA.",
       "label": "REPORTED",
-      "basis": "Secondary sources say Table ZA.1 maps Article 17(1) points (a) to (m) and the first sentence of Article 11(1); Article 17(2)-(4) are reported as not covered; Article 72 is reported as having no Annex ZA row. Sources disagree on detail.",
-      "to_verify": ["Full Table ZA.1 and the conditions on each row", "Whether Art. 17(2)-(4) and Art. 72 are excluded", "Any Annex ZB or similar caveat"],
-      "required_action": "OWNER DECISION REQUIRED: obtain the standard text (via the Irish national standards body or CEN-CENELEC) before mapping clauses."
+      "basis": "Secondary page reproducing Table ZA.1 (19 rows; not compared with the standard text): Annex ZA is informative and says conformity with the Table ZA.1 clauses gives a presumption only within the scope of the standard and only from Official Journal citation. Covered: Article 11(1) first sentence (on condition the technical documentation holds all Annex IV items); Article 17(1) first sentence and the first part of the second sentence; Article 17(1)(a) to (m) (point (g) on condition the risk management system complies with Article 9). Not covered: Article 17(2), 17(3), 17(4). No Table ZA.1 row for Articles 9, 72 or 73 as such (reached only through 17(1)(g), (h), (i)). 11 clauses have no row. Row remark: applying the standard does not as such ensure all regulatory requirements are met. WARNING 1: the presumption lasts only while the Official Journal keeps the reference.",
+      "to_verify": [
+        "Compare each Table ZA.1 row and condition with the purchased standard",
+        "Check the 11 clauses with no row"
+      ],
+      "required_action": "Confirm against the standard text once EN 18286:2026 is bought (EVS listing: English PDF, 32.24 EUR incl. tax)."
     },
     {
       "id": "ec-ai-act-standardisation",
       "title": "European Commission: AI Act standardisation page (voluntary nature of standards, M/613 status)",
       "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation",
-      "url_status": "Surfaced by search; not opened.",
-      "label": "REPORTED",
-      "basis": "Search summary states application of standards is voluntary and other means of showing compliance remain open.",
-      "to_verify": ["Current list of cited standards", "M/613 deliverable status"]
+      "url_status": "Read 2026-10-20.",
+      "label": "VERIFIED (page content as read on 2026-10-20)",
+      "basis": "States: application of standards is voluntary; harmonised standards referenced in the OJ give legal certainty and companies applying them are presumed compliant; EN 18286 was published as Implementing Decision (EU) 2026/2274; further JTC 21 work covers risk management, data governance, human oversight, accuracy, robustness, cybersecurity, quality management and conformity assessment.",
+      "to_verify": [
+        "Current list of cited standards",
+        "M/613 deliverable status"
+      ]
     }
   ],
   "acquisition": {
     "status": "OWNER DECISION: purchase planned 2026-10-20. Not yet bought.",
     "price_label": "REPORTED (search summaries, 2026-10-20; shop pages not opened). Re-check before buying.",
     "sellers": [
-      {"body": "EVS (Estonia)", "edition": "EVS-EN 18286:2026 PDF", "price": "EUR 32.24 incl. tax", "url": "https://www.evs.ee/en/evs-en-18286-2026"},
-      {"body": "NEN (Netherlands)", "edition": "NEN-EN 18286:2026 PDF", "price": "EUR 111.18 listed; EUR 102.00 shown as current", "url": "https://www.nen.nl/en/nen-en-18286-2026-en-354718"},
-      {"body": "DIN (Germany)", "edition": "DIN EN 18286, 2026-09", "price": "from EUR 149.80 incl. VAT (German); EUR 187.30 with English translation", "url": "https://www.dinmedia.de/en/standard/din-en-18286/403880292"},
-      {"body": "BSI via Nimonik", "edition": "BS EN 18286:2026 online PDF", "price": "USD 431.32", "url": "https://standards.nimonik.com/products/bsi/bs-en-18286/"},
-      {"body": "NSAI (Ireland)", "edition": "Only the superseded draft DIN EN 18286:2025-12 found; final not confirmed", "price": "not found", "url": "https://shop.standards.ie/en-ie/standards/din-en-18286-2025-12-draft--1449242_saig_din_din_3776983/"}
+      {
+        "body": "EVS (Estonia)",
+        "edition": "EVS-EN 18286:2026 PDF",
+        "price": "EUR 32.24 incl. tax",
+        "url": "https://www.evs.ee/en/evs-en-18286-2026"
+      },
+      {
+        "body": "NEN (Netherlands)",
+        "edition": "NEN-EN 18286:2026 PDF",
+        "price": "EUR 111.18 listed; EUR 102.00 shown as current",
+        "url": "https://www.nen.nl/en/nen-en-18286-2026-en-354718"
+      },
+      {
+        "body": "DIN (Germany)",
+        "edition": "DIN EN 18286, 2026-09",
+        "price": "from EUR 149.80 incl. VAT (German); EUR 187.30 with English translation",
+        "url": "https://www.dinmedia.de/en/standard/din-en-18286/403880292"
+      },
+      {
+        "body": "BSI via Nimonik",
+        "edition": "BS EN 18286:2026 online PDF",
+        "price": "USD 431.32",
+        "url": "https://standards.nimonik.com/products/bsi/bs-en-18286/"
+      },
+      {
+        "body": "NSAI (Ireland)",
+        "edition": "Only the superseded draft DIN EN 18286:2025-12 found; final not confirmed",
+        "price": "not found",
+        "url": "https://shop.standards.ie/en-ie/standards/din-en-18286-2025-12-draft--1449242_saig_din_din_3776983/"
+      }
     ],
     "do_not_buy": "prEN 18286 draft editions (pre-publication text).",
     "inferred": "The EN text should be identical across CEN members; national forewords differ. Confirm the PDF is the English version.",
-    "record_on_purchase": {"body": null, "edition_designation": null, "language": null, "purchase_date": null, "price_paid": null, "file_sha256": null}
+    "record_on_purchase": {
+      "body": null,
+      "edition_designation": null,
+      "language": null,
+      "purchase_date": null,
+      "price_paid": null,
+      "file_sha256": null
+    },
+    "language_check": "EVS listing (read 2026-10-20): language option English; PDF 32.24 EUR incl. tax; valid from 03.08.2026; single-user or multi-user licence. VERIFIED (page content). Check the title reads EVS-EN 18286:2026 before paying.",
+    "licence_warning": "Single-user licence, protected PDF (FileOpen): readable only on one computer. Do not upload or share the file. Keep extracts short.",
+    "incident_2026-10-20": "EVS-EN ISO 9001:2026 bought by mistake instead of EN 18286:2026; complaints window per EVS invoice is 14 days in writing."
   },
   "secondary_references": [
-    {"title": "Nemko Digital: EN 18286 cited as harmonised QMS standard", "url": "https://digital.nemko.com/news/en-18286-eu-ai-act-cites-new-harmonized-qms-standard", "label": "REPORTED"},
-    {"title": "Lovguiden: Commission publishes first harmonised AI standard EN 18286 (2026-10-14)", "url": "https://www.lovguiden.dk/en/det-offentlige/eur-lex-eu-tidende/2026-10-14-eu-kommissionen-offentliggoer-foerste-harmoniserede-ai-standard-en-18286", "label": "REPORTED"},
-    {"title": "Modulos: EN 18286 Annex ZA and presumption", "url": "https://docs.modulos.ai/frameworks/eu-ai-act/harmonized-standards/en-18286/annex-za-and-presumption", "label": "REPORTED"},
-    {"title": "Lumenova: EN 18286:2026 early breakdown", "url": "https://www.lumenova.ai/blog/en-18286-eu-ai-act-standard/", "label": "REPORTED"},
-    {"title": "AI Act Insight: where the presumption stands", "url": "https://aiactinsight.eu/en/standards/harmonised-standards/", "label": "REPORTED"},
-    {"title": "CMS: prEN 18286 first draft for public consultation", "url": "https://cms.law/en/aut/legal-updates/the-first-draft-ai-act-standard-for-public-consultation-what-pren-18286-quality-management-system-for-eu-ai-act-regulatory-purposes-signals-for", "label": "REPORTED"}
+    {
+      "title": "Nemko Digital: EN 18286 cited as harmonised QMS standard",
+      "url": "https://digital.nemko.com/news/en-18286-eu-ai-act-cites-new-harmonized-qms-standard",
+      "label": "REPORTED"
+    },
+    {
+      "title": "Lovguiden: Commission publishes first harmonised AI standard EN 18286 (2026-10-14)",
+      "url": "https://www.lovguiden.dk/en/det-offentlige/eur-lex-eu-tidende/2026-10-14-eu-kommissionen-offentliggoer-foerste-harmoniserede-ai-standard-en-18286",
+      "label": "REPORTED"
+    },
+    {
+      "title": "Modulos: EN 18286 Annex ZA and presumption",
+      "url": "https://docs.modulos.ai/frameworks/eu-ai-act/harmonized-standards/en-18286/annex-za-and-presumption",
+      "label": "REPORTED"
+    },
+    {
+      "title": "Lumenova: EN 18286:2026 early breakdown",
+      "url": "https://www.lumenova.ai/blog/en-18286-eu-ai-act-standard/",
+      "label": "REPORTED"
+    },
+    {
+      "title": "AI Act Insight: where the presumption stands",
+      "url": "https://aiactinsight.eu/en/standards/harmonised-standards/",
+      "label": "REPORTED"
+    },
+    {
+      "title": "CMS: prEN 18286 first draft for public consultation",
+      "url": "https://cms.law/en/aut/legal-updates/the-first-draft-ai-act-standard-for-public-consultation-what-pren-18286-quality-management-system-for-eu-ai-act-regulatory-purposes-signals-for",
+      "label": "REPORTED"
+    }
   ],
   "watch_items": [
-    {"id": "w-impl-dec-changes", "watch": "Corrigenda, amendments or withdrawal of Implementing Decision (EU) 2026/2274", "why": "Any change alters or removes the presumption.", "check": "EUR-Lex, Official Journal L series"},
-    {"id": "w-other-standards", "watch": "Further JTC 21 harmonised standards and their OJ citation (risk management, data governance, record-keeping/logging, human oversight, accuracy/robustness, cybersecurity, conformity assessment)", "why": "The record-keeping and cybersecurity standards are the closest fit to Aegis Guard's Article 12 and gateway-security functions. Draft numbers and status are not verified here.", "check": "CEN-CENELEC JTC 21 work programme; Commission standardisation page", "label": "REPORTED (delivery expected end of 2026 at the earliest per search summaries)"},
-    {"id": "w-omnibus", "watch": "Digital Omnibus on AI: final text, dates for Annex III and Annex I high-risk obligations, and any link between application dates and standards availability", "why": "aegis-guard.html cites Regulation (EU) 2026/1744 and a 2 Dec 2027 date; those claims were not re-verified in this review.", "check": "EUR-Lex; Council and Parliament press pages", "label": "UNVERIFIED in this review"},
-    {"id": "w-ireland-access", "watch": "Availability and price of the standard through the Irish national standards body", "why": "Needed to map Aegis Guard evidence to clauses.", "check": "Irish national standards body catalogue"},
-    {"id": "w-guidance", "watch": "Commission guidelines on high-risk classification and on Article 17 QMS expectations", "why": "May change how providers use the standard.", "check": "Commission AI Act pages"}
+    {
+      "id": "w-impl-dec-changes",
+      "watch": "Corrigenda, amendments or withdrawal of Implementing Decision (EU) 2026/2274",
+      "why": "Any change alters or removes the presumption.",
+      "check": "EUR-Lex, Official Journal L series"
+    },
+    {
+      "id": "w-other-standards",
+      "watch": "Further JTC 21 harmonised standards and their OJ citation (risk management, data governance, record-keeping/logging, human oversight, accuracy/robustness, cybersecurity, conformity assessment)",
+      "why": "The Commission page lists the pending areas: risk management, data governance, human oversight, accuracy, robustness, cybersecurity, quality management (now cited) and conformity assessment. The record-keeping/logging and cybersecurity standards are the closest fit to Aegis Guard. Draft numbers not verified.",
+      "check": "CEN-CENELEC JTC 21 work programme; Commission standardisation page",
+      "label": "REPORTED (delivery expected end of 2026 at the earliest per search summaries)"
+    },
+    {
+      "id": "w-omnibus",
+      "watch": "Digital Omnibus on AI: final text, dates for Annex III and Annex I high-risk obligations, and any link between application dates and standards availability",
+      "why": "aegis-guard.html cites Regulation (EU) 2026/1744 and a 2 Dec 2027 date; those claims were not re-verified in this review.",
+      "check": "EUR-Lex; Council and Parliament press pages",
+      "label": "REPORTED (Regulation (EU) 2026/1744 is named by a secondary page as amending Articles 11(1), 17(2) and 40(2); dates not re-verified)"
+    },
+    {
+      "id": "w-ireland-access",
+      "watch": "Availability and price of the standard through the Irish national standards body",
+      "why": "Needed to map Aegis Guard evidence to clauses.",
+      "check": "Irish national standards body catalogue"
+    },
+    {
+      "id": "w-guidance",
+      "watch": "Commission guidelines on high-risk classification and on Article 17 QMS expectations",
+      "why": "May change how providers use the standard.",
+      "check": "Commission AI Act pages"
+    }
   ],
   "update_protocol": [
     "Re-check each primary reference and watch item at the agreed cadence.",
