@@ -173,5 +173,21 @@
     "Record the check date and what was actually opened. If a primary source could not be opened, say so and leave the label at REPORTED.",
     "Never promote a label to VERIFIED without reading the primary text.",
     "Do not change public site copy (data.json, legislation.html, aegis-guard.html) without an owner decision."
+  ],
+  "supporting_standards": [
+    {
+      "designation": "EVS-EN ISO 9001:2026 (English, PDF, single-user licence)",
+      "role": "Baseline QMS that EN 18286 is reported to extend (REPORTED, from the CEN-CENELEC-based note already in data.json). Not AI-specific and gives no presumption of conformity.",
+      "bought": "2026-10-20 (owner decision: keep; complaints window 14 days in writing)",
+      "content_read": "No. The protected PDF has not been read in this review.",
+      "planned_use": [
+        "Delta table: ISO 9001 clause to EN 18286 clause to Article 17(1) point to evidence",
+        "Advisory offer: EN 18286-ready gap assessment for ISO 9001 holders"
+      ],
+      "do_not": [
+        "Do not claim ISO 9001 certification or conformity from owning the standard",
+        "Do not share or upload the file (single-user licence)"
+      ]
+    }
   ]
 }
