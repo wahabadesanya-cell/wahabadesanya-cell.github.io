@@ -376,7 +376,7 @@
       }
     ],
     "unknown_needs_input": [
-      "U-01: text search of the protected ISO 9001:2026 file (needs a searchable licensed copy)",
+      "U-01: closed by owner decision (2026-10-21) as read, not searched: two documented readings of the licensed copy; no keyword search was possible on the protected file and none was performed; re-open only if an external reader requires a word search",
       "U-02: independent review of the mapping and of each result",
       "U-03: done (see en18286_text_search); independent review of it still none"
     ],
@@ -409,6 +409,6 @@
       "9.6.1 reporting limits of 2, 10 and 15 days from awareness; 7.1 d) security-of-supply measures; 8.7 unique reference; 9.1 unique identification; 9.7.2.2 notice to market surveillance authorities; 9.5.3 AI system logging: all present as recorded.",
       "Front matter: CEN approval 12 July 2026; date of availability 22.07.2026; national status by January 2027; standardisation request M/613 C(2025)3871; Annex ZA Warnings 1 and 2."
     ],
-    "not_done": "Independent review (U-02) of either standard's mapping; text search of ISO 9001:2026 (U-01) still needs a searchable licensed copy."
+    "not_done": "Independent review (U-02) of either standard's mapping. U-01 closed as read, not searched (owner decision)."
   }
 }
