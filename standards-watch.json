@@ -33,7 +33,7 @@
       "url": "https://www.cencenelec.eu/news-events/news/2026/en-in-the-spotlight/2026-10-15-en-18286-2026-published-in-ojeu/",
       "url_status": "Annex ZA read in the owner's licensed copy of EVS-EN 18286:2026 (PDF pages 50 to 51). The CEN-CENELEC notice does not reproduce it.",
       "label": "VERIFIED (read in the purchased standard on 2026-10-20)",
-      "basis": "Annex ZA is informative and says conformity with the Table ZA.1 clauses gives a presumption only within the scope of the standard and only from Official Journal citation. Table ZA.1 has 19 rows. Covered: Article 11(1) first sentence (on condition the technical documentation holds all Annex IV items); Article 17(1) first sentence and the first part of the second sentence; Article 17(1)(a) to (m) (point (g) on condition the risk management system complies with Article 9). Not covered: Article 17(2), 17(3), 17(4). No row for Articles 9, 10, 12 to 15, 72 or 73 as such. Eleven clauses are cited in no row: 4.4.2, 8.1.2, 8.3.1.2, 8.4.1, 8.4.3.2, 8.6, 8.9.1, 9.2, 9.6.2.2, 10.1.1.2 and 10.1.2 (own count). Row remark: applying the standard does not by itself ensure every requirement is met. Warning 1: the presumption lasts only while the Official Journal keeps the reference.",
+      "basis": "Annex ZA is informative and says conformity with the Table ZA.1 clauses gives a presumption only within the scope of the standard and only from Official Journal citation. Table ZA.1 has 19 rows. Covered: Article 11(1) first sentence (on condition the technical documentation holds all Annex IV items); Article 17(1) first sentence and the first part of the second sentence; Article 17(1)(a) to (m) (point (g) on condition the risk management system complies with Article 9). Not covered: Article 17(2), 17(3), 17(4). No row for Articles 9, 10, 12 to 15, 72 or 73 as such. Eleven clauses are cited in no row: 4.4.2, 8.1.2, 8.3.1.2, 8.4.1, 8.4.3.2, 8.6, 8.9.1, 9.2, 9.6.2.2, 10.1.1.2 and 10.1.2 (own count, confirmed by a text-layer search of the standard; see en18286_text_search). Row remark: applying the standard does not by itself ensure every requirement is met. Warning 1: the presumption lasts only while the Official Journal keeps the reference.",
       "to_verify": [
         "Independent check of the clause count and mapping"
       ],
@@ -378,7 +378,23 @@
     "unknown_needs_input": [
       "U-01: text search of the protected ISO 9001:2026 file (needs a searchable licensed copy)",
       "U-02: independent review of the mapping and of each result",
-      "U-03: systematic text search of EN 18286 for statements that something is absent from it"
+      "U-03: done (see en18286_text_search); independent review of it still none"
     ]
+  },
+  "en18286_text_search": {
+    "label": "MEASURED (text-layer search of the owner's EVS online viewer copy of EVS-EN 18286:2026, 56 PDF pages, 55 with text). AI-assisted internal review; not independent validation.",
+    "search_date": "2026-10-21",
+    "method": "Page text layers read from the viewer in the owner's browser; term searches and a subclause inventory run on that text; nothing copied out beyond clause numbers and short paraphrases. A term with no hit was re-searched in its split or hyphenated form.",
+    "results": [
+      "Table ZA.1: 19 rows (Article 11(1) first sentence; 17(1) first sentence; 17(1) second sentence first part; 17(1)(a) to (m); 17(2), (3), (4)); 16 covered, 3 not covered; clause lists and conditions match this register.",
+      "Articles in Table ZA.1: only 11(1) and 17. Article 9 appears in the point (g) condition and in 4.4.2; Articles 10 and 12 only in 4.4.2; Article 73 only in notes to 7.3.2 and 9.6.1; Article 72 nowhere in the standard.",
+      "Subclauses of clauses 4 to 10 with no Table ZA.1 row: 11 of 83 leaf subclauses (4.4.2, 8.1.2, 8.3.1.2, 8.4.1, 8.4.3.2, 8.6, 8.9.1, 9.2, 9.6.2.2, 10.1.1.2, 10.1.2), a cited parent counting for its children.",
+      "ISO 9001:2026 is not cited anywhere; Annex B and bibliography item 3 cite EN ISO 9001:2015; item 11 cites EN ISO 9000:2015; Annex C and item 4 cite EN ISO/IEC 42001:2026.",
+      "Definition 3.1.23 (quality as fulfilling regulatory requirements; Note 2: differs from quality in EN ISO 9001), 3.4.5 (probability and severity of harm) and 3.2.8 (serious incident per Article 3(49)) read as recorded here.",
+      "Supporting standards EN 18228, EN 18284, EN 18229-1, EN 18229-2 and EN ISO/IEC 24970 are cited and footnoted as under preparation.",
+      "9.6.1 reporting limits of 2, 10 and 15 days from awareness; 7.1 d) security-of-supply measures; 8.7 unique reference; 9.1 unique identification; 9.7.2.2 notice to market surveillance authorities; 9.5.3 AI system logging: all present as recorded.",
+      "Front matter: CEN approval 12 July 2026; date of availability 22.07.2026; national status by January 2027; standardisation request M/613 C(2025)3871; Annex ZA Warnings 1 and 2."
+    ],
+    "not_done": "Independent review (U-02) of either standard's mapping; text search of ISO 9001:2026 (U-01) still needs a searchable licensed copy."
   }
 }
