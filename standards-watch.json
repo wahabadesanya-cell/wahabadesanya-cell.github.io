@@ -243,7 +243,7 @@
     "licensed_copy_used": true,
     "search_date": "2026-10-20",
     "places_read": "Introduction; scope; clauses 3 to 10 in full; Annex A (A.1 to A.10); bibliography",
-    "method_limit": "The protected PDF cannot be text-searched. Each result rests on a full read plus a targeted re-read for the listed terms. Confidence: High = concept absent from every place read; Medium-high = absent after targeted re-read; Medium = adjacent concepts found and the boundary is a matter of judgement.",
+    "method_limit": "The protected PDF cannot be text-searched. Each result rests on a full read plus a targeted re-read for the listed terms. Confidence: High = concept absent from every place read; Medium-high = absent after targeted re-read; Medium = adjacent concepts found and the boundary is a matter of judgement. Second full read on 2026-10-21 (see second_read).",
     "independent_review": "None. The mapping is the reviewer's judgement.",
     "claims": [
       {
@@ -316,7 +316,7 @@
         "element_tested": "AI system logging and per-version reference linked to documents and datasets",
         "status": "PARTIAL COUNTERPART",
         "counterpart_or_adjacent": "7.5.3.1; 7.5.3.2; 8.5.2(c)(d)",
-        "confidence": "Medium"
+        "confidence": "Medium-high (raised after the second read)"
       },
       {
         "id": "A-10",
@@ -364,7 +364,7 @@
         "element_tested": "AI-specific wording",
         "status": "NO COUNTERPART IDENTIFIED AFTER DOCUMENTED READING",
         "counterpart_or_adjacent": "adjacent wording: emerging technologies; automated interactions between devices",
-        "confidence": "Medium"
+        "confidence": "Medium-high (raised after the second read)"
       },
       {
         "id": "A-16",
@@ -379,7 +379,21 @@
       "U-01: text search of the protected ISO 9001:2026 file (needs a searchable licensed copy)",
       "U-02: independent review of the mapping and of each result",
       "U-03: done (see en18286_text_search); independent review of it still none"
-    ]
+    ],
+    "second_read": {
+      "label": "MEASURED as to pages read; results remain AI-assisted internal review after documented reading, not an automated search and not independent validation.",
+      "date": "2026-10-21",
+      "copy": "Owner's licensed single-user PDF, read on screen in Acrobat page by page (cover, contents, foreword, introduction, clauses 1 to 10, Annex A, bibliography). Acrobat Find returns no match on this file even for a word in its title, so no search was possible.",
+      "outcome": "No new counterpart found for any of A-01 to A-16; every status stands. Adjacent wording added where found. Confidence raised from Medium to Medium-high for A-09 and A-15 only.",
+      "adjacent_wording_added": [
+        "A-14: 8.3.2 g) involvement of customers and other interested parties in design and development; 9.3.2 c) and d) 4) interested-party feedback in management review",
+        "A-10: 6.1.2 note 1 and A.6.1.2 on disruption; 8.2.1 e) contingency information",
+        "A-15: 6.1.3 note (emerging technologies); 7.1.3 note (hardware, software, ICT); 7.1.6 (digital systems); A.5.3, A.7.1.2, A.7.1.3, A.7.1.4 (technologies); A.7.4 (automated interactions between devices); A.10.1 (reliance on data, integration of technologies); no AI, algorithm, machine-learning or model wording anywhere",
+        "A-16: 5.1.1 i), 7.3 e) and 7.1.4 (quality culture, ethical behaviour, non-discriminatory environment); 8.3.3 e) consequences of failure; 8.3.5 d) safe and proper provision; fundamental rights still not mentioned",
+        "A-13: 8.5.5 c) intended lifetime; A.7.1.3 disposal or recycling of infrastructure",
+        "A-07 and A-12: A.8.7 (nonconformities reported by customers or interested parties); A.10.2 (extent of investigation is the organisation's choice); still no duty to notify an authority"
+      ]
+    }
   },
   "en18286_text_search": {
     "label": "MEASURED (text-layer search of the owner's EVS online viewer copy of EVS-EN 18286:2026, 56 PDF pages, 55 with text). AI-assisted internal review; not independent validation.",
