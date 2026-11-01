@@ -193,9 +193,9 @@
 <div class="card q hide" id="q4">
   <div class="qnum">Question 5 of 6 · Prohibited practices screen</div>
   <h2>Do any systems do any of the following?</h2>
-  <p class="qhelp">These practices are banned outright — already in force since February 2025.</p>
+  <p class="qhelp">These practices are banned outright. Most bans have applied since February 2025; two new bans added by the Digital Omnibus apply from 2 December 2026.</p>
   <div class="opts">
-    <label class="opt"><input type="radio" name="proh" value="yes"><span>Possibly — we use: <b>emotion recognition in the workplace/education · social scoring · untargeted facial-image scraping · manipulative or exploitative techniques · real-time remote biometric ID in public spaces</b></span></label>
+    <label class="opt"><input type="radio" name="proh" value="yes"><span>Possibly — we use: <b>emotion recognition in the workplace/education · social scoring · untargeted facial-image scraping · manipulative or exploitative techniques · real-time remote biometric ID in public spaces · AI that generates or manipulates realistic intimate imagery of real people without consent, or child sexual abuse material</b></span></label>
     <label class="opt"><input type="radio" name="proh" value="no"><span>No — none of those</span></label>
   </div>
 </div>
@@ -359,13 +359,13 @@
     var out=[], role=ans.role;
 
     if(ans.proh==='yes'){
-      out.push(ob('⚠ Prohibited practices — immediate review needed','IN FORCE SINCE FEB 2025',
-        'One or more of your uses may fall under Article 5’s outright bans. These are not "high-risk with paperwork" — they are prohibited, and enforcement is live. This needs a factual legal review before anything else on this list.',
+      out.push(ob('⚠ Prohibited practices — immediate review needed','IN FORCE SINCE FEB 2025 · NEW BANS FROM 2 DEC 2026',
+        'One or more of your uses may fall under Article 5’s outright bans. The Digital Omnibus adds two further bans from 2 December 2026: AI systems that generate or manipulate realistic intimate imagery of an identifiable person without consent, and child sexual abuse material (Article 5(1)(ba) and (bb), subject to Article 5(1a)). These are not "high-risk with paperwork" — they are prohibited, and enforcement is live. This needs a factual legal review before anything else on this list.',
         'Article 5 — penalties up to €35M or 7% of worldwide turnover', true));
     }
     if(ans.lit==='yes'){
-      out.push(ob('AI literacy for your staff','IN FORCE FEB 2025 · ENFORCEMENT FROM 2 AUG 2026',
-        'Article 4 requires a sufficient level of AI literacy for staff dealing with AI systems — proportionate to their role and the systems used. It has applied since February 2025; national enforcement powers arrive 2 August 2026. Training records are your evidence.',
+      out.push(ob('AI literacy for your staff','IN FORCE FEB 2025 · AMENDED JUL 2026 · ENFORCEMENT FROM 2 AUG 2026',
+        'Article 4, as amended by the Digital Omnibus (Regulation (EU) 2026/1744), requires providers and deployers to take measures to support the AI literacy of staff and others operating AI systems on their behalf, taking into account their experience, training and the context of use. It does not require you to guarantee any specific level of literacy. The duty has applied since February 2025; national enforcement powers arrive 2 August 2026. Training records remain your evidence.',
         'Article 4 — applies to providers and deployers alike'));
     }
     if(ans.chat==='yes'){
@@ -391,13 +391,13 @@
     }
     if(ans.hr==='yes' || ans.hr==='unsure'){
       var lead = ans.hr==='unsure' ? 'Some of your uses may fall within Annex III — the classification exercise itself is the first obligation to get right. ' : '';
-      out.push(ob('High-risk regime — your runway, and your trap','2 DECEMBER 2027 (Omnibus, in force)',
-        lead+'The full high-risk obligations (risk management, data governance, logging, human oversight — Articles 9–17, plus deployer duties under Article 26) are deferred to 2 December 2027 by the Digital Omnibus (Regulation (EU) 2026/1744, in force 27 July 2026, an unconditional calendar date). One caution: the transparency and literacy duties above still land in 2026 regardless.',
+      out.push(ob('High-risk regime — your runway, and your trap','2 DECEMBER 2027 · 2 AUGUST 2028 IF PRODUCT-EMBEDDED (Omnibus, in force)',
+        lead+'The full high-risk obligations (risk management, data governance, logging, human oversight — Articles 9–17, plus deployer duties under Article 26) are deferred to 2 December 2027 by the Digital Omnibus (Regulation (EU) 2026/1744, in force 27 July 2026, an unconditional calendar date). High-risk AI that is a safety component of a product covered by Annex I sectoral law, such as medical devices or toys, follows a later date of 2 August 2028. One caution: the transparency and literacy duties above still land in 2026 regardless.',
         'Annex III + Articles 9–17, 26 — '+(role==='deployer'?'deployer duties under Art. 26 are yours':'provider conformity duties apply')+' · classification first'));
     }
     if(role==='gpai'){
-      out.push(ob('GPAI model obligations','2 AUGUST 2026',
-        'General-purpose AI model providers face documentation, copyright-policy and training-data summary duties, with additional obligations for models posing systemic risk. Enforcement begins 2 August 2026.',
+      out.push(ob('GPAI model obligations','IN FORCE AUG 2025 · FINES FROM 2 AUG 2026',
+        'General-purpose AI model providers face documentation, copyright-policy and training-data summary duties, with additional obligations for models posing systemic risk. These duties have applied since 2 August 2025. The Commission’s power to fine GPAI providers applies from 2 August 2026.',
         'Articles 53 and 55 — GPAI providers'));
     }
     var realCount = out.length;
@@ -629,7 +629,7 @@
     lines.push('<li>Confirmation of log retention ≥ 6 months (Article 19 / 26(6))</li>');
     lines.push('<li>If flagged high-risk above: human-oversight and monitoring arrangements (Article 26)</li>');
     lines.push('</ul>');
-    lines.push('<p style="margin-top:14px;color:#dde4ee;font-size:.9rem"><b>If this gets escalated:</b> an authorised officer can compel these records under section 70, and a documentation gap is itself grounds for further scrutiny under Article 77 — deferred to 2 December 2027 by the Digital Omnibus (Regulation (EU) 2026/1744), not the commonly-quoted 2026 date.</p>');
+    lines.push('<p style="margin-top:14px;color:#dde4ee;font-size:.9rem"><b>If this gets escalated:</b> an authorised officer can compel these records under section 70, and a documentation gap is itself grounds for further scrutiny. Since 2 August 2026, bodies that protect fundamental rights can obtain your AI documentation through the market surveillance authority (Article 77, as amended by the Digital Omnibus). The high-risk obligations that documentation evidences apply from 2 December 2027 (Regulation (EU) 2026/1744), not the commonly-quoted 2026 date.</p>');
     lines.push('</div>');
 
     lines.push('<div class="cta-band">');
