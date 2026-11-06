@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-10-13",
+    "updated": "2026-11-06",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,14 @@
     ]
   },
   "items": [
+    {
+      "j": "Cases",
+      "date": "2026-10-30",
+      "title": "OpenAI MDL: 51 amicus briefs on fair use, incl. House Judiciary members attacking DOJ's AI-training position",
+      "summary": "Ahead of summary-judgment argument in In re OpenAI Copyright Infringement Litigation (S.D.N.Y., No. 1:25-md-03143), amici filed 51 briefs by 30 October; three House Judiciary members (Raskin, Nadler, Johnson) urge the court to give the DOJ's 1 September statement of interest little or no weight, arguing national security is not a Section 107 factor and the Copyright Office was not consulted. No ruling yet, and amicus briefs are not law. For any organisation training or fine-tuning on third-party content, the point is that US fair-use doctrine for training is still open at first instance: keep licence and provenance records rather than relying on the defence.",
+      "source": "CourtListener, ECF No. 2404-1 (Members of Congress amicus brief); Publishing Perspectives (3 Nov 2026) for the wider count",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.nysd.640396/gov.uscourts.nysd.640396.2404.1.pdf"
+    },
     {
       "j": "US",
       "date": "2026-10-07",
