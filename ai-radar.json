@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-11-06",
+    "updated": "2026-11-11",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,30 @@
     ]
   },
   "items": [
+    {
+      "j": "Ireland",
+      "date": "2026-11-10",
+      "title": "Oireachtas AI Committee third interim report: 64 recommendations, incl. smart-glasses ban",
+      "summary": "The Joint Oireachtas Committee on Artificial Intelligence has published its third interim report, on AI, truth and democracy and AI-generated non-consensual sexual imagery, with 64 recommendations. As reported by RTÉ and the Irish Examiner, they include prohibiting smart glasses capable of covert recording without consent (with referral to the DPC), criminal liability for those who design or deploy systems that generate non-consensual intimate images or child sexual abuse material, new powers for An Coimisiún Toghcháin over AI-driven election interference, a rapid-response protocol between Coimisiún na Meán and the AI Office, and independent assessment before AI products that pose risks to children are deployed. These are committee recommendations, not law. They do show where Irish legislators want to go beyond the AI Act, and providers of wearable cameras and image generators selling into Ireland should expect the DPC to look at them first.",
+      "source": "RTÉ News (10 Nov 2026), reporting the Committee's Third Interim Report",
+      "url": "https://www.rte.ie/news/politics/2026/1110/1598729-oireachtas-committee-ai/"
+    },
+    {
+      "j": "EU",
+      "date": "2026-11-10",
+      "title": "Commission consults on revised DSA election guidelines aimed at generative AI risks",
+      "summary": "The Commission has opened a targeted consultation on draft revised election guidelines under the Digital Services Act. It says the update responds to rapid technological change, particularly generative AI, and draws on two years of DSA practice and the Code of Conduct on Disinformation. The drafts propose measures against information manipulation, safer recommender systems and stronger protection for political candidates. Feedback is due by 23 November 2026. The Article 35 DSA risk-mitigation duty sits with very large platforms and search engines, but AI providers whose outputs run through those services should expect the guidelines to come down to them in platform terms and contracts. That comes on top of the AI Act's Article 50 deepfake-labelling duties, which have applied since 2 August.",
+      "source": "European Commission, Shaping Europe's Digital Future",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-invites-views-draft-revised-election-guidelines-under-digital-services-act"
+    },
+    {
+      "j": "Cases",
+      "date": "2026-11-05",
+      "title": "CJEU C-205/25 Lindenberg: DPAs are controllers and owe complainants Article 15 access",
+      "summary": "The Court of Justice (Third Chamber) held that a supervisory authority handling an Article 77 GDPR complaint must be classified as a 'controller' and must, in principle, give the complainant access to their personal data and the information listed in Article 15. A national rule that denies complainants this access is precluded, and Article 23(1)(c), (h) and (i) do not save it. In practice, anyone complaining about an AI deployment can now ask the regulator for the personal data it holds on them in the complaint file, so organisations should assume their responses to a DPA may reach the complainant in that form. The right covers personal data, not, as commentators note, the whole administrative file.",
+      "source": "Court of Justice of the EU, judgment of 5 November 2026, Case C-205/25 (EUR-Lex)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A62025CJ0205"
+    },
     {
       "j": "Cases",
       "date": "2026-10-30",
