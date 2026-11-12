@@ -1,0 +1,414 @@
+{
+  "meta": {
+    "title": "Aegis Guard standards watch register",
+    "purpose": "References to harmonised standards and related instruments under the EU AI Act, with evidence labels and update triggers. References only; no product claims.",
+    "created": "2026-10-20",
+    "last_checked": "2026-10-20",
+    "checked_by": "AI-assisted internal review (not independent external validation)",
+    "label_key": "VERIFIED | MEASURED | REPORTED | INFERRED | PROVISIONAL | UNREPRODUCIBLE | OWNER DECISION REQUIRED | EXTERNAL REVIEW REQUIRED",
+    "access_note": "2026-10-20: Implementing Decision (EU) 2026/2274 and Regulation (EU) 2024/1689 (Articles 11, 16, 17, 40, 43, Annex VI, recitals 81 and 121) and Regulation (EU) 2026/1744 were read in a browser from EUR-Lex (EUR-Lex blocks automated fetches). EN 18286:2026 and EN ISO 9001:2026 were read in full from the owner's licensed English copies. Table ZA.1 was compared row by row with the purchased standard.",
+    "independent_review": "None. Every statement is AI-assisted internal review, with internal owner review where the owner has confirmed it. Neither is independent external validation, and nothing here is a conformity assessment or legal advice."
+  },
+  "primary_references": [
+    {
+      "id": "impl-dec-2026-2274",
+      "title": "Commission Implementing Decision (EU) 2026/2274 citing EN 18286:2026 as a harmonised standard (Art. 40 AI Act)",
+      "url": "https://eur-lex.europa.eu/eli/dec_impl/2026/2274/oj",
+      "url_status": "Read in a browser on 2026-10-20. EUR-Lex returns an empty script-challenge response to automated fetch.",
+      "claimed_dates": {
+        "adopted": "2026-10-12",
+        "published_oj": "2026-10-14",
+        "in_force": "day of publication (Article 2)"
+      },
+      "label": "VERIFIED (decision text, dates, Articles 1 and 2, Annex entry)",
+      "basis": "Commission Implementing Decision (EU) 2026/2274 of 12 October 2026, OJ L 14.10.2026. Article 1 publishes the reference of the harmonised standard listed in the Annex; Article 2 brings the Decision into force on the day of publication. The Annex lists one standard, EN 18286:2026, with no restriction shown. Recital 6 says the presumption runs from publication of the reference.",
+      "to_verify": [
+        "Corrigenda or amendment of the Decision (watch item w-impl-dec-changes)"
+      ],
+      "required_action": "EXTERNAL REVIEW REQUIRED before the decision's wording is used as legal advice to a customer."
+    },
+    {
+      "id": "en-18286-annex-za",
+      "title": "EN 18286:2026 Annex ZA (Table ZA.1): which AI Act requirements the presumption covers",
+      "url": "https://www.cencenelec.eu/news-events/news/2026/en-in-the-spotlight/2026-10-15-en-18286-2026-published-in-ojeu/",
+      "url_status": "Annex ZA read in the owner's licensed copy of EVS-EN 18286:2026 (PDF pages 50 to 51). The CEN-CENELEC notice does not reproduce it.",
+      "label": "VERIFIED (read in the purchased standard on 2026-10-20)",
+      "basis": "Annex ZA is informative and says conformity with the Table ZA.1 clauses gives a presumption only within the scope of the standard and only from Official Journal citation. Table ZA.1 has 19 rows. Covered: Article 11(1) first sentence (on condition the technical documentation holds all Annex IV items); Article 17(1) first sentence and the first part of the second sentence; Article 17(1)(a) to (m) (point (g) on condition the risk management system complies with Article 9). Not covered: Article 17(2), 17(3), 17(4). No row for Articles 9, 10, 12 to 15, 72 or 73 as such. Eleven clauses are cited in no row: 4.4.2, 8.1.2, 8.3.1.2, 8.4.1, 8.4.3.2, 8.6, 8.9.1, 9.2, 9.6.2.2, 10.1.1.2 and 10.1.2 (own count, confirmed by a text-layer search of the standard; see en18286_text_search). Row remark: applying the standard does not by itself ensure every requirement is met. Warning 1: the presumption lasts only while the Official Journal keeps the reference.",
+      "to_verify": [
+        "Independent check of the clause count and mapping"
+      ],
+      "required_action": "Keep the label at VERIFIED only for what Annex ZA says; the legal reach of the presumption is a separate question (see presumption_reach)."
+    },
+    {
+      "id": "ec-ai-act-standardisation",
+      "title": "European Commission: AI Act standardisation page (voluntary nature of standards, M/613 status)",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation",
+      "url_status": "Read 2026-10-20.",
+      "label": "VERIFIED (page content as read on 2026-10-20)",
+      "basis": "States: application of standards is voluntary; harmonised standards referenced in the OJ give legal certainty and companies applying them are presumed compliant; EN 18286 was published as Implementing Decision (EU) 2026/2274; further JTC 21 work covers risk management, data governance, human oversight, accuracy, robustness, cybersecurity, quality management and conformity assessment.",
+      "to_verify": [
+        "Current list of cited standards",
+        "M/613 deliverable status"
+      ]
+    },
+    {
+      "id": "reg-2026-1744-omnibus",
+      "title": "Regulation (EU) 2026/1744 (Digital Omnibus on AI) amending Regulation (EU) 2024/1689",
+      "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng",
+      "url_status": "Read in a browser on 2026-10-20 (amending provisions relevant to this register only).",
+      "label": "VERIFIED (provisions listed, as published)",
+      "basis": "Adopted 8 July 2026, OJ L 24.7.2026, in force on the third day after publication. Article 11(1): SMEs, including start-ups, and small mid-caps may give Annex IV in a simplified manner. Article 17(2): proportionality to the size of the provider, in particular SMEs including start-ups and small mid-caps. Article 40(2): the Commission is to request standardisation deliverables to facilitate joint compliance and presumption of conformity with the requirements or obligations in Chapter III, Sections 2 and 3. Article 40(1) is not amended. Chapter III Sections 1 to 3 apply from 2 December 2027 for Annex III high-risk systems and 2 August 2028 for Annex I systems. Article 63(1): SMEs may meet some QMS elements in a simplified manner. Guidelines on Articles 8(2), 9(10) and 17(3) are due by 1 August 2027.",
+      "to_verify": [
+        "Consolidated text of Regulation (EU) 2024/1689 as amended",
+        "How each product is classified under Article 6"
+      ]
+    },
+    {
+      "id": "reg-2024-1689-articles",
+      "title": "Regulation (EU) 2024/1689: Articles 11, 16, 17, 40, 43, Annex VI and recitals 81 and 121 (original 2024 text)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "url_status": "Read in a browser on 2026-10-20. This is the 2024 text; Regulation (EU) 2026/1744 has amended parts of it.",
+      "label": "VERIFIED (original text of the provisions listed)",
+      "basis": "Article 17 sits in Chapter III, Section 3. Article 40(1) refers to the requirements in Section 2 and to Chapter V obligations.",
+      "to_verify": [
+        "Other articles; Annex IV"
+      ]
+    }
+  ],
+  "acquisition": {
+    "status": "Bought 2026-10-20 (EVS, English single-user PDF). Read in full on the owner's computer.",
+    "price_label": "REPORTED (listing prices as seen on 2026-10-20; the price paid is not recorded here).",
+    "sellers": [
+      {
+        "body": "EVS (Estonia)",
+        "edition": "EVS-EN 18286:2026 PDF",
+        "price": "EUR 32.24 incl. tax",
+        "url": "https://www.evs.ee/en/evs-en-18286-2026"
+      },
+      {
+        "body": "NEN (Netherlands)",
+        "edition": "NEN-EN 18286:2026 PDF",
+        "price": "EUR 111.18 listed; EUR 102.00 shown as current",
+        "url": "https://www.nen.nl/en/nen-en-18286-2026-en-354718"
+      },
+      {
+        "body": "DIN (Germany)",
+        "edition": "DIN EN 18286, 2026-09",
+        "price": "from EUR 149.80 incl. VAT (German); EUR 187.30 with English translation",
+        "url": "https://www.dinmedia.de/en/standard/din-en-18286/403880292"
+      },
+      {
+        "body": "BSI via Nimonik",
+        "edition": "BS EN 18286:2026 online PDF",
+        "price": "USD 431.32",
+        "url": "https://standards.nimonik.com/products/bsi/bs-en-18286/"
+      },
+      {
+        "body": "NSAI (Ireland)",
+        "edition": "Only the superseded draft DIN EN 18286:2025-12 found; final not confirmed",
+        "price": "not found",
+        "url": "https://shop.standards.ie/en-ie/standards/din-en-18286-2025-12-draft--1449242_saig_din_din_3776983/"
+      }
+    ],
+    "do_not_buy": "prEN 18286 draft editions (pre-publication text).",
+    "inferred": "The EN text should be identical across CEN members; national forewords differ. Confirm the PDF is the English version.",
+    "record_on_purchase": {
+      "body": "EVS (Estonia)",
+      "edition_designation": "EVS-EN 18286:2026",
+      "language": "English",
+      "purchase_date": "2026-10-20",
+      "price_paid": null,
+      "file_sha256": null
+    },
+    "language_check": "Title page of the purchased copy reads EVS-EN 18286:2026 and the text is the English version of EN 18286:2026 (national foreword, date of availability 22.07.2026). VERIFIED (read on screen).",
+    "licence_warning": "Single-user licence, protected PDF (FileOpen): readable only on one computer. Do not upload or share the file. Keep extracts short."
+  },
+  "secondary_references": [
+    {
+      "title": "Nemko Digital: EN 18286 cited as harmonised QMS standard",
+      "url": "https://digital.nemko.com/news/en-18286-eu-ai-act-cites-new-harmonized-qms-standard",
+      "label": "REPORTED"
+    },
+    {
+      "title": "Lovguiden: Commission publishes first harmonised AI standard EN 18286 (2026-10-14)",
+      "url": "https://www.lovguiden.dk/en/det-offentlige/eur-lex-eu-tidende/2026-10-14-eu-kommissionen-offentliggoer-foerste-harmoniserede-ai-standard-en-18286",
+      "label": "REPORTED"
+    },
+    {
+      "title": "Modulos: EN 18286 Annex ZA and presumption",
+      "url": "https://docs.modulos.ai/frameworks/eu-ai-act/harmonized-standards/en-18286/annex-za-and-presumption",
+      "label": "REPORTED"
+    },
+    {
+      "title": "Lumenova: EN 18286:2026 early breakdown",
+      "url": "https://www.lumenova.ai/blog/en-18286-eu-ai-act-standard/",
+      "label": "REPORTED"
+    },
+    {
+      "title": "AI Act Insight: where the presumption stands",
+      "url": "https://aiactinsight.eu/en/standards/harmonised-standards/",
+      "label": "REPORTED"
+    },
+    {
+      "title": "CMS: prEN 18286 first draft for public consultation",
+      "url": "https://cms.law/en/aut/legal-updates/the-first-draft-ai-act-standard-for-public-consultation-what-pren-18286-quality-management-system-for-eu-ai-act-regulatory-purposes-signals-for",
+      "label": "REPORTED"
+    }
+  ],
+  "watch_items": [
+    {
+      "id": "w-impl-dec-changes",
+      "watch": "Corrigenda, amendments or withdrawal of Implementing Decision (EU) 2026/2274",
+      "why": "Any change alters or removes the presumption.",
+      "check": "EUR-Lex, Official Journal L series"
+    },
+    {
+      "id": "w-other-standards",
+      "watch": "Further JTC 21 harmonised standards and their OJ citation (risk management, data governance, record-keeping/logging, human oversight, accuracy/robustness, cybersecurity, conformity assessment)",
+      "why": "The Commission page lists the pending areas: risk management, data governance, human oversight, accuracy, robustness, cybersecurity, quality management (now cited) and conformity assessment. The record-keeping/logging and cybersecurity standards are the closest fit to Aegis Guard. Draft numbers not verified.",
+      "check": "CEN-CENELEC JTC 21 work programme; Commission standardisation page",
+      "label": "REPORTED (delivery expected end of 2026 at the earliest per search summaries)"
+    },
+    {
+      "id": "w-omnibus",
+      "watch": "Regulation (EU) 2026/1744 (Digital Omnibus on AI): application, consolidated text and Commission guidelines",
+      "why": "Read on 2026-10-20. It amends Articles 11(1), 17(2) and 40(2) and moves Chapter III Sections 1 to 3 to 2 December 2027 (Annex III high-risk systems) and 2 August 2028 (Annex I systems). Guidelines on Articles 8(2), 9(10) and 17(3) are due by 1 August 2027.",
+      "check": "EUR-Lex; Council and Parliament press pages",
+      "label": "VERIFIED (provisions read as published); classification of any given system not assessed"
+    },
+    {
+      "id": "w-ireland-access",
+      "watch": "Availability and price of the standard through the Irish national standards body",
+      "why": "EN 18286 is now bought through EVS; this item remains for Irish-language or national-annex needs only.",
+      "check": "Irish national standards body catalogue"
+    },
+    {
+      "id": "w-guidance",
+      "watch": "Commission guidelines on high-risk classification and on Article 17 QMS expectations",
+      "why": "May change how providers use the standard.",
+      "check": "Commission AI Act pages"
+    },
+    {
+      "id": "w-supporting-standards",
+      "watch": "Publication and Official Journal citation of the standards EN 18286 points to: EN 18228 (risk management), EN 18284 (datasets), EN 18229-1 (logging), EN 18229-2 (accuracy and robustness), EN ISO/IEC 24970 (AI system logging)",
+      "why": "EN 18286's bibliography (read 2026-10-20) shows each as under preparation at publication. Table ZA.1 has no row for Articles 9, 10 or 12.",
+      "check": "CEN-CENELEC JTC 21 work programme; Commission standardisation page",
+      "label": "VERIFIED (bibliography entries); status since publication not checked"
+    },
+    {
+      "id": "w-edition-reference",
+      "watch": "A later edition or amendment of EN 18286, and the matching Official Journal reference",
+      "why": "The Decision cites the dated designation EN 18286:2026. The presumption attaches to the cited edition (EVS referencing guideline, section 10, supports this reading).",
+      "check": "EUR-Lex, Official Journal L series; CEN-CENELEC",
+      "label": "INFERRED"
+    }
+  ],
+  "update_protocol": [
+    "Re-check each primary reference and watch item at the agreed cadence.",
+    "Record the check date and what was actually opened. If a primary source could not be opened, say so and leave the label at REPORTED.",
+    "Never promote a label to VERIFIED without reading the primary text.",
+    "Do not change public site copy (data.json, legislation.html, aegis-guard.html) without an owner decision."
+  ],
+  "supporting_standards": [
+    {
+      "designation": "EVS-EN ISO 9001:2026 (English, PDF, single-user licence) = EN ISO 9001:2026, sixth edition, published 2026-09-16",
+      "role": "Comparison baseline in the QMS gap assessment against EN 18286. General, not AI-specific, and gives no presumption of conformity. EN 18286 defines quality as fulfilling regulatory requirements and says this differs from quality in ISO 9001 (definition 3.1.23, Note 2); its own annexes and bibliography cite the 2015 edition of ISO 9001.",
+      "bought": "2026-10-20",
+      "content_read": "Full licensed English copy read on screen on 2026-10-20: introduction (also the public ISO sample), scope, clauses 3 to 10, Annex A, bibliography. The protected PDF cannot be text-searched, so the comparison rests on reading, not on an automated search.",
+      "planned_use": [
+        "Delta table: ISO 9001:2026 clause to EN 18286 clause to Article 17(1) point to evidence",
+        "Advisory offer wording: QMS gap assessment against EN 18286, with ISO 9001:2026 as a comparison baseline"
+      ],
+      "do_not": [
+        "Do not claim ISO 9001 certification, conformity or equivalence from owning the standard",
+        "Do not describe EN 18286 as building on or extending ISO 9001:2026",
+        "Do not share or upload the file (single-user licence)"
+      ]
+    }
+  ],
+  "presumption_reach": {
+    "label": "INFERRED (AI-assisted internal analysis from the texts read on 2026-10-20). OWNER DECISION REQUIRED on customer-facing wording.",
+    "points": [
+      "Article 11 sits in Chapter III, Section 2, so Article 40(1) covers the Article 11(1) row on its words.",
+      "Article 17 sits in Section 3. Article 40(1), which Regulation (EU) 2026/1744 did not amend, names Section 2 requirements and Chapter V obligations.",
+      "Pointing the other way: Article 16(c) requires a QMS that complies with Article 17; Articles 17(1)(e) and 17(4) refer to harmonised standards; recital 121 treats compliance with harmonised standards as a means to demonstrate conformity; recitals 3 to 5 of Decision 2026/2274 treat EN 18286 as a harmonised standard in support of the Regulation; Annex ZA states a presumption for each Table ZA.1 row; the new Article 40(2) subparagraph refers to presumption of conformity for Sections 2 and 3.",
+      "Annex VI point 2 has the provider verify its QMS against Article 17, and Table ZA.1 says applying the standard does not by itself ensure every requirement is met."
+    ],
+    "working_position": "EN 18286 is cited in the Official Journal and Annex ZA states a presumption for the Table ZA.1 rows within its scope. Do not say that Article 40(1) itself gives a presumption of conformity with Article 17. Do not promise a customer a presumption."
+  },
+  "iso9001_comparison": {
+    "offer_wording": "QMS gap assessment against EN 18286, with ISO 9001:2026 as a comparison baseline.",
+    "source_identifier": "EVS-EN ISO 9001:2026 (EN ISO 9001:2026, ISO 9001:2026 sixth edition)",
+    "edition_note": "Published 2026-09 (16 September); supersedes EN ISO 9001:2015 and its Amendment 1:2024 (European foreword).",
+    "licensed_copy_used": true,
+    "search_date": "2026-10-20",
+    "places_read": "Introduction; scope; clauses 3 to 10 in full; Annex A (A.1 to A.10); bibliography",
+    "method_limit": "The protected PDF cannot be text-searched. Each result rests on a full read plus a targeted re-read for the listed terms. Confidence: High = concept absent from every place read; Medium-high = absent after targeted re-read; Medium = adjacent concepts found and the boundary is a matter of judgement. Second full read on 2026-10-21 (see second_read).",
+    "independent_review": "None. The mapping is the reviewer's judgement.",
+    "claims": [
+      {
+        "id": "A-01",
+        "delta_row": "Art 11(1)",
+        "element_tested": "Technical documentation set shown to authorities",
+        "status": "PARTIAL COUNTERPART",
+        "counterpart_or_adjacent": "7.5; 8.3.5; 8.5.1(a)",
+        "confidence": "Medium-high"
+      },
+      {
+        "id": "A-02",
+        "delta_row": "Art 17(1)(a)",
+        "element_tested": "Written regulatory compliance strategy, conformity assessment choice, substantial-modification decision",
+        "status": "PARTIAL COUNTERPART",
+        "counterpart_or_adjacent": "5.1.2(a); 8.2.2(a)(1); 8.2.3.1(d); 8.3.3(c); 8.3.6; 8.5.6; 8.6",
+        "confidence": "Medium-high"
+      },
+      {
+        "id": "A-03",
+        "delta_row": "Art 17(1)(e)",
+        "element_tested": "Record of what a harmonised standard leaves uncovered",
+        "status": "PARTIAL COUNTERPART",
+        "counterpart_or_adjacent": "8.3.3(d)",
+        "confidence": "Medium-high"
+      },
+      {
+        "id": "A-04",
+        "delta_row": "Art 17(1)(f)",
+        "element_tested": "Data management across acquisition, collection, labelling, filtration, aggregation",
+        "status": "NO COUNTERPART IDENTIFIED AFTER DOCUMENTED READING",
+        "counterpart_or_adjacent": "adjacent: 8.5.3 note; 8.5.4; 7.5.3.2(d)",
+        "confidence": "Medium-high"
+      },
+      {
+        "id": "A-05",
+        "delta_row": "Art 17(1)(g)",
+        "element_tested": "Risk management system across the AI system life cycle",
+        "status": "NO COUNTERPART IDENTIFIED AFTER DOCUMENTED READING",
+        "counterpart_or_adjacent": "6.1 concerns QMS risks only; Annex A.6.1.2",
+        "confidence": "High"
+      },
+      {
+        "id": "A-06",
+        "delta_row": "Art 17(1)(h)",
+        "element_tested": "Plan-based post-market monitoring system",
+        "status": "PARTIAL COUNTERPART",
+        "counterpart_or_adjacent": "8.5.5; 9.1.2; 9.1.3",
+        "confidence": "Medium-high"
+      },
+      {
+        "id": "A-07",
+        "delta_row": "Art 17(1)(i)",
+        "element_tested": "Serious-incident investigation and reporting to authorities with deadlines",
+        "status": "NO COUNTERPART IDENTIFIED AFTER DOCUMENTED READING",
+        "counterpart_or_adjacent": "adjacent: 8.7.1(c); 8.5.5; 10.2.1",
+        "confidence": "High"
+      },
+      {
+        "id": "A-08",
+        "delta_row": "Art 17(1)(j)",
+        "element_tested": "Procedures to communicate with competent authorities and notified bodies",
+        "status": "PARTIAL COUNTERPART",
+        "counterpart_or_adjacent": "7.4; 8.2.1; 8.6",
+        "confidence": "Medium-high"
+      },
+      {
+        "id": "A-09",
+        "delta_row": "Art 17(1)(k)",
+        "element_tested": "AI system logging and per-version reference linked to documents and datasets",
+        "status": "PARTIAL COUNTERPART",
+        "counterpart_or_adjacent": "7.5.3.1; 7.5.3.2; 8.5.2(c)(d)",
+        "confidence": "Medium-high (raised after the second read)"
+      },
+      {
+        "id": "A-10",
+        "delta_row": "Art 17(1)(l)",
+        "element_tested": "Security-of-supply measures",
+        "status": "PARTIAL COUNTERPART",
+        "counterpart_or_adjacent": "7.1.1(b); 8.2.1(e); 8.4",
+        "confidence": "Medium"
+      },
+      {
+        "id": "A-11",
+        "delta_row": "EN 18286 8.8",
+        "element_tested": "Continuous-learning AI systems",
+        "status": "NO COUNTERPART IDENTIFIED AFTER DOCUMENTED READING",
+        "counterpart_or_adjacent": "8.3.6; 8.5.6 (general change control only)",
+        "confidence": "High"
+      },
+      {
+        "id": "A-12",
+        "delta_row": "EN 18286 9.7.2",
+        "element_tested": "AI system presenting a risk, with notice to market surveillance authorities",
+        "status": "PARTIAL COUNTERPART",
+        "counterpart_or_adjacent": "8.7.1(a)-(c); 10.2.1 (containment only)",
+        "confidence": "High"
+      },
+      {
+        "id": "A-13",
+        "delta_row": "EN 18286 8.6",
+        "element_tested": "Retirement of AI systems",
+        "status": "PARTIAL COUNTERPART",
+        "counterpart_or_adjacent": "8.5.5 note",
+        "confidence": "Medium-high"
+      },
+      {
+        "id": "A-14",
+        "delta_row": "EN 18286 8.3.1.2, 8.4.3.2, Annex A",
+        "element_tested": "Consultation with affected persons on health, safety and fundamental rights",
+        "status": "PARTIAL COUNTERPART",
+        "counterpart_or_adjacent": "4.2",
+        "confidence": "Medium-high"
+      },
+      {
+        "id": "A-15",
+        "delta_row": "All",
+        "element_tested": "AI-specific wording",
+        "status": "NO COUNTERPART IDENTIFIED AFTER DOCUMENTED READING",
+        "counterpart_or_adjacent": "adjacent wording: emerging technologies; automated interactions between devices",
+        "confidence": "Medium-high (raised after the second read)"
+      },
+      {
+        "id": "A-16",
+        "delta_row": "All",
+        "element_tested": "Protection of health, safety and fundamental rights as the purpose",
+        "status": "NO COUNTERPART IDENTIFIED AFTER DOCUMENTED READING",
+        "counterpart_or_adjacent": "8.3.5(d) safe and proper provision",
+        "confidence": "Medium-high"
+      }
+    ],
+    "unknown_needs_input": [
+      "U-01: closed by owner decision (2026-10-21) as read, not searched: two documented readings of the licensed copy; no keyword search was possible on the protected file and none was performed; re-open only if an external reader requires a word search",
+      "U-02: independent review of the mapping and of each result",
+      "U-03: done (see en18286_text_search); independent review of it still none"
+    ],
+    "second_read": {
+      "label": "MEASURED as to pages read; results remain AI-assisted internal review after documented reading, not an automated search and not independent validation.",
+      "date": "2026-10-21",
+      "copy": "Owner's licensed single-user PDF, read on screen in Acrobat page by page (cover, contents, foreword, introduction, clauses 1 to 10, Annex A, bibliography). Acrobat Find returns no match on this file even for a word in its title, so no search was possible.",
+      "outcome": "No new counterpart found for any of A-01 to A-16; every status stands. Adjacent wording added where found. Confidence raised from Medium to Medium-high for A-09 and A-15 only.",
+      "adjacent_wording_added": [
+        "A-14: 8.3.2 g) involvement of customers and other interested parties in design and development; 9.3.2 c) and d) 4) interested-party feedback in management review",
+        "A-10: 6.1.2 note 1 and A.6.1.2 on disruption; 8.2.1 e) contingency information",
+        "A-15: 6.1.3 note (emerging technologies); 7.1.3 note (hardware, software, ICT); 7.1.6 (digital systems); A.5.3, A.7.1.2, A.7.1.3, A.7.1.4 (technologies); A.7.4 (automated interactions between devices); A.10.1 (reliance on data, integration of technologies); no AI, algorithm, machine-learning or model wording anywhere",
+        "A-16: 5.1.1 i), 7.3 e) and 7.1.4 (quality culture, ethical behaviour, non-discriminatory environment); 8.3.3 e) consequences of failure; 8.3.5 d) safe and proper provision; fundamental rights still not mentioned",
+        "A-13: 8.5.5 c) intended lifetime; A.7.1.3 disposal or recycling of infrastructure",
+        "A-07 and A-12: A.8.7 (nonconformities reported by customers or interested parties); A.10.2 (extent of investigation is the organisation's choice); still no duty to notify an authority"
+      ]
+    }
+  },
+  "en18286_text_search": {
+    "label": "MEASURED (text-layer search of the owner's EVS online viewer copy of EVS-EN 18286:2026, 56 PDF pages, 55 with text). AI-assisted internal review; not independent validation.",
+    "search_date": "2026-10-21",
+    "method": "Page text layers read from the viewer in the owner's browser; term searches and a subclause inventory run on that text; nothing copied out beyond clause numbers and short paraphrases. A term with no hit was re-searched in its split or hyphenated form.",
+    "results": [
+      "Table ZA.1: 19 rows (Article 11(1) first sentence; 17(1) first sentence; 17(1) second sentence first part; 17(1)(a) to (m); 17(2), (3), (4)); 16 covered, 3 not covered; clause lists and conditions match this register.",
+      "Articles in Table ZA.1: only 11(1) and 17. Article 9 appears in the point (g) condition and in 4.4.2; Articles 10 and 12 only in 4.4.2; Article 73 only in notes to 7.3.2 and 9.6.1; Article 72 nowhere in the standard.",
+      "Subclauses of clauses 4 to 10 with no Table ZA.1 row: 11 of 83 leaf subclauses (4.4.2, 8.1.2, 8.3.1.2, 8.4.1, 8.4.3.2, 8.6, 8.9.1, 9.2, 9.6.2.2, 10.1.1.2, 10.1.2), a cited parent counting for its children.",
+      "ISO 9001:2026 is not cited anywhere; Annex B and bibliography item 3 cite EN ISO 9001:2015; item 11 cites EN ISO 9000:2015; Annex C and item 4 cite EN ISO/IEC 42001:2026.",
+      "Definition 3.1.23 (quality as fulfilling regulatory requirements; Note 2: differs from quality in EN ISO 9001), 3.4.5 (probability and severity of harm) and 3.2.8 (serious incident per Article 3(49)) read as recorded here.",
+      "Supporting standards EN 18228, EN 18284, EN 18229-1, EN 18229-2 and EN ISO/IEC 24970 are cited and footnoted as under preparation.",
+      "9.6.1 reporting limits of 2, 10 and 15 days from awareness; 7.1 d) security-of-supply measures; 8.7 unique reference; 9.1 unique identification; 9.7.2.2 notice to market surveillance authorities; 9.5.3 AI system logging: all present as recorded.",
+      "Front matter: CEN approval 12 July 2026; date of availability 22.07.2026; national status by January 2027; standardisation request M/613 C(2025)3871; Annex ZA Warnings 1 and 2."
+    ],
+    "not_done": "Independent review (U-02) of either standard's mapping. U-01 closed as read, not searched (owner decision)."
+  }
+}
