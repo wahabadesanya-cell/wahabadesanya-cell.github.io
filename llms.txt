@@ -18,7 +18,7 @@ Organisations providing or deploying AI in the EU market; Nigerian companies who
 - [EU AI Act Obligation Checker](https://adesanyaaiadvisory.com/obligation-checker.html): six questions, no email required — returns which EU AI Act obligations apply and their deadlines.
 
 ## Reference & analysis
-- [AI Legislation Library](https://adesanyaaiadvisory.com/legislation.html): curated index of AI laws across the EU, Ireland, the US, Nigeria and the UK with links to official texts.
+- [AI Legislation Library](https://adesanyaaiadvisory.com/legislation.html): curated index of AI laws across the EU, Ireland, the US, Nigeria and the UK with links to official texts, plus a member-state implementation section covering national AI Act enforcement machinery (Italy Law 132/2025; Germany KI-MIG; Greece Law 5321/2026; Spain and France still pending). That section is not exhaustive of the 27 member states and says so.
 - [Knowledge Base](https://adesanyaaiadvisory.com/knowledge-base.html): curated primary sources on the EU AI Act, AI governance, AI contracting and data privacy.
 - Articles: analysis of the EU AI Act deadline structure, AI audit frameworks, AI contract clauses, AI governance infrastructure, and Nigerian data protection enforcement (GTCO/NDPA judgment) and its implications for GDPR-regulated companies.
 
