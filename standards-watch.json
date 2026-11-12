@@ -201,6 +201,12 @@
       "why": "The Decision cites the dated designation EN 18286:2026. The presumption attaches to the cited edition (EVS referencing guideline, section 10, supports this reading).",
       "check": "EUR-Lex, Official Journal L series; CEN-CENELEC",
       "label": "INFERRED"
+    },
+    {
+      "id": "w-42001-licence-and-edition",
+      "watch": "ISO/IEC 42001: the NSAI decision on a licence for Annex A clause numbers in a product, and which edition the owner holds (ISO/IEC 42001:2023 or EN ISO/IEC 42001:2026)",
+      "why": "The standard is held but not yet referenced in the workbook's sources or on public pages beyond the 2023 citations; product use depends on the licence.",
+      "check": "NSAI reply to the Digital Use Enquiry; ISO order receipt; EVS and NSAI catalogues for the EN edition"
     }
   ],
   "update_protocol": [
@@ -223,6 +229,20 @@
         "Do not claim ISO 9001 certification, conformity or equivalence from owning the standard",
         "Do not describe EN 18286 as building on or extending ISO 9001:2026",
         "Do not share or upload the file (single-user licence)"
+      ]
+    },
+    {
+      "designation": "ISO/IEC 42001 (AI management system standard), bought directly from ISO",
+      "edition": "To be confirmed from the order receipt. Public pages cite ISO/IEC 42001:2023. The EN 18286 uncertainty-register note records that EN 18286 Annex C and bibliography item 4 cite EN ISO/IEC 42001:2026 (ISO/IEC 42001:2023).",
+      "role": "AI management system standard. EN 18286 Annex C maps to it. Used internally by the owner; not part of the comparison baseline in the EN 18286 gap assessment, which uses ISO 9001:2026.",
+      "bought": "Owner statement, 2026-11-12: bought from ISO directly and processed. REPORTED: no ISO order email is in the work mailbox.",
+      "content_read": "Not recorded in this register. The owner says it was used internally.",
+      "licence": "Understood as an ISO Store single-user licence (REPORTED). ISO customer service (10 and 28 September 2026) and NSAI (2 October 2026) said that a standard single-user licence does not cover showing Annex A clause numbers in a commercial product's audit records; a broader licence comes from the national member, NSAI for Ireland. No licensing decision is recorded as received.",
+      "label": "REPORTED (purchase and edition). VERIFIED (the licensing statements, from the emails). AI-assisted internal review; not independent validation.",
+      "do_not": [
+        "Do not show Annex A clause numbers in product records until a licence is recorded here",
+        "Do not claim ISO/IEC 42001 certification or conformity",
+        "Do not share or copy the file"
       ]
     }
   ],
