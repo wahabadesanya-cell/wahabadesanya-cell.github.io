@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Law & Regulation Radar",
-    "updated": "2026-11-11",
+    "updated": "2026-11-13",
     "note": "Curated current AI legal and regulatory developments across the EU, Ireland, US and Nigeria, plus Nigerian Bar Association / profession updates and notable AI court cases. Refreshed daily by a scheduled task. Summaries are original; follow the source link for detail.",
     "jurisdictions": [
       "EU",
@@ -19,6 +19,30 @@
     ]
   },
   "items": [
+    {
+      "j": "Cases",
+      "date": "2026-11-12",
+      "title": "Nonprofits sue Anthropic, Google, Meta, OpenAI and SpaceX AI unit to halt frontier AI work",
+      "summary": "Four nonprofits (Irreplaceable Education Fund, Public Citizen, Heat Initiative and The Alliance for Secure AI) have brought a complaint for injunctive relief in San Francisco Superior Court under California's Unfair Competition Law, Bus. & Prof. Code § 17200; their press release says it was filed on 12 November, and no case number is public yet. The complaint attacks five practices, among them recursive self-improvement, building AGI or superintelligence, and deploying systems that can escape their developers' control, and the plaintiffs say they want development of the most advanced systems frozen. The copy reviewed was incomplete, so the exact orders sought were not checked. Whatever its prospects, treat it as a supplier-continuity question: if a product depends on one frontier model, check what the contract says should that model be suspended, withdrawn or frozen at its current version.",
+      "source": "Complaint, Irreplaceable Education Fund et al. v. Anthropic PBC et al. (S.F. Superior Court), copy published by plaintiffs' counsel",
+      "url": "https://www.platkinllp.com/2026/11/12/complaint-for-injunctive-relief-for-violations-of-the-unfair-competition-laws/"
+    },
+    {
+      "j": "EU",
+      "date": "2026-11-11",
+      "title": "Digital Fairness Act proposed: curbs on profiling-based pricing and ad targeting",
+      "summary": "On 11 November the Commission adopted its proposal for a Digital Fairness Act, COM(2026) 1100, a Regulation that would replace the Unfair Commercial Practices Directive. For AI deployers the live provisions are Article 12 (limits on ad targeting based on profiling of minors or on special-category data), Article 13 (limits on profiling-based personalised pricing aimed at minors and vulnerable consumers), Article 25 (a right to reach a human after the contract is concluded) and Articles 26–27 (rules for consumers' own automated contracting systems); the explanatory memorandum presents it as complementing the AI Act. It is a proposal, not law, and now goes to Parliament and Council. Any business running algorithmic pricing, profile-based ad targeting or chatbot-only customer service should map those flows against Articles 12, 13 and 25 now, while the text can still be influenced.",
+      "source": "European Commission — Proposal for a Digital Fairness Act, COM(2026) 1100 final",
+      "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/digital-fairness-act_en"
+    },
+    {
+      "j": "Cases",
+      "date": "2026-11-06",
+      "title": "Kahn v Anthropic: claims over Claude Max usage-limit marketing survive dismissal",
+      "summary": "On 6 November Magistrate Judge Alex Tse (N.D. Cal., No. 3:26-cv-05763) allowed negligent misrepresentation and breach of contract claims to proceed against Anthropic over how it marketed the usage allowances of its Claude Max tiers, according to The Next Web and Glitchwire, both relying on Courthouse News; the order itself was not reviewed. The California unfair-competition and false-advertising claims were reportedly dismissed, one consumer-law claim was dismissed with leave to amend, and the claim that tightening limits mid-billing-period was unfair failed. The practical point for anyone selling an AI service: capacity multipliers in marketing are being treated as factual representations that can ground contract claims. State the baseline and the limits in the same place you make the claim.",
+      "source": "The Next Web (reporting Courthouse News); order not reviewed",
+      "url": "https://thenextweb.com/news/anthropic-claude-max-lawsuit-ruling-usage-claims"
+    },
     {
       "j": "Ireland",
       "date": "2026-11-10",
