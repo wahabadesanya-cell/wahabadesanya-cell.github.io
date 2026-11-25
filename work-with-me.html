@@ -347,11 +347,11 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
         <div class="service-num">04</div>
         <div class="service-badge" style="margin-bottom:14px;border-color:rgba(233,184,114,.3);"><span class="dot" style="background:var(--lamp);animation:pulse 2s ease-out infinite;"></span>Early access</div>
         <h2>Aegis Guard Gateway™<br><span style="font-size:.75em;opacity:.7;">Enterprise Early Access</span></h2>
-        <p class="lede">Aegis Guard is an enterprise-grade MCP (Model Context Protocol) gateway that sits between your LLM clients and internal systems. It enforces EU AI Act risk-tier rules and ISO 42001 controls in real time — every request, every response, logged and auditable.</p>
+        <p class="lede">Aegis Guard Gateway is an MCP (Model Context Protocol) gateway that runs in front of the tools you wrap. It applies EU AI Act risk-tier rules before each wrapped tool runs and writes signed, tamper-evident records.</p>
         <ul class="service-includes">
           <li>Real-time JSON-RPC payload interception and risk classification</li>
           <li>EU AI Act tier enforcement — blocks Prohibited, flags High-Risk automatically</li>
-          <li>ISO 42001 Annex A control mapping baked into the gateway layer</li>
+          <li>Findings tagged with the gateway's own control registry</li>
           <li>HMAC-SHA256 tamper-evident audit logging for regulatory defence</li>
           <li>PII detection by type and severity; audit records that hold no tool-call arguments</li>
           <li>Dedicated onboarding and implementation support</li>

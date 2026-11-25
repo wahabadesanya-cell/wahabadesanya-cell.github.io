@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com; media-src 'self'; connect-src 'self' https://formsubmit.co https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com; form-action 'self' https://formsubmit.co; frame-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Aegis Guard Gateway — Real-Time AI Compliance at the Point of Execution | Adesanya AI Advisory</title>
-<meta name="description" content="Aegis Guard Gateway enforces EU AI Act risk-tier rules and Article 12 logging in real time, at the moment AI calls a tool, and flags consent-related language in the payload. Architecture Review, Pilot, and Retainer engagements available.">
+<meta name="description" content="Aegis Guard Gateway applies EU AI Act risk-tier rules to each call to a wrapped MCP tool before the tool runs, and writes signed audit records. Architecture Review, Pilot, and Retainer engagements available.">
 <link rel="canonical" href="https://adesanyaaiadvisory.com/aegis-guard">
 <meta property="og:title" content="Aegis Guard Gateway — Real-Time AI Compliance Enforcement">
 <meta property="og:description" content="Proprietary architecture that enforces EU AI Act risk-tier rules and Article 12 logging at the point of AI execution. Transparency obligations: 2 August 2026. Annex III high-risk AI: 2 December 2027.">
@@ -1449,26 +1449,6 @@ footer {
  "image": "https://adesanyaaiadvisory.com/og-image.png"
 }
 </script>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "VideoObject",
- "name": "How Aegis Guard Gateway Enforces the EU AI Act Risk Taxonomy in Real Time",
- "description": "A walkthrough of the Aegis Guard Gateway compliance mechanism: request interception, EU AI Act risk-taxonomy evaluation, fail-closed enforcement, and a HMAC-SHA256 tamper-evident audit trail that holds no tool-call arguments.",
- "thumbnailUrl": "https://adesanyaaiadvisory.com/aegis-guard-video-poster.png",
- "uploadDate": "2026-07-26",
- "contentUrl": "https://adesanyaaiadvisory.com/aegis-guard-mechanism-walkthrough.mp4",
- "duration": "PT7M35S",
- "publisher": {
-  "@type": "Organization",
-  "name": "Adesanya AI Advisory",
-  "logo": {
-   "@type": "ImageObject",
-   "url": "https://adesanyaaiadvisory.com/og-image.png"
-  }
- }
-}
-</script>
 </head>
 <body>
 
@@ -1511,7 +1491,7 @@ footer {
 <section class="hero">
   <p class="hero-eyebrow">Aegis Guard Gateway™ · <span>Adesanya AI Advisory™</span></p>
   <h1>Compliance enforced at the <em>moment</em> AI executes.</h1>
-  <p class="hero-sub">Aegis Guard Gateway sits in your live AI data path. It evaluates every tool call against the EU AI Act risk taxonomy before it runs and flags personal-data patterns such as card numbers, IBANs and email addresses, recording the type and severity in a tamper-evident audit trail — resolving the GDPR–AI Act compliance conflict at the architectural level.</p>
+  <p class="hero-sub">Aegis Guard Gateway runs in front of the tools you wrap. It assesses each call to a wrapped tool against the EU AI Act risk taxonomy before the tool runs and flags personal-data patterns such as card numbers, IBANs and email addresses, recording the type and severity in a tamper-evident audit trail. It addresses the tension between GDPR minimisation and AI Act logging at the architectural level.</p>
   <div class="hero-ctas">
     <a href="#contact" class="btn-primary">Request an Architecture Review</a>
     <a href="#how-it-works" class="btn-secondary">See how it works</a>
@@ -1524,7 +1504,7 @@ footer {
   <div class="section">
     <span class="section-label">Why Aegis Guard · Three Principles</span>
     <h2 class="section-title">Built by a lawyer. Enforced like one.</h2>
-    <p class="section-intro">Aegis Guard Gateway is built on three pillars: the binding obligations of the EU AI Act, the governance architecture of ISO/IEC 42001, and real-time MCP data-flow runtime security. It is built to a legal specification rather than a security one, for organisations running multi-agent and Model Context Protocol architectures.</p>
+    <p class="section-intro">Aegis Guard Gateway is built on three pillars: the binding obligations of the EU AI Act, a control registry of its own, and a check at the moment an agent calls a tool. It is built to a legal specification, for organisations running Model Context Protocol tools.</p>
     <div class="principles-grid">
       <div class="principle-card">
         <p class="principle-num">Principle 01</p>
@@ -1535,7 +1515,7 @@ footer {
       <div class="principle-card">
         <p class="principle-num">Principle 02</p>
         <h3>Zero-Trust Data Sovereignty</h3>
-        <p>Aegis Guard runs inside your own network. Minimal configuration — redirect your API endpoint, nothing else touches your stack. No cloud connectivity. No external data sharing. Your data never crosses a boundary you don't control.</p>
+        <p>Aegis Guard Gateway runs in your own process, on your own infrastructure. You wrap each tool you want protected with one decorator. Outbound connections go to destinations you configure.</p>
       </div>
       <div class="principle-card">
         <p class="principle-num">Principle 03</p>
@@ -1561,12 +1541,12 @@ footer {
       <div class="camp-card">
         <p class="camp-label">Camp 2</p>
         <h3>Technical API Gateways</h3>
-        <p>AI proxies and standard reverse gateways are built for engineers. They manage load balancing, caching, and API token consumption. They have no mechanism to verify whether a specific user revoked their GDPR data processing consent five minutes ago before routing a prompt to an external model. Security gateways address data loss prevention — not legal consent status.</p>
+        <p>AI proxies and reverse gateways are built for engineers. They manage load balancing, caching and API token consumption, and their focus is traffic and data loss prevention. The legal classification of the action an agent is about to take sits outside that job.</p>
       </div>
     </div>
     <div class="problem-kicker">
-      <h3>Neither camp can answer the question that kills deals and triggers DPC investigations: <em>"Did this person have valid GDPR consent at the moment AI processed their data?"</em></h3>
-      <p>Other tools tell you after a violation has occurred. Aegis Guard Gateway evaluates the call before the tool runs — real-time legal enforcement at the point of AI execution. It blocks prohibited practices and calls that carry critical-severity personal data such as payment-card numbers, and it records every other call, with its personal-data findings, in a tamper-evident audit trail.</p>
+      <h3>The question both camps leave open: <em>"What did your AI system try to do, and what did you do about it?"</em></h3>
+      <p>Aegis Guard Gateway assesses each call to a wrapped tool before the tool runs. It blocks prohibited practices and calls that carry critical-severity personal data such as payment-card numbers, and it writes a signed record of each allowed call, with its personal-data findings, before the tool runs.</p>
     </div>
   </div>
 </div>
@@ -1575,16 +1555,16 @@ footer {
 <div class="how-bg" id="how-it-works">
   <div class="section">
     <span class="section-label">02 · How It Works</span>
-    <h2 class="section-title">In the live path. <em>Before the data moves.</em></h2>
-    <p class="section-intro">Aegis Guard Gateway intercepts every AI execution request and evaluates the legal position of each call before the tool runs and detects defined personal-data patterns, such as card numbers, IBANs and email addresses, by severity.</p>
+    <h2 class="section-title">In the tool path. <em>Before the tool runs.</em></h2>
+    <p class="section-intro">Aegis Guard Gateway intercepts each call to a wrapped tool, assesses it before the tool runs, and detects defined personal-data patterns, such as card numbers, IBANs and email addresses, by severity.</p>
 
     <!-- Pipeline Flow Diagram -->
     <div class="pipeline">
       <div class="pipe-node">
         <div class="node-icon">🏢</div>
         <p class="node-tag">Origin</p>
-        <p class="node-name">Enterprise App</p>
-        <p class="node-detail">User request<br>+ personal data</p>
+        <p class="node-name">AI Agent</p>
+        <p class="node-detail">Tool call<br>and its arguments</p>
       </div>
 
       <div class="pipe-arrow">
@@ -1600,7 +1580,7 @@ footer {
         <div class="node-icon">🛡</div>
         <p class="node-tag">Aegis Guard</p>
         <p class="node-name">Gateway</p>
-        <p class="node-detail">PII redaction<br>Injection defence<br>Art. 26(6) logging</p>
+        <p class="node-detail">Rule assessment<br>PII detection<br>Signed record</p>
       </div>
 
       <div class="pipe-arrow">
@@ -1614,9 +1594,9 @@ footer {
 
       <div class="pipe-node">
         <div class="node-icon">✅</div>
-        <p class="node-tag">Consent Signal</p>
+        <p class="node-tag">Your Policy</p>
         <p class="node-name">Rule Engine</p>
-        <p class="node-detail">Payload scanned<br>Consent language flagged</p>
+        <p class="node-detail">Built-in rules<br>Your signed policy</p>
       </div>
 
       <div class="pipe-arrow">
@@ -1632,16 +1612,16 @@ footer {
       <div class="pipe-node">
         <div class="node-icon">🤖</div>
         <p class="node-tag">Destination</p>
-        <p class="node-name">AI Model</p>
-        <p class="node-detail">GPT / Gemini<br>Claude / internal LLM</p>
+        <p class="node-name">Your Tool</p>
+        <p class="node-detail">Runs when the<br>call is allowed</p>
       </div>
 
       <div class="outcome-row">
-        <span class="outcome-label">Response path ←</span>
+        <span class="outcome-label">Outcome ←</span>
         <div class="outcome-line"></div>
-        <span class="badge badge-pass">✓ Compliant output</span>
-        <span class="outcome-label">Leakage filter · HMAC-SHA256 audit log written</span>
-        <span class="badge badge-block">✗ Blocked &amp; logged</span>
+        <span class="badge badge-pass">✓ Allowed</span>
+        <span class="outcome-label">HMAC-SHA256 record written before the tool runs</span>
+        <span class="badge badge-block">✗ Blocked</span>
       </div>
     </div>
 
@@ -1656,31 +1636,31 @@ footer {
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-icon">🔒</div>
-        <h3>Intercept at the Boundary</h3>
-        <p>Every AI execution request — regardless of the model, vendor, or application — is intercepted by Aegis Guard Gateway before data exits the enterprise network. Nothing passes through uninspected.</p>
+        <h3>Intercept at the Tool Boundary</h3>
+        <p>Each call to a wrapped tool is assessed inside your own process before the tool runs.</p>
         <ul class="step-benefits">
-          <li><span class="dot-mark"></span>Zero bypass — nothing passes uninspected</li>
+          <li><span class="dot-mark"></span>Applies to every tool you wrap</li>
           <li><span class="dot-mark"></span>Optional redaction of emails, US SSNs, IBANs, labelled dates of birth and biometric templates</li>
-          <li><span class="dot-mark"></span>Every tool call checked before it runs: prohibited practices blocked, high-risk calls flagged for review, each decision written to a tamper-evident audit record</li>
+          <li><span class="dot-mark"></span>Each call to a wrapped tool is checked before it runs: prohibited practices blocked, high-risk calls flagged for review, each decision written to a tamper-evident audit record</li>
         </ul>
       </div>
       <div class="step-card">
         <div class="step-icon">⚡</div>
-        <h3>Flag Consent Signals in Real Time</h3>
-        <p>Aegis scans every payload for consent-related signals — opt-in language, lawful-basis markers, GDPR consent phrasing — as part of each classification pass, live at the moment of execution. Direct API integration with named consent platforms, including OneTrust, is planned for a coming release.</p>
+        <h3>Add Your Own Policy</h3>
+        <p>Alongside the built-in rules you can load your own signed policy, which can only make a result more restrictive. Built-in rules for Singapore, Egypt and India address specific consent situations.</p>
         <ul class="step-benefits">
-          <li><span class="dot-mark"></span>Consent-language detection built into every classification pass</li>
-          <li><span class="dot-mark"></span>Direct consent-platform integrations planned for a coming release</li>
-          <li><span class="dot-mark"></span>Sub-15ms validation overhead</li>
+          <li><span class="dot-mark"></span>Policy signature checked at start-up</li>
+          <li><span class="dot-mark"></span>A policy fault blocks the call</li>
+          <li><span class="dot-mark"></span>Consent-platform integrations are on the product roadmap</li>
         </ul>
       </div>
       <div class="step-card">
         <div class="step-icon">📋</div>
-        <h3>Log, Anonymise, Enforce</h3>
-        <p>Approved requests proceed to the AI model with full Article 12 audit logging. Denied requests are blocked and logged with the reason. Audit entries hold no tool-call arguments — GDPR data minimisation preserved, AI Act audit trail maintained.</p>
+        <h3>Record and Enforce</h3>
+        <p>An allowed call has its signed record on disk before the tool runs. Audit entries leave out tool-call arguments, which limits the personal data they carry.</p>
         <ul class="step-benefits">
           <li><span class="dot-mark"></span>HMAC-SHA256 tamper-resistant logs</li>
-          <li><span class="dot-mark"></span>GDPR data minimisation preserved</li>
+          <li><span class="dot-mark"></span>Tool-call arguments stay out of the log</li>
           <li><span class="dot-mark"></span>Forwarded to your SIEM over HTTPS when you connect one</li>
         </ul>
       </div>
@@ -1695,19 +1675,8 @@ footer {
 
     <!-- MECHANISM WALKTHROUGH: diagram + video -->
     <div class="mechanism-media">
-      <h3>Watch the mechanism, end to end.</h3>
-      <p>A tool call enters the AI data path. Aegis Guard Gateway evaluates it against the EU AI Act risk taxonomy — Prohibited, High-Risk, Transparency — before the request reaches the model, applies a fail-closed enforcement decision, and writes the outcome to a tamper-evident audit trail that holds no tool-call arguments. The diagram and the walkthrough below show the same enforcement path at two levels of depth.</p>
-
-      <img src="/aegis-guard-realtime-compliance-workflow.png"
-           alt="Diagram of the Aegis Guard Gateway real-time AI compliance workflow: request interception, EU AI Act risk-taxonomy evaluation, fail-closed enforcement, and HMAC-SHA256 tamper-evident audit trail"
-           loading="lazy" width="1600" height="893">
-
-      <video controls preload="metadata"
-             poster="/aegis-guard-video-poster.png"
-             aria-label="Aegis Guard Gateway mechanism walkthrough">
-        <source src="/aegis-guard-mechanism-walkthrough.mp4" type="video/mp4">
-        Your browser does not support embedded video. <a href="/aegis-guard-mechanism-walkthrough.mp4">Download the walkthrough (MP4)</a>.
-      </video>
+      <h3>The mechanism, end to end.</h3>
+      <p>A tool call reaches a wrapped tool. Aegis Guard Gateway assesses it against the EU AI Act risk taxonomy (Prohibited, High-Risk and Transparency) before the tool runs, applies a fail-closed decision, and writes a tamper-evident audit trail that leaves tool-call arguments out.</p>
 
       <p class="mechanism-caption">The gateway resolves a specific legal collision: the EU AI Act's Article 26(6) deployer log-retention duty (deferred to 2 December 2027 under the Digital Omnibus, Regulation (EU) 2026/1744, in force 27 July 2026) requires a tamper-evident record kept for at least six months, while GDPR Articles 5 and 17 require personal data to stay minimised and erasable. Aegis Guard addresses it before the log is written — tool-call arguments never enter an entry, caller identities are pseudonymised with a keyed hash when the caller-identity policy is set to pseudonymise (the default stores them as given), and every entry is signed with HMAC-SHA256 and stored inside the client's own network boundary.</p>
     </div>
@@ -1727,18 +1696,18 @@ footer {
       </div>
       <div class="benchmark-card">
         <span class="benchmark-stat">Fail-Closed</span>
-        <p class="benchmark-title">Blocked At The Protocol Layer</p>
-        <p>Aegis Guard intercepts every tool call through a compliance_gate decorator that runs before the underlying handler executes. On a rule violation or evaluation fault, the call is blocked at the MCP protocol layer — not proxied, not silently passed through — and returned to the caller as a JSON-RPC error, never a partial result. Cannot be bypassed by Client configuration.</p>
+        <p class="benchmark-title">Blocked Before The Tool Runs</p>
+        <p>Aegis Guard Gateway intercepts each call to a wrapped tool through the compliance_gate decorator, which runs before the tool's own code. A prohibited practice or an evaluation fault blocks the call and returns an error to the caller.</p>
       </div>
       <div class="benchmark-card">
         <span class="benchmark-stat">HMAC-SHA256</span>
         <p class="benchmark-title">Audit-Ready by Default</p>
-        <p>Every transaction signed with HMAC-SHA256, key held inside your own network boundary — a tamper-evident record your legal team can present to a regulator without a developer in the room. Forwarded to your SIEM over HTTPS when you connect one, ready for WORM-configured retention on your side. Built to support the Article 26(6) log-integrity requirement.</p>
+        <p>Each audit record is signed with HMAC-SHA256, with the key held on your own infrastructure: a tamper-evident record your legal team can present to a regulator without a developer in the room. Forwarded to your SIEM over HTTPS when you connect one, ready for WORM-configured retention on your side. Built to support the Article 26(6) log-integrity requirement.</p>
       </div>
       <div class="benchmark-card">
         <span class="benchmark-stat">MCP-Aware</span>
         <p class="benchmark-title">MCP Runtime Validation</p>
-        <p>When your AI system calls another AI system via Model Context Protocol, Aegis Guard validates the data flow at each node — logging tamper-evident interaction records, enforcing content boundaries, and mapping accountability to the correct deployer. This is the gap standard compliance middleware does not address.</p>
+        <p>Aegis Guard Gateway is built for the Model Context Protocol: one decorator on an MCP tool places the assessment in front of it.</p>
       </div>
     </div>
   </div>
@@ -1750,7 +1719,7 @@ footer {
     <span class="section-label">03 · Legal Foundation</span>
     <h2 class="section-title">The GDPR–AI Act conflict, resolved.</h2>
     <p class="legal-intro">Two bodies of law. One data pipeline. Obligations that appear to contradict each other — until you resolve them at the architecture level.</p>
-    <p class="legal-sub">Aegis does not resolve the conflict in a policy document. It resolves it in the code that runs before data moves. Tool-call arguments never enter a log entry, and caller identities are pseudonymised when the deployer sets that policy. The result is an audit trail built for AI Act Article 12 that keeps the personal data it carries to a minimum.</p>
+    <p class="legal-sub">Aegis does not resolve the conflict in a policy document. It resolves it in the code that runs before the tool does. Tool-call arguments never enter a log entry, and caller identities are pseudonymised when the deployer sets that policy. The result is an audit trail built for AI Act Article 12 that keeps the personal data it carries to a minimum.</p>
 
     <!-- Conflict visualisation -->
     <div class="conflict-row">
@@ -1777,7 +1746,7 @@ footer {
     </div>
 
     <!-- Obligation cards 2×2 -->
-    <p class="section-label" style="margin-bottom:20px;">Four obligations. One architecture.</p>
+    <p class="section-label" style="margin-bottom:20px;">Three obligations. One architecture.</p>
     <div class="oblig-grid">
 
       <div class="oblig-card">
@@ -1791,7 +1760,7 @@ footer {
         </div>
         <div class="oblig-satisfy">
           <span class="oblig-satisfy-label">Aegis →</span>
-          <p>Captures HMAC-SHA256 timestamped logs at the execution point, inside your network boundary, before any data leaves the enterprise.</p>
+          <p>Writes HMAC-SHA256 signed, timestamped records at the point a wrapped tool is called, inside your own infrastructure.</p>
         </div>
       </div>
 
@@ -1825,27 +1794,6 @@ footer {
         </div>
       </div>
 
-      <div class="oblig-card">
-        <div class="oblig-card-top">
-          <div class="oblig-header">
-            <span class="oblig-badge gdpr">GDPR</span>
-            <span class="oblig-article">Art. 6–7</span>
-          </div>
-          <h4>Lawful basis and consent validity</h4>
-          <p>Where consent is the lawful basis for AI processing, it must be freely given, specific, informed, and current at the moment of processing — not assumed from a prior interaction or cached from a previous session.</p>
-        </div>
-        <div class="oblig-satisfy">
-          <span class="oblig-satisfy-label">Aegis →</span>
-          <p>Flags consent-related language in every payload at classification time — opt-in wording, lawful-basis markers, GDPR consent phrasing. Live circuit-breaker enforcement against your consent platform's real-time policy state (AEGIS_NO_LAWFUL_BASIS) is on the product roadmap.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="proprietary-box">
-      <p class="prop-tag">Proprietary Architecture</p>
-      <p class="prop-name">AEGIS_NO_LAWFUL_BASIS</p>
-      <p>This is a proprietary runtime consent-enforcement architecture designed by Adesanya AI Advisory. It is not a regulatory standard or a term defined in EU law. It is the specific technical configuration built to convert your consent platform's policy state into an active, real-time circuit breaker — preventing AI execution when legal permission is absent. The name refers to the enforcement mode that activates when your consent platform returns a no-consent signal for the data subject at the moment of the AI call. Live consent-platform circuit-breaker enforcement is on the product roadmap; today, Aegis flags consent-related signals within payload content at classification time.</p>
     </div>
   </div>
 </div>
@@ -1884,7 +1832,7 @@ footer {
         <ul class="tier-features">
           <li>Aegis Guard Gateway configured for your environment</li>
           <li>One AI execution path fully instrumented</li>
-          <li>30 days of live consent validation and logging</li>
+          <li>30 days of live call assessment and logging</li>
           <li>Full audit log review and anomaly report</li>
           <li>GDPR–AI Act reconciliation documentation</li>
           <li>Compliance report for board or regulator</li>
@@ -1923,14 +1871,14 @@ footer {
       <div class="persona-card">
         <p class="persona-role">Data Protection Officer</p>
         <h3>You need evidence, not assurance.</h3>
-        <p>Regulators do not accept policy documents as proof of compliance. Aegis produces timestamped, tamper-resistant logs that demonstrate GDPR consent was validated before each AI execution — the kind of evidence that closes a DPC inquiry before it escalates.</p>
+        <p>Aegis Guard Gateway writes a signed, timestamped record of each allowed call to a wrapped tool, with the assessment made, as evidence you can put in front of a regulator.</p>
         <p class="persona-action">Timestamped, tamper-resistant audit logs ready for a DPC inquiry.</p>
       </div>
       <div class="persona-card">
         <p class="persona-role">Chief Information Security Officer</p>
         <h3>The control gap is in the legal layer.</h3>
-        <p>Your security stack monitors data in transit. It does not check whether the person whose data is in transit consented to AI processing it. Aegis closes that legal blind spot without requiring changes to your existing security architecture.</p>
-        <p class="persona-action">Closes the legal blind spot without touching your security stack.</p>
+        <p>Your security stack monitors data in transit. Aegis Guard Gateway adds a legal assessment at the tool boundary: what the call does, which rule it engages and what happened. You add one decorator to each tool.</p>
+        <p class="persona-action">Adds the legal layer alongside your security stack.</p>
       </div>
       <div class="persona-card">
         <p class="persona-role">General Counsel / Head of Legal</p>
