@@ -232,8 +232,8 @@
   </div>
   <div class="gate" id="authorityGate">
     <div class="qnum">Ireland-specific · optional</div>
-    <h2 style="font-family:var(--serif);font-weight:600;font-size:1.25rem;margin-bottom:6px">Which regulator would actually examine you — and what would they ask for?</h2>
-    <p class="qhelp">Ireland's newly enacted Regulation of Artificial Intelligence Act 2026 (No. 31 of 2026) names a specific competent authority for your sector, and a specific evidence checklist under section 84. This part does ask for your details — it's what feeds a full readiness assessment if you want one.</p>
+    <h2 style="font-family:var(--serif);font-weight:600;font-size:1.25rem;margin-bottom:6px">Which regulator would examine you, and what should you have ready?</h2>
+    <p class="qhelp">Ireland's Regulation of Artificial Intelligence Act 2026 (No. 31 of 2026) names competent authorities by sector and gives authorised officers powers to require records under section 70. Share your sector and contact details to see your likely competent authority and our recommended evidence pack. Your details also support a full readiness assessment if you want one.</p>
     <form id="gateForm" name="obligation-checker-authority-gate" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="obligation-checker-authority-gate">
       <p class="hide"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
@@ -589,7 +589,7 @@
     energy:   {name:'Commission for Regulation of Utilities', basis:'s.78(d)'},
     rail:     {name:'Commission for Railway Regulation', basis:'s.78(b)'},
     transport:{name:'National Transport Authority', basis:'s.78(j)'},
-    media:    {name:'Coimisiún na Meán', basis:'s.78(a)'},
+    media:    {name:'Coimisiún na Meán', basis:'s.78(a), awaiting a commencement order'},
     health:   {name:'Health Service Executive', basis:'s.78(h)'},
     medicines:{name:'Health Products Regulatory Authority', basis:'s.78(g)'},
     maritime: {name:'Marine Survey Office (Department of Transport)', basis:'s.78(i)'},
@@ -616,20 +616,20 @@
       lines.push('<h3 style="font-family:var(--serif);font-weight:600;font-size:1.15rem;color:var(--lamp)">Not confidently mappable from sector alone</h3>');
       lines.push('<p class="prov" style="margin-top:4px">Public sector, justice, education, and “other” use cases don’t map to a single sectoral body from a sector answer alone under the Regulation of Artificial Intelligence Act 2026 (No. 31 of 2026) — flagged here for manual review rather than guessed.</p>');
     }
-    lines.push('<p style="margin-top:10px;color:#dde4ee;font-size:.9rem"><b>Always cross-cutting, regardless of sector:</b> the Data Protection Commission (s.78(e)), wherever personal data is processed; the Workplace Relations Commission (s.78(k)), wherever the use case touches employment; the Health and Safety Authority (s.78(f)), if workplace safety is touched.</p>');
+    lines.push('<p style="margin-top:10px;color:#dde4ee;font-size:.9rem"><b>Also relevant, depending on the use case:</b> the Workplace Relations Commission (s.78(k)) where the use case touches employment, and the Health and Safety Authority (s.78(f)) where workplace safety is touched. The parts of section 78 covering Coimisiún na Meán (paragraph (a)) and the Data Protection Commission (paragraph (e)) await a commencement order.</p>');
     lines.push('</div>');
 
     lines.push('<div class="card">');
-    lines.push('<div class="qnum">Your evidence checklist</div>');
-    lines.push('<p class="qhelp" style="margin-bottom:10px">Built from section 84’s documentation-handover checklist — what an authorised officer can already compel today under section 70:</p>');
+    lines.push('<div class="qnum">Recommended evidence pack</div>');
+    lines.push('<p class="qhelp" style="margin-bottom:10px">Section 70 of the 2026 Act lets an authorised officer require relevant records and information. These items help you answer promptly:</p>');
     lines.push('<ul style="margin:0 0 4px 20px;color:#dde4ee;font-size:.92rem;line-height:1.8">');
     lines.push('<li>Description of your AI system(s) and their purpose</li>');
-    lines.push('<li>Records of use — s.70(11)’s broad "record" definition covers logs, configs, prompts, and outputs, in any stored form</li>');
+    lines.push('<li>Records of use, such as logs, configurations, prompts and outputs. Section 70(11) defines “record” to include data, code, algorithms and software in any form</li>');
     lines.push('<li>Technical documentation status (Article 11 / Annex IV)</li>');
     lines.push('<li>Confirmation of log retention ≥ 6 months (Article 19 / 26(6))</li>');
     lines.push('<li>If flagged high-risk above: human-oversight and monitoring arrangements (Article 26)</li>');
     lines.push('</ul>');
-    lines.push('<p style="margin-top:14px;color:#dde4ee;font-size:.9rem"><b>If this gets escalated:</b> an authorised officer can compel these records under section 70, and a documentation gap is itself grounds for further scrutiny. Since 2 August 2026, bodies that protect fundamental rights can obtain your AI documentation through the market surveillance authority (Article 77, as amended by the Digital Omnibus). The high-risk obligations that documentation evidences apply from 2 December 2027 (Regulation (EU) 2026/1744), not the commonly-quoted 2026 date.</p>');
+    lines.push('<p style="margin-top:14px;color:#dde4ee;font-size:.9rem"><b>If a question is raised:</b> an authorised officer can require relevant records and information under section 70. Since 2 August 2026, bodies that protect fundamental rights can request AI documentation through the market surveillance authority (Article 77, as amended by the Digital Omnibus). The high-risk obligations behind that documentation apply from 2 December 2027 for Annex III systems and 2 August 2028 for Annex I systems (Regulation (EU) 2026/1744).</p>');
     lines.push('</div>');
 
     lines.push('<div class="cta-band">');

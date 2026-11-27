@@ -1454,21 +1454,8 @@ footer {
 
 <!-- COUNTDOWN BAR -->
 <div class="countdown-bar">
-  EU AI Act Horizon 1 <strong>·</strong> <span id="aegis-cdtxt"></span> <strong>·</strong> Annex III: <strong>2 Dec 2027</strong>
+  Article 50 transparency: since <strong>2 Aug 2026</strong> <strong>·</strong> New Article 5 prohibitions: from <strong>2 Dec 2026</strong> <strong>·</strong> Annex III high-risk: <strong>2 Dec 2027</strong>
 </div>
-<script>
-(function(){
-  var h1=new Date('2026-08-02T00:00:00');
-  var now=new Date();
-  var d=Math.ceil((h1-now)/864e5);
-  var el=document.getElementById('aegis-cdtxt');
-  if(!el)return;
-  if(d>1)el.innerHTML=d+' days to <strong>2 Aug 2026</strong>';
-  else if(d===1)el.innerHTML='Tomorrow — <strong>2 Aug 2026</strong>';
-  else if(d===0)el.innerHTML='<strong>TODAY — 2 Aug 2026 NOW IN FORCE</strong>';
-  else el.innerHTML='<strong>2 Aug 2026 IN FORCE</strong> · Art.50 &amp; Art.4 active';
-})();
-</script>
 
 <!-- NAVIGATION -->
 <nav>
@@ -1496,7 +1483,7 @@ footer {
     <a href="#contact" class="btn-primary">Request an Architecture Review</a>
     <a href="#how-it-works" class="btn-secondary">See how it works</a>
   </div>
-  <p class="hero-tags">EU AI Act Article 12 logging <strong>·</strong> Article 26(6) audit trails <strong>·</strong> GDPR Article 5 &amp; 17 compatibility <strong>·</strong> No extensions to 2 Aug 2026</p>
+  <p class="hero-tags">EU AI Act Article 12 logging <strong>·</strong> Article 26(6) log retention <strong>·</strong> GDPR Article 5 &amp; 17 compatibility <strong>·</strong> Annex III duties from 2 Dec 2027</p>
 </section>
 
 <!-- THREE PRINCIPLES -->
@@ -1520,7 +1507,7 @@ footer {
       <div class="principle-card">
         <p class="principle-num">Principle 03</p>
         <h3>The Regulatory Imperative</h3>
-        <p>The EU AI Act operates on two enforcement horizons. Transparency and AI literacy obligations are live from 2 August 2026. Annex III high-risk AI full obligations — including Art. 12 logging and Art. 26 deployer requirements — apply from 2 December 2027. CISOs, DPOs, and CROs need architecture that addresses both horizons. Aegis Guard is operational from day one of your Architecture Review.</p>
+        <p>The EU AI Act applies in stages. AI literacy has applied since 2 February 2025 and Article 50 transparency since 2 August 2026, with machine-readable marking for generative systems already on the market due by 2 December 2026. Annex III high-risk obligations, including Article 12 logging and Article 26 deployer duties, apply from 2 December 2027. CISOs, DPOs and CROs need architecture that addresses each stage. An Architecture Review maps your systems to each date.</p>
       </div>
     </div>
   </div>
@@ -1659,7 +1646,7 @@ footer {
         <h3>Record and Enforce</h3>
         <p>An allowed call has its signed record on disk before the tool runs. Audit entries leave out tool-call arguments, which limits the personal data they carry.</p>
         <ul class="step-benefits">
-          <li><span class="dot-mark"></span>HMAC-SHA256 tamper-resistant logs</li>
+          <li><span class="dot-mark"></span>HMAC-SHA256 tamper-evident logs</li>
           <li><span class="dot-mark"></span>Tool-call arguments stay out of the log</li>
           <li><span class="dot-mark"></span>Forwarded to your SIEM over HTTPS when you connect one</li>
         </ul>
@@ -1678,7 +1665,7 @@ footer {
       <h3>The mechanism, end to end.</h3>
       <p>A tool call reaches a wrapped tool. Aegis Guard Gateway assesses it against the EU AI Act risk taxonomy (Prohibited, High-Risk and Transparency) before the tool runs, applies a fail-closed decision, and writes a tamper-evident audit trail that leaves tool-call arguments out.</p>
 
-      <p class="mechanism-caption">The gateway resolves a specific legal collision: the EU AI Act's Article 26(6) deployer log-retention duty (deferred to 2 December 2027 under the Digital Omnibus, Regulation (EU) 2026/1744, in force 27 July 2026) requires a tamper-evident record kept for at least six months, while GDPR Articles 5 and 17 require personal data to stay minimised and erasable. Aegis Guard addresses it before the log is written — tool-call arguments never enter an entry, caller identities are pseudonymised with a keyed hash when the caller-identity policy is set to pseudonymise (the default stores them as given), and every entry is signed with HMAC-SHA256 and stored inside the client's own network boundary.</p>
+      <p class="mechanism-caption">The gateway resolves a specific legal collision: the EU AI Act's Article 26(6) deployer log-retention duty (deferred to 2 December 2027 under the Digital Omnibus, Regulation (EU) 2026/1744, in force 27 July 2026) requires logs to be kept for at least six months, while GDPR Articles 5 and 17 require personal data to stay minimised and erasable. Aegis Guard makes each record tamper-evident and addresses the tension before the log is written — tool-call arguments never enter an entry, caller identities are pseudonymised with a keyed hash when the caller-identity policy is set to pseudonymise (the default stores them as given), and every entry is signed with HMAC-SHA256 and stored inside the client's own network boundary.</p>
     </div>
   </div>
 </div>
@@ -1702,7 +1689,7 @@ footer {
       <div class="benchmark-card">
         <span class="benchmark-stat">HMAC-SHA256</span>
         <p class="benchmark-title">Audit-Ready by Default</p>
-        <p>Each audit record is signed with HMAC-SHA256, with the key held on your own infrastructure: a tamper-evident record your legal team can present to a regulator without a developer in the room. Forwarded to your SIEM over HTTPS when you connect one, ready for WORM-configured retention on your side. Built to support the Article 26(6) log-integrity requirement.</p>
+        <p>Each audit record is signed with HMAC-SHA256, with the key held on your own infrastructure: a tamper-evident record your legal team can present to a regulator without a developer in the room. Forwarded to your SIEM over HTTPS when you connect one, ready for WORM-configured retention on your side. Built to support Article 26(6) log retention.</p>
       </div>
       <div class="benchmark-card">
         <span class="benchmark-stat">MCP-Aware</span>
@@ -1740,7 +1727,7 @@ footer {
       <div class="conflict-panel aiact">
         <span class="conflict-law-tag aiact-tag">EU AI Act</span>
         <h4>Continuous automated logging</h4>
-        <p>Providers and deployers of Annex III high-risk AI systems must build automatic, tamper-resistant logging across the full operational lifecycle. Logs must be retained for a minimum of six months and produced on request to supervisory authorities.</p>
+        <p>Annex III high-risk AI systems must technically allow automatic event logging over their lifetime. Providers and deployers keep the logs under their control for at least six months, unless other applicable law provides otherwise. Aegis Guard makes its records tamper-evident by design.</p>
         <p class="conflict-articles">Art. 12 · Art. 26(6)</p>
       </div>
     </div>
@@ -1756,7 +1743,7 @@ footer {
             <span class="oblig-article">Art. 12</span>
           </div>
           <h4>Automatic logging for high-risk AI</h4>
-          <p>Providers of Annex III systems must build automatic, tamper-resistant logging across the full operational lifecycle. Full enforcement: 2 December 2027 (Digital Omnibus, Regulation (EU) 2026/1744, published in the Official Journal 24 July 2026, in force 27 July 2026).</p>
+          <p>Annex III systems must technically allow automatic event logging over their lifetime. Applies from 2 December 2027 (Digital Omnibus, Regulation (EU) 2026/1744, published in the Official Journal 24 July 2026, in force 27 July 2026).</p>
         </div>
         <div class="oblig-satisfy">
           <span class="oblig-satisfy-label">Aegis →</span>
@@ -1771,7 +1758,7 @@ footer {
             <span class="oblig-article">Art. 26(6)</span>
           </div>
           <h4>Deployer log retention</h4>
-          <p>Deployers of high-risk AI must retain system logs for a minimum of six months. The evidentiary burden rests with the deployer — not the provider — and regulators may request production at any time.</p>
+          <p>Deployers of high-risk AI keep the automatically generated logs under their control for a period suited to the purpose, of at least six months, unless other applicable law provides otherwise.</p>
         </div>
         <div class="oblig-satisfy">
           <span class="oblig-satisfy-label">Aegis →</span>
@@ -1872,7 +1859,7 @@ footer {
         <p class="persona-role">Data Protection Officer</p>
         <h3>You need evidence, not assurance.</h3>
         <p>Aegis Guard Gateway writes a signed, timestamped record of each allowed call to a wrapped tool, with the assessment made, as evidence you can put in front of a regulator.</p>
-        <p class="persona-action">Timestamped, tamper-resistant audit logs ready for a DPC inquiry.</p>
+        <p class="persona-action">Timestamped, tamper-evident audit logs ready for a DPC inquiry.</p>
       </div>
       <div class="persona-card">
         <p class="persona-role">Chief Information Security Officer</p>
@@ -1889,8 +1876,8 @@ footer {
       <div class="persona-card">
         <p class="persona-role">Chief Compliance Officer</p>
         <h3>The Annex III deadline moved. The preparation window just became the compliance window.</h3>
-        <p>High-risk AI obligations — Art. 12 logging and Art. 26 deployer requirements — apply from 2 December 2027 under the EU AI Act Digital Omnibus. For financial services, insurance, and essential services, that is 17 months to build architecture that works. The organisations that start now will not be scrambling in 2027.</p>
-        <p class="persona-action">Architecture designed for 2 Dec 2027 — 17 months to build it right.</p>
+        <p>High-risk obligations, including Article 12 logging and Article 26 deployer duties, apply from 2 December 2027 under the Digital Omnibus. For financial services, insurance and essential services, now is the time to build and evidence that architecture. Organisations that start early are best placed to reach December 2027 with their logs and records already in place.</p>
+        <p class="persona-action">Architecture designed for 2 December 2027.</p>
       </div>
       <div class="persona-card">
         <p class="persona-role">Founder / Managing Director</p>

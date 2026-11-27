@@ -93,7 +93,7 @@
   .watch .full{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .4s var(--ease)}
   .watch:hover .full{max-width:160px}
   .burger{display:none;background:none;border:1px solid var(--hairline);border-radius:6px;color:var(--paper);font-size:1.1rem;padding:6px 12px;cursor:pointer}
-  @media(max-width:880px){
+  @media(max-width:1100px){
     .burger{display:block}
     .navlinks{position:absolute;top:64px;left:0;right:0;background:var(--chamber);border-bottom:1px solid var(--hairline);flex-direction:column;align-items:flex-start;gap:0;padding:10px 28px 22px;display:none}
     .navlinks.open{display:flex}
@@ -1751,23 +1751,6 @@ if(document.getElementById('aQuiz'))aRn();
       });
     },{threshold:0.55});
     els.forEach(function(el){obs.observe(el);});
-  }
-
-  // Aegis Guard card: cycle through "intercepting" requests for realism
-  var labels=[
-    'Intercepting AI request',
-    'Checking data residency',
-    'Validating model provenance',
-    'Scanning for bias triggers',
-    'Verifying consent signals'
-  ];
-  var ic=document.querySelector('.aegis-intercept');
-  if(ic){
-    var li=0;
-    setInterval(function(){
-      li=(li+1)%labels.length;
-      ic.innerHTML='&gt; '+labels[li]+'<span class="cur">_</span>';
-    },3800);
   }
 
   // 3D perspective card tilt — practice briefs
